@@ -1,0 +1,539 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,Dataset,Source
+Chimborazo,Chimborazo,,,,,,,,Andean,Heggarty2007
+Tena,Tena,,,,,,,,Andean,Heggarty2007
+Inkawasi,Inkawasi,,,,,,,,Andean,Heggarty2007
+Cajamarca,Cajamarca,,,,,,,,Andean,Heggarty2007
+Corongo,Corongo,,,,,,,,Andean,Heggarty2007
+Caraz,Caraz,,,,,,,,Andean,Heggarty2007
+Chavin,Chavín,,,,,,,,Andean,Heggarty2007
+Huancayo,Huancayo,,,,,,,,Andean,Heggarty2007
+Huancavelica,Huancavelica,,,,,,,,Andean,Heggarty2007
+Cuzco,Cuzco,,,,,,,,Andean,Heggarty2007
+Puno,Puno,,,,,,,,Andean,Heggarty2007
+Taquile,Taquile,,,,,,,,Andean,Heggarty2007
+Apolobamba,Apolobamba,,,,,,,,Andean,Heggarty2007
+Cochabamba,Cochabamba,,,,,,,,Andean,Heggarty2007
+Sucre,Sucre,,,,,,,,Andean,Heggarty2007
+Kawki,Kawki,,,,,,,,Andean,Heggarty2007
+Jaqaru,Jaqaru,,,,,,,,Andean,Heggarty2007
+Huancane,Huancané,,,,,,,,Andean,Heggarty2007
+Tiwanaku,Tiwanaku,,,,,,,,Andean,Heggarty2007
+Oruro,Oruro,,,,,,,,Andean,Heggarty2007
+Eryuan,Ěryuán,eryu1239,Eryuan,,Eurasia,26.538056,99.91,Sino-Tibetan,Bai,Allen2007
+Heqing,Hèqìng,heqi1238,Heqing,,Eurasia,26.0991374,99.9416161,Sino-Tibetan,Bai,Allen2007
+Jianchuan,Jiànchuàn,jian1239,Jianchuan,,Eurasia,26.5536208,100.1396921,Sino-Tibetan,Bai,Allen2007
+Lanping,Lánpíng,lanp1241,Lanping,,Eurasia,26.5158555,99.2581092,Sino-Tibetan,Bai,Allen2007
+Luobenzhuo,Luòběnzhuō,nuji1238,Jinman Bai,,Eurasia,26.4240223,98.8862088,Sino-Tibetan,Bai,Allen2007
+Qiliqiao,Qīlǐqiáo,qili1234,Qiliqiao,,Eurasia,25.6553283,100.1709288,Sino-Tibetan,Bai,Allen2007
+Xiangyun,Xiángyún,xian1250,Xiangyun,,Eurasia,25.5313657,100.4478932,Sino-Tibetan,Bai,Allen2007
+Yunlong,Yúnlóng,yunl1238,Yunlong,,Eurasia,25.9223745,99.0352884,Sino-Tibetan,Bai,Allen2007
+Zhoucheng,Zhōuchéng,zhou1234,Zhoucheng,,Eurasia,25.8958633,100.0987848,Sino-Tibetan,Bai,Allen2007
+Dashi,Dàshí,,,,,26.3530106,100.1930442,,Bai,Wang2004
+Ega,Égà,egab1234,Ega Bai,,Eurasia,26.4858945,98.8528962,Sino-Tibetan,Bai,Wang2004
+Enqi,Ēnqī,enqi1234,Enqi Bai,,Eurasia,26.4738155,99.1189832,Sino-Tibetan,Bai,Wang2004
+Gongxing,Gōngxìng,,,,,27.0852794,99.1652452,,Bai,Wang2004
+Jinman,Jīnmǎn,nuji1238,Jinman Bai,,Eurasia,26.4154856,99.1285952,Sino-Tibetan,Bai,Wang2004
+Jinxing,Jīnxīng,,,,,24.9259218,103.1237482,,Bai,Wang2004
+Mazhelong,Mǎzhělóng,,,,,24.1677209,104.1950232,,Bai,Wang2004
+Tuoluo,Tuōluò,tuol1234,Tuoluo Bai,,Eurasia,23.3833337,102.1839821,Sino-Tibetan,Bai,Wang2004
+Aldomirovcislivnica,Aldomirovci (slivnica),zhou1234,Zhoucheng,,Eurasia,25.8958826,100.0988062,Sino-Tibetan,Bulgarian,Prokic2009
+Asparuhovolom,Asparuhovo (lom),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Asparuhovoprov,Asparuhovo (prov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Babjakrazl,Babjak (razl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Bachkovoasgr,Bachkovo (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Bagrencikjust,Bagrenci (kjust),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Balgaricarev,Balgari (carev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Banishtebrezn,Banishte (brezn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Banskorazl,Bansko (razl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Beglezhluk,Beglezh (luk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Belenesvisht,Belene (svisht),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Belicarazl,Belica (razl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Bistricablgr,Bistrica (blgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Bogdanovdolpern,Bogdanov dol (pern),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Borisovoelh,Borisovo (elh),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Bovsvog,Bov (svog),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Brashljanmtarn,Brashljan (mtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Buchinprohodgod,Buchin prohod (god),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Caparevosand,Caparevo (sand),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Cerovicakjust,Cerovica (kjust),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Chepelareasgr,Chepelare (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Chernogorovopaz,Chernogorovo (paz),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Chernomorecbs,Chernomorec (bs),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Chukovecradom,Chukovec (radom),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dermanciluk,Dermanci (luk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Devenciluk,Devenci (luk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Devesilicakrgr,Devesilica (krgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dichinvtarn,Dichin (vtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dinevohask,Dinevo (hask),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Divaslatinamont,Diva slatina (mont),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Divdjadovoshum,Divdjadovo (shum),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dobarskorazl,Dobarsko (razl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dobroselectopgr,Dobroselec (topgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dobroslavcisof,Dobroslavci (sof),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dobrotinogd,Dobrotino (gd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnabeshovicavrach,Dolna beshovica (vrach),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnadikanjaradom,Dolna dikanja (radom),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnamelnatran,Dolna melna (tran),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnariksamont,Dolna riksa (mont),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnasrudenabel,Dolna srudena (bel),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnibogrovsof,Dolni bogrov (sof),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dolnolevskipan,Dolno levski (pan),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dorkovovelgr,Dorkovo (velgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Drabishnaivgr,Drabishna (ivgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dragizhevovtarn,Dragizhevo (vtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dragodanovosliv,Dragodanovo (sliv),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dragoevopresl,Dragoevo (presl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Dragojchincikjust,Dragojchinci (kjust),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Elovdolpk,Elov dol (pk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Eninakaz,Enina (kaz),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ezerovoparvom,Ezerovo (parvom),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Furenvrach,Furen (vrach),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gabarebslat,Gabare (bslat),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gabraelpel,Gabra (elpel),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Galatatetev,Galata (tetev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ganchovecdrjan,Ganchovec (drjan),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Garmengd,Garmen (gd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Garvansil,Garvan (sil),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gegapetr,Gega (petr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Glozheneorjah,Glozhene (orjah),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Golemarakovicaelpel,Golema rakovica (elpel),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Golemomalovosliven,Golemo malovo (sliven),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Golicavarn,Golica (varn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Goljamazheljaznatetev,Goljama zheljazna (tetev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Goljamoshivachevosliv,Goljamo shivachevo (sliv),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gornarosicasevl,Gorna rosica (sevl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gornivarpishtadrjan,Gorni varpishta (drjan),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Govedarcisam,Govedarci (sam),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Gradecvd,Gradec (vd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Huhlaivgr,Huhla (ivgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Hvojnaasgr,Hvojna (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Indzhevojvodamtarn,Indzhe vojvoda (mtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ivanskishum,Ivanski (shum),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Izvorovoharm,Izvorovo (harm),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Javorovoasgr,Javorovo (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kalipetrovosil,Kalipetrovo (sil),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kalojanovoplov,Kalojanovo (plov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Karaisenpavl,Karaisen (pavl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Karanovoajt,Karanovo (ajt),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kaspichannp,Kaspichan (np),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Koljumarinovochirp,Kolju marinovo (chirp),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Konskabrezn,Konska (brezn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kopilovcimont,Kopilovci (mont),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Koprivshticapird,Koprivshtica (pird),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kortennzag,Korten (nzag),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kosteneciht,Kostenec (iht),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kovachevcisam,Kovachevci (sam),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kozichinopom,Kozichino (pom),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kramolinsevl,Kramolin (sevl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kraveniksevl,Kravenik (sevl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Kretavrach,Kreta (vrach),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Krivnjarazgr,Krivnja (razgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Levunovosand,Levunovo (sand),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Liljachevr,Liljache (vr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Lipnicabotgr,Lipnica (botgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ljubenovamahalanzag,Ljubenova mahala (nzag),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Loboshrad,Lobosh (rad),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Lozensof,Lozen (sof),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Malomirovoelh,Malomirovo (elh),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Marchaevosof,Marchaevo (sof),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Marikostinovopetr,Marikostinovo (petr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Markovoshum,Markovo (shum),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Merdanjavtarn,Merdanja (vtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Merichlerichirp,Merichleri (chirp),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Mihalcipavl,Mihalci (pavl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Milchinalakakul,Milchina laka (kul),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Momchilovcismol,Momchilovci (smol),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Mominabanjapl,Momina banja (pl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Mominaklisurapz,Momina klisura (pz),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Momkovosvgr,Momkovo (svgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Mugladev,Mugla (dev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Nikolovolipnikrus,Nikolovo(lipnik) (rus),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Nikolovohask,Nikolovo (hask),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Noevcibrezn,Noevci (brezn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Novalovchagd,Nova lovcha (gd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Novanadezhdahs,Nova nadezhda (hs),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Novoselotrojan,Novo selo (trojan),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ognenkarn,Ognen (karn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Omarchevonzag,Omarchevo (nzag),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Opanstzag,Opan (stzag),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Osenecrazgr,Osenec (razgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Panagjurishtegd,Panagjurishte (gd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Paskalevecpavl,Paskalevec (pavl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Pavelskoasgr,Pavelsko (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Pelatikovokjust,Pelatikovo (kjust),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Petarnicaplev,Petarnica (plev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Pevectarg,Pevec (targ),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Plakovovt,Plakovo (vt),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Podviskarn,Podvis (karn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Pozharevotutr,Pozharevo (tutr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Rabishabelgr,Rabisha (belgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Radovenevr,Radovene (vr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Rakevovr,Rakevo (vr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Rakovicakul,Rakovica (kul),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ranilugtryn,Rani lug (tryn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Razboishtegod,Razboishte (god),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ruzhincibelgr,Ruzhinci (belgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Sadinapop,Sadina (pop),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Saparevodup,Saparevo (dup),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Sekirovoplov,Sekirovo (plov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Senokosblgr,Senokos (blgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Sestrinopetr,Sestrino (petr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Shipkakaz,Shipka (kaz),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Shirokalakadev,Shiroka laka (dev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Shirokidolsam,Shiroki dol (sam),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Shtipskoprov,Shtipsko (prov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Skobelevosliv,Skobelevo (sliv),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Slaveinosmol,Slaveino (smol),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Slavjanovoplev,Slavjanovo (plev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Smochevodupn,Smochevo (dupn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Smolskopird,Smolsko (pird),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Solishtadev,Solishta (dev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Sredeczlgr,Sredec (zlgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Stakevciblgr,Stakevci (blgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Stambolovohask,Stambolovo (hask),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Starmenbel,Starmen (bel),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Stoilovomt,Stoilovo (mt),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Straldzhajamb,Straldzha (jamb),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Stroevoplov,Stroevo (plov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Suhindolvtarn,Suhindol (vtarn),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Sushicablgr,Sushica (blgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Svetlinatopgr,Svetlina (topgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Svirkovoharm,Svirkovo (harm),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Tihomirkrgr,Tihomir (krgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Tihomirovostzag,Tihomirovo (stzag),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Topolchanesliv,Topolchane (sliv),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Trancovicanik,Trancovica (nik),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Trastenikplev,Trastenik (plev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Ustovosm,Ustovo (sm),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vabelnik,Vabel (nik),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vaklinovogd,Vaklinovo (gd),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Valchepolesvgr,Valche pole (svgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Varbicapresl,Varbica (presl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Varbovoblgr,Varbovo (blgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Varduntarg,Vardun (targ),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Varvarapaz,Varvara (paz),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vasiljovotetev,Vasiljovo (tetev),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Velkovcipk,Velkovci (pk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vinarovovid,Vinarovo (vid),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vinishtemont,Vinishte (mont),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vladinjalov,Vladinja (lov),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vodenelh,Voden (elh),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vojnjagovokarl,Vojnjagovo (karl),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vracheshbotgr,Vrachesh (botgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vranilovcigabr,Vranilovci (gabr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Vresovoajt,Vresovo (ajt),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zabardoasgr,Zabardo (asgr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zabernovomt,Zabernovo (mt),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zamfirovoberk,Zamfirovo (berk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zanozheneberk,Zanozhene (berk),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zdravkovecgabr,Zdravkovec (gabr),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zelenigradtran,Zelenigrad (tran),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zhaltushaard,Zhaltusha (ard),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zheglicavid,Zheglica (vid),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zhelensvog,Zhelen (svog),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zheljazkovosred,Zheljazkovo (sred),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+Zheravnakot,Zheravna (kot),bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Bulgarian,Prokic2009
+MidslandFr,Midsland (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+LiesFr,Lies (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WestTerschellingFr,West-Terschelling (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+DenHoornNH,Den Hoorn (NH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BurenFr,Buren (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+OosterendFr,Oosterend (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+HolwerdFr,Holwerd (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WierumFr,Wierum (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KantensGn,Kantens (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+LeermensGn,Leermens (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+AduardGn,Aduard (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SintAnnenGn,Sint-Annen (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+ScheveningenZH,Scheveningen (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WateringenZH,Wateringen (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+CallantsoogNH,Callantsoog (NH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SchagenNH,Schagen (NH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KoedijkNH,Koedijk (NH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+AbbekerkNH,Abbekerk (NH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WorkumFr,Workum (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+OudeschootFr,Oudeschoot (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SlotenFr,Sloten (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+NijeholtpadeFr,Nijeholtpade (Fr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SmildeDr,Smilde (Dr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+MusselGn,Mussel (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+ValthermondDr,Valthermond (Dr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+TerApelGn,Ter Apel (Gn),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KnokkeBeWv,Knokke (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+OostendeBeWv,Oostende (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KoekelareBeWv,Koekelare (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+ZuydcooteFrVl,Zuydcoote (FrVl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BrielleZH,Brielle (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+PiershilZH,Piershil (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+HaamstedeZe,Haamstede (Ze),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BrouwershavenZe,Brouwershaven (Ze),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+GouderakZH,Gouderak (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+AmeideZH,Ameide (ZH),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BuurmalsenGl,Buurmalsen (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+AlmkerkNB,Almkerk (NB),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+IngenGl,Ingen (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+RenkumGl,Renkum (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+ZevenaarGl,Zevenaar (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+NijmegenGl,Nijmegen (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+VarsseveldGl,Varsseveld (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SilvoldeGl,Silvolde (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+UlftGl,Ulft (Gl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+PoperingeBeWv,Poperinge (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+MoorsledeBeWv,Moorslede (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KortrijkBeWv,Kortrijk (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+MouscronBe,Mouscron (Be),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+NazarethBeOv,Nazareth (BeOv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WaregemBeWv,Waregem (BeWv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+OoikeBeOv,Ooike (BeOv),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+HumbeekBeBr,Humbeek (BeBr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+MeerbeekBeBr,Meerbeek (BeBr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+WalshoutemBeBr,Walshoutem (BeBr),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+ZutendaalBeLb,Zutendaal (BeLb),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+SchinnenLb,Schinnen (Lb),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BilzenBeLb,Bilzen (BeLb),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+KerkradeLb,Kerkrade (Lb),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BrouckerqueFrVl,Brouckerque (FrVl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+BollezeeleFrVl,Bollezeele (FrVl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+NieurletFrVl,Nieurlet (FrVl),dutc1256,Dutch,nld,Eurasia,,,Indo-European,Dutch,MAND
+AmericanEnglish,American English,,,,,,,,Germanic,Heggarty2007
+CanadianEnglish,Canadian English,,,,,,,,Germanic,Heggarty2007
+CentralGermanCologne,Central German (Cologne),,,,,,,,Germanic,Heggarty2007
+CentralGermanHonigberg,Central German (Honigberg),,,,,,,,Germanic,Heggarty2007
+CentralGermanLuxembourg,Central German (Luxembourg),,,,,,,,Germanic,Heggarty2007
+CentralGermanMurrhardt,Central German (Murrhardt),,,,,,,,Germanic,Heggarty2007
+Danish,Danish,,,,,,,,Germanic,Heggarty2007
+DutchAntwerp,Dutch (Antwerp),,,,,,,,Germanic,Heggarty2007
+BelgianDutch,Belgian Dutch,,,,,,,,Germanic,Heggarty2007
+DutchLimburg,Dutch (Limburg),,,,,,,,Germanic,Heggarty2007
+DutchOstend,Dutch (Ostend),,,,,,,,Germanic,Heggarty2007
+Dutch,Dutch,,,,,,,,Germanic,Heggarty2007
+NewZealandEnglishAuckland,New Zealand English (Auckland),,,,,,,,Germanic,Heggarty2007
+EnglishBuckie,English (Buckie),,,,,,,,Germanic,Heggarty2007
+IndianEnglishDelhi,Indian English (Delhi),,,,,,,,Germanic,Heggarty2007
+NigerianEnglishIgbo,Nigerian English (Igbo),,,,,,,,Germanic,Heggarty2007
+SouthAfricanEnglishJohannisburg,South African English (Johannisburg),,,,,,,,Germanic,Heggarty2007
+EnglishLindisfarne,English (Lindisfarne),,,,,,,,Germanic,Heggarty2007
+EnglishLiverpool,English (Liverpool,,,,,,,,Germanic,Heggarty2007
+EnglishLondon,English (London,,,,,,,,Germanic,Heggarty2007
+EnglishNorthCarolina,English (North Carolina),,,,,,,,Germanic,Heggarty2007
+AustralianEnglishPerth,Australian English (Perth),,,,,,,,Germanic,Heggarty2007
+EnglishSingapore,English (Singapore),,,,,,,,Germanic,Heggarty2007
+English,English,,,,,,,,Germanic,Heggarty2007
+EnglishTyrone,English (Tyrone),,,,,,,,Germanic,Heggarty2007
+Faroese,Faroese,,,,,,,,Germanic,Heggarty2007
+German,German,,,,,,,,Germanic,Heggarty2007
+HighGermanNorthAlsace,High German (North Alsace),,,,,,,,Germanic,Heggarty2007
+HighGermanBiel,High German (Biel),,,,,,,,Germanic,Heggarty2007
+HighGermanBodensee,High German (Bodensee),,,,,,,,Germanic,Heggarty2007
+HighGermanGraubuenden,High German (Graubuenden),,,,,,,,Germanic,Heggarty2007
+HighGermanHerrlisheim,High German (Herrlisheim),,,,,,,,Germanic,Heggarty2007
+HighGermanOrtisei,High German (Ortisei),,,,,,,,Germanic,Heggarty2007
+HighGermanTuebingen,High German (Tuebingen),,,,,,,,Germanic,Heggarty2007
+HighGermanWalser,High German (Walser),,,,,,,,Germanic,Heggarty2007
+Icelandic,Icelandic,,,,,,,,Germanic,Heggarty2007
+LowGermanAchterhoek,Low German (Achterhoek),,,,,,,,Germanic,Heggarty2007
+LowGermanBargstedt,Low German (Bargstedt),,,,,,,,Germanic,Heggarty2007
+NorwegianStavanger,Norwegian (Stavanger),,,,,,,,Germanic,Heggarty2007
+Scottish,Scottish,,,,,,,,Germanic,Heggarty2007
+SwedishSkane,Swedish (Skane),,,,,,,,Germanic,Heggarty2007
+SwedishStockholm,Swedish (Stockholm),,,,,,,,Germanic,Heggarty2007
+WestFrisianGrou,West Frisian (Grou),,,,,,,,Germanic,Heggarty2007
+YiddishNewYork,Yiddish (New York),,,,,,,,Germanic,Heggarty2007
+ProtoGermanic,Proto-Germanic,,,,,,,,Germanic,Heggarty2007
+Miyako,Miyako,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Tokyo,Tokyo,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Amami,Amami,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Kyoto,Kyoto,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Hachijo,Hachijō,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Shuri,Shuri,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Kochi,Kōchi,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Sado,Sado,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Oki,Oki,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Kagoshima,Kagoshima,nucl1643,Japanese,jpn,Eurasia,,,Japonic,Japanese,Hattori1973
+Assery,Asserøy,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Bjrnevatn,Bjørnevatn,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Borre,Borre,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Brekke,Brekke,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Bryne,Bryne,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Brnnysund,Brønnøysund,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Bygstad,Bygstad,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+B,Bø,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Dokka,Dokka,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Dovre,Dovre,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Eggesbneset,Eggesbøneset,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Elnesvagen,Elnesvågen,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Fagerhaug,Fagerhaug,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Flate,Flåte,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+FoldvikBrunlanes,"Foldvik, Brunlanes",norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Fyllingsdalen,Fyllingsdalen,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Fyresdal,Fyresdal,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Gjra,Gjøra,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Hafrsfjord,Hafrsfjord,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Halden,Halden,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Hisy,Hisøy,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Hundvag,Hundvåg,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Kaldfarnes,Kaldfarnes,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Kristiansand,Kristiansand,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+KrogtoftBorge,"Krogtoft, Borge",norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Russland,Russland,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Lillehammer,Lillehammer,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Lomnes,Lomnes,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Mandal,Mandal,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Molde,Molde,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Mrkved,Mørkved,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+NaasEide,"Naas, Eide",norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Nordstrand,Nordstrand,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Orkanger,Orkanger,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+RaundalenFagnastl,"Raundalen, Fagnastøl",norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Sandnessjen,Sandnessjøen,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Selfors,Selfors,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Sortland,Sortland,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Stange,Stange,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Stanghelle,Stanghelle,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Stjrdal,Stjørdal,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Stjrdalshalsen,Stjørdalshalsen,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Sta,Støa,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Stre,Sætre,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Srkjosen,Sørkjosen,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Tjtta,Tjøtta,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Troms,Tromsø,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Trondheim,Trondheim,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Tynsetsentrum,Tynset sentrum,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+Undheim,Undheim,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+ra,Øra,norw1258,Norwegian,nor,Eurasia,,,Indo-European,Norwegian,Almberg2011
+NorthMansi,North Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+MiddleLozvaMansi,Middle Lozva Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+LowerLozvaMansi,Lower Lozva Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+KondaMansi,Konda Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+TavdaMansi,Tavda Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+UpperDemjankaKhanti,Upper Demjanka Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+KondaKhanti,Konda Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+NizjamKhanti,Nizjam Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+SherkaliKhanti,Sherkali Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+VakhKhanti,Vakh Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+VerkhneKalimskKhanti,Verkhne Kalimsk Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+VasjuganKhanti,Vasjugan Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+VartovskojeKhanti,Vartovskoje Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+LikrisovskojeKhanti,Likrisovskoje Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+MalyjJuganKhanti,Malyj Jugan Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+TremjuganKhanti,Tremjugan Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+JuganKhanti,Jugan Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+KazimKhanti,Kazim Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+SinjaKhanti,Sinja Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+ObdorskKhanti,Obdorsk Khanti,,,,,,,,Ob-Ugrian,Zhivlov2011
+PelimkaMansi,Pelimka Mansi,,,,,,,,Ob-Ugrian,Zhivlov2011
+Italian,Italian,,,,,,,,Romance,Heggarty2007
+French,French,,,,,,,,Romance,Heggarty2007
+Occitan,Occitan,,,,,,,,Romance,Heggarty2007
+Ligurian,Ligurian,,,,,,,,Romance,Heggarty2007
+LombardWest,Lombard (West),,,,,,,,Romance,Heggarty2007
+LombardEast,Lombard (East),,,,,,,,Romance,Heggarty2007
+Ladino,Ladino,,,,,,,,Romance,Heggarty2007
+Venetian,Venetian,,,,,,,,Romance,Heggarty2007
+Beijing,Běijīng,beij1234,Beijing Mandarin,,Eurasia,39.9385466,116.1172766,Sino-Tibetan,Sinitic,Hou2004
+Changsha,Chángshà,chan1326,Changsha,,Eurasia,28.85032,112.943344,Sino-Tibetan,Sinitic,Hou2004
+Chengdu,Chéngdū,chen1267,Chengdu Mandarin,,Eurasia,30.605768,103.970947,Sino-Tibetan,Sinitic,Hou2004
+Fuzhou,Fùzhōu,fuzh1239,Houguan,,Eurasia,26.08904,119.294243,Sino-Tibetan,Sinitic,Hou2004
+Guangzhou,Guǎngzhōu,guan1279,Guangzhou,,Eurasia,23.1253503,112.9476548,Sino-Tibetan,Sinitic,Hou2004
+Guiyang,Guìyáng,guiy1235,Guiyang,,,26.71691,106.638336,Hmong-Mien,Sinitic,Hou2004
+Haikou,Hǎikǒu,haer1234,Ha'erbin Mandarin,,Eurasia,45.846595,126.551056,Sino-Tibetan,Sinitic,Hou2004
+Hangzhou,Hángzhōu,hain1237,Fucheng,,Eurasia,20.043869,110.329399,Sino-Tibetan,Sinitic,Hou2004
+Harbin,Hǎrbīn,hang1257,Hangzhou,,Eurasia,30.261316,120.0318057,Sino-Tibetan,Sinitic,Hou2004
+Hefei,Héfēi,hefe1234,Hefei Mandarin,,Eurasia,31.873593,117.223663,Sino-Tibetan,Sinitic,Hou2004
+Hohhot,Hohhot,huhe1234,Huhehaote,,Eurasia,40.855526,111.743889,Sino-Tibetan,Sinitic,Hou2004
+Jianou,Jian'ou,jian1240,Jian'ou,,Eurasia,27.04237,118.307419,Sino-Tibetan,Sinitic,Hou2004
+Jinan,Jìnán,jina1245,Jinan Mandarin,,Eurasia,36.690777,116.997299,Sino-Tibetan,Sinitic,Hou2004
+Kunming,Kùnmíng,kunm1234,Kunming Chinese,,Eurasia,25.049711,102.72274,Sino-Tibetan,Sinitic,Hou2004
+Lanzhou,Lánzhōu,lanz1234,Lanzhou Mandarin,,Eurasia,36.080515,103.838425,Sino-Tibetan,Sinitic,Hou2004
+Meixian,Měixiàn,yuet1238,Meixian,,Eurasia,24.3522958,115.8903375,Sino-Tibetan,Sinitic,Hou2004
+Nanchang,Nánchàng,nanc1254,Nanchang,,Eurasia,28.706609,115.857468,Sino-Tibetan,Sinitic,Hou2004
+Nanjing,Nánjīng,nanj1234,Nanjing Mandarin,,Eurasia,32.0989607,118.4575646,Sino-Tibetan,Sinitic,Hou2004
+Nanning,Nánníng,nann1239,Nanning Pinghua,,Eurasia,22.848716,108.366165,Sino-Tibetan,Sinitic,Hou2004
+Pingyao,Pingyao,ping1247,Pingyao,,Eurasia,37.1390706,111.9656111,Sino-Tibetan,Sinitic,Hou2004
+Qingdao,Qingdao,qing1240,Qingdao Mandarin,,Eurasia,36.089393,120.379715,Sino-Tibetan,Sinitic,Hou2004
+Shanghai,Shànghǎi,shan1293,Shanghainese,,Eurasia,31.222902,121.475372,Sino-Tibetan,Sinitic,Hou2004
+Shantou,Shāntóu,shan1244,Shantou,,Eurasia,23.3372419,116.6068173,Sino-Tibetan,Sinitic,Hou2004
+Shexian,Shèxiàn,shex1234,Shexian,,Eurasia,30.589829,118.428268,Sino-Tibetan,Sinitic,Hou2004
+Suzhou,Sùzhōu,suzh1234,Suzhou,,Eurasia,31.3280439,120.364116,Sino-Tibetan,Sinitic,Hou2004
+Taibei,Táiběi,taib1242,Taibei Hokkien,,Eurasia,25.0853403,121.4231642,Sino-Tibetan,Sinitic,Hou2004
+Taiyuan,Tàiyuán,taiy1243,Taiyuan,,Eurasia,37.8632119,112.4024883,Sino-Tibetan,Sinitic,Hou2004
+Taoyuan,Táoyuán,taoy1234,Taoyuan-Miaoli,,Eurasia,24.854549,120.9520006,Sino-Tibetan,Sinitic,Hou2004
+Tianjin,Tiānjìn,tian1238,Tianjin Mandarin,,Eurasia,39.186072,117.215424,Sino-Tibetan,Sinitic,Hou2004
+Tunxi,Tūnxī,tunx1234,Tunxi,,Eurasia,29.7201616,118.2294365,Sino-Tibetan,Sinitic,Hou2004
+Urumqi,Ürümqi,ouji1238,Wenzhou,,Eurasia,28.005496,120.701179,Sino-Tibetan,Sinitic,Hou2004
+Wenzhou,Wénzhōu,wuha1234,Wuhan Mandarin,,Eurasia,30.624086,114.305649,Sino-Tibetan,Sinitic,Hou2004
+Wuhan,Wǔhàn,wulu1243,Wulumuqi Mandarin,,Eurasia,43.8216271,87.4226688,Sino-Tibetan,Sinitic,Hou2004
+Xiamen,Xiàmén,xian1253,Xi'an Mandarin,,Eurasia,34.228154,108.960571,Sino-Tibetan,Sinitic,Hou2004
+Xian,Xi'an,xiam1236,Xiamen,,Eurasia,24.49421,118.08918,Sino-Tibetan,Sinitic,Hou2004
+Xianggang,Xiānggǎng,xian1255,Hong Kong,,Eurasia,22.422645,114.098396,Sino-Tibetan,Sinitic,Hou2004
+Xiangtan,Xiāngtàn,xian1254,Xiangtan,,Eurasia,27.8482649,112.7688127,Sino-Tibetan,Sinitic,Hou2004
+Xining,Xīníng,xini1234,Xining Mandarin,,Eurasia,36.671283,101.776886,Sino-Tibetan,Sinitic,Hou2004
+Yinchuan,Yīnchuàn,yinc1239,Yinchuan Mandarin,,Eurasia,38.546662,106.240082,Sino-Tibetan,Sinitic,Hou2004
+Zhengzhou,Zhèngzhōu,zhen1241,Zhengzhou Mandarin,,Eurasia,34.807715,113.639374,Sino-Tibetan,Sinitic,Hou2004
+Bulgarian,Bulgarian,bulg1262,Bulgarian,bul,Eurasia,,,Indo-European,Slavic,Derksen2008
+Czech,Czech,czec1258,Czech,ces,Eurasia,,,Indo-European,Slavic,Derksen2008
+Russian,Russian,russ1263,Russian,rus,Eurasia,,,Indo-European,Slavic,Derksen2008
+Polish,Polish,poli1260,Polish,pol,Eurasia,,,Indo-European,Slavic,Derksen2008
+Serbian,Serbian,sout1528,Serbian-Croatian-Bosnian,hbs,Eurasia,,,Indo-European,Slavic,Derksen2008
+Arconciel,Arconciel,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Arnex,Arnex,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+AvrysurMatran,Avry-sur-Matran,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Ayent,Ayent,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Boudry,Boudry,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Cerlatez,Cerlatez,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+CerneuxPequignot,Cerneux-Péquignot,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Champery,Champéry,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Charnex,Charnex,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+ChateaudOex,Château-d'Oex,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+ChauxduMilieu,Chaux-du-Milieu,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Chevroux,Chevroux,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Collex,Collex,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Collombey,Collombey,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Commugny,Commugny,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Conthey,Conthey,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Corcelles,Corcelles,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+CoteauxFees,Côte-aux-Fées,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Court,Court,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Courtedoux,Courtedoux,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Courtepin,Courtepin,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Develier,Develier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Dompierre,Dompierre,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Evolene,Évolène,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Fully,Fully,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Grimentz,Grimentz,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Grone,Grône,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Hermance,Hermance,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Laconnex,Laconnex,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Lamboing,Lamboing,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Landeron,Landeron,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+LAuberson,L'Auberson,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+LeSentier,Le Sentier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Longirod,Longirod,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Lourtier,Lourtier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Martigny,Martigny,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Miege,Miège,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Montalchez,Montalchez,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Montbovon,Montbovon,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Montpreveyres,Montpreveyres,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Murist,Murist,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Nendaz,Nendaz,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Noiraigue,Noiraigue,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+OrmontDessus,Ormont-Dessus,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Orsieres,Orsières,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Orvin,Orvin,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Plagne,Plagne,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Prahins,Prahins,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Roche,Roche,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Savagnier,Savagnier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Saviese,Savièse,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Semsalves,Semsalves,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Sombeval,Sombeval,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+StGingolph,St-Gingolph,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Sugiez,Sugiez,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Vallorbe,Vallorbe,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Vaugondry,Vaugondry,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Vermes,Vermes,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Vernier,Vernier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Veyrier,Veyrier,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+VillarsleTerroir,Villars-le-Terroir,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925
+Vullierens,Vullierens,stan1290,French,fra,Eurasia,,,Indo-European,French,Gauchat1925

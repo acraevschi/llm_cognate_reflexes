@@ -1,0 +1,514 @@
+ID,Local_ID,Language_ID,Parameter_ID,Value,Form,Segments,Comment,Source,Cognacy,Loan,Graphemes,Profile
+tashatujia-42_i-1,,tashatujia,42_i,ŋa24,ŋ.a.²⁴,ŋ a ²⁴,,Starostin2013,,False,^ ŋ . a . ²⁴$,default
+duogutujia-42_i-1,,duogutujia,42_i,ŋa24,ŋ.a.²⁴,ŋ a ²⁴,,Starostin2013,,False,^ ŋ . a . ²⁴$,default
+dianfangtujia-42_i-1,,dianfangtujia,42_i,ŋa35,ŋ.a.³⁵,ŋ a ³⁵,,Starostin2013,,False,^ ŋ . a . ³⁵$,default
+boluotujia-42_i-1,,boluotujia,42_i,ŋo33,ŋ.o.³³,ŋ o ³³,,Starostin2013,,False,^ ŋ . o . ³³$,default
+tanxitujia-42_i-1,,tanxitujia,42_i,ŋo33,ŋ.o.³³,ŋ o ³³,,Starostin2013,,False,^ ŋ . o . ³³$,default
+tashatujia-1_all-1,,tashatujia,1_all,xu24-ni55,x.u.²⁴.n.i.⁵⁵,x u ²⁴ + n i ⁵⁵,,Starostin2013,,False,^ x . u . ²⁴ . n . i . ⁵⁵$,default
+duogutujia-1_all-1,,duogutujia,1_all,xu24-ni44,x.u.²⁴.n.i.⁴⁴,x u ²⁴ + n i ⁴⁴,,Starostin2013,,False,^ x . u . ²⁴ . n . i . ⁴⁴$,default
+dianfangtujia-1_all-1,,dianfangtujia,1_all,xu35-ni55,x.u.³⁵.n.i.⁵⁵,x u ³⁵ + n i ⁵⁵,,Starostin2013,,False,^ x . u . ³⁵ . n . i . ⁵⁵$,default
+boluotujia-1_all-1,,boluotujia,1_all,bu13=li53,b.u.¹³.l.i.⁵³,b u ¹³ + l i ⁵³,,Starostin2013,,False,^ b . u . ¹³ . l . i . ⁵³$,default
+tanxitujia-1_all-1,,tanxitujia,1_all,bu13,b.u.¹³,b u ¹³,,Starostin2013,,False,^ b . u . ¹³$,default
+tashatujia-2_ashes-1,,tashatujia,2_ashes,pu21=ɕʰi24,p.u.²¹.tɕʰ.i.²⁴,p u ²¹ + tɕʰ i ²⁴,,Starostin2013,,False,^ p . u . ²¹ . tɕʰ . i . ²⁴$,default
+duogutujia-2_ashes-1,,duogutujia,2_ashes,pu21=cʰi53,p.u.²¹.tsʰ.i.⁵³,p u ²¹ + tsʰ i ⁵³,,Starostin2013,,False,^ p . u . ²¹ . tsʰ . i . ⁵³$,default
+dianfangtujia-2_ashes-1,,dianfangtujia,2_ashes,pu21=cʰi35,p.u.²¹.tsʰ.i.³⁵,p u ²¹ + tsʰ i ³⁵,,Starostin2013,,False,^ p . u . ²¹ . tsʰ . i . ³⁵$,default
+boluotujia-2_ashes-1,,boluotujia,2_ashes,mu21=cʰi53,m.u.²¹.tsʰ.i.⁵³,m u ²¹ + tsʰ i ⁵³,,Starostin2013,,False,^ m . u . ²¹ . tsʰ . i . ⁵³$,default
+tanxitujia-2_ashes-1,,tanxitujia,2_ashes,mu13=cʰi55,m.u.¹³.tsʰ.i.⁵⁵,m u ¹³ + tsʰ i ⁵⁵,,Starostin2013,,False,^ m . u . ¹³ . tsʰ . i . ⁵⁵$,default
+tashatujia-3_bark-1,,tashatujia,3_bark,kʰa21=tʰa24-pʰa21,kʰ.a.²¹.tʰ.a.²⁴.pʰ.a.²¹,kʰ a ²¹ + tʰ a ²⁴ + pʰ a ²¹,,Starostin2013,,False,^ kʰ . a . ²¹ . tʰ . a . ²⁴ . pʰ . a . ²¹$,default
+tashatujia-4_belly-1,,tashatujia,4_belly,mɤ21-cʰi21-kʰɤ55,m.ɤ.²¹.tsʰ.i.²¹.kʰ.ɤ.⁵⁵,m ɤ ²¹ + tsʰ i ²¹ + kʰ ɤ ⁵⁵,,Starostin2013,,False,^ m . ɤ . ²¹ . tsʰ . i . ²¹ . kʰ . ɤ . ⁵⁵$,default
+duogutujia-4_belly-1,,duogutujia,4_belly,mɨe21,m.ɨ.e.²¹,m ɨ e ²¹,,Starostin2013,,False,^ m . ɨ . e . ²¹$,default
+dianfangtujia-4_belly-1,,dianfangtujia,4_belly,mɨe21,m.ɨ.e.²¹,m ɨ e ²¹,,Starostin2013,,False,^ m . ɨ . e . ²¹$,default
+boluotujia-4_belly-1,,boluotujia,4_belly,mɨe21-ɕi53,m.ɨ.e.²¹.tɕ.i.⁵³,m ɨ e ²¹ + tɕ i ⁵³,,Starostin2013,,False,^ m . ɨ . e . ²¹ . tɕ . i . ⁵³$,default
+tanxitujia-4_belly-1,,tanxitujia,4_belly,mɨe13-ɕi55,m.ɨ.e.¹³.tɕ.i.⁵⁵,m ɨ e ¹³ + tɕ i ⁵⁵,,Starostin2013,,False,^ m . ɨ . e . ¹³ . tɕ . i . ⁵⁵$,default
+tashatujia-5_big-1,,tashatujia,5_big,cʰi21,tsʰ.i.²¹,tsʰ i ²¹,,Starostin2013,,False,^ tsʰ . i . ²¹$,default
+duogutujia-5_big-1,,duogutujia,5_big,cʰi53,tsʰ.i.⁵³,tsʰ i ⁵³,,Starostin2013,,False,^ tsʰ . i . ⁵³$,default
+dianfangtujia-5_big-1,,dianfangtujia,5_big,cʰi55,tsʰ.i.⁵⁵,tsʰ i ⁵⁵,,Starostin2013,,False,^ tsʰ . i . ⁵⁵$,default
+boluotujia-5_big-1,,boluotujia,5_big,ɕʰi33,tɕʰ.i.³³,tɕʰ i ³³,,Starostin2013,,False,^ tɕʰ . i . ³³$,default
+tanxitujia-5_big-1,,tanxitujia,5_big,ɕʰi33,tɕʰ.i.³³,tɕʰ i ³³,,Starostin2013,,False,^ tɕʰ . i . ³³$,default
+tashatujia-6_bird-1,,tashatujia,6_bird,ni̯ɛ24-pi55 ~ ni24-pi55,n.j.ɛ.²⁴.p.i.⁵⁵,n j ɛ ²⁴ + p i ⁵⁵,,Starostin2013,,False,^ n . j . ɛ . ²⁴ . p . i . ⁵⁵$,default
+duogutujia-6_bird-1,,duogutujia,6_bird,nie21-pi53,n.i.e.²¹.p.i.⁵³,n i e ²¹ + p i ⁵³,,Starostin2013,,False,^ n . i . e . ²¹ . p . i . ⁵³$,default
+dianfangtujia-6_bird-1,,dianfangtujia,6_bird,ne35-pi35,n.e.³⁵.p.i.³⁵,n e ³⁵ + p i ³⁵,,Starostin2013,,False,^ n . e . ³⁵ . p . i . ³⁵$,default
+boluotujia-6_bird-1,,boluotujia,6_bird,kɨ21-co21-nũ21,k.ɨ.²¹.ts.o.²¹.n.ũ.∼.²¹,k ɨ ²¹ + ts o ²¹ + n ũ ²¹,,Starostin2013,,False,^ k . ɨ . ²¹ . ts . o . ²¹ . n . ũ . ∼ . ²¹$,default
+tanxitujia-6_bird-1,,tanxitujia,6_bird,kɨ21-co21,k.ɨ.²¹.ts.o.²¹,k ɨ ²¹ + ts o ²¹,,Starostin2013,,False,^ k . ɨ . ²¹ . ts . o . ²¹$,default
+tashatujia-7_bite-1,,tashatujia,7_bite,ka24,k.a.²⁴,k a ²⁴,,Starostin2013,,False,^ k . a . ²⁴$,default
+duogutujia-7_bite-1,,duogutujia,7_bite,ka24,k.a.²⁴,k a ²⁴,,Starostin2013,,False,^ k . a . ²⁴$,default
+boluotujia-7_bite-1,,boluotujia,7_bite,go13,ɡ.o.¹³,ɡ o ¹³,,Starostin2013,,False,^ ɡ . o . ¹³$,default
+tashatujia-8_black-1,,tashatujia,8_black,laŋ24-ka55,l.a.ŋ.²⁴.k.a.⁵⁵,l a ŋ ²⁴ + k a ⁵⁵,,Starostin2013,,False,^ l . a . ŋ . ²⁴ . k . a . ⁵⁵$,default
+duogutujia-8_black-1,,duogutujia,8_black,lã44-ka44-tie21,l.ã.∼.⁴⁴.k.a.⁴⁴.t.i.e.²¹,l ã ⁴⁴ + k a ⁴⁴ + t i e ²¹,,Starostin2013,,False,^ l . ã . ∼ . ⁴⁴ . k . a . ⁴⁴ . t . i . e . ²¹$,default
+dianfangtujia-8_black-1,,dianfangtujia,8_black,lã35-ka55,l.ã.∼.³⁵.k.a.⁵⁵,l ã ³⁵ + k a ⁵⁵,,Starostin2013,,False,^ l . ã . ∼ . ³⁵ . k . a . ⁵⁵$,default
+boluotujia-8_black-1,,boluotujia,8_black,no21,n.o.²¹,n o ²¹,,Starostin2013,,False,^ n . o . ²¹$,default
+tanxitujia-8_black-1,,tanxitujia,8_black,lo21,l.o.²¹,l o ²¹,,Starostin2013,,False,^ l . o . ²¹$,default
+tashatujia-9_blood-1,,tashatujia,9_blood,mi̯ɛ21,m.j.ɛ.²¹,m j ɛ ²¹,,Starostin2013,,False,^ m . j . ɛ . ²¹$,default
+duogutujia-9_blood-1,,duogutujia,9_blood,mie53,m.i.e.⁵³,m i e ⁵³,,Starostin2013,,False,^ m . i . e . ⁵³$,default
+dianfangtujia-9_blood-1,,dianfangtujia,9_blood,me55,m.e.⁵⁵,m e ⁵⁵,,Starostin2013,,False,^ m . e . ⁵⁵$,default
+boluotujia-9_blood-1,,boluotujia,9_blood,mie21-mie21,m.i.e.²¹.m.i.e.²¹,m i e ²¹ + m i e ²¹,,Starostin2013,,False,^ m . i . e . ²¹ . m . i . e . ²¹$,default
+tanxitujia-9_blood-1,,tanxitujia,9_blood,me21-me21,m.e.²¹.m.e.²¹,m e ²¹ + m e ²¹,,Starostin2013,,False,^ m . e . ²¹ . m . e . ²¹$,default
+tashatujia-10_bone-1,,tashatujia,10_bone,lu55-ka55,l.u.⁵⁵.k.a.⁵⁵,l u ⁵⁵ + k a ⁵⁵,,Starostin2013,,False,^ l . u . ⁵⁵ . k . a . ⁵⁵$,default
+duogutujia-10_bone-1,,duogutujia,10_bone,lu44-ka44,l.u.⁴⁴.k.a.⁴⁴,l u ⁴⁴ + k a ⁴⁴,,Starostin2013,,False,^ l . u . ⁴⁴ . k . a . ⁴⁴$,default
+dianfangtujia-10_bone-1,,dianfangtujia,10_bone,lu55-ka55,l.u.⁵⁵.k.a.⁵⁵,l u ⁵⁵ + k a ⁵⁵,,Starostin2013,,False,^ l . u . ⁵⁵ . k . a . ⁵⁵$,default
+boluotujia-10_bone-1,,boluotujia,10_bone,kʰa21-kʰɨe53,kʰ.a.²¹.kʰ.ɨ.e.⁵³,kʰ a ²¹ + kʰ ɨ e ⁵³,,Starostin2013,,False,^ kʰ . a . ²¹ . kʰ . ɨ . e . ⁵³$,default
+tanxitujia-10_bone-1,,tanxitujia,10_bone,kʰa21-kɨ21,kʰ.a.²¹.k.ɨ.²¹,kʰ a ²¹ + k ɨ ²¹,,Starostin2013,,False,^ kʰ . a . ²¹ . k . ɨ . ²¹$,default
+tashatujia-11_breast-1,,tashatujia,11_breast,li55=ku̯ɔ55-cʰɔŋ55,l.i.⁵⁵.k.w.ɔ.⁵⁵.tsʰ.ɔ.ŋ.⁵⁵,l i ⁵⁵ + k w ɔ ⁵⁵ + tsʰ ɔ ŋ ⁵⁵,,Starostin2013,,False,^ l . i . ⁵⁵ . k . w . ɔ . ⁵⁵ . tsʰ . ɔ . ŋ . ⁵⁵$,default
+duogutujia-11_breast-1,,duogutujia,11_breast,ʆĩ44-tʰã21,ɕ.ĩ.∼.⁴⁴.tʰ.ã.∼.²¹,ɕ ĩ ⁴⁴ + tʰ ã ²¹,,Starostin2013,,True,^ ɕ . ĩ . ∼ . ⁴⁴ . tʰ . ã . ∼ . ²¹$,default
+dianfangtujia-11_breast-1,,dianfangtujia,11_breast,li55=kʰo55-cʰũ55,l.i.⁵⁵.kʰ.o.⁵⁵.tsʰ.ũ.∼.⁵⁵,l i ⁵⁵ + kʰ o ⁵⁵ + tsʰ ũ ⁵⁵,,Starostin2013,,False,^ l . i . ⁵⁵ . kʰ . o . ⁵⁵ . tsʰ . ũ . ∼ . ⁵⁵$,default
+boluotujia-11_breast-1,,boluotujia,11_breast,dẽ33=go13-lẽ33,d.ẽ.∼.³³.ɡ.o.¹³.l.ẽ.∼.³³,d ẽ ³³ + ɡ o ¹³ + l ẽ ³³,,Starostin2013,,False,^ d . ẽ . ∼ . ³³ . ɡ . o . ¹³ . l . ẽ . ∼ . ³³$,default
+tanxitujia-11_breast-1,,tanxitujia,11_breast,ʆiõ55-kẽ21-ʓiã21,ɕ.i.õ.∼.⁵⁵.k.ẽ.∼.²¹.dʑ.i.ã.∼.²¹,ɕ i õ ⁵⁵ + k ẽ ²¹ + dʑ i ã ²¹,,Starostin2013,,False,^ ɕ . i . õ . ∼ . ⁵⁵ . k . ẽ . ∼ . ²¹ . dʑ . i . ã . ∼ . ²¹$,default
+tashatujia-12_burntr-1,,tashatujia,12_burntr,za21,z.a.²¹,z a ²¹,,Starostin2013,,False,^ z . a . ²¹$,default
+duogutujia-12_burntr-1,,duogutujia,12_burntr,ɕiau44,tɕ.i.a.u.⁴⁴,tɕ i a u ⁴⁴,,Starostin2013,,False,^ tɕ . i . a . u . ⁴⁴$,default
+boluotujia-12_burntr-1,,boluotujia,12_burntr,ɕiaʉ33,tɕ.i.a.ʉ.³³,tɕ i a ʉ ³³,,Starostin2013,,False,^ tɕ . i . a . ʉ . ³³$,default
+tashatujia-13_clawnail-1,,tashatujia,13_clawnail,kʰu̯ɔ24-tʰa55,kʰ.w.ɔ.²⁴.tʰ.a.⁵⁵,kʰ w ɔ ²⁴ + tʰ a ⁵⁵,,Starostin2013,,False,^ kʰ . w . ɔ . ²⁴ . tʰ . a . ⁵⁵$,default
+duogutujia-13_clawnail-1,,duogutujia,13_clawnail,kʰo53-tʰa53,kʰ.o.⁵³.tʰ.a.⁵³,kʰ o ⁵³ + tʰ a ⁵³,,Starostin2013,,False,^ kʰ . o . ⁵³ . tʰ . a . ⁵³$,default
+dianfangtujia-13_clawnail-1,,dianfangtujia,13_clawnail,kʰo55-tʰa55,kʰ.o.⁵⁵.tʰ.a.⁵⁵,kʰ o ⁵⁵ + tʰ a ⁵⁵,,Starostin2013,,False,^ kʰ . o . ⁵⁵ . tʰ . a . ⁵⁵$,default
+boluotujia-13_clawnail-1,,boluotujia,13_clawnail,ʓie53=mũ21=ko21-lo21,dʑ.i.e.⁵³.m.ũ.∼.²¹.k.o.²¹.l.o.²¹,dʑ i e ⁵³ + m ũ ²¹ + k o ²¹ + l o ²¹,,Starostin2013,,False,^ dʑ . i . e . ⁵³ . m . ũ . ∼ . ²¹ . k . o . ²¹ . l . o . ²¹$,default
+tanxitujia-13_clawnail-1,,tanxitujia,13_clawnail,ʓe55=mo55=kʰo21,dʑ.e.⁵⁵.m.o.⁵⁵.kʰ.o.²¹,dʑ e ⁵⁵ + m o ⁵⁵ + kʰ o ²¹,,Starostin2013,,False,^ dʑ . e . ⁵⁵ . m . o . ⁵⁵ . kʰ . o . ²¹$,default
+tashatujia-14_cloud-1,,tashatujia,14_cloud,me24=la55-ɔŋ21,m.e.²⁴.l.a.⁵⁵.ɔ.ŋ.²¹,m e ²⁴ + l a ⁵⁵ + ɔ ŋ ²¹,,Starostin2013,,False,^ m . e . ²⁴ . l . a . ⁵⁵ . ɔ . ŋ . ²¹$,default
+dianfangtujia-14_cloud-1,,dianfangtujia,14_cloud,mɨe35=la55-ɣũ21,m.ɨ.e.³⁵.l.a.⁵⁵.ɣ.ũ.∼.²¹,m ɨ e ³⁵ + l a ⁵⁵ + ɣ ũ ²¹,,Starostin2013,,False,^ m . ɨ . e . ³⁵ . l . a . ⁵⁵ . ɣ . ũ . ∼ . ²¹$,default
+boluotujia-14_cloud-1,,boluotujia,14_cloud,yẽ21-doʉ33,j.ẽ.∼.²¹.d.o.ʉ.³³,j ẽ ²¹ + d o ʉ ³³,,Starostin2013,,True,^ j . ẽ . ∼ . ²¹ . d . o . ʉ . ³³$,default
+tanxitujia-14_cloud-1,,tanxitujia,14_cloud,yüẽ33,j.y.ẽ.∼.³³,j y ẽ ³³,,Starostin2013,,True,^ j . y . ẽ . ∼ . ³³$,default
+tashatujia-15_cold-1,,tashatujia,15_cold,sa21,s.a.²¹,s a ²¹,,Starostin2013,,False,^ s . a . ²¹$,default
+duogutujia-15_cold-1,,duogutujia,15_cold,sa53,s.a.⁵³,s a ⁵³,,Starostin2013,,False,^ s . a . ⁵³$,default
+dianfangtujia-15_cold-1,,dianfangtujia,15_cold,sa55,s.a.⁵⁵,s a ⁵⁵,,Starostin2013,,False,^ s . a . ⁵⁵$,default
+boluotujia-15_cold-1,,boluotujia,15_cold,si21-ʒa21,s.i.²¹.dz.a.²¹,s i ²¹ + dz a ²¹,,Starostin2013,,False,^ s . i . ²¹ . dz . a . ²¹$,default
+tanxitujia-15_cold-1,,tanxitujia,15_cold,si21-ʒa13,s.i.²¹.dz.a.¹³,s i ²¹ + dz a ¹³,,Starostin2013,,False,^ s . i . ²¹ . dz . a . ¹³$,default
+tashatujia-16_come-1,,tashatujia,16_come,ɤŋ21-ɕi̯u21,ɤ.ŋ.²¹.tɕ.j.u.²¹,ɤ ŋ ²¹ + tɕ j u ²¹,,Starostin2013,,False,^ ɤ . ŋ . ²¹ . tɕ . j . u . ²¹$,default
+duogutujia-16_come-1,,duogutujia,16_come,ẽ21-ci21,ẽ.∼.²¹.ts.i.²¹,ẽ ²¹ + ts i ²¹,,Starostin2013,,False,^ ẽ . ∼ . ²¹ . ts . i . ²¹$,default
+dianfangtujia-16_come-1,,dianfangtujia,16_come,ẽ21-ci21 ~ ẽ21-ɕʰe35,ẽ.∼.²¹.ts.i.²¹,ẽ ²¹ + ts i ²¹,,Starostin2013,,False,^ ẽ . ∼ . ²¹ . ts . i . ²¹$,default
+boluotujia-16_come-1,,boluotujia,16_come,ɣɨ21-dɨ53,ɣ.ɨ.²¹.d.ɨ.⁵³,ɣ ɨ ²¹ + d ɨ ⁵³,,Starostin2013,,False,^ ɣ . ɨ . ²¹ . d . ɨ . ⁵³$,default
+tanxitujia-16_come-1,,tanxitujia,16_come,ʔɨ13-dɨ55,ʔ.ɨ.¹³.d.ɨ.⁵⁵,ʔ ɨ ¹³ + d ɨ ⁵⁵,,Starostin2013,,False,^ ʔ . ɨ . ¹³ . d . ɨ . ⁵⁵$,default
+tashatujia-17_die-1,,tashatujia,17_die,sɤ24,s.ɤ.²⁴,s ɤ ²⁴,,Starostin2013,,False,^ s . ɤ . ²⁴$,default
+duogutujia-17_die-1,,duogutujia,17_die,se24,s.e.²⁴,s e ²⁴,,Starostin2013,,False,^ s . e . ²⁴$,default
+dianfangtujia-17_die-1,,dianfangtujia,17_die,se35,s.e.³⁵,s e ³⁵,,Starostin2013,,False,^ s . e . ³⁵$,default
+boluotujia-17_die-1,,boluotujia,17_die,se21,s.e.²¹,s e ²¹,,Starostin2013,,False,^ s . e . ²¹$,default
+tanxitujia-17_die-1,,tanxitujia,17_die,se21,s.e.²¹,s e ²¹,,Starostin2013,,False,^ s . e . ²¹$,default
+tashatujia-18_dog-1,,tashatujia,18_dog,xa21-li̯ɛ21,x.a.²¹.l.j.ɛ.²¹,x a ²¹ + l j ɛ ²¹,,Starostin2013,,False,^ x . a . ²¹ . l . j . ɛ . ²¹$,default
+duogutujia-18_dog-1,,duogutujia,18_dog,xa53-lie21,x.a.⁵³.l.i.e.²¹,x a ⁵³ + l i e ²¹,,Starostin2013,,False,^ x . a . ⁵³ . l . i . e . ²¹$,default
+dianfangtujia-18_dog-1,,dianfangtujia,18_dog,xa55-le21,x.a.⁵⁵.l.e.²¹,x a ⁵⁵ + l e ²¹,,Starostin2013,,False,^ x . a . ⁵⁵ . l . e . ²¹$,default
+boluotujia-18_dog-1,,boluotujia,18_dog,cʰe53,tsʰ.e.⁵³,tsʰ e ⁵³,,Starostin2013,,False,^ tsʰ . e . ⁵³$,default
+tanxitujia-18_dog-1,,tanxitujia,18_dog,cʰe55,tsʰ.e.⁵⁵,tsʰ e ⁵⁵,,Starostin2013,,False,^ tsʰ . e . ⁵⁵$,default
+tashatujia-19_drink-1,,tashatujia,19_drink,xu21,x.u.²¹,x u ²¹,,Starostin2013,,False,^ x . u . ²¹$,default
+duogutujia-19_drink-1,,duogutujia,19_drink,xu21,x.u.²¹,x u ²¹,,Starostin2013,,False,^ x . u . ²¹$,default
+dianfangtujia-19_drink-1,,dianfangtujia,19_drink,xu21,x.u.²¹,x u ²¹,,Starostin2013,,False,^ x . u . ²¹$,default
+boluotujia-19_drink-1,,boluotujia,19_drink,ʒoʉ33,dz.o.ʉ.³³,dz o ʉ ³³,,Starostin2013,,False,^ dz . o . ʉ . ³³$,default
+tanxitujia-19_drink-1,,tanxitujia,19_drink,ʒʉ33,dz.ʉ.³³,dz ʉ ³³,,Starostin2013,,False,^ dz . ʉ . ³³$,default
+tashatujia-20_dry-1,,tashatujia,20_dry,ka21,k.a.²¹,k a ²¹,,Starostin2013,,False,^ k . a . ²¹$,default
+duogutujia-20_dry-1,,duogutujia,20_dry,a53=ka21,a.⁵³.k.a.²¹,a ⁵³ + k a ²¹,,Starostin2013,,False,^ a . ⁵³ . k . a . ²¹$,default
+dianfangtujia-20_dry-1,,dianfangtujia,20_dry,ka21 ~ a55=ka21,k.a.²¹,k a ²¹,,Starostin2013,,False,^ k . a . ²¹$,default
+boluotujia-20_dry-1,,boluotujia,20_dry,go13,ɡ.o.¹³,ɡ o ¹³,,Starostin2013,,False,^ ɡ . o . ¹³$,default
+tanxitujia-20_dry-1,,tanxitujia,20_dry,go55,ɡ.o.⁵⁵,ɡ o ⁵⁵,,Starostin2013,,False,^ ɡ . o . ⁵⁵$,default
+tashatujia-21_ear-1,,tashatujia,21_ear,ɤŋ21-ɕʰi̯ɛ24,ɤ.ŋ.²¹.tɕʰ.j.ɛ.²⁴,ɤ ŋ ²¹ + tɕʰ j ɛ ²⁴,,Starostin2013,,False,^ ɤ . ŋ . ²¹ . tɕʰ . j . ɛ . ²⁴$,default
+duogutujia-21_ear-1,,duogutujia,21_ear,ũ21-ɕʰie44,ũ.∼.²¹.tɕʰ.i.e.⁴⁴,ũ ²¹ + tɕʰ i e ⁴⁴,,Starostin2013,,False,^ ũ . ∼ . ²¹ . tɕʰ . i . e . ⁴⁴$,default
+dianfangtujia-21_ear-1,,dianfangtujia,21_ear,ẽ21-ɕʰe35 ~ ũ21-ɕʰe35,ẽ.∼.²¹.tɕʰ.e.³⁵,ẽ ²¹ + tɕʰ e ³⁵,,Starostin2013,,False,^ ẽ . ∼ . ²¹ . tɕʰ . e . ³⁵$,default
+boluotujia-21_ear-1,,boluotujia,21_ear,ca21-po53,ts.a.²¹.p.o.⁵³,ts a ²¹ + p o ⁵³,,Starostin2013,,False,^ ts . a . ²¹ . p . o . ⁵³$,default
+tanxitujia-21_ear-1,,tanxitujia,21_ear,cã21-pʉ55,ts.ã.∼.²¹.p.ʉ.⁵⁵,ts ã ²¹ + p ʉ ⁵⁵,,Starostin2013,,False,^ ts . ã . ∼ . ²¹ . p . ʉ . ⁵⁵$,default
+tashatujia-22_earth-1,,tashatujia,22_earth,zu̯ɔ21,z.w.ɔ.²¹,z w ɔ ²¹,,Starostin2013,,False,^ z . w . ɔ . ²¹$,default
+duogutujia-22_earth-1,,duogutujia,22_earth,zo53,z.o.⁵³,z o ⁵³,,Starostin2013,,False,^ z . o . ⁵³$,default
+dianfangtujia-22_earth-1,,dianfangtujia,22_earth,zo55,z.o.⁵⁵,z o ⁵⁵,,Starostin2013,,False,^ z . o . ⁵⁵$,default
+boluotujia-22_earth-1,,boluotujia,22_earth,za53,z.a.⁵³,z a ⁵³,,Starostin2013,,False,^ z . a . ⁵³$,default
+tanxitujia-22_earth-1,,tanxitujia,22_earth,za55,z.a.⁵⁵,z a ⁵⁵,,Starostin2013,,False,^ z . a . ⁵⁵$,default
+tashatujia-23_eat-1,,tashatujia,23_eat,ka24,k.a.²⁴,k a ²⁴,,Starostin2013,,False,^ k . a . ²⁴$,default
+duogutujia-23_eat-1,,duogutujia,23_eat,ka24,k.a.²⁴,k a ²⁴,,Starostin2013,,False,^ k . a . ²⁴$,default
+dianfangtujia-23_eat-1,,dianfangtujia,23_eat,ka35,k.a.³⁵,k a ³⁵,,Starostin2013,,False,^ k . a . ³⁵$,default
+boluotujia-23_eat-1,,boluotujia,23_eat,ɣɨe13,ɣ.ɨ.e.¹³,ɣ ɨ e ¹³,,Starostin2013,,False,^ ɣ . ɨ . e . ¹³$,default
+tanxitujia-23_eat-1,,tanxitujia,23_eat,ɣɨe35,ɣ.ɨ.e.³⁵,ɣ ɨ e ³⁵,,Starostin2013,,False,^ ɣ . ɨ . e . ³⁵$,default
+tashatujia-24_egg-1,,tashatujia,24_egg,a55=li̯ɛ55,a.⁵⁵.l.j.ɛ.⁵⁵,a ⁵⁵ + l j ɛ ⁵⁵,,Starostin2013,,False,^ a . ⁵⁵ . l . j . ɛ . ⁵⁵$,default
+dianfangtujia-24_egg-1,,dianfangtujia,24_egg,a55=le55,a.⁵⁵.l.e.⁵⁵,a ⁵⁵ + l e ⁵⁵,,Starostin2013,,False,^ a . ⁵⁵ . l . e . ⁵⁵$,default
+boluotujia-24_egg-1,,boluotujia,24_egg,si21=ŋɨe21=a13=lɨe53,s.i.²¹.ŋ.ɨ.e.²¹.a.¹³.l.ɨ.e.⁵³,s i ²¹ + ŋ ɨ e ²¹ + a ¹³ + l ɨ e ⁵³,,Starostin2013,,False,^ s . i . ²¹ . ŋ . ɨ . e . ²¹ . a . ¹³ . l . ɨ . e . ⁵³$,default
+tanxitujia-24_egg-1,,tanxitujia,24_egg,ʔa21=le55,ʔ.a.²¹.l.e.⁵⁵,ʔ a ²¹ + l e ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . l . e . ⁵⁵$,default
+tashatujia-25_eye-1,,tashatujia,25_eye,lu̯ɔ24-pu55,l.w.ɔ.²⁴.p.u.⁵⁵,l w ɔ ²⁴ + p u ⁵⁵,,Starostin2013,,False,^ l . w . ɔ . ²⁴ . p . u . ⁵⁵$,default
+duogutujia-25_eye-1,,duogutujia,25_eye,lo24-pu44,l.o.²⁴.p.u.⁴⁴,l o ²⁴ + p u ⁴⁴,,Starostin2013,,False,^ l . o . ²⁴ . p . u . ⁴⁴$,default
+dianfangtujia-25_eye-1,,dianfangtujia,25_eye,lo35-pu35,l.o.³⁵.p.u.³⁵,l o ³⁵ + p u ³⁵,,Starostin2013,,False,^ l . o . ³⁵ . p . u . ³⁵$,default
+boluotujia-25_eye-1,,boluotujia,25_eye,a21=la53,a.²¹.l.a.⁵³,a ²¹ + l a ⁵³,,Starostin2013,,False,^ a . ²¹ . l . a . ⁵³$,default
+tanxitujia-25_eye-1,,tanxitujia,25_eye,ʔa21=la55,ʔ.a.²¹.l.a.⁵⁵,ʔ a ²¹ + l a ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . l . a . ⁵⁵$,default
+duogutujia-101_far-1,,duogutujia,101_far,ɣɨe21,ɣ.ɨ.e.²¹,ɣ ɨ e ²¹,,Starostin2013,,False,^ ɣ . ɨ . e . ²¹$,default
+dianfangtujia-101_far-1,,dianfangtujia,101_far,ɣɨe21,ɣ.ɨ.e.²¹,ɣ ɨ e ²¹,,Starostin2013,,False,^ ɣ . ɨ . e . ²¹$,default
+boluotujia-101_far-1,,boluotujia,101_far,ɣoʉ21=i53,ɣ.o.ʉ.²¹.i.⁵³,ɣ o ʉ ²¹ + i ⁵³,,Starostin2013,,False,^ ɣ . o . ʉ . ²¹ . i . ⁵³$,default
+tanxitujia-101_far-1,,tanxitujia,101_far,ʔʉ13=yi55,ʔ.ʉ.¹³.j.i.⁵⁵,ʔ ʉ ¹³ + j i ⁵⁵,,Starostin2013,,False,^ ʔ . ʉ . ¹³ . j . i . ⁵⁵$,default
+tashatujia-27_feather-1,,tashatujia,27_feather,si24-ka21,s.i.²⁴.k.a.²¹,s i ²⁴ + k a ²¹,,Starostin2013,,False,^ s . i . ²⁴ . k . a . ²¹$,default
+duogutujia-27_feather-1,,duogutujia,27_feather,ɕi24-ka44,tɕ.i.²⁴.k.a.⁴⁴,tɕ i ²⁴ + k a ⁴⁴,,Starostin2013,,False,^ tɕ . i . ²⁴ . k . a . ⁴⁴$,default
+boluotujia-27_feather-1,,boluotujia,27_feather,a33-so33,a.³³.s.o.³³,a ³³ + s o ³³,,Starostin2013,,False,^ a . ³³ . s . o . ³³$,default
+tashatujia-28_fire-1,,tashatujia,28_fire,mi21,m.i.²¹,m i ²¹,,Starostin2013,,False,^ m . i . ²¹$,default
+duogutujia-28_fire-1,,duogutujia,28_fire,mi53,m.i.⁵³,m i ⁵³,,Starostin2013,,False,^ m . i . ⁵³$,default
+dianfangtujia-28_fire-1,,dianfangtujia,28_fire,mi55,m.i.⁵⁵,m i ⁵⁵,,Starostin2013,,False,^ m . i . ⁵⁵$,default
+boluotujia-28_fire-1,,boluotujia,28_fire,mi53,m.i.⁵³,m i ⁵³,,Starostin2013,,False,^ m . i . ⁵³$,default
+tanxitujia-28_fire-1,,tanxitujia,28_fire,mi55,m.i.⁵⁵,m i ⁵⁵,,Starostin2013,,False,^ m . i . ⁵⁵$,default
+tashatujia-29_fish-1,,tashatujia,29_fish,sɔŋ24,s.ɔ.ŋ.²⁴,s ɔ ŋ ²⁴,,Starostin2013,,False,^ s . ɔ . ŋ . ²⁴$,default
+duogutujia-29_fish-1,,duogutujia,29_fish,sũ24,s.ũ.∼.²⁴,s ũ ²⁴,,Starostin2013,,False,^ s . ũ . ∼ . ²⁴$,default
+dianfangtujia-29_fish-1,,dianfangtujia,29_fish,sũ35,s.ũ.∼.³⁵,s ũ ³⁵,,Starostin2013,,False,^ s . ũ . ∼ . ³⁵$,default
+boluotujia-29_fish-1,,boluotujia,29_fish,si21=ŋe21 ~ si21=ŋɨy21,s.i.²¹.ŋ.e.²¹,s i ²¹ + ŋ e ²¹,,Starostin2013,,False,^ s . i . ²¹ . ŋ . e . ²¹$,default
+tanxitujia-29_fish-1,,tanxitujia,29_fish,si21=ŋɨ21,s.i.²¹.ŋ.ɨ.²¹,s i ²¹ + ŋ ɨ ²¹,,Starostin2013,,False,^ s . i . ²¹ . ŋ . ɨ . ²¹$,default
+tashatujia-30_flyv-1,,tashatujia,30_flyv,za24,z.a.²⁴,z a ²⁴,,Starostin2013,,False,^ z . a . ²⁴$,default
+duogutujia-30_flyv-1,,duogutujia,30_flyv,za53,z.a.⁵³,z a ⁵³,,Starostin2013,,False,^ z . a . ⁵³$,default
+dianfangtujia-30_flyv-1,,dianfangtujia,30_flyv,za55,z.a.⁵⁵,z a ⁵⁵,,Starostin2013,,False,^ z . a . ⁵⁵$,default
+boluotujia-30_flyv-1,,boluotujia,30_flyv,mu33-ʓi33,m.u.³³.dʑ.i.³³,m u ³³ + dʑ i ³³,,Starostin2013,,False,^ m . u . ³³ . dʑ . i . ³³$,default
+tanxitujia-30_flyv-1,,tanxitujia,30_flyv,mu33-ʒi33,m.u.³³.dz.i.³³,m u ³³ + dz i ³³,,Starostin2013,,False,^ m . u . ³³ . dz . i . ³³$,default
+tashatujia-31_foot-1,,tashatujia,31_foot,ɕi21,tɕ.i.²¹,tɕ i ²¹,,Starostin2013,,False,^ tɕ . i . ²¹$,default
+duogutujia-31_foot-1,,duogutujia,31_foot,ɕi21-pʰa21,tɕ.i.²¹.pʰ.a.²¹,tɕ i ²¹ + pʰ a ²¹,,Starostin2013,,False,^ tɕ . i . ²¹ . pʰ . a . ²¹$,default
+dianfangtujia-31_foot-1,,dianfangtujia,31_foot,ɕi21,tɕ.i.²¹,tɕ i ²¹,,Starostin2013,,False,^ tɕ . i . ²¹$,default
+boluotujia-31_foot-1,,boluotujia,31_foot,a33=ʓi13,a.³³.dʑ.i.¹³,a ³³ + dʑ i ¹³,,Starostin2013,,False,^ a . ³³ . dʑ . i . ¹³$,default
+tanxitujia-31_foot-1,,tanxitujia,31_foot,ʔa33=ʓi35,ʔ.a.³³.dʑ.i.³⁵,ʔ a ³³ + dʑ i ³⁵,,Starostin2013,,False,^ ʔ . a . ³³ . dʑ . i . ³⁵$,default
+duogutujia-32_full-1,,duogutujia,32_full,mã53,m.ã.∼.⁵³,m ã ⁵³,,Starostin2013,,False,^ m . ã . ∼ . ⁵³$,default
+dianfangtujia-32_full-1,,dianfangtujia,32_full,mã55,m.ã.∼.⁵⁵,m ã ⁵⁵,,Starostin2013,,False,^ m . ã . ∼ . ⁵⁵$,default
+boluotujia-32_full-1,,boluotujia,32_full,moʉ53,m.o.ʉ.⁵³,m o ʉ ⁵³,,Starostin2013,,False,^ m . o . ʉ . ⁵³$,default
+tanxitujia-32_full-1,,tanxitujia,32_full,mʉ33,m.ʉ.³³,m ʉ ³³,,Starostin2013,,False,^ m . ʉ . ³³$,default
+tashatujia-33_give-1,,tashatujia,33_give,li̯ɛ24,l.j.ɛ.²⁴,l j ɛ ²⁴,,Starostin2013,,False,^ l . j . ɛ . ²⁴$,default
+duogutujia-33_give-1,,duogutujia,33_give,lie24,l.i.e.²⁴,l i e ²⁴,,Starostin2013,,False,^ l . i . e . ²⁴$,default
+dianfangtujia-33_give-1,,dianfangtujia,33_give,le35,l.e.³⁵,l e ³⁵,,Starostin2013,,False,^ l . e . ³⁵$,default
+boluotujia-33_give-1,,boluotujia,33_give,lie53,l.i.e.⁵³,l i e ⁵³,,Starostin2013,,False,^ l . i . e . ⁵³$,default
+tanxitujia-33_give-1,,tanxitujia,33_give,le55,l.e.⁵⁵,l e ⁵⁵,,Starostin2013,,False,^ l . e . ⁵⁵$,default
+tashatujia-34_good-1,,tashatujia,34_good,cʰa24,tsʰ.a.²⁴,tsʰ a ²⁴,,Starostin2013,,False,^ tsʰ . a . ²⁴$,default
+duogutujia-34_good-1,,duogutujia,34_good,cʰa24,tsʰ.a.²⁴,tsʰ a ²⁴,,Starostin2013,,False,^ tsʰ . a . ²⁴$,default
+dianfangtujia-34_good-1,,dianfangtujia,34_good,cʰa35,tsʰ.a.³⁵,tsʰ a ³⁵,,Starostin2013,,False,^ tsʰ . a . ³⁵$,default
+boluotujia-34_good-1,,boluotujia,34_good,cʰo21,tsʰ.o.²¹,tsʰ o ²¹,,Starostin2013,,False,^ tsʰ . o . ²¹$,default
+tanxitujia-34_good-1,,tanxitujia,34_good,cʰo33,tsʰ.o.³³,tsʰ o ³³,,Starostin2013,,False,^ tsʰ . o . ³³$,default
+tashatujia-35_green-1,,tashatujia,35_green,ʆiŋ24-ka55,ɕ.i.ŋ.²⁴.k.a.⁵⁵,ɕ i ŋ ²⁴ + k a ⁵⁵,,Starostin2013,,False,^ ɕ . i . ŋ . ²⁴ . k . a . ⁵⁵$,default
+duogutujia-35_green-1,,duogutujia,35_green,lu21-lu21-ti44,l.u.²¹.l.u.²¹.t.i.⁴⁴,l u ²¹ + l u ²¹ + t i ⁴⁴,,Starostin2013,,False,^ l . u . ²¹ . l . u . ²¹ . t . i . ⁴⁴$,default
+dianfangtujia-35_green-1,,dianfangtujia,35_green,lu35-ka55,l.u.³⁵.k.a.⁵⁵,l u ³⁵ + k a ⁵⁵,,Starostin2013,,False,^ l . u . ³⁵ . k . a . ⁵⁵$,default
+boluotujia-35_green-1,,boluotujia,35_green,ʆi21,ɕ.i.²¹,ɕ i ²¹,,Starostin2013,,False,^ ɕ . i . ²¹$,default
+tanxitujia-35_green-1,,tanxitujia,35_green,lu21,l.u.²¹,l u ²¹,,Starostin2013,,False,^ l . u . ²¹$,default
+tashatujia-36_hair-1,,tashatujia,36_hair,sa24-ɕʰi55,s.a.²⁴.tɕʰ.i.⁵⁵,s a ²⁴ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ s . a . ²⁴ . tɕʰ . i . ⁵⁵$,default
+duogutujia-36_hair-1,,duogutujia,36_hair,sa24-ɕʰi44,s.a.²⁴.tɕʰ.i.⁴⁴,s a ²⁴ + tɕʰ i ⁴⁴,,Starostin2013,,False,^ s . a . ²⁴ . tɕʰ . i . ⁴⁴$,default
+dianfangtujia-36_hair-1,,dianfangtujia,36_hair,sa35-ɕʰi55,s.a.³⁵.tɕʰ.i.⁵⁵,s a ³⁵ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ s . a . ³⁵ . tɕʰ . i . ⁵⁵$,default
+boluotujia-36_hair-1,,boluotujia,36_hair,a21=bo53=a21=so21,a.²¹.b.o.⁵³.a.²¹.s.o.²¹,a ²¹ + b o ⁵³ + a ²¹ + s o ²¹,,Starostin2013,,False,^ a . ²¹ . b . o . ⁵³ . a . ²¹ . s . o . ²¹$,default
+tanxitujia-36_hair-1,,tanxitujia,36_hair,ʔa21=so21,ʔ.a.²¹.s.o.²¹,ʔ a ²¹ + s o ²¹,,Starostin2013,,False,^ ʔ . a . ²¹ . s . o . ²¹$,default
+tashatujia-37_hand-1,,tashatujia,37_hand,ɕi̯ɛ24,tɕ.j.ɛ.²⁴,tɕ j ɛ ²⁴,,Starostin2013,,False,^ tɕ . j . ɛ . ²⁴$,default
+duogutujia-37_hand-1,,duogutujia,37_hand,ɕie24,tɕ.i.e.²⁴,tɕ i e ²⁴,,Starostin2013,,False,^ tɕ . i . e . ²⁴$,default
+dianfangtujia-37_hand-1,,dianfangtujia,37_hand,ɕe35,tɕ.e.³⁵,tɕ e ³⁵,,Starostin2013,,False,^ tɕ . e . ³⁵$,default
+boluotujia-37_hand-1,,boluotujia,37_hand,a21=ʓie53,a.²¹.dʑ.i.e.⁵³,a ²¹ + dʑ i e ⁵³,,Starostin2013,,False,^ a . ²¹ . dʑ . i . e . ⁵³$,default
+tanxitujia-37_hand-1,,tanxitujia,37_hand,ʔa21=ʓe55,ʔ.a.²¹.dʑ.e.⁵⁵,ʔ a ²¹ + dʑ e ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . dʑ . e . ⁵⁵$,default
+tashatujia-38_head-1,,tashatujia,38_head,kʰa55-tʰa55,kʰ.a.⁵⁵.tʰ.a.⁵⁵,kʰ a ⁵⁵ + tʰ a ⁵⁵,,Starostin2013,,False,^ kʰ . a . ⁵⁵ . tʰ . a . ⁵⁵$,default
+duogutujia-38_head-1,,duogutujia,38_head,kʰo53-pa53,kʰ.o.⁵³.p.a.⁵³,kʰ o ⁵³ + p a ⁵³,,Starostin2013,,False,^ kʰ . o . ⁵³ . p . a . ⁵³$,default
+dianfangtujia-38_head-1,,dianfangtujia,38_head,kʰo55-pa55 ~ kʰo55-cʰo55,kʰ.o.⁵⁵.p.a.⁵⁵,kʰ o ⁵⁵ + p a ⁵⁵,,Starostin2013,,False,^ kʰ . o . ⁵⁵ . p . a . ⁵⁵$,default
+boluotujia-38_head-1,,boluotujia,38_head,a21=bo53-bu21,a.²¹.b.o.⁵³.b.u.²¹,a ²¹ + b o ⁵³ + b u ²¹,,Starostin2013,,False,^ a . ²¹ . b . o . ⁵³ . b . u . ²¹$,default
+tanxitujia-38_head-1,,tanxitujia,38_head,ʔa21=bo65,ʔ.a.²¹.b.o.⁵⁵,ʔ a ²¹ + b o ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . b . o . ⁵⁵$,default
+tashatujia-39_hear-1,,tashatujia,39_hear,ʆi21,ɕ.i.²¹,ɕ i ²¹,,Starostin2013,,False,^ ɕ . i . ²¹$,default
+duogutujia-39_hear-1,,duogutujia,39_hear,zu21,z.u.²¹,z u ²¹,,Starostin2013,,False,^ z . u . ²¹$,default
+dianfangtujia-39_hear-1,,dianfangtujia,39_hear,zu21,z.u.²¹,z u ²¹,,Starostin2013,,False,^ z . u . ²¹$,default
+boluotujia-39_hear-1,,boluotujia,39_hear,xo33-zi33,x.o.³³.z.i.³³,x o ³³ + z i ³³,,Starostin2013,,False,^ x . o . ³³ . z . i . ³³$,default
+tanxitujia-39_hear-1,,tanxitujia,39_hear,ħo33-zi33,ħ.o.³³.z.i.³³,ħ o ³³ + z i ³³,,Starostin2013,,False,^ ħ . o . ³³ . z . i . ³³$,default
+tashatujia-40_heart-1,,tashatujia,40_heart,li55-kʰu̯ɔ55-lu̯ɔ55,l.i.⁵⁵.kʰ.w.ɔ.⁵⁵.l.w.ɔ.⁵⁵,l i ⁵⁵ + kʰ w ɔ ⁵⁵ + l w ɔ ⁵⁵,,Starostin2013,,False,^ l . i . ⁵⁵ . kʰ . w . ɔ . ⁵⁵ . l . w . ɔ . ⁵⁵$,default
+duogutujia-40_heart-1,,duogutujia,40_heart,li53-kʰo44-lo44,l.i.⁵³.kʰ.o.⁴⁴.l.o.⁴⁴,l i ⁵³ + kʰ o ⁴⁴ + l o ⁴⁴,,Starostin2013,,False,^ l . i . ⁵³ . kʰ . o . ⁴⁴ . l . o . ⁴⁴$,default
+dianfangtujia-40_heart-1,,dianfangtujia,40_heart,li55-kʰo55-lo35,l.i.⁵⁵.kʰ.o.⁵⁵.l.o.³⁵,l i ⁵⁵ + kʰ o ⁵⁵ + l o ³⁵,,Starostin2013,,False,^ l . i . ⁵⁵ . kʰ . o . ⁵⁵ . l . o . ³⁵$,default
+boluotujia-40_heart-1,,boluotujia,40_heart,tu13-sẽ33,t.u.¹³.s.ẽ.∼.³³,t u ¹³ + s ẽ ³³,,Starostin2013,,False,^ t . u . ¹³ . s . ẽ . ∼ . ³³$,default
+tanxitujia-40_heart-1,,tanxitujia,40_heart,li21-ŋa21,l.i.²¹.ŋ.a.²¹,l i ²¹ + ŋ a ²¹,,Starostin2013,,False,^ l . i . ²¹ . ŋ . a . ²¹$,default
+tashatujia-102_heavy-1,,tashatujia,102_heavy,tu21 ~ tu21-ci21,t.u.²¹,t u ²¹,,Starostin2013,,False,^ t . u . ²¹$,default
+duogutujia-102_heavy-1,,duogutujia,102_heavy,tu53,t.u.⁵³,t u ⁵³,,Starostin2013,,False,^ t . u . ⁵³$,default
+dianfangtujia-102_heavy-1,,dianfangtujia,102_heavy,tu55,t.u.⁵⁵,t u ⁵⁵,,Starostin2013,,False,^ t . u . ⁵⁵$,default
+boluotujia-102_heavy-1,,boluotujia,102_heavy,doʉ13,d.o.ʉ.¹³,d o ʉ ¹³,,Starostin2013,,False,^ d . o . ʉ . ¹³$,default
+tanxitujia-102_heavy-1,,tanxitujia,102_heavy,dʉ35,d.ʉ.³⁵,d ʉ ³⁵,,Starostin2013,,False,^ d . ʉ . ³⁵$,default
+tashatujia-41_horn-1,,tashatujia,41_horn,kʰɤ21,kʰ.ɤ.²¹,kʰ ɤ ²¹,,Starostin2013,,False,^ kʰ . ɤ . ²¹$,default
+duogutujia-41_horn-1,,duogutujia,41_horn,kʰɨe53,kʰ.ɨ.e.⁵³,kʰ ɨ e ⁵³,,Starostin2013,,False,^ kʰ . ɨ . e . ⁵³$,default
+dianfangtujia-41_horn-1,,dianfangtujia,41_horn,kʰɨe55,kʰ.ɨ.e.⁵⁵,kʰ ɨ e ⁵⁵,,Starostin2013,,False,^ kʰ . ɨ . e . ⁵⁵$,default
+boluotujia-41_horn-1,,boluotujia,41_horn,a33=kʰɨe33,a.³³.kʰ.ɨ.e.³³,a ³³ + kʰ ɨ e ³³,,Starostin2013,,False,^ a . ³³ . kʰ . ɨ . e . ³³$,default
+tanxitujia-41_horn-1,,tanxitujia,41_horn,ʔa33=kʰɨe33,ʔ.a.³³.kʰ.ɨ.e.³³,ʔ a ³³ + kʰ ɨ e ³³,,Starostin2013,,False,^ ʔ . a . ³³ . kʰ . ɨ . e . ³³$,default
+tashatujia-43_kill-1,,tashatujia,43_kill,pu24,p.u.²⁴,p u ²⁴,,Starostin2013,,False,^ p . u . ²⁴$,default
+duogutujia-43_kill-1,,duogutujia,43_kill,pu24,p.u.²⁴,p u ²⁴,,Starostin2013,,False,^ p . u . ²⁴$,default
+dianfangtujia-43_kill-1,,dianfangtujia,43_kill,pu35,p.u.³⁵,p u ³⁵,,Starostin2013,,False,^ p . u . ³⁵$,default
+boluotujia-43_kill-1,,boluotujia,43_kill,ɣɨe13,ɣ.ɨ.e.¹³,ɣ ɨ e ¹³,,Starostin2013,,False,^ ɣ . ɨ . e . ¹³$,default
+tanxitujia-43_kill-1,,tanxitujia,43_kill,ʔɨ13,ʔ.ɨ.¹³,ʔ ɨ ¹³,,Starostin2013,,False,^ ʔ . ɨ . ¹³$,default
+duogutujia-44_knee-1,,duogutujia,44_knee,ɕi21=tʰi21-kʰe53-kai24-kai24,tɕ.i.²¹.tʰ.i.²¹.kʰ.e.⁵³.k.a.i.²⁴.k.a.i.²⁴,tɕ i ²¹ + tʰ i ²¹ + kʰ e ⁵³ + k a i ²⁴ + k a i ²⁴,,Starostin2013,,False,^ tɕ . i . ²¹ . tʰ . i . ²¹ . kʰ . e . ⁵³ . k . a . i . ²⁴ . k . a . i . ²⁴$,default
+dianfangtujia-44_knee-1,,dianfangtujia,44_knee,ɕi21=tʰi21-kʰɨe55,tɕ.i.²¹.tʰ.i.²¹.kʰ.ɨ.e.⁵⁵,tɕ i ²¹ + tʰ i ²¹ + kʰ ɨ e ⁵⁵,,Starostin2013,,False,^ tɕ . i . ²¹ . tʰ . i . ²¹ . kʰ . ɨ . e . ⁵⁵$,default
+boluotujia-44_knee-1,,boluotujia,44_knee,ʓi21=to21-ŋo13,dʑ.i.²¹.t.o.²¹.ŋ.o.¹³,dʑ i ²¹ + t o ²¹ + ŋ o ¹³,,Starostin2013,,False,^ dʑ . i . ²¹ . t . o . ²¹ . ŋ . o . ¹³$,default
+tanxitujia-44_knee-1,,tanxitujia,44_knee,ʔa21=ʓi35=po33-lo33,ʔ.a.²¹.dʑ.i.³⁵.p.o.³³.l.o.³³,ʔ a ²¹ + dʑ i ³⁵ + p o ³³ + l o ³³,,Starostin2013,,False,^ ʔ . a . ²¹ . dʑ . i . ³⁵ . p . o . ³³ . l . o . ³³$,default
+tashatujia-45_know-1,,tashatujia,45_know,xa21-zi21,x.a.²¹.z.i.²¹,x a ²¹ + z i ²¹,,Starostin2013,,False,^ x . a . ²¹ . z . i . ²¹$,default
+duogutujia-45_know-1,,duogutujia,45_know,xau53-ʆi44,x.a.u.⁵³.ɕ.i.⁴⁴,x a u ⁵³ + ɕ i ⁴⁴,,Starostin2013,,False,^ x . a . u . ⁵³ . ɕ . i . ⁴⁴$,default
+dianfangtujia-45_know-1,,dianfangtujia,45_know,xau55-ʆi35 ~ xa55-zi21,x.a.u.⁵⁵.ɕ.i.³⁵,x a u ⁵⁵ + ɕ i ³⁵,,Starostin2013,,False,^ x . a . u . ⁵⁵ . ɕ . i . ³⁵$,default
+boluotujia-45_know-1,,boluotujia,45_know,ʆie53,ɕ.i.e.⁵³,ɕ i e ⁵³,,Starostin2013,,False,^ ɕ . i . e . ⁵³$,default
+tanxitujia-45_know-1,,tanxitujia,45_know,ʆe55-cʰe55,ɕ.e.⁵⁵.tsʰ.e.⁵⁵,ɕ e ⁵⁵ + tsʰ e ⁵⁵,,Starostin2013,,False,^ ɕ . e . ⁵⁵ . tsʰ . e . ⁵⁵$,default
+tashatujia-46_leaf-1,,tashatujia,46_leaf,ɣɤ55=tʰa55,ɣ.ɤ.⁵⁵.tʰ.a.⁵⁵,ɣ ɤ ⁵⁵ + tʰ a ⁵⁵,,Starostin2013,,False,^ ɣ . ɤ . ⁵⁵ . tʰ . a . ⁵⁵$,default
+duogutujia-46_leaf-1,,duogutujia,46_leaf,ɣɨe53=tʰa53,ɣ.ɨ.e.⁵³.tʰ.a.⁵³,ɣ ɨ e ⁵³ + tʰ a ⁵³,,Starostin2013,,False,^ ɣ . ɨ . e . ⁵³ . tʰ . a . ⁵³$,default
+dianfangtujia-46_leaf-1,,dianfangtujia,46_leaf,ɣɨe55=tʰa55,ɣ.ɨ.e.⁵⁵.tʰ.a.⁵⁵,ɣ ɨ e ⁵⁵ + tʰ a ⁵⁵,,Starostin2013,,False,^ ɣ . ɨ . e . ⁵⁵ . tʰ . a . ⁵⁵$,default
+boluotujia-46_leaf-1,,boluotujia,46_leaf,a33=ɣɨe33,a.³³.ɣ.ɨ.e.³³,a ³³ + ɣ ɨ e ³³,,Starostin2013,,False,^ a . ³³ . ɣ . ɨ . e . ³³$,default
+tanxitujia-46_leaf-1,,tanxitujia,46_leaf,ʔa21=ɣɨe21,ʔ.a.²¹.ɣ.ɨ.e.²¹,ʔ a ²¹ + ɣ ɨ e ²¹,,Starostin2013,,False,^ ʔ . a . ²¹ . ɣ . ɨ . e . ²¹$,default
+tashatujia-47_lie-1,,tashatujia,47_lie,pʰɤ21,pʰ.ɤ.²¹,pʰ ɤ ²¹,,Starostin2013,,False,^ pʰ . ɤ . ²¹$,default
+duogutujia-47_lie-1,,duogutujia,47_lie,nie24-po44,n.i.e.²⁴.p.o.⁴⁴,n i e ²⁴ + p o ⁴⁴,,Starostin2013,,False,^ n . i . e . ²⁴ . p . o . ⁴⁴$,default
+boluotujia-47_lie-1,,boluotujia,47_lie,kʰaʉ13,kʰ.a.ʉ.¹³,kʰ a ʉ ¹³,,Starostin2013,,False,^ kʰ . a . ʉ . ¹³$,default
+tashatujia-48_liver-1,,tashatujia,48_liver,aŋ55-a55,a.ŋ.⁵⁵.a.⁵⁵,a ŋ ⁵⁵ + a ⁵⁵,,Starostin2013,,False,^ a . ŋ . ⁵⁵ . a . ⁵⁵$,default
+duogutujia-48_liver-1,,duogutujia,48_liver,a53-ŋai44,a.⁵³.ŋ.a.i.⁴⁴,a ⁵³ + ŋ a i ⁴⁴,,Starostin2013,,False,^ a . ⁵³ . ŋ . a . i . ⁴⁴$,default
+dianfangtujia-48_liver-1,,dianfangtujia,48_liver,ã55-ŋa55 ~ a55-ŋã55,ã.∼.⁵⁵.ŋ.a.⁵⁵,ã ⁵⁵ + ŋ a ⁵⁵,,Starostin2013,,False,^ ã . ∼ . ⁵⁵ . ŋ . a . ⁵⁵$,default
+boluotujia-48_liver-1,,boluotujia,48_liver,kæ̃33,k.æ̃.∼.³³,k æ̃ ³³,,Starostin2013,,True,^ k . æ̃ . ∼ . ³³$,default
+tanxitujia-48_liver-1,,tanxitujia,48_liver,kã33,k.ã.∼.³³,k ã ³³,,Starostin2013,,True,^ k . ã . ∼ . ³³$,default
+tashatujia-49_long-1,,tashatujia,49_long,ɣɤ21,ɣ.ɤ.²¹,ɣ ɤ ²¹,,Starostin2013,,False,^ ɣ . ɤ . ²¹$,default
+duogutujia-49_long-1,,duogutujia,49_long,ɣɨe21,ɣ.ɨ.e.²¹,ɣ ɨ e ²¹,,Starostin2013,,False,^ ɣ . ɨ . e . ²¹$,default
+dianfangtujia-49_long-1,,dianfangtujia,49_long,ɣɨe21,ɣ.ɨ.e.²¹,ɣ ɨ e ²¹,,Starostin2013,,False,^ ɣ . ɨ . e . ²¹$,default
+boluotujia-49_long-1,,boluotujia,49_long,ɣɨe13,ɣ.ɨ.e.¹³,ɣ ɨ e ¹³,,Starostin2013,,False,^ ɣ . ɨ . e . ¹³$,default
+tanxitujia-49_long-1,,tanxitujia,49_long,ɣɨe35,ɣ.ɨ.e.³⁵,ɣ ɨ e ³⁵,,Starostin2013,,False,^ ɣ . ɨ . e . ³⁵$,default
+tashatujia-50_louse-1,,tashatujia,50_louse,si55-si55,s.i.⁵⁵.s.i.⁵⁵,s i ⁵⁵ + s i ⁵⁵,,Starostin2013,,False,^ s . i . ⁵⁵ . s . i . ⁵⁵$,default
+duogutujia-50_louse-1,,duogutujia,50_louse,si53-si44,s.i.⁵³.s.i.⁴⁴,s i ⁵³ + s i ⁴⁴,,Starostin2013,,False,^ s . i . ⁵³ . s . i . ⁴⁴$,default
+dianfangtujia-50_louse-1,,dianfangtujia,50_louse,si55-si55,s.i.⁵⁵.s.i.⁵⁵,s i ⁵⁵ + s i ⁵⁵,,Starostin2013,,False,^ s . i . ⁵⁵ . s . i . ⁵⁵$,default
+boluotujia-50_louse-1,,boluotujia,50_louse,a21=si53-lũ33,a.²¹.s.i.⁵³.l.ũ.∼.³³,a ²¹ + s i ⁵³ + l ũ ³³,,Starostin2013,,False,^ a . ²¹ . s . i . ⁵³ . l . ũ . ∼ . ³³$,default
+tanxitujia-50_louse-1,,tanxitujia,50_louse,ʔa21=si55,ʔ.a.²¹.s.i.⁵⁵,ʔ a ²¹ + s i ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . s . i . ⁵⁵$,default
+tashatujia-51_man-1,,tashatujia,51_man,cu̯ɔ55=pa55,ts.w.ɔ.⁵⁵.p.a.⁵⁵,ts w ɔ ⁵⁵ + p a ⁵⁵,,Starostin2013,,False,^ ts . w . ɔ . ⁵⁵ . p . a . ⁵⁵$,default
+duogutujia-51_man-1,,duogutujia,51_man,no53=pa44-ce44,n.o.⁵³.p.a.⁴⁴.ts.e.⁴⁴,n o ⁵³ + p a ⁴⁴ + ts e ⁴⁴,,Starostin2013,,False,^ n . o . ⁵³ . p . a . ⁴⁴ . ts . e . ⁴⁴$,default
+dianfangtujia-51_man-1,,dianfangtujia,51_man,no55=pa55,n.o.⁵⁵.p.a.⁵⁵,n o ⁵⁵ + p a ⁵⁵,,Starostin2013,,False,^ n . o . ⁵⁵ . p . a . ⁵⁵$,default
+boluotujia-51_man-1,,boluotujia,51_man,a21=ko21-bie21,a.²¹.k.o.²¹.b.i.e.²¹,a ²¹ + k o ²¹ + b i e ²¹,,Starostin2013,,False,^ a . ²¹ . k . o . ²¹ . b . i . e . ²¹$,default
+tanxitujia-51_man-1,,tanxitujia,51_man,ʔa21=ko21-be21-ŋɨ21,ʔ.a.²¹.k.o.²¹.b.e.²¹.ŋ.ɨ.²¹,ʔ a ²¹ + k o ²¹ + b e ²¹ + ŋ ɨ ²¹,,Starostin2013,,False,^ ʔ . a . ²¹ . k . o . ²¹ . b . e . ²¹ . ŋ . ɨ . ²¹$,default
+tashatujia-52_many-1,,tashatujia,52_many,zi21,z.i.²¹,z i ²¹,,Starostin2013,,False,^ z . i . ²¹$,default
+duogutujia-52_many-1,,duogutujia,52_many,zi21,z.i.²¹,z i ²¹,,Starostin2013,,False,^ z . i . ²¹$,default
+dianfangtujia-52_many-1,,dianfangtujia,52_many,zi21,z.i.²¹,z i ²¹,,Starostin2013,,False,^ z . i . ²¹$,default
+boluotujia-52_many-1,,boluotujia,52_many,zi45,z.i.⁴⁵,z i ⁴⁵,,Starostin2013,,False,^ z . i . ⁴⁵$,default
+tanxitujia-52_many-1,,tanxitujia,52_many,zi35,z.i.³⁵,z i ³⁵,,Starostin2013,,False,^ z . i . ³⁵$,default
+tashatujia-53_meat-1,,tashatujia,53_meat,si21,s.i.²¹,s i ²¹,,Starostin2013,,False,^ s . i . ²¹$,default
+duogutujia-53_meat-1,,duogutujia,53_meat,si21,s.i.²¹,s i ²¹,,Starostin2013,,False,^ s . i . ²¹$,default
+dianfangtujia-53_meat-1,,dianfangtujia,53_meat,si21,s.i.²¹,s i ²¹,,Starostin2013,,False,^ s . i . ²¹$,default
+boluotujia-53_meat-1,,boluotujia,53_meat,si13,s.i.¹³,s i ¹³,,Starostin2013,,False,^ s . i . ¹³$,default
+tanxitujia-53_meat-1,,tanxitujia,53_meat,si35,s.i.³⁵,s i ³⁵,,Starostin2013,,False,^ s . i . ³⁵$,default
+tashatujia-54_moon-1,,tashatujia,54_moon,su21-su21,s.u.²¹.s.u.²¹,s u ²¹ + s u ²¹,,Starostin2013,,False,^ s . u . ²¹ . s . u . ²¹$,default
+duogutujia-54_moon-1,,duogutujia,54_moon,su21-su21-kʰa21-ɕi̯e44,s.u.²¹.s.u.²¹.kʰ.a.²¹.tɕ.j.e.⁴⁴,s u ²¹ + s u ²¹ + kʰ a ²¹ + tɕ j e ⁴⁴,,Starostin2013,,False,^ s . u . ²¹ . s . u . ²¹ . kʰ . a . ²¹ . tɕ . j . e . ⁴⁴$,default
+dianfangtujia-54_moon-1,,dianfangtujia,54_moon,su21-su21 ~ su21-su21-kʰa21-ʆe21,s.u.²¹.s.u.²¹,s u ²¹ + s u ²¹,,Starostin2013,,False,^ s . u . ²¹ . s . u . ²¹$,default
+boluotujia-54_moon-1,,boluotujia,54_moon,ye21-liã45,j.e.²¹.l.i.ã.∼.⁴⁵,j e ²¹ + l i ã ⁴⁵,,Starostin2013,,True,^ j . e . ²¹ . l . i . ã . ∼ . ⁴⁵$,default
+tanxitujia-54_moon-1,,tanxitujia,54_moon,lo35-ʆi55-dʉ35,l.o.³⁵.ɕ.i.⁵⁵.d.ʉ.³⁵,l o ³⁵ + ɕ i ⁵⁵ + d ʉ ³⁵,,Starostin2013,,False,^ l . o . ³⁵ . ɕ . i . ⁵⁵ . d . ʉ . ³⁵$,default
+tashatujia-55_mountain-1,,tashatujia,55_mountain,kʰu55-li̯ɛ55,kʰ.u.⁵⁵.l.j.ɛ.⁵⁵,kʰ u ⁵⁵ + l j ɛ ⁵⁵,,Starostin2013,,False,^ kʰ . u . ⁵⁵ . l . j . ɛ . ⁵⁵$,default
+duogutujia-55_mountain-1,,duogutujia,55_mountain,kʰu53-ca53,kʰ.u.⁵³.ts.a.⁵³,kʰ u ⁵³ + ts a ⁵³,,Starostin2013,,False,^ kʰ . u . ⁵³ . ts . a . ⁵³$,default
+dianfangtujia-55_mountain-1,,dianfangtujia,55_mountain,kʰu55-ca55 ~ kʰu55-le55,kʰ.u.⁵⁵.ts.a.⁵⁵,kʰ u ⁵⁵ + ts a ⁵⁵,,Starostin2013,,False,^ kʰ . u . ⁵⁵ . ts . a . ⁵⁵$,default
+boluotujia-55_mountain-1,,boluotujia,55_mountain,za53-kʰa21,z.a.⁵³.kʰ.a.²¹,z a ⁵³ + kʰ a ²¹,,Starostin2013,,False,^ z . a . ⁵³ . kʰ . a . ²¹$,default
+tanxitujia-55_mountain-1,,tanxitujia,55_mountain,za55,z.a.⁵⁵,z a ⁵⁵,,Starostin2013,,False,^ z . a . ⁵⁵$,default
+tashatujia-56_mouth-1,,tashatujia,56_mouth,ca24-ɕʰi55,ts.a.²⁴.tɕʰ.i.⁵⁵,ts a ²⁴ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ ts . a . ²⁴ . tɕʰ . i . ⁵⁵$,default
+duogutujia-56_mouth-1,,duogutujia,56_mouth,ca24-ɕʰi44,ts.a.²⁴.tɕʰ.i.⁴⁴,ts a ²⁴ + tɕʰ i ⁴⁴,,Starostin2013,,False,^ ts . a . ²⁴ . tɕʰ . i . ⁴⁴$,default
+dianfangtujia-56_mouth-1,,dianfangtujia,56_mouth,ca35-ɕʰi55,ts.a.³⁵.tɕʰ.i.⁵⁵,ts a ³⁵ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ ts . a . ³⁵ . tɕʰ . i . ⁵⁵$,default
+boluotujia-56_mouth-1,,boluotujia,56_mouth,a21=ze21,a.²¹.z.e.²¹,a ²¹ + z e ²¹,,Starostin2013,,False,^ a . ²¹ . z . e . ²¹$,default
+tanxitujia-56_mouth-1,,tanxitujia,56_mouth,ʔa21=ze21,ʔ.a.²¹.z.e.²¹,ʔ a ²¹ + z e ²¹,,Starostin2013,,False,^ ʔ . a . ²¹ . z . e . ²¹$,default
+duogutujia-57_name-1,,duogutujia,57_name,mĩ21-ci24,m.ĩ.∼.²¹.ts.i.²⁴,m ĩ ²¹ + ts i ²⁴,,Starostin2013,,True,^ m . ĩ . ∼ . ²¹ . ts . i . ²⁴$,default
+dianfangtujia-57_name-1,,dianfangtujia,57_name,mĩ21-ci35,m.ĩ.∼.²¹.ts.i.³⁵,m ĩ ²¹ + ts i ³⁵,,Starostin2013,,True,^ m . ĩ . ∼ . ²¹ . ts . i . ³⁵$,default
+boluotujia-57_name-1,,boluotujia,57_name,nioʉ33,n.i.o.ʉ.³³,n i o ʉ ³³,,Starostin2013,,False,^ n . i . o . ʉ . ³³$,default
+tanxitujia-57_name-1,,tanxitujia,57_name,niʉ35-bo21,n.i.ʉ.³⁵.b.o.²¹,n i ʉ ³⁵ + b o ²¹,,Starostin2013,,False,^ n . i . ʉ . ³⁵ . b . o . ²¹$,default
+duogutujia-103_near-1,,duogutujia,103_near,cũ53 ~ cũ44,ts.ũ.∼.⁵³,ts ũ ⁵³,,Starostin2013,,False,^ ts . ũ . ∼ . ⁵³$,default
+dianfangtujia-103_near-1,,dianfangtujia,103_near,cũ55,ts.ũ.∼.⁵⁵,ts ũ ⁵⁵,,Starostin2013,,False,^ ts . ũ . ∼ . ⁵⁵$,default
+boluotujia-103_near-1,,boluotujia,103_near,ɣoʉ21=ʒa21,ɣ.o.ʉ.²¹.dz.a.²¹,ɣ o ʉ ²¹ + dz a ²¹,,Starostin2013,,False,^ ɣ . o . ʉ . ²¹ . dz . a . ²¹$,default
+tanxitujia-103_near-1,,tanxitujia,103_near,ʔʉ13=ʒa33,ʔ.ʉ.¹³.dz.a.³³,ʔ ʉ ¹³ + dz a ³³,,Starostin2013,,False,^ ʔ . ʉ . ¹³ . dz . a . ³³$,default
+tashatujia-58_neck-1,,tashatujia,58_neck,kʰɔŋ55-ti55,kʰ.ɔ.ŋ.⁵⁵.t.i.⁵⁵,kʰ ɔ ŋ ⁵⁵ + t i ⁵⁵,,Starostin2013,,False,^ kʰ . ɔ . ŋ . ⁵⁵ . t . i . ⁵⁵$,default
+duogutujia-58_neck-1,,duogutujia,58_neck,kʰũ44-ti44,kʰ.ũ.∼.⁴⁴.t.i.⁴⁴,kʰ ũ ⁴⁴ + t i ⁴⁴,,Starostin2013,,False,^ kʰ . ũ . ∼ . ⁴⁴ . t . i . ⁴⁴$,default
+dianfangtujia-58_neck-1,,dianfangtujia,58_neck,kʰũ55-ti55,kʰ.ũ.∼.⁵⁵.t.i.⁵⁵,kʰ ũ ⁵⁵ + t i ⁵⁵,,Starostin2013,,False,^ kʰ . ũ . ∼ . ⁵⁵ . t . i . ⁵⁵$,default
+boluotujia-58_neck-1,,boluotujia,58_neck,kua13-la53,k.u.a.¹³.l.a.⁵³,k u a ¹³ + l a ⁵³,,Starostin2013,,False,^ k . u . a . ¹³ . l . a . ⁵³$,default
+tanxitujia-58_neck-1,,tanxitujia,58_neck,gua21-la55,ɡ.u.a.²¹.l.a.⁵⁵,ɡ u a ²¹ + l a ⁵⁵,,Starostin2013,,False,^ ɡ . u . a . ²¹ . l . a . ⁵⁵$,default
+tashatujia-59_new-1,,tashatujia,59_new,a24=ʆi55,a.²⁴.ɕ.i.⁵⁵,a ²⁴ + ɕ i ⁵⁵,,Starostin2013,,False,^ a . ²⁴ . ɕ . i . ⁵⁵$,default
+duogutujia-59_new-1,,duogutujia,59_new,ɣa24=si44,ɣ.a.²⁴.s.i.⁴⁴,ɣ a ²⁴ + s i ⁴⁴,,Starostin2013,,False,^ ɣ . a . ²⁴ . s . i . ⁴⁴$,default
+dianfangtujia-59_new-1,,dianfangtujia,59_new,a35=si35,a.³⁵.s.i.³⁵,a ³⁵ + s i ³⁵,,Starostin2013,,False,^ a . ³⁵ . s . i . ³⁵$,default
+boluotujia-59_new-1,,boluotujia,59_new,a33=ʆi33,a.³³.ɕ.i.³³,a ³³ + ɕ i ³³,,Starostin2013,,False,^ a . ³³ . ɕ . i . ³³$,default
+tanxitujia-59_new-1,,tanxitujia,59_new,ʔa55=ʆi21,ʔ.a.⁵⁵.ɕ.i.²¹,ʔ a ⁵⁵ + ɕ i ²¹,,Starostin2013,,False,^ ʔ . a . ⁵⁵ . ɕ . i . ²¹$,default
+tashatujia-60_night-1,,tashatujia,60_night,pʰɤ55,pʰ.ɤ.⁵⁵,pʰ ɤ ⁵⁵,,Starostin2013,,False,^ pʰ . ɤ . ⁵⁵$,default
+tashatujia-61_nose-1,,tashatujia,61_nose,ɤŋ24-ɕʰi55,ɤ.ŋ.²⁴.tɕʰ.i.⁵⁵,ɤ ŋ ²⁴ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ ɤ . ŋ . ²⁴ . tɕʰ . i . ⁵⁵$,default
+duogutujia-61_nose-1,,duogutujia,61_nose,ũ24-ɕʰi44,ũ.∼.²⁴.tɕʰ.i.⁴⁴,ũ ²⁴ + tɕʰ i ⁴⁴,,Starostin2013,,False,^ ũ . ∼ . ²⁴ . tɕʰ . i . ⁴⁴$,default
+dianfangtujia-61_nose-1,,dianfangtujia,61_nose,ẽ35-ɕʰi55 ~ ũ35-ɕʰi55,ẽ.∼.³⁵.tɕʰ.i.⁵⁵,ẽ ³⁵ + tɕʰ i ⁵⁵,,Starostin2013,,False,^ ẽ . ∼ . ³⁵ . tɕʰ . i . ⁵⁵$,default
+boluotujia-61_nose-1,,boluotujia,61_nose,koʉ21-ɕi53,k.o.ʉ.²¹.tɕ.i.⁵³,k o ʉ ²¹ + tɕ i ⁵³,,Starostin2013,,False,^ k . o . ʉ . ²¹ . tɕ . i . ⁵³$,default
+tanxitujia-61_nose-1,,tanxitujia,61_nose,kʉ13-ɕi55-dʉ35,k.ʉ.¹³.tɕ.i.⁵⁵.d.ʉ.³⁵,k ʉ ¹³ + tɕ i ⁵⁵ + d ʉ ³⁵,,Starostin2013,,False,^ k . ʉ . ¹³ . tɕ . i . ⁵⁵ . d . ʉ . ³⁵$,default
+tashatujia-62_not-1,,tashatujia,62_not,ta24,t.a.²⁴,t a ²⁴,,Starostin2013,,False,^ t . a . ²⁴$,default
+duogutujia-62_not-1,,duogutujia,62_not,tʰa53 ~ tʰa21,tʰ.a.⁵³,tʰ a ⁵³,,Starostin2013,,False,^ tʰ . a . ⁵³$,default
+dianfangtujia-62_not-1,,dianfangtujia,62_not,tʰa55,tʰ.a.⁵⁵,tʰ a ⁵⁵,,Starostin2013,,False,^ tʰ . a . ⁵⁵$,default
+boluotujia-62_not-1,,boluotujia,62_not,læ̃,l.æ̃.∼,l æ̃,,Starostin2013,,False,^ l . æ̃ . ∼ $,default
+tanxitujia-62_not-1,,tanxitujia,62_not,ma53,m.a.⁵³,m a ⁵³,,Starostin2013,,False,^ m . a . ⁵³$,default
+tashatujia-63_one-1,,tashatujia,63_one,la24,l.a.²⁴,l a ²⁴,,Starostin2013,,False,^ l . a . ²⁴$,default
+duogutujia-63_one-1,,duogutujia,63_one,na24,n.a.²⁴,n a ²⁴,,Starostin2013,,False,^ n . a . ²⁴$,default
+dianfangtujia-63_one-1,,dianfangtujia,63_one,na35,n.a.³⁵,n a ³⁵,,Starostin2013,,False,^ n . a . ³⁵$,default
+boluotujia-63_one-1,,boluotujia,63_one,la33,l.a.³³,l a ³³,,Starostin2013,,False,^ l . a . ³³$,default
+tanxitujia-63_one-1,,tanxitujia,63_one,la55,l.a.⁵⁵,l a ⁵⁵,,Starostin2013,,False,^ l . a . ⁵⁵$,default
+tashatujia-64_person-1,,tashatujia,64_person,lu̯ɔ21,l.w.ɔ.²¹,l w ɔ ²¹,,Starostin2013,,False,^ l . w . ɔ . ²¹$,default
+dianfangtujia-64_person-1,,dianfangtujia,64_person,no55,n.o.⁵⁵,n o ⁵⁵,,Starostin2013,,False,^ n . o . ⁵⁵$,default
+tanxitujia-64_person-1,,tanxitujia,64_person,nia33,n.i.a.³³,n i a ³³,,Starostin2013,,False,^ n . i . a . ³³$,default
+tashatujia-65_rain-1,,tashatujia,65_rain,mɤ24=zɤ21,m.ɤ.²⁴.z.ɤ.²¹,m ɤ ²⁴ + z ɤ ²¹,,Starostin2013,,False,^ m . ɤ . ²⁴ . z . ɤ . ²¹$,default
+duogutujia-65_rain-1,,duogutujia,65_rain,mɨe24=ce21,m.ɨ.e.²⁴.ts.e.²¹,m ɨ e ²⁴ + ts e ²¹,,Starostin2013,,False,^ m . ɨ . e . ²⁴ . ts . e . ²¹$,default
+dianfangtujia-65_rain-1,,dianfangtujia,65_rain,mɨe35=ce21,m.ɨ.e.³⁵.ts.e.²¹,m ɨ e ³⁵ + ts e ²¹,,Starostin2013,,False,^ m . ɨ . e . ³⁵ . ts . e . ²¹$,default
+boluotujia-65_rain-1,,boluotujia,65_rain,ze13,z.e.¹³,z e ¹³,,Starostin2013,,False,^ z . e . ¹³$,default
+tanxitujia-65_rain-1,,tanxitujia,65_rain,ze35,z.e.³⁵,z e ³⁵,,Starostin2013,,False,^ z . e . ³⁵$,default
+tashatujia-66_red-1,,tashatujia,66_red,mi̯ɛn55-ɕi̯ɛ55,m.j.ɛ.n.⁵⁵.tɕ.j.ɛ.⁵⁵,m j ɛ n ⁵⁵ + tɕ j ɛ ⁵⁵,,Starostin2013,,False,^ m . j . ɛ . n . ⁵⁵ . tɕ . j . ɛ . ⁵⁵$,default
+duogutujia-66_red-1,,duogutujia,66_red,miã53-ɕie44,m.i.ã.∼.⁵³.tɕ.i.e.⁴⁴,m i ã ⁵³ + tɕ i e ⁴⁴,,Starostin2013,,False,^ m . i . ã . ∼ . ⁵³ . tɕ . i . e . ⁴⁴$,default
+dianfangtujia-66_red-1,,dianfangtujia,66_red,miã55-ɕe55,m.i.ã.∼.⁵⁵.tɕ.e.⁵⁵,m i ã ⁵⁵ + tɕ e ⁵⁵,,Starostin2013,,False,^ m . i . ã . ∼ . ⁵⁵ . tɕ . e . ⁵⁵$,default
+boluotujia-66_red-1,,boluotujia,66_red,bo21-ni21,b.o.²¹.n.i.²¹,b o ²¹ + n i ²¹,,Starostin2013,,False,^ b . o . ²¹ . n . i . ²¹$,default
+tanxitujia-66_red-1,,tanxitujia,66_red,bo33-ni13,b.o.³³.n.i.¹³,b o ³³ + n i ¹³,,Starostin2013,,False,^ b . o . ³³ . n . i . ¹³$,default
+tashatujia-67_road-1,,tashatujia,67_road,la21,l.a.²¹,l a ²¹,,Starostin2013,,False,^ l . a . ²¹$,default
+dianfangtujia-67_road-1,,dianfangtujia,67_road,la55,l.a.⁵⁵,l a ⁵⁵,,Starostin2013,,False,^ l . a . ⁵⁵$,default
+tanxitujia-67_road-1,,tanxitujia,67_road,lo33,l.o.³³,l o ³³,,Starostin2013,,False,^ l . o . ³³$,default
+tashatujia-68_root-1,,tashatujia,68_root,ɕi55-la21,tɕ.i.⁵⁵.l.a.²¹,tɕ i ⁵⁵ + l a ²¹,,Starostin2013,,False,^ tɕ . i . ⁵⁵ . l . a . ²¹$,default
+duogutujia-68_root-1,,duogutujia,68_root,ɕi53-la21,tɕ.i.⁵³.l.a.²¹,tɕ i ⁵³ + l a ²¹,,Starostin2013,,False,^ tɕ . i . ⁵³ . l . a . ²¹$,default
+dianfangtujia-68_root-1,,dianfangtujia,68_root,ɕi55-la21,tɕ.i.⁵⁵.l.a.²¹,tɕ i ⁵⁵ + l a ²¹,,Starostin2013,,False,^ tɕ . i . ⁵⁵ . l . a . ²¹$,default
+tanxitujia-68_root-1,,tanxitujia,68_root,kẽ33,k.ẽ.∼.³³,k ẽ ³³,,Starostin2013,,True,^ k . ẽ . ∼ . ³³$,default
+tashatujia-69_round-1,,tashatujia,69_round,pɔ21-lu̯ɔ55-lu̯ɔ55,p.ɔ.²¹.l.w.ɔ.⁵⁵.l.w.ɔ.⁵⁵,p ɔ ²¹ + l w ɔ ⁵⁵ + l w ɔ ⁵⁵,,Starostin2013,,False,^ p . ɔ . ²¹ . l . w . ɔ . ⁵⁵ . l . w . ɔ . ⁵⁵$,default
+duogutujia-69_round-1,,duogutujia,69_round,tʰuã21-kʰo53-li44,tʰ.u.ã.∼.²¹.kʰ.o.⁵³.l.i.⁴⁴,tʰ u ã ²¹ + kʰ o ⁵³ + l i ⁴⁴,,Starostin2013,,False,^ tʰ . u . ã . ∼ . ²¹ . kʰ . o . ⁵³ . l . i . ⁴⁴$,default
+dianfangtujia-69_round-1,,dianfangtujia,69_round,kʰu21-lo55-lo21,kʰ.u.²¹.l.o.⁵⁵.l.o.²¹,kʰ u ²¹ + l o ⁵⁵ + l o ²¹,,Starostin2013,,False,^ kʰ . u . ²¹ . l . o . ⁵⁵ . l . o . ²¹$,default
+boluotujia-69_round-1,,boluotujia,69_round,duæ̃33,d.u.æ̃.∼.³³,d u æ̃ ³³,,Starostin2013,,False,^ d . u . æ̃ . ∼ . ³³$,default
+tanxitujia-69_round-1,,tanxitujia,69_round,duã33,d.u.ã.∼.³³,d u ã ³³,,Starostin2013,,False,^ d . u . ã . ∼ . ³³$,default
+tashatujia-104_salt-1,,tashatujia,104_salt,la24-pu55,l.a.²⁴.p.u.⁵⁵,l a ²⁴ + p u ⁵⁵,,Starostin2013,,False,^ l . a . ²⁴ . p . u . ⁵⁵$,default
+duogutujia-104_salt-1,,duogutujia,104_salt,la24-pu44,l.a.²⁴.p.u.⁴⁴,l a ²⁴ + p u ⁴⁴,,Starostin2013,,False,^ l . a . ²⁴ . p . u . ⁴⁴$,default
+dianfangtujia-104_salt-1,,dianfangtujia,104_salt,la35-pu35,l.a.³⁵.p.u.³⁵,l a ³⁵ + p u ³⁵,,Starostin2013,,False,^ l . a . ³⁵ . p . u . ³⁵$,default
+boluotujia-104_salt-1,,boluotujia,104_salt,a21=si53,a.²¹.s.i.⁵³,a ²¹ + s i ⁵³,,Starostin2013,,False,^ a . ²¹ . s . i . ⁵³$,default
+tanxitujia-104_salt-1,,tanxitujia,104_salt,ʔa21=si55,ʔ.a.²¹.s.i.⁵⁵,ʔ a ²¹ + s i ⁵⁵,,Starostin2013,,False,^ ʔ . a . ²¹ . s . i . ⁵⁵$,default
+tashatujia-70_sand-1,,tashatujia,70_sand,a21-pu24-li55,a.²¹.p.u.²⁴.l.i.⁵⁵,a ²¹ + p u ²⁴ + l i ⁵⁵,,Starostin2013,,False,^ a . ²¹ . p . u . ²⁴ . l . i . ⁵⁵$,default
+duogutujia-70_sand-1,,duogutujia,70_sand,ɣa21-pʰi24-pʰi53,ɣ.a.²¹.pʰ.i.²⁴.pʰ.i.⁵³,ɣ a ²¹ + pʰ i ²⁴ + pʰ i ⁵³,,Starostin2013,,False,^ ɣ . a . ²¹ . pʰ . i . ²⁴ . pʰ . i . ⁵³$,default
+dianfangtujia-70_sand-1,,dianfangtujia,70_sand,a21-pu35-li35,a.²¹.p.u.³⁵.l.i.³⁵,a ²¹ + p u ³⁵ + l i ³⁵,,Starostin2013,,False,^ a . ²¹ . p . u . ³⁵ . l . i . ³⁵$,default
+boluotujia-70_sand-1,,boluotujia,70_sand,sa53-ci21,s.a.⁵³.ts.i.²¹,s a ⁵³ + ts i ²¹,,Starostin2013,,True,^ s . a . ⁵³ . ts . i . ²¹$,default
+tanxitujia-70_sand-1,,tanxitujia,70_sand,lʉ35=sa55-ci21,l.ʉ.³⁵.s.a.⁵⁵.ts.i.²¹,l ʉ ³⁵ + s a ⁵⁵ + ts i ²¹,,Starostin2013,,True,^ l . ʉ . ³⁵ . s . a . ⁵⁵ . ts . i . ²¹$,default
+tashatujia-71_say-1,,tashatujia,71_say,li21,l.i.²¹,l i ²¹,,Starostin2013,,False,^ l . i . ²¹$,default
+duogutujia-71_say-1,,duogutujia,71_say,li21,l.i.²¹,l i ²¹,,Starostin2013,,False,^ l . i . ²¹$,default
+dianfangtujia-71_say-1,,dianfangtujia,71_say,li21,l.i.²¹,l i ²¹,,Starostin2013,,False,^ l . i . ²¹$,default
+boluotujia-71_say-1,,boluotujia,71_say,xɨe53,x.ɨ.e.⁵³,x ɨ e ⁵³,,Starostin2013,,False,^ x . ɨ . e . ⁵³$,default
+tanxitujia-71_say-1,,tanxitujia,71_say,ħɨ55,ħ.ɨ.⁵⁵,ħ ɨ ⁵⁵,,Starostin2013,,False,^ ħ . ɨ . ⁵⁵$,default
+tashatujia-72_see-1,,tashatujia,72_see,yi21,j.i.²¹,j i ²¹,,Starostin2013,,False,^ j . i . ²¹$,default
+duogutujia-72_see-1,,duogutujia,72_see,pa53-to21-liaw21,p.a.⁵³.t.o.²¹.l.i.a.w.²¹,p a ⁵³ + t o ²¹ + l i a w ²¹,,Starostin2013,,False,^ p . a . ⁵³ . t . o . ²¹ . l . i . a . w . ²¹$,default
+dianfangtujia-72_see-1,,dianfangtujia,72_see,yi21 ~ yi21-le21,j.i.²¹,j i ²¹,,Starostin2013,,False,^ j . i . ²¹$,default
+boluotujia-72_see-1,,boluotujia,72_see,bo13=i45,b.o.¹³.i.⁴⁵,b o ¹³ + i ⁴⁵,,Starostin2013,,False,^ b . o . ¹³ . i . ⁴⁵$,default
+tanxitujia-72_see-1,,tanxitujia,72_see,bo13=yi35,b.o.¹³.j.i.³⁵,b o ¹³ + j i ³⁵,,Starostin2013,,False,^ b . o . ¹³ . j . i . ³⁵$,default
+tashatujia-73_seed-1,,tashatujia,73_seed,ni̯ɛ55-laŋ55,n.j.ɛ.⁵⁵.l.a.ŋ.⁵⁵,n j ɛ ⁵⁵ + l a ŋ ⁵⁵,,Starostin2013,,False,^ n . j . ɛ . ⁵⁵ . l . a . ŋ . ⁵⁵$,default
+duogutujia-73_seed-1,,duogutujia,73_seed,pu24-li53,p.u.²⁴.l.i.⁵³,p u ²⁴ + l i ⁵³,,Starostin2013,,False,^ p . u . ²⁴ . l . i . ⁵³$,default
+dianfangtujia-73_seed-1,,dianfangtujia,73_seed,ne55-nã55 ~ ne55-na55,n.e.⁵⁵.n.ã.∼.⁵⁵,n e ⁵⁵ + n ã ⁵⁵,,Starostin2013,,False,^ n . e . ⁵⁵ . n . ã . ∼ . ⁵⁵$,default
+boluotujia-73_seed-1,,boluotujia,73_seed,a33=lie33,a.³³.l.i.e.³³,a ³³ + l i e ³³,,Starostin2013,,False,^ a . ³³ . l . i . e . ³³$,default
+tanxitujia-73_seed-1,,tanxitujia,73_seed,ʔa33=le33,ʔ.a.³³.l.e.³³,ʔ a ³³ + l e ³³,,Starostin2013,,False,^ ʔ . a . ³³ . l . e . ³³$,default
+tashatujia-105_short-1,,tashatujia,105_short,cɔŋ21,ts.ɔ.ŋ.²¹,ts ɔ ŋ ²¹,,Starostin2013,,False,^ ts . ɔ . ŋ . ²¹$,default
+duogutujia-105_short-1,,duogutujia,105_short,cũ53,ts.ũ.∼.⁵³,ts ũ ⁵³,,Starostin2013,,False,^ ts . ũ . ∼ . ⁵³$,default
+dianfangtujia-105_short-1,,dianfangtujia,105_short,cũ55,ts.ũ.∼.⁵⁵,ts ũ ⁵⁵,,Starostin2013,,False,^ ts . ũ . ∼ . ⁵⁵$,default
+boluotujia-105_short-1,,boluotujia,105_short,ʒoʉ13,dz.o.ʉ.¹³,dz o ʉ ¹³,,Starostin2013,,False,^ dz . o . ʉ . ¹³$,default
+tanxitujia-105_short-1,,tanxitujia,105_short,ʒʉ13,dz.ʉ.¹³,dz ʉ ¹³,,Starostin2013,,False,^ dz . ʉ . ¹³$,default
+tashatujia-74_sit-1,,tashatujia,74_sit,ɔŋ21,ɔ.ŋ.²¹,ɔ ŋ ²¹,,Starostin2013,,False,^ ɔ . ŋ . ²¹$,default
+duogutujia-74_sit-1,,duogutujia,74_sit,ũ21,ũ.∼.²¹,ũ ²¹,,Starostin2013,,False,^ ũ . ∼ . ²¹$,default
+dianfangtujia-74_sit-1,,dianfangtujia,74_sit,ũ21,ũ.∼.²¹,ũ ²¹,,Starostin2013,,False,^ ũ . ∼ . ²¹$,default
+boluotujia-74_sit-1,,boluotujia,74_sit,ɣoʉ13,ɣ.o.ʉ.¹³,ɣ o ʉ ¹³,,Starostin2013,,False,^ ɣ . o . ʉ . ¹³$,default
+tanxitujia-74_sit-1,,tanxitujia,74_sit,ʔʉ35,ʔ.ʉ.³⁵,ʔ ʉ ³⁵,,Starostin2013,,False,^ ʔ . ʉ . ³⁵$,default
+tashatujia-75_skin-1,,tashatujia,75_skin,tʰa24-pʰa21,tʰ.a.²⁴.pʰ.a.²¹,tʰ a ²⁴ + pʰ a ²¹,,Starostin2013,,False,^ tʰ . a . ²⁴ . pʰ . a . ²¹$,default
+duogutujia-75_skin-1,,duogutujia,75_skin,tʰa53-pʰa21,tʰ.a.⁵³.pʰ.a.²¹,tʰ a ⁵³ + pʰ a ²¹,,Starostin2013,,False,^ tʰ . a . ⁵³ . pʰ . a . ²¹$,default
+dianfangtujia-75_skin-1,,dianfangtujia,75_skin,tʰa55-pʰa21,tʰ.a.⁵⁵.pʰ.a.²¹,tʰ a ⁵⁵ + pʰ a ²¹,,Starostin2013,,False,^ tʰ . a . ⁵⁵ . pʰ . a . ²¹$,default
+boluotujia-75_skin-1,,boluotujia,75_skin,ko33-lo33,k.o.³³.l.o.³³,k o ³³ + l o ³³,,Starostin2013,,False,^ k . o . ³³ . l . o . ³³$,default
+tanxitujia-75_skin-1,,tanxitujia,75_skin,kɨ21-lo21,k.ɨ.²¹.l.o.²¹,k ɨ ²¹ + l o ²¹,,Starostin2013,,False,^ k . ɨ . ²¹ . l . o . ²¹$,default
+tashatujia-76_sleep-1,,tashatujia,76_sleep,ni̯ɛ24-pi̯ɛ21,n.j.ɛ.²⁴.p.j.ɛ.²¹,n j ɛ ²⁴ + p j ɛ ²¹,,Starostin2013,,False,^ n . j . ɛ . ²⁴ . p . j . ɛ . ²¹$,default
+duogutujia-76_sleep-1,,duogutujia,76_sleep,nie24,n.i.e.²⁴,n i e ²⁴,,Starostin2013,,False,^ n . i . e . ²⁴$,default
+dianfangtujia-76_sleep-1,,dianfangtujia,76_sleep,ne35,n.e.³⁵,n e ³⁵,,Starostin2013,,False,^ n . e . ³⁵$,default
+boluotujia-76_sleep-1,,boluotujia,76_sleep,nie21,n.i.e.²¹,n i e ²¹,,Starostin2013,,False,^ n . i . e . ²¹$,default
+tanxitujia-76_sleep-1,,tanxitujia,76_sleep,ne21,n.e.²¹,n e ²¹,,Starostin2013,,False,^ n . e . ²¹$,default
+tashatujia-77_small-1,,tashatujia,77_small,su̯an21,s.w.a.n.²¹,s w a n ²¹,,Starostin2013,,False,^ s . w . a . n . ²¹$,default
+duogutujia-77_small-1,,duogutujia,77_small,suã53,s.u.ã.∼.⁵³,s u ã ⁵³,,Starostin2013,,False,^ s . u . ã . ∼ . ⁵³$,default
+dianfangtujia-77_small-1,,dianfangtujia,77_small,suã55,s.u.ã.∼.⁵⁵,s u ã ⁵⁵,,Starostin2013,,False,^ s . u . ã . ∼ . ⁵⁵$,default
+boluotujia-77_small-1,,boluotujia,77_small,sa33,s.a.³³,s a ³³,,Starostin2013,,False,^ s . a . ³³$,default
+tanxitujia-77_small-1,,tanxitujia,77_small,sa33,s.a.³³,s a ³³,,Starostin2013,,False,^ s . a . ³³$,default
+duogutujia-78_smoke-1,,duogutujia,78_smoke,kʰe53-kʰa21,kʰ.e.⁵³.kʰ.a.²¹,kʰ e ⁵³ + kʰ a ²¹,,Starostin2013,,False,^ kʰ . e . ⁵³ . kʰ . a . ²¹$,default
+dianfangtujia-78_smoke-1,,dianfangtujia,78_smoke,kʰɨe55-kʰa21,kʰ.ɨ.e.⁵⁵.kʰ.a.²¹,kʰ ɨ e ⁵⁵ + kʰ a ²¹,,Starostin2013,,False,^ kʰ . ɨ . e . ⁵⁵ . kʰ . a . ²¹$,default
+boluotujia-78_smoke-1,,boluotujia,78_smoke,kʰɨe53-sa21,kʰ.ɨ.e.⁵³.s.a.²¹,kʰ ɨ e ⁵³ + s a ²¹,,Starostin2013,,False,^ kʰ . ɨ . e . ⁵³ . s . a . ²¹$,default
+tanxitujia-78_smoke-1,,tanxitujia,78_smoke,kɨe55-sa21,k.ɨ.e.⁵⁵.s.a.²¹,k ɨ e ⁵⁵ + s a ²¹,,Starostin2013,,False,^ k . ɨ . e . ⁵⁵ . s . a . ²¹$,default
+tashatujia-106_snake-1,,tashatujia,106_snake,wɔ21,w.ɔ.²¹,w ɔ ²¹,,Starostin2013,,False,^ w . ɔ . ²¹$,default
+duogutujia-106_snake-1,,duogutujia,106_snake,uo53,u.o.⁵³,u o ⁵³,,Starostin2013,,False,^ u . o . ⁵³$,default
+dianfangtujia-106_snake-1,,dianfangtujia,106_snake,wo55,w.o.⁵⁵,w o ⁵⁵,,Starostin2013,,False,^ w . o . ⁵⁵$,default
+boluotujia-106_snake-1,,boluotujia,106_snake,tɨy53-pɨe45-nũ33,t.ɨ.j.⁵³.p.ɨ.e.⁴⁵.n.ũ.∼.³³,t ɨ j ⁵³ + p ɨ e ⁴⁵ + n ũ ³³,,Starostin2013,,False,^ t . ɨ . j . ⁵³ . p . ɨ . e . ⁴⁵ . n . ũ . ∼ . ³³$,default
+tanxitujia-106_snake-1,,tanxitujia,106_snake,tei33-pʰɨe35,t.e.i.³³.pʰ.ɨ.e.³⁵,t e i ³³ + pʰ ɨ e ³⁵,,Starostin2013,,False,^ t . e . i . ³³ . pʰ . ɨ . e . ³⁵$,default
+tashatujia-79_stand-1,,tashatujia,79_stand,cu55-cu21,ts.u.⁵⁵.ts.u.²¹,ts u ⁵⁵ + ts u ²¹,,Starostin2013,,False,^ ts . u . ⁵⁵ . ts . u . ²¹$,default
+duogutujia-79_stand-1,,duogutujia,79_stand,cu53-cu53,ts.u.⁵³.ts.u.⁵³,ts u ⁵³ + ts u ⁵³,,Starostin2013,,False,^ ts . u . ⁵³ . ts . u . ⁵³$,default
+dianfangtujia-79_stand-1,,dianfangtujia,79_stand,cu55-cu55,ts.u.⁵⁵.ts.u.⁵⁵,ts u ⁵⁵ + ts u ⁵⁵,,Starostin2013,,False,^ ts . u . ⁵⁵ . ts . u . ⁵⁵$,default
+boluotujia-79_stand-1,,boluotujia,79_stand,du33,d.u.³³,d u ³³,,Starostin2013,,False,^ d . u . ³³$,default
+tanxitujia-79_stand-1,,tanxitujia,79_stand,du33,d.u.³³,d u ³³,,Starostin2013,,False,^ d . u . ³³$,default
+tashatujia-80_star-1,,tashatujia,80_star,ʆi21-pu24-li55,ɕ.i.²¹.p.u.²⁴.l.i.⁵⁵,ɕ i ²¹ + p u ²⁴ + l i ⁵⁵,,Starostin2013,,False,^ ɕ . i . ²¹ . p . u . ²⁴ . l . i . ⁵⁵$,default
+duogutujia-80_star-1,,duogutujia,80_star,si53-zi21,s.i.⁵³.z.i.²¹,s i ⁵³ + z i ²¹,,Starostin2013,,False,^ s . i . ⁵³ . z . i . ²¹$,default
+dianfangtujia-80_star-1,,dianfangtujia,80_star,si51-zi21,s.i.⁵¹.z.i.²¹,s i ⁵¹ + z i ²¹,,Starostin2013,,False,^ s . i . ⁵¹ . z . i . ²¹$,default
+boluotujia-80_star-1,,boluotujia,80_star,tʰiæ̃33=sẽ33-ci53,tʰ.i.æ̃.∼.³³.s.ẽ.∼.³³.ts.i.⁵³,tʰ i æ̃ ³³ + s ẽ ³³ + ts i ⁵³,,Starostin2013,,True,^ tʰ . i . æ̃ . ∼ . ³³ . s . ẽ . ∼ . ³³ . ts . i . ⁵³$,default
+tanxitujia-80_star-1,,tanxitujia,80_star,ʆẽ33-ci33,ɕ.ẽ.∼.³³.ts.i.³³,ɕ ẽ ³³ + ts i ³³,,Starostin2013,,True,^ ɕ . ẽ . ∼ . ³³ . ts . i . ³³$,default
+tashatujia-81_stone-1,,tashatujia,81_stone,a21-pa21,a.²¹.p.a.²¹,a ²¹ + p a ²¹,,Starostin2013,,False,^ a . ²¹ . p . a . ²¹$,default
+duogutujia-81_stone-1,,duogutujia,81_stone,ɣa21-pa21,ɣ.a.²¹.p.a.²¹,ɣ a ²¹ + p a ²¹,,Starostin2013,,False,^ ɣ . a . ²¹ . p . a . ²¹$,default
+dianfangtujia-81_stone-1,,dianfangtujia,81_stone,a21-pa21,a.²¹.p.a.²¹,a ²¹ + p a ²¹,,Starostin2013,,False,^ a . ²¹ . p . a . ²¹$,default
+boluotujia-81_stone-1,,boluotujia,81_stone,loʉ13-koʉ21-doʉ13,l.o.ʉ.¹³.k.o.ʉ.²¹.d.o.ʉ.¹³,l o ʉ ¹³ + k o ʉ ²¹ + d o ʉ ¹³,,Starostin2013,,False,^ l . o . ʉ . ¹³ . k . o . ʉ . ²¹ . d . o . ʉ . ¹³$,default
+tanxitujia-81_stone-1,,tanxitujia,81_stone,lʉ35,l.ʉ.³⁵,l ʉ ³⁵,,Starostin2013,,False,^ l . ʉ . ³⁵$,default
+tashatujia-82_sun-1,,tashatujia,82_sun,law21,l.a.w.²¹,l a w ²¹,,Starostin2013,,False,^ l . a . w . ²¹$,default
+duogutujia-82_sun-1,,duogutujia,82_sun,naw21-cʰi21,n.a.w.²¹.tsʰ.i.²¹,n a w ²¹ + tsʰ i ²¹,,Starostin2013,,False,^ n . a . w . ²¹ . tsʰ . i . ²¹$,default
+dianfangtujia-82_sun-1,,dianfangtujia,82_sun,naw21 ~ naw21-cʰi21,n.a.w.²¹,n a w ²¹,,Starostin2013,,False,^ n . a . w . ²¹$,default
+boluotujia-82_sun-1,,boluotujia,82_sun,no45-doʉ33,n.o.⁴⁵.d.o.ʉ.³³,n o ⁴⁵ + d o ʉ ³³,,Starostin2013,,False,^ n . o . ⁴⁵ . d . o . ʉ . ³³$,default
+tanxitujia-82_sun-1,,tanxitujia,82_sun,lo35-yi33-dʉ13,l.o.³⁵.j.i.³³.d.ʉ.¹³,l o ³⁵ + j i ³³ + d ʉ ¹³,,Starostin2013,,False,^ l . o . ³⁵ . j . i . ³³ . d . ʉ . ¹³$,default
+tashatujia-83_swim-1,,tashatujia,83_swim,ɕi̯ɛ24-ta55-wu21,tɕ.j.ɛ.²⁴.t.a.⁵⁵.w.u.²¹,tɕ j ɛ ²⁴ + t a ⁵⁵ + w u ²¹,,Starostin2013,,False,^ tɕ . j . ɛ . ²⁴ . t . a . ⁵⁵ . w . u . ²¹$,default
+duogutujia-83_swim-1,,duogutujia,83_swim,cʰe21-ɕʰiw21,tsʰ.e.²¹.tɕʰ.i.w.²¹,tsʰ e ²¹ + tɕʰ i w ²¹,,Starostin2013,,False,^ tsʰ . e . ²¹ . tɕʰ . i . w . ²¹$,default
+tashatujia-84_tail-1,,tashatujia,84_tail,li̯ɛ21-pʰɔŋ24,l.j.ɛ.²¹.pʰ.ɔ.ŋ.²⁴,l j ɛ ²¹ + pʰ ɔ ŋ ²⁴,,Starostin2013,,False,^ l . j . ɛ . ²¹ . pʰ . ɔ . ŋ . ²⁴$,default
+duogutujia-84_tail-1,,duogutujia,84_tail,nie21-pʰũ53,n.i.e.²¹.pʰ.ũ.∼.⁵³,n i e ²¹ + pʰ ũ ⁵³,,Starostin2013,,False,^ n . i . e . ²¹ . pʰ . ũ . ∼ . ⁵³$,default
+dianfangtujia-84_tail-1,,dianfangtujia,84_tail,le21-pʰũ35,l.e.²¹.pʰ.ũ.∼.³⁵,l e ²¹ + pʰ ũ ³⁵,,Starostin2013,,False,^ l . e . ²¹ . pʰ . ũ . ∼ . ³⁵$,default
+boluotujia-84_tail-1,,boluotujia,84_tail,liã21-to53,l.i.ã.∼.²¹.t.o.⁵³,l i ã ²¹ + t o ⁵³,,Starostin2013,,False,^ l . i . ã . ∼ . ²¹ . t . o . ⁵³$,default
+tanxitujia-84_tail-1,,tanxitujia,84_tail,yiã21-tʉ55,j.i.ã.∼.²¹.t.ʉ.⁵⁵,j i ã ²¹ + t ʉ ⁵⁵,,Starostin2013,,False,^ j . i . ã . ∼ . ²¹ . t . ʉ . ⁵⁵$,default
+tashatujia-85_that-1,,tashatujia,85_that,ay55 ~ ay55-ti55,a.j.⁵⁵,a j ⁵⁵,,Starostin2013,,False,^ a . j . ⁵⁵$,default
+duogutujia-85_that-1,,duogutujia,85_that,ay53-ti44,a.j.⁵³.t.i.⁴⁴,a j ⁵³ + t i ⁴⁴,,Starostin2013,,False,^ a . j . ⁵³ . t . i . ⁴⁴$,default
+dianfangtujia-85_that-1,,dianfangtujia,85_that,ay55 ~ aw55,a.j.⁵⁵,a j ⁵⁵,,Starostin2013,,False,^ a . j . ⁵⁵$,default
+boluotujia-85_that-1,,boluotujia,85_that,ta33-bu33,t.a.³³.b.u.³³,t a ³³ + b u ³³,,Starostin2013,,False,^ t . a . ³³ . b . u . ³³$,default
+tanxitujia-85_that-1,,tanxitujia,85_that,ta21,t.a.²¹,t a ²¹,,Starostin2013,,False,^ t . a . ²¹$,default
+tashatujia-107_thin-1,,tashatujia,107_thin,sa21-sa21,s.a.²¹.s.a.²¹,s a ²¹ + s a ²¹,,Starostin2013,,False,^ s . a . ²¹ . s . a . ²¹$,default
+duogutujia-107_thin-1,,duogutujia,107_thin,sa21-say44,s.a.²¹.s.a.j.⁴⁴,s a ²¹ + s a j ⁴⁴,,Starostin2013,,False,^ s . a . ²¹ . s . a . j . ⁴⁴$,default
+dianfangtujia-107_thin-1,,dianfangtujia,107_thin,sa21-sa31,s.a.²¹.s.a.³¹,s a ²¹ + s a ³¹,,Starostin2013,,False,^ s . a . ²¹ . s . a . ³¹$,default
+boluotujia-107_thin-1,,boluotujia,107_thin,so21-so53,s.o.²¹.s.o.⁵³,s o ²¹ + s o ⁵³,,Starostin2013,,False,^ s . o . ²¹ . s . o . ⁵³$,default
+tanxitujia-107_thin-1,,tanxitujia,107_thin,so21-so55,s.o.²¹.s.o.⁵⁵,s o ²¹ + s o ⁵⁵,,Starostin2013,,False,^ s . o . ²¹ . s . o . ⁵⁵$,default
+tashatujia-86_this-1,,tashatujia,86_this,ɤŋ55 ~ ɤŋ55-ti55,ɤ.ŋ.⁵⁵,ɤ ŋ ⁵⁵,,Starostin2013,,False,^ ɤ . ŋ . ⁵⁵$,default
+duogutujia-86_this-1,,duogutujia,86_this,kay24-ti44,k.a.j.²⁴.t.i.⁴⁴,k a j ²⁴ + t i ⁴⁴,,Starostin2013,,False,^ k . a . j . ²⁴ . t . i . ⁴⁴$,default
+dianfangtujia-86_this-1,,dianfangtujia,86_this,ũ55 ~ ẽ55,ũ.∼.⁵⁵,ũ ⁵⁵,,Starostin2013,,False,^ ũ . ∼ . ⁵⁵$,default
+boluotujia-86_this-1,,boluotujia,86_this,ʓia21-bu21,dʑ.i.a.²¹.b.u.²¹,dʑ i a ²¹ + b u ²¹,,Starostin2013,,False,^ dʑ . i . a . ²¹ . b . u . ²¹$,default
+tanxitujia-86_this-1,,tanxitujia,86_this,ʓia21,dʑ.i.a.²¹,dʑ i a ²¹,,Starostin2013,,False,^ dʑ . i . a . ²¹$,default
+tashatujia-86_this-2,,tashatujia,86_this,kay24,k.a.j.²⁴,k a j ²⁴,,Starostin2013,,False,^ k . a . j . ²⁴$,default
+dianfangtujia-86_this-2,,dianfangtujia,86_this,kay35,k.a.j.³⁵,k a j ³⁵,,Starostin2013,,False,^ k . a . j . ³⁵$,default
+tashatujia-87_thou-1,,tashatujia,87_thou,ni24,n.i.²⁴,n i ²⁴,,Starostin2013,,False,^ n . i . ²⁴$,default
+duogutujia-87_thou-1,,duogutujia,87_thou,ni24,n.i.²⁴,n i ²⁴,,Starostin2013,,False,^ n . i . ²⁴$,default
+dianfangtujia-87_thou-1,,dianfangtujia,87_thou,ni35,n.i.³⁵,n i ³⁵,,Starostin2013,,False,^ n . i . ³⁵$,default
+boluotujia-87_thou-1,,boluotujia,87_thou,ni33,n.i.³³,n i ³³,,Starostin2013,,False,^ n . i . ³³$,default
+tanxitujia-87_thou-1,,tanxitujia,87_thou,ni33,n.i.³³,n i ³³,,Starostin2013,,False,^ n . i . ³³$,default
+tashatujia-88_tongue-1,,tashatujia,88_tongue,yi24=la55,j.i.²⁴.l.a.⁵⁵,j i ²⁴ + l a ⁵⁵,,Starostin2013,,False,^ j . i . ²⁴ . l . a . ⁵⁵$,default
+duogutujia-88_tongue-1,,duogutujia,88_tongue,i24=la53,i.²⁴.l.a.⁵³,i ²⁴ + l a ⁵³,,Starostin2013,,False,^ i . ²⁴ . l . a . ⁵³$,default
+dianfangtujia-88_tongue-1,,dianfangtujia,88_tongue,yi35=la55,j.i.³⁵.l.a.⁵⁵,j i ³⁵ + l a ⁵⁵,,Starostin2013,,False,^ j . i . ³⁵ . l . a . ⁵⁵$,default
+boluotujia-88_tongue-1,,boluotujia,88_tongue,ʒi21=la21,dz.i.²¹.l.a.²¹,dz i ²¹ + l a ²¹,,Starostin2013,,False,^ dz . i . ²¹ . l . a . ²¹$,default
+tanxitujia-88_tongue-1,,tanxitujia,88_tongue,ʒi21=la21,dz.i.²¹.l.a.²¹,dz i ²¹ + l a ²¹,,Starostin2013,,False,^ dz . i . ²¹ . l . a . ²¹$,default
+tashatujia-89_tooth-1,,tashatujia,89_tooth,si55-si55,s.i.⁵⁵.s.i.⁵⁵,s i ⁵⁵ + s i ⁵⁵,,Starostin2013,,False,^ s . i . ⁵⁵ . s . i . ⁵⁵$,default
+duogutujia-89_tooth-1,,duogutujia,89_tooth,si44-si44,s.i.⁴⁴.s.i.⁴⁴,s i ⁴⁴ + s i ⁴⁴,,Starostin2013,,False,^ s . i . ⁴⁴ . s . i . ⁴⁴$,default
+dianfangtujia-89_tooth-1,,dianfangtujia,89_tooth,si55-si55,s.i.⁵⁵.s.i.⁵⁵,s i ⁵⁵ + s i ⁵⁵,,Starostin2013,,False,^ s . i . ⁵⁵ . s . i . ⁵⁵$,default
+boluotujia-89_tooth-1,,boluotujia,89_tooth,si33-ta13,s.i.³³.t.a.¹³,s i ³³ + t a ¹³,,Starostin2013,,False,^ s . i . ³³ . t . a . ¹³$,default
+tanxitujia-89_tooth-1,,tanxitujia,89_tooth,si33-ta35,s.i.³³.t.a.³⁵,s i ³³ + t a ³⁵,,Starostin2013,,False,^ s . i . ³³ . t . a . ³⁵$,default
+tashatujia-90_tree-1,,tashatujia,90_tree,kʰa21-mɔŋ21,kʰ.a.²¹.m.ɔ.ŋ.²¹,kʰ a ²¹ + m ɔ ŋ ²¹,,Starostin2013,,False,^ kʰ . a . ²¹ . m . ɔ . ŋ . ²¹$,default
+duogutujia-90_tree-1,,duogutujia,90_tree,kʰa21-mũ21,kʰ.a.²¹.m.ũ.∼.²¹,kʰ a ²¹ + m ũ ²¹,,Starostin2013,,False,^ kʰ . a . ²¹ . m . ũ . ∼ . ²¹$,default
+dianfangtujia-90_tree-1,,dianfangtujia,90_tree,kʰa21-mũ21,kʰ.a.²¹.m.ũ.∼.²¹,kʰ a ²¹ + m ũ ²¹,,Starostin2013,,False,^ kʰ . a . ²¹ . m . ũ . ∼ . ²¹$,default
+boluotujia-90_tree-1,,boluotujia,90_tree,kʰo13-mũ21,kʰ.o.¹³.m.ũ.∼.²¹,kʰ o ¹³ + m ũ ²¹,,Starostin2013,,False,^ kʰ . o . ¹³ . m . ũ . ∼ . ²¹$,default
+tanxitujia-90_tree-1,,tanxitujia,90_tree,kʰo35 ~ kʰo35-mõ21,kʰ.o.³⁵,kʰ o ³⁵,,Starostin2013,,False,^ kʰ . o . ³⁵$,default
+tashatujia-91_two-1,,tashatujia,91_two,ni̯ɛ55,n.j.ɛ.⁵⁵,n j ɛ ⁵⁵,,Starostin2013,,False,^ n . j . ɛ . ⁵⁵$,default
+duogutujia-91_two-1,,duogutujia,91_two,nie53,n.i.e.⁵³,n i e ⁵³,,Starostin2013,,False,^ n . i . e . ⁵³$,default
+dianfangtujia-91_two-1,,dianfangtujia,91_two,ne55,n.e.⁵⁵,n e ⁵⁵,,Starostin2013,,False,^ n . e . ⁵⁵$,default
+boluotujia-91_two-1,,boluotujia,91_two,nie53,n.i.e.⁵³,n i e ⁵³,,Starostin2013,,False,^ n . i . e . ⁵³$,default
+tanxitujia-91_two-1,,tanxitujia,91_two,le55,l.e.⁵⁵,l e ⁵⁵,,Starostin2013,,False,^ l . e . ⁵⁵$,default
+tashatujia-92_walkgo-1,,tashatujia,92_walkgo,ɣi24,ɣ.i.²⁴,ɣ i ²⁴,,Starostin2013,,False,^ ɣ . i . ²⁴$,default
+duogutujia-92_walkgo-1,,duogutujia,92_walkgo,ɣɨ24,ɣ.ɨ.²⁴,ɣ ɨ ²⁴,,Starostin2013,,False,^ ɣ . ɨ . ²⁴$,default
+dianfangtujia-92_walkgo-1,,dianfangtujia,92_walkgo,ɣɨ35,ɣ.ɨ.³⁵,ɣ ɨ ³⁵,,Starostin2013,,False,^ ɣ . ɨ . ³⁵$,default
+boluotujia-92_walkgo-1,,boluotujia,92_walkgo,ʒoʉ13,dz.o.ʉ.¹³,dz o ʉ ¹³,,Starostin2013,,False,^ dz . o . ʉ . ¹³$,default
+tanxitujia-92_walkgo-1,,tanxitujia,92_walkgo,ye21,j.e.²¹,j e ²¹,,Starostin2013,,False,^ j . e . ²¹$,default
+tashatujia-93_warm-1,,tashatujia,93_warm,ki21,k.i.²¹,k i ²¹,,Starostin2013,,False,^ k . i . ²¹$,default
+duogutujia-93_warm-1,,duogutujia,93_warm,kɨ21,k.ɨ.²¹,k ɨ ²¹,,Starostin2013,,False,^ k . ɨ . ²¹$,default
+dianfangtujia-93_warm-1,,dianfangtujia,93_warm,kɨ21,k.ɨ.²¹,k ɨ ²¹,,Starostin2013,,False,^ k . ɨ . ²¹$,default
+boluotujia-93_warm-1,,boluotujia,93_warm,si21-to21,s.i.²¹.t.o.²¹,s i ²¹ + t o ²¹,,Starostin2013,,False,^ s . i . ²¹ . t . o . ²¹$,default
+tanxitujia-93_warm-1,,tanxitujia,93_warm,si21-to13,s.i.²¹.t.o.¹³,s i ²¹ + t o ¹³,,Starostin2013,,False,^ s . i . ²¹ . t . o . ¹³$,default
+tashatujia-94_water-1,,tashatujia,94_water,ɕʰɤ21,tɕʰ.ɤ.²¹,tɕʰ ɤ ²¹,,Starostin2013,,False,^ tɕʰ . ɤ . ²¹$,default
+duogutujia-94_water-1,,duogutujia,94_water,cʰe21,tsʰ.e.²¹,tsʰ e ²¹,,Starostin2013,,False,^ tsʰ . e . ²¹$,default
+dianfangtujia-94_water-1,,dianfangtujia,94_water,cʰe21,tsʰ.e.²¹,tsʰ e ²¹,,Starostin2013,,False,^ tsʰ . e . ²¹$,default
+boluotujia-94_water-1,,boluotujia,94_water,cʰe13,tsʰ.e.¹³,tsʰ e ¹³,,Starostin2013,,False,^ tsʰ . e . ¹³$,default
+tanxitujia-94_water-1,,tanxitujia,94_water,cʰe35,tsʰ.e.³⁵,tsʰ e ³⁵,,Starostin2013,,False,^ tsʰ . e . ³⁵$,default
+tashatujia-95_we-1,,tashatujia,95_we,aŋ24 ~ aŋ24-ni55,a.ŋ.²⁴.n.i.⁵⁵,a ŋ ²⁴ + n i ⁵⁵,,Starostin2013,,False,^ a . ŋ . ²⁴ . n . i . ⁵⁵$,default
+duogutujia-95_we-1,,duogutujia,95_we,ŋa24-ni44,ŋ.a.²⁴.n.i.⁴⁴,ŋ a ²⁴ + n i ⁴⁴,,Starostin2013,,False,^ ŋ . a . ²⁴ . n . i . ⁴⁴$,default
+dianfangtujia-95_we-1,,dianfangtujia,95_we,ŋa35-ni35,ŋ.a.³⁵.n.i.³⁵,ŋ a ³⁵ + n i ³⁵,,Starostin2013,,False,^ ŋ . a . ³⁵ . n . i . ³⁵$,default
+boluotujia-95_we-1,,boluotujia,95_we,a33-ni33,a.³³.n.i.³³,a ³³ + n i ³³,,Starostin2013,,False,^ a . ³³ . n . i . ³³$,default
+tanxitujia-95_we-1,,tanxitujia,95_we,ʔa21-ni33,ʔ.a.²¹.n.i.³³,ʔ a ²¹ + n i ³³,,Starostin2013,,False,^ ʔ . a . ²¹ . n . i . ³³$,default
+tashatujia-96_what-1,,tashatujia,96_what,ɕʰi̯ɛ21 ~ ɕʰi̯ɛ21-ʆi21,tɕʰ.j.ɛ.²¹,tɕʰ j ɛ ²¹,,Starostin2013,,False,^ tɕʰ . j . ɛ . ²¹$,default
+duogutujia-96_what-1,,duogutujia,96_what,nay53=ʆi21,n.a.j.⁵³.ɕ.i.²¹,n a j ⁵³ + ɕ i ²¹,,Starostin2013,,False,^ n . a . j . ⁵³ . ɕ . i . ²¹$,default
+dianfangtujia-96_what-1,,dianfangtujia,96_what,nay55=ʆi21 ~ na55=ʆi21,n.a.j.⁵⁵.ɕ.i.²¹,n a j ⁵⁵ + ɕ i ²¹,,Starostin2013,,False,^ n . a . j . ⁵⁵ . ɕ . i . ²¹$,default
+boluotujia-96_what-1,,boluotujia,96_what,cʰu53-u33,tsʰ.u.⁵³.u.³³,tsʰ u ⁵³ + u ³³,,Starostin2013,,False,^ tsʰ . u . ⁵³ . u . ³³$,default
+tanxitujia-96_what-1,,tanxitujia,96_what,cʰu55-mo21,tsʰ.u.⁵⁵.m.o.²¹,tsʰ u ⁵⁵ + m o ²¹,,Starostin2013,,False,^ tsʰ . u . ⁵⁵ . m . o . ²¹$,default
+tashatujia-97_white-1,,tashatujia,97_white,a21=si21,a.²¹.s.i.²¹,a ²¹ + s i ²¹,,Starostin2013,,False,^ a . ²¹ . s . i . ²¹$,default
+duogutujia-97_white-1,,duogutujia,97_white,a21=si21,a.²¹.s.i.²¹,a ²¹ + s i ²¹,,Starostin2013,,False,^ a . ²¹ . s . i . ²¹$,default
+dianfangtujia-97_white-1,,dianfangtujia,97_white,a21=si21,a.²¹.s.i.²¹,a ²¹ + s i ²¹,,Starostin2013,,False,^ a . ²¹ . s . i . ²¹$,default
+boluotujia-97_white-1,,boluotujia,97_white,si33,s.i.³³,s i ³³,,Starostin2013,,False,^ s . i . ³³$,default
+tanxitujia-97_white-1,,tanxitujia,97_white,si33,s.i.³³,s i ³³,,Starostin2013,,False,^ s . i . ³³$,default
+tashatujia-98_who-1,,tashatujia,98_who,a21=sɤ21,a.²¹.s.ɤ.²¹,a ²¹ + s ɤ ²¹,,Starostin2013,,False,^ a . ²¹ . s . ɤ . ²¹$,default
+duogutujia-98_who-1,,duogutujia,98_who,a53=so21,a.⁵³.s.o.²¹,a ⁵³ + s o ²¹,,Starostin2013,,False,^ a . ⁵³ . s . o . ²¹$,default
+dianfangtujia-98_who-1,,dianfangtujia,98_who,a55=se21,a.⁵⁵.s.e.²¹,a ⁵⁵ + s e ²¹,,Starostin2013,,False,^ a . ⁵⁵ . s . e . ²¹$,default
+boluotujia-98_who-1,,boluotujia,98_who,a33=si33-ŋe33,a.³³.s.i.³³.ŋ.e.³³,a ³³ + s i ³³ + ŋ e ³³,,Starostin2013,,False,^ a . ³³ . s . i . ³³ . ŋ . e . ³³$,default
+tanxitujia-98_who-1,,tanxitujia,98_who,ʔa33=si33,ʔ.a.³³.s.i.³³,ʔ a ³³ + s i ³³,,Starostin2013,,False,^ ʔ . a . ³³ . s . i . ³³$,default
+tashatujia-108_wind-1,,tashatujia,108_wind,zɤ24,z.ɤ.²⁴,z ɤ ²⁴,,Starostin2013,,False,^ z . ɤ . ²⁴$,default
+duogutujia-108_wind-1,,duogutujia,108_wind,ze24-su53,z.e.²⁴.s.u.⁵³,z e ²⁴ + s u ⁵³,,Starostin2013,,False,^ z . e . ²⁴ . s . u . ⁵³$,default
+dianfangtujia-108_wind-1,,dianfangtujia,108_wind,ze35-su55,z.e.³⁵.s.u.⁵⁵,z e ³⁵ + s u ⁵⁵,,Starostin2013,,False,^ z . e . ³⁵ . s . u . ⁵⁵$,default
+boluotujia-108_wind-1,,boluotujia,108_wind,ze21-ŋey45,z.e.²¹.ŋ.e.j.⁴⁵,z e ²¹ + ŋ e j ⁴⁵,,Starostin2013,,False,^ z . e . ²¹ . ŋ . e . j . ⁴⁵$,default
+tanxitujia-108_wind-1,,tanxitujia,108_wind,ze21-ŋɨ21 ~ ze21-lĩ21,z.e.²¹.ŋ.ɨ.²¹,z e ²¹ + ŋ ɨ ²¹,,Starostin2013,,False,^ z . e . ²¹ . ŋ . ɨ . ²¹$,default
+tashatujia-99_woman-1,,tashatujia,99_woman,ma21-ma55,m.a.²¹.m.a.⁵⁵,m a ²¹ + m a ⁵⁵,,Starostin2013,,False,^ m . a . ²¹ . m . a . ⁵⁵$,default
+duogutujia-99_woman-1,,duogutujia,99_woman,ma21-ma21-ce44,m.a.²¹.m.a.²¹.ts.e.⁴⁴,m a ²¹ + m a ²¹ + ts e ⁴⁴,,Starostin2013,,False,^ m . a . ²¹ . m . a . ²¹ . ts . e . ⁴⁴$,default
+dianfangtujia-99_woman-1,,dianfangtujia,99_woman,ma21-ma21-te55,m.a.²¹.m.a.²¹.t.e.⁵⁵,m a ²¹ + m a ²¹ + t e ⁵⁵,,Starostin2013,,False,^ m . a . ²¹ . m . a . ²¹ . t . e . ⁵⁵$,default
+boluotujia-99_woman-1,,boluotujia,99_woman,a13=io53-bie21,a.¹³.i.o.⁵³.b.i.e.²¹,a ¹³ + i o ⁵³ + b i e ²¹,,Starostin2013,,False,^ a . ¹³ . i . o . ⁵³ . b . i . e . ²¹$,default
+tanxitujia-99_woman-1,,tanxitujia,99_woman,ʔa21=yio55-be21-ŋɨ21,ʔ.a.²¹.j.i.o.⁵⁵.b.e.²¹.ŋ.ɨ.²¹,ʔ a ²¹ + j i o ⁵⁵ + b e ²¹ + ŋ ɨ ²¹,,Starostin2013,,False,^ ʔ . a . ²¹ . j . i . o . ⁵⁵ . b . e . ²¹ . ŋ . ɨ . ²¹$,default
+tashatujia-109_worm-1,,tashatujia,109_worm,kʰu̯ay55-ɕʰi55-la55,kʰ.w.a.j.⁵⁵.tɕʰ.i.⁵⁵.l.a.⁵⁵,kʰ w a j ⁵⁵ + tɕʰ i ⁵⁵ + l a ⁵⁵,,Starostin2013,,False,^ kʰ . w . a . j . ⁵⁵ . tɕʰ . i . ⁵⁵ . l . a . ⁵⁵$,default
+duogutujia-109_worm-1,,duogutujia,109_worm,kʰuay24-ɕʰi21-la21,kʰ.u.a.j.²⁴.tɕʰ.i.²¹.l.a.²¹,kʰ u a j ²⁴ + tɕʰ i ²¹ + l a ²¹,,Starostin2013,,False,^ kʰ . u . a . j . ²⁴ . tɕʰ . i . ²¹ . l . a . ²¹$,default
+dianfangtujia-109_worm-1,,dianfangtujia,109_worm,kʰuay35-ɕʰi55-la55 ~ kʰo35-ɕʰi55-la21,kʰ.u.a.j.³⁵.tɕʰ.i.⁵⁵.l.a.⁵⁵,kʰ u a j ³⁵ + tɕʰ i ⁵⁵ + l a ⁵⁵,,Starostin2013,,False,^ kʰ . u . a . j . ³⁵ . tɕʰ . i . ⁵⁵ . l . a . ⁵⁵$,default
+boluotujia-109_worm-1,,boluotujia,109_worm,ka53-doʉ13-se21,k.a.⁵³.d.o.ʉ.¹³.s.e.²¹,k a ⁵³ + d o ʉ ¹³ + s e ²¹,,Starostin2013,,False,^ k . a . ⁵³ . d . o . ʉ . ¹³ . s . e . ²¹$,default
+tanxitujia-109_worm-1,,tanxitujia,109_worm,ka21-dʉ35-se21,k.a.²¹.d.ʉ.³⁵.s.e.²¹,k a ²¹ + d ʉ ³⁵ + s e ²¹,,Starostin2013,,False,^ k . a . ²¹ . d . ʉ . ³⁵ . s . e . ²¹$,default
+tashatujia-110_year-1,,tashatujia,110_year,lɔŋ55,l.ɔ.ŋ.⁵⁵,l ɔ ŋ ⁵⁵,,Starostin2013,,False,^ l . ɔ . ŋ . ⁵⁵$,default
+dianfangtujia-110_year-1,,dianfangtujia,110_year,nũ21,n.ũ.∼.²¹,n ũ ²¹,,Starostin2013,,False,^ n . ũ . ∼ . ²¹$,default
+tanxitujia-110_year-1,,tanxitujia,110_year,niʉ35,n.i.ʉ.³⁵,n i ʉ ³⁵,,Starostin2013,,False,^ n . i . ʉ . ³⁵$,default
+tashatujia-100_yellow-1,,tashatujia,100_yellow,wan21-ka55-la55,w.a.n.²¹.k.a.⁵⁵.l.a.⁵⁵,w a n ²¹ + k a ⁵⁵ + l a ⁵⁵,,Starostin2013,,False,^ w . a . n . ²¹ . k . a . ⁵⁵ . l . a . ⁵⁵$,default
+duogutujia-100_yellow-1,,duogutujia,100_yellow,uã21-ka53-lie44,u.ã.∼.²¹.k.a.⁵³.l.i.e.⁴⁴,u ã ²¹ + k a ⁵³ + l i e ⁴⁴,,Starostin2013,,False,^ u . ã . ∼ . ²¹ . k . a . ⁵³ . l . i . e . ⁴⁴$,default
+dianfangtujia-100_yellow-1,,dianfangtujia,100_yellow,wã21-ka55-la55 ~ wã21-ka55-ka55,w.ã.∼.²¹.k.a.⁵⁵.l.a.⁵⁵,w ã ²¹ + k a ⁵⁵ + l a ⁵⁵,,Starostin2013,,False,^ w . ã . ∼ . ²¹ . k . a . ⁵⁵ . l . a . ⁵⁵$,default
+boluotujia-100_yellow-1,,boluotujia,100_yellow,xoʉ33,x.o.ʉ.³³,x o ʉ ³³,,Starostin2013,,False,^ x . o . ʉ . ³³$,default
+tanxitujia-100_yellow-1,,tanxitujia,100_yellow,ħʉ33,ħ.ʉ.³³,ħ ʉ ³³,,Starostin2013,,False,^ ħ . ʉ . ³³$,default

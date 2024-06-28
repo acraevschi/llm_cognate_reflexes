@@ -1,0 +1,1341 @@
+ID,Local_ID,Language_ID,Parameter_ID,Value,Form,Segments,Comment,Source,Cognacy,Loan,Graphemes,Profile
+CentralArabic-1_all-1,,CentralArabic,1_all,kull,kull,k u lː,,Ratcliffe2021,,,^k u ll$,default
+MoroccanArabic-1_all-1,,MoroccanArabic,1_all,koll,koll,k o lː,,Harrell1962;Caubet1993,,,^k o ll$,default
+Maltese-1_all-1,,Maltese,1_all,Koll u,Koll_u,k o lː u,,Borg1997;Aquilina1965,,,^K o ll _ u$,default
+Cairene-1_all-1,,Cairene,1_all,kull,kull,k u lː,,AbdelMassih2009,,,^k u ll$,default
+Damascene-1_all-1,,Damascene,1_all,kəll,kəll,k ə lː,,Cowell2005,,,^k ə ll$,default
+Iraqi-1_all-1,,Iraqi,1_all,kull,kull,k u lː,,Erwin1963,,,^k u ll$,default
+Soukhne-1_all-1,,Soukhne,1_all,ʧill,ʧill,tʃ i lː,,Behnstedt1994,,,^ʧ i ll$,default
+AqraArbilArabic-1_all-1,,AqraArbilArabic,1_all,"kəll, sa:γi:  n",kəll,k ə lː,,Jastrow1990,,,^k ə ll$,default
+CypriotArabic-1_all-1,,CypriotArabic,1_all,kull,kull,k u lː,,Borg1985,,,^k u ll$,default
+GulfArabic-1_all-1,,GulfArabic,1_all,kil,kil,k i l,,Qafisheh1975;Holes1990,,,^k i l$,default
+YemeniticArabic-1_all-1,,YemeniticArabic,1_all,kull,kull,k u lː,,Qafisheh1992,,,^k u ll$,default
+NigerianArabic-1_all-1,,NigerianArabic,1_all,tʃat,tʃat,tʃ a t,,Owens1993;Kaye1982,,,^tʃ a t$,default
+Buxari-1_all-1,,Buxari,1_all,kullu,kullu,k u lː u,,Zimmermann2002;Ratcliffe2005,,,^k u ll u$,default
+Kinubi-1_all-1,,Kinubi,1_all,kulu,kulu,k u l u,,Wellens2003,,,^k u l u$,default
+CentralArabic-2_ash-1,,CentralArabic,2_ash,ra ma: d,ra_ma:_d,r a m aː d,,Ratcliffe2021,,,^r a _ m a: _ d$,default
+MoroccanArabic-2_ash-1,,MoroccanArabic,2_ash,rˁm adˁ,rˁm_adˁ,rˤ m a dˤ,,Harrell1962;Caubet1993,,,^rˁ m _ a dˁ$,default
+Maltese-2_ash-1,,Maltese,2_ash,rmi: d,rmi:_d,r m iː d,,Borg1997;Aquilina1965,,,^r m i: _ d$,default
+Cairene-2_ash-1,,Cairene,2_ash,ram a:dˁ  *,ram_a:dˁ_*,r a m aː dˤ,,AbdelMassih2009,,,^r a m _ a: dˁ _ *$,default
+Damascene-2_ash-1,,Damascene,2_ash,rama :d,rama_:d,r a m aː d,,Cowell2005,,,^r a m a_: d$,default
+Iraqi-2_ash-1,,Iraqi,2_ash,ruma :d,ruma_:d,r u m aː d,,Erwin1963,,,^r u m a_: d$,default
+AqraArbilArabic-2_ash-1,,AqraArbilArabic,2_ash,rˁam a:d,rˁam_a:d,rˤ a m aː d,,Jastrow1990,,,^rˁ a m _ a: d$,default
+CypriotArabic-2_ash-1,,CypriotArabic,2_ash,rama t  r-m-  d,rama_t_r-m-_d,r a m a t r m d,,Borg1985,,,^r a m a _ t _ r - m - _ d$,default
+GulfArabic-2_ash-1,,GulfArabic,2_ash,rama ad,rama_ad,r a m a a d,,Qafisheh1975;Holes1990,,,^r a m a _ a d$,default
+Buxari-2_ash-1,,Buxari,2_ash,ra’matt,ra’matt,r a mˁ a tː,,Zimmermann2002;Ratcliffe2005,,,^r a ’m a tt$,default
+Kinubi-2_ash-1,,Kinubi,2_ash,ruman,ruman,r u m a n,,Wellens2003,,,^r u m a n$,default
+CentralArabic-3_bark-1,,CentralArabic,3_bark,qirf at,qirf_at,q i r f a t,,Ratcliffe2021,,,^q i r f _ a t$,default
+MoroccanArabic-3_bark-1,,MoroccanArabic,3_bark,qeʃ rˁa,qeʃ_rˁa,q e ʃ rˤ a,,Harrell1962;Caubet1993,,,^q e ʃ _ rˁ a$,default
+Maltese-3_bark-1,,Maltese,3_bark,ʔoʃr a,ʔoʃr_a,ʔ o ʃ r a,,Borg1997;Aquilina1965,,,^ʔ o ʃ r _ a$,default
+Cairene-3_bark-1,,Cairene,3_bark,ʔiʃr*,ʔiʃr*,ʔ i ʃ r,,AbdelMassih2009,,,^ʔ i ʃ r *$,default
+Damascene-3_bark-1,,Damascene,3_bark,ʔəʃər,ʔəʃər,ʔ ə ʃ ə r,,Cowell2005,,,^ʔ ə ʃ ə r$,default
+Iraqi-3_bark-1,,Iraqi,3_bark,giʃra,giʃra,g i ʃ r a,,Erwin1963,,,^g i ʃ r a$,default
+Soukhne-3_bark-1,,Soukhne,3_bark,kiʃr,kiʃr,k i ʃ r,,Behnstedt1994,,,^k i ʃ r$,default
+AqraArbilArabic-3_bark-1,,AqraArbilArabic,3_bark,səvi:y e,səvi:y_e,s ə v iː j e,,Jastrow1990,,,^s ə v i:y _ e$,default
+GulfArabic-3_bark-1,,GulfArabic,3_bark,giʃra,giʃra,g i ʃ r a,,Qafisheh1975;Holes1990,,,^g i ʃ r a$,default
+YemeniticArabic-3_bark-1,,YemeniticArabic,3_bark,giʃr,giʃr,g i ʃ r,,Qafisheh1992,,,^g i ʃ r$,default
+NigerianArabic-3_bark-1,,NigerianArabic,3_bark,"li:he, girfe",li:he,l iː h e,,Owens1993;Kaye1982,,,^l i: h e$,default
+Kinubi-3_bark-1,,Kinubi,3_bark,"*kokobo  lataka, (girifa)",*kokobo_lataka,k o k o b o l a t a k a,,Wellens2003,,,^* k o k o b o _ l a t a k a$,default
+CentralArabic-4_belly-1,,CentralArabic,4_belly,batˁ n,batˁ_n,b a tˤ n,,Ratcliffe2021,,,^b a tˁ _ n$,default
+MoroccanArabic-4_belly-1,,MoroccanArabic,4_belly,ker ʃ,ker_ʃ,k e r ʃ,,Harrell1962;Caubet1993,,,^k e r _ ʃ$,default
+Maltese-4_belly-1,,Maltese,4_belly,zaʔʔ,zaʔʔ,z a ʔː,,Borg1997;Aquilina1965,,,^z a ʔʔ$,default
+Cairene-4_belly-1,,Cairene,4_belly,batˁ n*,batˁ_n*,b a tˤ n,,AbdelMassih2009,,,^b a tˁ _ n *$,default
+Damascene-4_belly-1,,Damascene,4_belly,batˁə n,batˁə_n,b a tˤ ə n,,Cowell2005,,,^b a tˁ ə _ n$,default
+Iraqi-4_belly-1,,Iraqi,4_belly,batˁi n,batˁi_n,b a tˤ i n,,Erwin1963,,,^b a tˁ i _ n$,default
+Soukhne-4_belly-1,,Soukhne,4_belly,"batˁn , ʧarʃ",batˁn,b a tˤ n,,Behnstedt1994,,,^b a tˁ n$,default
+AqraArbilArabic-4_belly-1,,AqraArbilArabic,4_belly,ʤoof,ʤoof,dʒ oː f,,Jastrow1990,,,^ʤ oo f$,default
+CypriotArabic-4_belly-1,,CypriotArabic,4_belly,patn b-tˁ-  n,patn_b-tˁ-_n,p a t n b tˤ n,,Borg1985,,,^p a t n _ b - tˁ - _ n$,default
+GulfArabic-4_belly-1,,GulfArabic,4_belly,batˤn,batˤn,b a tˤ n,,Qafisheh1975;Holes1990,,,^b a tˤ n$,default
+YemeniticArabic-4_belly-1,,YemeniticArabic,4_belly,"batˁn , karʃ",batˁn,b a tˤ n,,Qafisheh1992,,,^b a tˁ n$,default
+NigerianArabic-4_belly-1,,NigerianArabic,4_belly,kirʃ,kirʃ,k i r ʃ,,Owens1993;Kaye1982,,,^k i rʃ$,default
+Buxari-4_belly-1,,Buxari,4_belly,batin,batin,b a t i n,,Zimmermann2002;Ratcliffe2005,,,^b a t i n$,default
+Kinubi-4_belly-1,,Kinubi,4_belly,batna,batna,b a t n a,,Wellens2003,,,^b a t n a$,default
+CentralArabic-5_big-1,,CentralArabic,5_big,kab i:r,kab_i:r,k a b iː r,,Ratcliffe2021,,,^k a b _ i: r$,default
+MoroccanArabic-5_big-1,,MoroccanArabic,5_big,kbi r,kbi_r,k b i r,,Harrell1962;Caubet1993,,,^k b i _ r$,default
+Maltese-5_big-1,,Maltese,5_big,kibi r,kibi_r,k i b i r,,Borg1997;Aquilina1965,,,^k i b i _ r$,default
+Cairene-5_big-1,,Cairene,5_big,kibii r,kibii_r,k i b iː r,,AbdelMassih2009,,,^k i b ii _ r$,default
+Damascene-5_big-1,,Damascene,5_big,kbi:r,kbi:r,k b iː r,,Cowell2005,,,^k b i: r$,default
+Iraqi-5_big-1,,Iraqi,5_big,ʧbi:r,ʧbi:r,tʃ b iː r,,Erwin1963,,,^ʧ b i: r$,default
+Soukhne-5_big-1,,Soukhne,5_big,ʧabi: r,ʧabi:_r,tʃ a b iː r,,Behnstedt1994,,,^ʧ a b i: _ r$,default
+AqraArbilArabic-5_big-1,,AqraArbilArabic,5_big,gəbi: r,gəbi:_r,g ə b iː r,,Jastrow1990,,,^g ə b i: _ r$,default
+CypriotArabic-5_big-1,,CypriotArabic,5_big,k-b- r,k-b-_r,k b r,,Borg1985,,,^k - b - _ r$,default
+GulfArabic-5_big-1,,GulfArabic,5_big,ʕood,ʕood,ʕ oː d,,Qafisheh1975;Holes1990,,,^ʕ oo d$,default
+YemeniticArabic-5_big-1,,YemeniticArabic,5_big,Kabii r,Kabii_r,k a b iː r,,Qafisheh1992,,,^K a b ii _ r$,default
+NigerianArabic-5_big-1,,NigerianArabic,5_big,kabi:r,kabi:r,k a b iː r,,Owens1993;Kaye1982,,,^k a b i: r$,default
+Buxari-5_big-1,,Buxari,5_big,ka’biir,ka’biir,k a bˤ iː r,,Zimmermann2002;Ratcliffe2005,,,^k a ’b ii r$,default
+Kinubi-5_big-1,,Kinubi,5_big,kbir,kbir,k b i r,,Wellens2003,,,^k b i r$,default
+CentralArabic-6_bird-1,,CentralArabic,6_bird,tˁa: ʔir,tˁa:_ʔir,tˤ aː ʔ i r,,Ratcliffe2021,,,^tˁ a: _ ʔ i r$,default
+MoroccanArabic-6_bird-1,,MoroccanArabic,6_bird,tˁir,tˁir,tˤ i r,,Harrell1962;Caubet1993,,,^tˁ i r$,default
+Maltese-6_bird-1,,Maltese,6_bird,ʕasf ur,ʕasf_ur,ʕ a s f u r,,Borg1997;Aquilina1965,,,^ʕ a s f _ u r$,default
+Cairene-6_bird-1,,Cairene,6_bird,tˁee r*,tˁee_r*,tˤ eː r,,AbdelMassih2009,,,^tˁ ee _ r *$,default
+Damascene-6_bird-1,,Damascene,6_bird,tˁeer,tˁeer,tˤ eː r,,Cowell2005,,,^tˁ ee r$,default
+Iraqi-6_bird-1,,Iraqi,6_bird,tˁeer,tˁeer,tˤ eː r,,Erwin1963,,,^tˁ ee r$,default
+Soukhne-6_bird-1,,Soukhne,6_bird,tˁeer,tˁeer,tˤ eː r,,Behnstedt1994,,,^tˁ ee r$,default
+AqraArbilArabic-6_bird-1,,AqraArbilArabic,6_bird,ku:ʧ ka:ye,ku:ʧ_ka:ye,k uː tʃ k aː j e,,Jastrow1990,,,^k u: ʧ _ k a:ye$,default
+GulfArabic-6_bird-1,,GulfArabic,6_bird,tˤeer,tˤeer,tˤ eː r,,Qafisheh1975;Holes1990,,,^tˤ ee r$,default
+YemeniticArabic-6_bird-1,,YemeniticArabic,6_bird,tˁajr,tˁajr,tˤ a j r,,Qafisheh1992,,,^tˁ a j r$,default
+NigerianArabic-6_bird-1,,NigerianArabic,6_bird,tˁe:ra,tˁe:ra,tˤ eː r a,,Owens1993;Kaye1982,,,^tˁ e: r a$,default
+Buxari-6_bird-1,,Buxari,6_bird,tayra,tayra,t ai̯ r a,,Zimmermann2002;Ratcliffe2005,,,^t ay r a$,default
+Kinubi-6_bird-1,,Kinubi,6_bird,ter,ter,t e r,,Wellens2003,,,^t e r$,default
+CentralArabic-7_bite-1,,CentralArabic,7_bite,ʕad ˁdˁa,ʕad_ˁdˁa,ʕ a d ˀdˁ a,,Ratcliffe2021,,,^ʕ a d _ˁdˁ a$,default
+MoroccanArabic-7_bite-1,,MoroccanArabic,7_bite,ʕed ˁdˁ,ʕed_ˁdˁ,ʕ e d ˀdˁ,,Harrell1962;Caubet1993,,,^ʕ e d _ˁdˁ $,default
+Maltese-7_bite-1,,Maltese,7_bite,gidem,gidem,g i d e m,,Borg1997;Aquilina1965,,,^g i d e m$,default
+Cairene-7_bite-1,,Cairene,7_bite,ʕadˁdˁ,ʕadˁdˁ,ʕ a dˤː,,AbdelMassih2009,,,^ʕ a dˁdˁ$,default
+Damascene-7_bite-1,,Damascene,7_bite,ʕadˁdˁ,ʕadˁdˁ,ʕ a dˤː,,Cowell2005,,,^ʕ a dˁdˁ$,default
+Iraqi-7_bite-1,,Iraqi,7_bite,ʕaðˁðˁ,ʕaðˁðˁ,ʕ a ðˤː,,Erwin1963,,,^ʕ a ðˁðˁ$,default
+Soukhne-7_bite-1,,Soukhne,7_bite,ʕaðˁðˁ,ʕaðˁðˁ,ʕ a ðˤː,,Behnstedt1994,,,^ʕ a ðˁðˁ$,default
+CypriotArabic-7_bite-1,,CypriotArabic,7_bite,ʕaððʕ-dˁ- dˁ,ʕaððʕ-dˁ-_dˁ,ʕ a ðː ʕ dˤ dˤ,,Borg1985,,,^ʕ a ðð ʕ - dˁ - _ dˁ$,default
+GulfArabic-7_bite-1,,GulfArabic,7_bite,ʕadˤdˤ,ʕadˤdˤ,ʕ a dˤː,,Qafisheh1975;Holes1990,,,^ʕ a dˤdˤ$,default
+YemeniticArabic-7_bite-1,,YemeniticArabic,7_bite,lugusˁ,lugusˁ,l u g u sˤ,,Qafisheh1992,,,^l u g u sˁ$,default
+NigerianArabic-7_bite-1,,NigerianArabic,7_bite,adˁdˁa,adˁdˁa,a dˤː a,,Owens1993;Kaye1982,,,^a dˁdˁ a$,default
+Buxari-7_bite-1,,Buxari,7_bite,yaʕazz,yaʕazz,j a ʕ a zː,,Zimmermann2002;Ratcliffe2005,,,^ya ʕ a zz$,default
+Kinubi-7_bite-1,,Kinubi,7_bite,adi,adi,a d i,,Wellens2003,,,^a d i$,default
+CentralArabic-8_black-1,,CentralArabic,8_black,ʔas  wa d,ʔas_wa_d,ʔ a s w a d,,Ratcliffe2021,,,^ʔ a s _ w a _ d$,default
+MoroccanArabic-8_black-1,,MoroccanArabic,8_black,kħe l,kħe_l,k ħ e l,,Harrell1962;Caubet1993,,,^k ħ e _ l$,default
+Maltese-8_black-1,,Maltese,8_black,iswe d,iswe_d,i s w e d,,Borg1997;Aquilina1965,,,^i sw e _ d$,default
+Cairene-8_black-1,,Cairene,8_black,iswi d,iswi_d,i s w i d,,AbdelMassih2009,,,^i sw i _ d$,default
+Damascene-8_black-1,,Damascene,8_black,ʔasw ad,ʔasw_ad,ʔ a s w a d,,Cowell2005,,,^ʔ a sw _ a d$,default
+Iraqi-8_black-1,,Iraqi,8_black,ʔasw ad,ʔasw_ad,ʔ a s w a d,,Erwin1963,,,^ʔ a sw _ a d$,default
+Soukhne-8_black-1,,Soukhne,8_black,ʔasw ad,ʔasw_ad,ʔ a s w a d,,Behnstedt1994,,,^ʔ a sw _ a d$,default
+AqraArbilArabic-8_black-1,,AqraArbilArabic,8_black,əswə d,əswə_d,ə s w ə d,,Jastrow1990,,,^ə sw ə _ d$,default
+CypriotArabic-8_black-1,,CypriotArabic,8_black,isfet  s-w- d,isfet_s-w-_d,i s f e t s w d,,Borg1985,,,^i s f e t _ s - w - _ d$,default
+GulfArabic-8_black-1,,GulfArabic,8_black,ʔasw ad,ʔasw_ad,ʔ a s w a d,,Qafisheh1975;Holes1990,,,^ʔ a sw _ a d$,default
+YemeniticArabic-8_black-1,,YemeniticArabic,8_black,ʔasw ad,ʔasw_ad,ʔ a s w a d,,Qafisheh1992,,,^ʔ a sw _ a d$,default
+NigerianArabic-8_black-1,,NigerianArabic,8_black,axadˁar,axadˁar,a x a dˤ a r,,Owens1993;Kaye1982,,,^a x a dˁ a r$,default
+Buxari-8_black-1,,Buxari,8_black,ʔaswad,ʔaswad,ʔ a s w a d,,Zimmermann2002;Ratcliffe2005,,,^ʔ a sw a d$,default
+Kinubi-8_black-1,,Kinubi,8_black,*asue,*asue,a s u e,,Wellens2003,,,^* a s ue$,default
+CentralArabic-9_blood-1,,CentralArabic,9_blood,da m,da_m,d a m,,Ratcliffe2021,,,^d a _ m$,default
+MoroccanArabic-9_blood-1,,MoroccanArabic,9_blood,de mm,de_mm,d e mː,,Harrell1962;Caubet1993,,,^d e _ mm$,default
+Maltese-9_blood-1,,Maltese,9_blood,dem m,dem_m,d e m m,,Borg1997;Aquilina1965,,,^d e m _ m$,default
+Cairene-9_blood-1,,Cairene,9_blood,dam m,dam_m,d a m m,,AbdelMassih2009,,,^d a m _ m$,default
+Damascene-9_blood-1,,Damascene,9_blood,dam m,dam_m,d a m m,,Cowell2005,,,^d a m _ m$,default
+Iraqi-9_blood-1,,Iraqi,9_blood,dam m,dam_m,d a m m,,Erwin1963,,,^d a m _ m$,default
+Soukhne-9_blood-1,,Soukhne,9_blood,dam,dam,d a m,,Behnstedt1994,,,^d a m$,default
+AqraArbilArabic-9_blood-1,,AqraArbilArabic,9_blood,Dam,Dam,d a m,,Jastrow1990,,,^D a m$,default
+CypriotArabic-9_blood-1,,CypriotArabic,9_blood,d-m- y,d-m-_y,d m y,,Borg1985,,,^d - m - _ y$,default
+GulfArabic-9_blood-1,,GulfArabic,9_blood,dam m,dam_m,d a m m,,Qafisheh1975;Holes1990,,,^d a m _ m$,default
+YemeniticArabic-9_blood-1,,YemeniticArabic,9_blood,Dam,Dam,d a m,,Qafisheh1992,,,^D a m$,default
+NigerianArabic-9_blood-1,,NigerianArabic,9_blood,damm,damm,d a mː,,Owens1993;Kaye1982,,,^d a mm$,default
+Buxari-9_blood-1,,Buxari,9_blood,dam,dam,d a m,,Zimmermann2002;Ratcliffe2005,,,^d a m$,default
+Kinubi-9_blood-1,,Kinubi,9_blood,dum,dum,d u m,,Wellens2003,,,^d u m$,default
+CentralArabic-10_bone-1,,CentralArabic,10_bone,ʕað  ˁm,ʕað_ˁm,ʕ a ð mˁ,,Ratcliffe2021,,,^ʕ a ð _ ˁm $,default
+MoroccanArabic-10_bone-1,,MoroccanArabic,10_bone,ʕdˁ  em,ʕdˁ_em,ʕ dˤ e m,,Harrell1962;Caubet1993,,,^ʕ dˁ _ e m$,default
+Maltese-10_bone-1,,Maltese,10_bone,ʕad  ma,ʕad_ma,ʕ a d m a,,Borg1997;Aquilina1965,,,^ʕ a d _ m a$,default
+Cairene-10_bone-1,,Cairene,10_bone,ʕad  ma,ʕad_ma,ʕ a d m a,,AbdelMassih2009,,,^ʕ a d _ m a$,default
+Damascene-10_bone-1,,Damascene,10_bone,ʕadˁ  me,ʕadˁ_me,ʕ a dˤ m e,,Cowell2005,,,^ʕ a dˁ _ m e$,default
+Iraqi-10_bone-1,,Iraqi,10_bone,ʕaðˁ  ma,ʕaðˁ_ma,ʕ a ðˤ m a,,Erwin1963,,,^ʕ a ðˁ _ m a$,default
+Soukhne-10_bone-1,,Soukhne,10_bone,ʕaðˁ  m,ʕaðˁ_m,ʕ a ðˤ m,,Behnstedt1994,,,^ʕ a ðˁ _ m$,default
+AqraArbilArabic-10_bone-1,,AqraArbilArabic,10_bone,ʕadˁə  m,ʕadˁə_m,ʕ a dˤ ə m,,Jastrow1990,,,^ʕ a dˁ ə _ m$,default
+GulfArabic-10_bone-1,,GulfArabic,10_bone,ʕaðˤ  m,ʕaðˤ_m,ʕ a ðˤ m,,Qafisheh1975;Holes1990,,,^ʕ a ðˤ _ m$,default
+YemeniticArabic-10_bone-1,,YemeniticArabic,10_bone,ʕaðˁ  ma,ʕaðˁ_ma,ʕ a ðˤ m a,,Qafisheh1992,,,^ʕ a ðˁ _ m a$,default
+NigerianArabic-10_bone-1,,NigerianArabic,10_bone,adˁum,adˁum,a dˤ u m,,Owens1993;Kaye1982,,,^a dˁ u m$,default
+Buxari-10_bone-1,,Buxari,10_bone,ʕazəm,ʕazəm,ʕ a z ə m,,Zimmermann2002;Ratcliffe2005,,,^ʕ a z ə m$,default
+Kinubi-10_bone-1,,Kinubi,10_bone,ladim,ladim,l a d i m,,Wellens2003,,,^l a d i m$,default
+CentralArabic-11_breast-1,,CentralArabic,11_breast,sˁa dr,sˁa_dr,sˤ a d r,,Ratcliffe2021,,,^sˁ a _ d r$,default
+MoroccanArabic-11_breast-1,,MoroccanArabic,11_breast,bez zul a,bez_zul_a,b e z z u l a,,Harrell1962;Caubet1993,,,^b e z _ z u l _ a$,default
+Maltese-11_breast-1,,Maltese,11_breast,Side r,Side_r,s i d e r,,Borg1997;Aquilina1965,,,^S i d e _ r$,default
+Cairene-11_breast-1,,Cairene,11_breast,sidir *,sidir_*,s i d i r,,AbdelMassih2009,,,^s i d i r _ *$,default
+Damascene-11_breast-1,,Damascene,11_breast,sˁədˁ ər,sˁədˁ_ər,sˤ ə dˤ ə r,,Cowell2005,,,^sˁ ə dˁ _ ə r$,default
+Iraqi-11_breast-1,,Iraqi,11_breast,nahid,nahid,n a h i d,,Erwin1963,,,^n a h i d$,default
+Soukhne-11_breast-1,,Soukhne,11_breast,θidi (f.)  sˁidr,θidi__sˁidr,θ i d i sˤ i d r,,Behnstedt1994,,,^θ i d i __ sˁ i d r$,default
+CypriotArabic-11_breast-1,,CypriotArabic,11_breast,pzaz 9pl) b-z-  z,pzaz_9pl)_b-z-_z,p z a z,,Borg1985,,,^pzaz_9pl)_b-z-_z $,default
+GulfArabic-11_breast-1,,GulfArabic,11_breast,deed (f) sˤadr,deed__sˤadr,d eː d sˤ a d r,,Qafisheh1975;Holes1990,,,^d ee d __ sˤ a d r$,default
+YemeniticArabic-11_breast-1,,YemeniticArabic,11_breast,sˁadr,sˁadr,sˤ a d r,,Qafisheh1992,,,^sˁ a d r$,default
+NigerianArabic-11_breast-1,,NigerianArabic,11_breast,de:d,de:d,d eː d,,Owens1993;Kaye1982,,,^d e: d$,default
+Buxari-11_breast-1,,Buxari,11_breast,sadər;bu Ʒul,sadər,s a d ə r,,Zimmermann2002;Ratcliffe2005,,,^s a d ə r$,default
+Kinubi-11_breast-1,,Kinubi,11_breast,*sudur,*sudur,s u d u r,,Wellens2003,,,^*s u d u r$,default
+CentralArabic-12_burnvt-1,,CentralArabic,12_burnvt,ħar aqa,ħar_aqa,ħ a r a q a,,Ratcliffe2021,,,^ħ a r _ a q a$,default
+MoroccanArabic-12_burnvt-1,,MoroccanArabic,12_burnvt,ħre q,ħre_q,ħ r e q,,Harrell1962;Caubet1993,,,^ħ r e _ q$,default
+Maltese-12_burnvt-1,,Maltese,12_burnvt,ħar aʔ,ħar_aʔ,ħ a r a ʔ,,Borg1997;Aquilina1965,,,^ħ a r _ a ʔ$,default
+Cairene-12_burnvt-1,,Cairene,12_burnvt,ħar aʔ,ħar_aʔ,ħ a r a ʔ,,AbdelMassih2009,,,^ħ a r _ a ʔ$,default
+Damascene-12_burnvt-1,,Damascene,12_burnvt,ħaraʔ,ħaraʔ,ħ a r a ʔ,,Cowell2005,,,^ħ a r a ʔ$,default
+Iraqi-12_burnvt-1,,Iraqi,12_burnvt,ħirag,ħirag,ħ i r a g,,Erwin1963,,,^ħ i r a g$,default
+Soukhne-12_burnvt-1,,Soukhne,12_burnvt,ħarak,ħarak,ħ a r a k,,Behnstedt1994,,,^ħ a r a k$,default
+AqraArbilArabic-12_burnvt-1,,AqraArbilArabic,12_burnvt,ħ-r- q,ħ-r-_q,ħ r q,,Jastrow1990,,,^ħ - r - _ q$,default
+CypriotArabic-12_burnvt-1,,CypriotArabic,12_burnvt,ħ-r- q,ħ-r-_q,ħ r q,,Borg1985,,,^ħ - r - _ q$,default
+GulfArabic-12_burnvt-1,,GulfArabic,12_burnvt,ħara g,ħara_g,ħ a r a g,,Qafisheh1975;Holes1990,,,^ħ a r a _ g$,default
+YemeniticArabic-12_burnvt-1,,YemeniticArabic,12_burnvt,ħara g,ħara_g,ħ a r a g,,Qafisheh1992,,,^ħ a r a _ g$,default
+NigerianArabic-12_burnvt-1,,NigerianArabic,12_burnvt,"hirig,  taʃʃa (tr)",hirig,h i r i g,,Owens1993;Kaye1982,,,^h i r i g$,default
+Buxari-12_burnvt-1,,Buxari,12_burnvt,ʕalag,ʕalag,ʕ a l a g,,Zimmermann2002;Ratcliffe2005,,,^ʕ a l a g$,default
+Kinubi-12_burnvt-1,,Kinubi,12_burnvt,haragu,haragu,h a r a g u,,Wellens2003,,,^h a r a g u$,default
+CentralArabic-13_claw-1,,CentralArabic,13_claw,ðˁu fr,ðˁu_fr,ðˤ u f r,,Ratcliffe2021,,,^ðˁ u _ f r$,default
+MoroccanArabic-13_claw-1,,MoroccanArabic,13_claw,dˁfe rˁ,dˁfe_rˁ,dˤ f e rˤ,,Harrell1962;Caubet1993,,,^dˁ f e _ rˁ$,default
+Maltese-13_claw-1,,Maltese,13_claw,Dife r,Dife_r,d i f e r,,Borg1997;Aquilina1965,,,^D i f e _ r$,default
+Cairene-13_claw-1,,Cairene,13_claw,dˁifr  ˁ*,dˁifr_ˁ*,dˤ i f rˤ,,AbdelMassih2009,,,^dˁ i f r_ˁ *$,default
+Damascene-13_claw-1,,Damascene,13_claw,dˁəfə r,dˁəfə_r,dˤ ə f ə r,,Cowell2005,,,^dˁ ə f ə _ r$,default
+Iraqi-13_claw-1,,Iraqi,13_claw,ðˁifir,ðˁifir,ðˤ i f i r,,Erwin1963,,,^ðˁ i f i r$,default
+Soukhne-13_claw-1,,Soukhne,13_claw,iðˁfir,iðˁfir,i ðˤ f i r,,Behnstedt1994,,,^i ðˁ f i r$,default
+AqraArbilArabic-13_claw-1,,AqraArbilArabic,13_claw,dˁəfə r,dˁəfə_r,dˤ ə f ə r,,Jastrow1990,,,^dˁ ə f ə _ r$,default
+CypriotArabic-13_claw-1,,CypriotArabic,13_claw,ðˁ-f- r,ðˁ-f-_r,ðˤ f r,,Borg1985,,,^ðˁ - f - _ r$,default
+GulfArabic-13_claw-1,,GulfArabic,13_claw,"mixla b,  ðˤifr",mixla_b,m i x l a b,,Qafisheh1975;Holes1990,,,^m i x l a _ b$,default
+YemeniticArabic-13_claw-1,,YemeniticArabic,13_claw,θˁufri n**,θˁufri_n**,θˤ u f r i n,,Qafisheh1992,,,^θˁ u f r i _ n **$,default
+NigerianArabic-13_claw-1,,NigerianArabic,13_claw,xumfur,xumfur,x u m f u r,,Owens1993;Kaye1982,,,^x u m f u r$,default
+Kinubi-13_claw-1,,Kinubi,13_claw,*dufuru,*dufuru,d u f u r u,,Wellens2003,,,^* d u f u r u$,default
+CentralArabic-14_cloud-1,,CentralArabic,14_cloud,γam a:m at,γam_a:m_at,ɣ a m aː m a t,,Ratcliffe2021,,,^γ a m _ a: m _ a t$,default
+MoroccanArabic-14_cloud-1,,MoroccanArabic,14_cloud,γm am  a,γm_am_a,ɣ m a m a,,Harrell1962;Caubet1993,,,^γ m _ a m _ a$,default
+Maltese-14_cloud-1,,Maltese,14_cloud,sħa ba,sħa_ba,s ħ a b a,,Borg1997;Aquilina1965,,,^s ħ a _ b a$,default
+Cairene-14_cloud-1,,Cairene,14_cloud,saħ aab,saħ_aab,s a ħ aː b,,AbdelMassih2009,,,^s a ħ _ aa b$,default
+Damascene-14_cloud-1,,Damascene,14_cloud,γeem e,γeem_e,ɣ eː m e,,Cowell2005,,,^γ ee m _ e$,default
+Iraqi-14_cloud-1,,Iraqi,14_cloud,γeem a,γeem_a,ɣ eː m a,,Erwin1963,,,^γ ee m _ a$,default
+Soukhne-14_cloud-1,,Soukhne,14_cloud,γeem i,γeem_i,ɣ eː m i,,Behnstedt1994,,,^γ ee m _ i$,default
+CypriotArabic-14_cloud-1,,CypriotArabic,14_cloud,ɣ-y-r,ɣ-y-r,ɣ y r,,Borg1985,,,^ɣ - y - r$,default
+GulfArabic-14_cloud-1,,GulfArabic,14_cloud,"siħaa b,  γeem",siħaa_b,s i ħ aː b,,Qafisheh1975;Holes1990,,,^s i ħ aa _ b$,default
+NigerianArabic-14_cloud-1,,NigerianArabic,14_cloud,dˁa(ha)w ije,dˁaw_ije,dˤ a w i j e,,Owens1993;Kaye1982,,,^dˁ a w _ i j e$,default
+Buxari-14_cloud-1,,Buxari,14_cloud,"γeem,qe em",γeem,ɣ eː m,,Zimmermann2002;Ratcliffe2005,,,^γ ee m$,default
+Kinubi-14_cloud-1,,Kinubi,14_cloud,*soobur a,*soobur_a,s oː b u r a,,Wellens2003,,,^*s oo b u r _ a$,default
+CentralArabic-15_cold-1,,CentralArabic,15_cold,ba: rid,ba:_rid,b aː r i d,,Ratcliffe2021,,,^b a: _ r i d$,default
+MoroccanArabic-15_cold-1,,MoroccanArabic,15_cold,bar ed,bar_ed,b a r e d,,Harrell1962;Caubet1993,,,^b a r _ e d$,default
+Maltese-15_cold-1,,Maltese,15_cold,bi:r ed,bi:r_ed,b iː r e d,,Borg1997;Aquilina1965,,,^b i: r _ e d$,default
+Cairene-15_cold-1,,Cairene,15_cold,bar d,bar_d,b a r d,,AbdelMassih2009,,,^b a r _ d$,default
+Damascene-15_cold-1,,Damascene,15_cold,barəd,barəd,b a r ə d,,Cowell2005,,,^b a r ə d$,default
+Iraqi-15_cold-1,,Iraqi,15_cold,bard a:n,bard_a:n,b a r d aː n,,Erwin1963,,,^b a r d _ a: n$,default
+Soukhne-15_cold-1,,Soukhne,15_cold,bi:rid,bi:rid,b iː r i d,,Behnstedt1994,,,^b i: r i d$,default
+AqraArbilArabic-15_cold-1,,AqraArbilArabic,15_cold,beerə  d,beerə_d,b eː r ə d,,Jastrow1990,,,^b ee r ə _ d$,default
+CypriotArabic-15_cold-1,,CypriotArabic,15_cold,*pere t  (brd),*pere_t_,p e r e t,,Borg1985,,,^* p e r e _ t _$,default
+GulfArabic-15_cold-1,,GulfArabic,15_cold,baari d,baari_d,b aː r i d,,Qafisheh1975;Holes1990,,,^b aa r i _ d$,default
+YemeniticArabic-15_cold-1,,YemeniticArabic,15_cold,baari d,baari_d,b aː r i d,,Qafisheh1992,,,^b aa r i _ d$,default
+NigerianArabic-15_cold-1,,NigerianArabic,15_cold,barda:n,barda:n,b a r d aː n,,Owens1993;Kaye1982,,,^b a r d a: n$,default
+Buxari-15_cold-1,,Buxari,15_cold,bard,bard,b a r d,,Zimmermann2002;Ratcliffe2005,,,^b a r d$,default
+Kinubi-15_cold-1,,Kinubi,15_cold,bari,bari,b a r i,,Wellens2003,,,^b a r i$,default
+CentralArabic-16_come-1,,CentralArabic,16_come,ʤa: ʔa,ʤa:_ʔa,dʒ aː ʔ a,,Ratcliffe2021,,,^ʤ a: _ ʔ a$,default
+MoroccanArabic-16_come-1,,MoroccanArabic,16_come,ʒa,ʒa,ʒ a,,Harrell1962;Caubet1993,,,^ʒ a$,default
+Maltese-16_come-1,,Maltese,16_come,ʤi:,ʤi:,dʒ iː,,Borg1997;Aquilina1965,,,^ʤ i:$,default
+Cairene-16_come-1,,Cairene,16_come,ga,ga,g a,,AbdelMassih2009,,,^g a$,default
+Damascene-16_come-1,,Damascene,16_come,ʔəʤa,ʔəʤa,ʔ ə dʒ a,,Cowell2005,,,^ʔ ə ʤ a$,default
+Iraqi-16_come-1,,Iraqi,16_come,ʤa:,ʤa:,dʒ aː,,Erwin1963,,,^ʤ a:$,default
+Soukhne-16_come-1,,Soukhne,16_come,aʦa,aʦa,a ts a,,Behnstedt1994,,,^a ʦ a$,default
+AqraArbilArabic-16_come-1,,AqraArbilArabic,16_come,ʤa:,ʤa:,dʒ aː,,Jastrow1990,,,^ʤ a:$,default
+CypriotArabic-16_come-1,,CypriotArabic,16_come,ʤ-y- y,ʤ-y-_y,dʒ y y,,Borg1985,,,^ʤ - y - _ y$,default
+GulfArabic-16_come-1,,GulfArabic,16_come,ʤa,ʤa,dʒ a,,Qafisheh1975;Holes1990,,,^ʤ a$,default
+YemeniticArabic-16_come-1,,YemeniticArabic,16_come,ʤaaʔ,ʤaaʔ,dʒ aː ʔ,,Qafisheh1992,,,^ʤ aa ʔ$,default
+NigerianArabic-16_come-1,,NigerianArabic,16_come,ʤa,ʤa,dʒ a,,Owens1993;Kaye1982,,,^ʤ a$,default
+Buxari-16_come-1,,Buxari,16_come,dƷakki,dƷakki,d ʒ a kː i,,Zimmermann2002;Ratcliffe2005,,,^d Ʒ a kk i$,default
+Kinubi-16_come-1,,Kinubi,16_come,ʤa,ʤa,dʒ a,,Wellens2003,,,^ʤ a$,default
+CentralArabic-17_die-1,,CentralArabic,17_die,ma: ta,ma:_ta,m aː t a,,Ratcliffe2021,,,^m a: _ t a$,default
+MoroccanArabic-17_die-1,,MoroccanArabic,17_die,mat,mat,m a t,,Harrell1962;Caubet1993,,,^m a t$,default
+Maltese-17_die-1,,Maltese,17_die,mi:t,mi:t,m iː t,,Borg1997;Aquilina1965,,,^m i: t$,default
+Cairene-17_die-1,,Cairene,17_die,maa t,maa_t,m aː t,,AbdelMassih2009,,,^m aa _ t$,default
+Damascene-17_die-1,,Damascene,17_die,ma:t,ma:t,m aː t,,Cowell2005,,,^m a: t$,default
+Iraqi-17_die-1,,Iraqi,17_die,ma:t,ma:t,m aː t,,Erwin1963,,,^m a: t$,default
+Soukhne-17_die-1,,Soukhne,17_die,ma:t,ma:t,m aː t,,Behnstedt1994,,,^m a: t$,default
+AqraArbilArabic-17_die-1,,AqraArbilArabic,17_die,ma:t,ma:t,m aː t,,Jastrow1990,,,^m a: t$,default
+CypriotArabic-17_die-1,,CypriotArabic,17_die,m- w-t,m-_w-t,m w t,,Borg1985,,,^m - _ w - t$,default
+GulfArabic-17_die-1,,GulfArabic,17_die,maat,maat,m aː t,,Qafisheh1975;Holes1990,,,^m aa t$,default
+YemeniticArabic-17_die-1,,YemeniticArabic,17_die,maat,maat,m aː t,,Qafisheh1992,,,^m aa t$,default
+NigerianArabic-17_die-1,,NigerianArabic,17_die,ma:t,ma:t,m aː t,,Owens1993;Kaye1982,,,^m a: t$,default
+Buxari-17_die-1,,Buxari,17_die,maat,maat,m aː t,,Zimmermann2002;Ratcliffe2005,,,^m aa t$,default
+Kinubi-17_die-1,,Kinubi,17_die,mutu,mutu,m u t u,,Wellens2003,,,^m u t u$,default
+CentralArabic-18_dog-1,,CentralArabic,18_dog,kal b,kal_b,k a l b,,Ratcliffe2021,,,^k a l _ b$,default
+MoroccanArabic-18_dog-1,,MoroccanArabic,18_dog,kel b,kel_b,k e l b,,Harrell1962;Caubet1993,,,^k e l _ b$,default
+Maltese-18_dog-1,,Maltese,18_dog,kelb,kelb,k e l b,,Borg1997;Aquilina1965,,,^k e l b$,default
+Cairene-18_dog-1,,Cairene,18_dog,kalb,kalb,k a l b,,AbdelMassih2009,,,^k a l b$,default
+Damascene-18_dog-1,,Damascene,18_dog,kalb,kalb,k a l b,,Cowell2005,,,^k a l b$,default
+Iraqi-18_dog-1,,Iraqi,18_dog,ʧalib,ʧalib,tʃ a l i b,,Erwin1963,,,^ʧ a l i b$,default
+Soukhne-18_dog-1,,Soukhne,18_dog,ʧalb,ʧalb,tʃ a l b,,Behnstedt1994,,,^ʧ a l b$,default
+AqraArbilArabic-18_dog-1,,AqraArbilArabic,18_dog,kalb,kalb,k a l b,,Jastrow1990,,,^k a l b$,default
+CypriotArabic-18_dog-1,,CypriotArabic,18_dog,k-l-b,k-l-b,k l b,,Borg1985,,,^k - l - b$,default
+GulfArabic-18_dog-1,,GulfArabic,18_dog,ʧalb,ʧalb,tʃ a l b,,Qafisheh1975;Holes1990,,,^ʧ a l b$,default
+YemeniticArabic-18_dog-1,,YemeniticArabic,18_dog,kalb,kalb,k a l b,,Qafisheh1992,,,^k a l b$,default
+NigerianArabic-18_dog-1,,NigerianArabic,18_dog,kalb,kalb,k a l b,,Owens1993;Kaye1982,,,^k a l b$,default
+Buxari-18_dog-1,,Buxari,18_dog,kalb,kalb,k a l b,,Zimmermann2002;Ratcliffe2005,,,^k a l b$,default
+Kinubi-18_dog-1,,Kinubi,18_dog,keli,keli,k e l i,,Wellens2003,,,^k e l i$,default
+CentralArabic-19_drink-1,,CentralArabic,19_drink,ʃari ba,ʃari_ba,ʃ a r i b a,,Ratcliffe2021,,,^ʃ a r i _ b a$,default
+MoroccanArabic-19_drink-1,,MoroccanArabic,19_drink,ʃre b,ʃre_b,ʃ r e b,,Harrell1962;Caubet1993,,,^ʃ r e _ b$,default
+Maltese-19_drink-1,,Maltese,19_drink,ʃoro b,ʃoro_b,ʃ o r o b,,Borg1997;Aquilina1965,,,^ʃ o r o _ b$,default
+Cairene-19_drink-1,,Cairene,19_drink,ʃirib,ʃirib,ʃ i r i b,,AbdelMassih2009,,,^ʃ i r i b$,default
+Damascene-19_drink-1,,Damascene,19_drink,ʃəreb,ʃəreb,ʃ ə r e b,,Cowell2005,,,^ʃ ə r e b$,default
+Iraqi-19_drink-1,,Iraqi,19_drink,ʃirab,ʃirab,ʃ i r a b,,Erwin1963,,,^ʃ i r a b$,default
+Soukhne-19_drink-1,,Soukhne,19_drink,iʃrib,iʃrib,i ʃ r i b,,Behnstedt1994,,,^i ʃ r i b$,default
+AqraArbilArabic-19_drink-1,,AqraArbilArabic,19_drink,ʃərəb,ʃərəb,ʃ ə r ə b,,Jastrow1990,,,^ʃ ə r ə b$,default
+CypriotArabic-19_drink-1,,CypriotArabic,19_drink,ʃ-r-b,ʃ-r-b,ʃ r b,,Borg1985,,,^ʃ - r - b$,default
+GulfArabic-19_drink-1,,GulfArabic,19_drink,ʃarab,ʃarab,ʃ a r a b,,Qafisheh1975;Holes1990,,,^ʃ a r a b$,default
+YemeniticArabic-19_drink-1,,YemeniticArabic,19_drink,ʃirib,ʃirib,ʃ i r i b,,Qafisheh1992,,,^ʃ i r i b$,default
+NigerianArabic-19_drink-1,,NigerianArabic,19_drink,ʃarab,ʃarab,ʃ a r a b,,Owens1993;Kaye1982,,,^ʃ a r a b$,default
+Buxari-19_drink-1,,Buxari,19_drink,ʃarab,ʃarab,ʃ a r a b,,Zimmermann2002;Ratcliffe2005,,,^ʃ a r a b$,default
+Kinubi-19_drink-1,,Kinubi,19_drink,‘aʃrubu,‘aʃrubu,ʔ a ʃ r u b u,,Wellens2003,,,^‘ a ʃ r u b u$,default
+CentralArabic-20_dry-1,,CentralArabic,20_dry,ja:b is,ja:b_is,j aː b i s,,Ratcliffe2021,,,^j a: b _ i s$,default
+MoroccanArabic-20_dry-1,,MoroccanArabic,20_dry,jab es,jab_es,j a b e s,,Harrell1962;Caubet1993,,,^j a b _ e s$,default
+Maltese-20_dry-1,,Maltese,20_dry,ni:ʃ ef,ni:ʃ_ef,n iː ʃ e f,,Borg1997;Aquilina1965,,,^n i: ʃ _ e f$,default
+Cairene-20_dry-1,,Cairene,20_dry,na:ʃ if*,na:ʃ_if*,n aː ʃ i f,,AbdelMassih2009,,,^n a: ʃ _ i f *$,default
+Damascene-20_dry-1,,Damascene,20_dry,na:ʃe f,na:ʃe_f,n aː ʃ e f,,Cowell2005,,,^n a: ʃ e _ f$,default
+Iraqi-20_dry-1,,Iraqi,20_dry,na:ʃif,na:ʃif,n aː ʃ i f,,Erwin1963,,,^n a: ʃ i f$,default
+Soukhne-20_dry-1,,Soukhne,20_dry,ji:bis,ji:bis,j iː b i s,,Behnstedt1994,,,^j i: b i s$,default
+AqraArbilArabic-20_dry-1,,AqraArbilArabic,20_dry,jeebə s,jeebə_s,j eː b ə s,,Jastrow1990,,,^j ee b ə _ s$,default
+CypriotArabic-20_dry-1,,CypriotArabic,20_dry,neʃef ʤ-f-  y,neʃef_ʤ-f-_y,n e ʃ e f dʒ f y,,Borg1985,,,^n e ʃ e f _ ʤ - f - _ y$,default
+GulfArabic-20_dry-1,,GulfArabic,20_dry,jaabi s/na  aʃif,jaabi_s,j aː b i s,,Qafisheh1975;Holes1990,,,^j aa b i _ s$,default
+YemeniticArabic-20_dry-1,,YemeniticArabic,20_dry,jaabi s,jaabi_s,j aː b i s,,Qafisheh1992,,,^j aa b i _ s$,default
+NigerianArabic-20_dry-1,,NigerianArabic,20_dry,ja:bis,ja:bis,j aː b i s,,Owens1993;Kaye1982,,,^j a: b i s$,default
+Buxari-20_dry-1,,Buxari,20_dry,yabs,yabs,j a b s,,Zimmermann2002;Ratcliffe2005,,,^ya bs$,default
+Kinubi-20_dry-1,,Kinubi,20_dry,abis,abis,a b i s,,Wellens2003,,,^a b i s$,default
+CentralArabic-21_ear-1,,CentralArabic,21_ear,ʔuð n,ʔuð_n,ʔ u ð n,,Ratcliffe2021,,,^ʔ u ð _ n$,default
+MoroccanArabic-21_ear-1,,MoroccanArabic,21_ear,wd en,wd_en,w d e n,,Harrell1962;Caubet1993,,,^w d _ e n$,default
+Maltese-21_ear-1,,Maltese,21_ear,wid na,wid_na,w i d n a,,Borg1997;Aquilina1965,,,^w i d _ n a$,default
+Cairene-21_ear-1,,Cairene,21_ear,wid n,wid_n,w i d n,,AbdelMassih2009,,,^w i d _ n$,default
+Damascene-21_ear-1,,Damascene,21_ear,ʔədən,ʔədən,ʔ ə d ə n,,Cowell2005,,,^ʔ ə d ə n$,default
+Iraqi-21_ear-1,,Iraqi,21_ear,ʔiðin,ʔiðin,ʔ i ð i n,,Erwin1963,,,^ʔ i ð i n$,default
+Soukhne-21_ear-1,,Soukhne,21_ear,iðn,iðn,i ð n,,Behnstedt1994,,,^i ð n$,default
+AqraArbilArabic-21_ear-1,,AqraArbilArabic,21_ear,ədən,ədən,ə d ə n,,Jastrow1990,,,^ə d ə n$,default
+CypriotArabic-21_ear-1,,CypriotArabic,21_ear,iðn  ʔ-ð- n,iðn_ʔ-ð-_n,i ð n ʔ ð n,,Borg1985,,,^i ð n _ ʔ - ð - _ n$,default
+GulfArabic-21_ear-1,,GulfArabic,21_ear,iðin,iðin,i ð i n,,Qafisheh1975;Holes1990,,,^i ð i n$,default
+YemeniticArabic-21_ear-1,,YemeniticArabic,21_ear,ʔiðn,ʔiðn,ʔ i ð n,,Qafisheh1992,,,^ʔ i ð n$,default
+NigerianArabic-21_ear-1,,NigerianArabic,21_ear,dˁan,dˁan,dˤ a n,,Owens1993;Kaye1982,,,^dˁ a n$,default
+Buxari-21_ear-1,,Buxari,21_ear,ʔizən,ʔizən,ʔ i z ə n,,Zimmermann2002;Ratcliffe2005,,,^ʔ i z ə n$,default
+Kinubi-21_ear-1,,Kinubi,21_ear,a’dan,a’dan,a dˤ a n,,Wellens2003,,,^a ’d a n$,default
+CentralArabic-22_earthdirt-1,,CentralArabic,22_earthdirt,tur a:b,tur_a:b,t u r aː b,,Ratcliffe2021,,,^t u r _ a: b$,default
+MoroccanArabic-22_earthdirt-1,,MoroccanArabic,22_earthdirt,trˁa b,trˁa_b,t rˤ a b,,Harrell1962;Caubet1993,,,^t rˁ a _ b$,default
+Maltese-22_earthdirt-1,,Maltese,22_earthdirt,trab,trab,t r a b,,Borg1997;Aquilina1965,,,^t r a b$,default
+Cairene-22_earthdirt-1,,Cairene,22_earthdirt,ardˁ,ardˁ,a r dˤ,,AbdelMassih2009,,,^a r dˁ$,default
+Damascene-22_earthdirt-1,,Damascene,22_earthdirt,tˁrˁa: b,tˁrˁa:_b,tˤ rˤ aː b,,Cowell2005,,,^tˁ rˁ a: _ b$,default
+Iraqi-22_earthdirt-1,,Iraqi,22_earthdirt,tra:b,tra:b,t r aː b,,Erwin1963,,,^t r a: b$,default
+Soukhne-22_earthdirt-1,,Soukhne,22_earthdirt,"arðˁ, turbi",arðˁ,a r ðˤ,,Behnstedt1994,,,^a r ðˁ$,default
+AqraArbilArabic-22_earthdirt-1,,AqraArbilArabic,22_earthdirt,ardˁ,ardˁ,a r dˤ,,Jastrow1990,,,^a r dˁ$,default
+CypriotArabic-22_earthdirt-1,,CypriotArabic,22_earthdirt,trap t-r-b,trap_t-r-b,t r a p t r b,,Borg1985,,,^t r a p _ t - r - b$,default
+GulfArabic-22_earthdirt-1,,GulfArabic,22_earthdirt,traab,traab,t r aː b,,Qafisheh1975;Holes1990,,,^t r aa b$,default
+YemeniticArabic-22_earthdirt-1,,YemeniticArabic,22_earthdirt,arðˁ,arðˁ,a r ðˤ,,Qafisheh1992,,,^a r ðˁ$,default
+NigerianArabic-22_earthdirt-1,,NigerianArabic,22_earthdirt,ardˁ,ardˁ,a r dˤ,,Owens1993;Kaye1982,,,^a r dˁ$,default
+Buxari-22_earthdirt-1,,Buxari,22_earthdirt,tiin,tiin,t iː n,,Zimmermann2002;Ratcliffe2005,,,^t ii n$,default
+Kinubi-22_earthdirt-1,,Kinubi,22_earthdirt,tura,tura,t u r a,,Wellens2003,,,^t u r a$,default
+CentralArabic-23_eat-1,,CentralArabic,23_eat,ʔak ala,ʔak_ala,ʔ a k a l a,,Ratcliffe2021,,,^ʔ a k _ a l a$,default
+MoroccanArabic-23_eat-1,,MoroccanArabic,23_eat,kla,kla,k l a,,Harrell1962;Caubet1993,,,^k l a$,default
+Maltese-23_eat-1,,Maltese,23_eat,ki:l,ki:l,k iː l,,Borg1997;Aquilina1965,,,^k i: l$,default
+Cairene-23_eat-1,,Cairene,23_eat,akal,akal,a k a l,,AbdelMassih2009,,,^a k a l$,default
+Damascene-23_eat-1,,Damascene,23_eat,ʔakal,ʔakal,ʔ a k a l,,Cowell2005,,,^ʔ a k a l$,default
+Iraqi-23_eat-1,,Iraqi,23_eat,ʔakal,ʔakal,ʔ a k a l,,Erwin1963,,,^ʔ a k a l$,default
+Soukhne-23_eat-1,,Soukhne,23_eat,aʧal,aʧal,a tʃ a l,,Behnstedt1994,,,^a ʧ a l$,default
+AqraArbilArabic-23_eat-1,,AqraArbilArabic,23_eat,akal,akal,a k a l,,Jastrow1990,,,^a k a l$,default
+CypriotArabic-23_eat-1,,CypriotArabic,23_eat,ʔ-k-l,ʔ-k-l,ʔ k l,,Borg1985,,,^ʔ - k - l$,default
+GulfArabic-23_eat-1,,GulfArabic,23_eat,ʔakal,ʔakal,ʔ a k a l,,Qafisheh1975;Holes1990,,,^ʔ a k a l$,default
+YemeniticArabic-23_eat-1,,YemeniticArabic,23_eat,ʔakal,ʔakal,ʔ a k a l,,Qafisheh1992,,,^ʔ a k a l$,default
+NigerianArabic-23_eat-1,,NigerianArabic,23_eat,akal,akal,a k a l,,Owens1993;Kaye1982,,,^a k a l$,default
+Buxari-23_eat-1,,Buxari,23_eat,ʔukul,ʔukul,ʔ u k u l,,Zimmermann2002;Ratcliffe2005,,,^ʔ u k u l$,default
+Kinubi-23_eat-1,,Kinubi,23_eat,‘akulu,‘akulu,ʔ a k u l u,,Wellens2003,,,^‘ a k u l u$,default
+CentralArabic-24_egg-1,,CentralArabic,24_egg,bai dˁat,bai_dˁat,b ai̯ dˤ a t,,Ratcliffe2021,,,^b ai _ dˁ a t$,default
+MoroccanArabic-24_egg-1,,MoroccanArabic,24_egg,bidˁ a,bidˁ_a,b i dˤ a,,Harrell1962;Caubet1993,,,^b i dˁ _ a$,default
+Maltese-24_egg-1,,Maltese,24_egg,Bajd a,Bajd_a,b a j d a,,Borg1997;Aquilina1965,,,^B a j d _ a$,default
+Cairene-24_egg-1,,Cairene,24_egg,bee dˁa,bee_dˁa,b eː dˤ a,,AbdelMassih2009,,,^b ee _ dˁ a$,default
+Damascene-24_egg-1,,Damascene,24_egg,beedˁ a,beedˁ_a,b eː dˤ a,,Cowell2005,,,^b ee dˁ _ a$,default
+Iraqi-24_egg-1,,Iraqi,24_egg,beeðˁ a,beeðˁ_a,b eː ðˤ a,,Erwin1963,,,^b ee ðˁ _ a$,default
+Soukhne-24_egg-1,,Soukhne,24_egg,beeðˁ a,beeðˁ_a,b eː ðˤ a,,Behnstedt1994,,,^b ee ðˁ _ a$,default
+AqraArbilArabic-24_egg-1,,AqraArbilArabic,24_egg,bajdˁ a,bajdˁ_a,b a j dˤ a,,Jastrow1990,,,^b a j dˁ _ a$,default
+CypriotArabic-24_egg-1,,CypriotArabic,24_egg,b-y- dˁ,b-y-_dˁ,b y dˤ,,Borg1985,,,^b - y - _ dˁ$,default
+GulfArabic-24_egg-1,,GulfArabic,24_egg,beedˤ a,beedˤ_a,b eː dˤ a,,Qafisheh1975;Holes1990,,,^b ee dˤ _ a$,default
+YemeniticArabic-24_egg-1,,YemeniticArabic,24_egg,bajðˁ ah,bajðˁ_ah,b a j ðˤ a h,,Qafisheh1992,,,^b a j ðˁ _ a h$,default
+NigerianArabic-24_egg-1,,NigerianArabic,24_egg,be:dˁe,be:dˁe,b eː dˤ e,,Owens1993;Kaye1982,,,^b e: dˁ e$,default
+Buxari-24_egg-1,,Buxari,24_egg,bayda,bayda,b ai̯ d a,,Zimmermann2002;Ratcliffe2005,,,^b ay d a$,default
+Kinubi-24_egg-1,,Kinubi,24_egg,ma’jai,ma’jai,m a jˤ ai,,Wellens2003,,,^m a ’j ai$,default
+CentralArabic-25_eye-1,,CentralArabic,25_eye,ʕai n,ʕai_n,ʕ ai̯ n,,Ratcliffe2021,,,^ʕ ai _ n$,default
+MoroccanArabic-25_eye-1,,MoroccanArabic,25_eye,ʕej n,ʕej_n,ʕ e j n,,Harrell1962;Caubet1993,,,^ʕ e j _ n$,default
+Maltese-25_eye-1,,Maltese,25_eye,ʕajn,ʕajn,ʕ a j n,,Borg1997;Aquilina1965,,,^ʕ a j n$,default
+Cairene-25_eye-1,,Cairene,25_eye,ʕee n,ʕee_n,ʕ eː n,,AbdelMassih2009,,,^ʕ ee _ n$,default
+Damascene-25_eye-1,,Damascene,25_eye,ʕeen,ʕeen,ʕ eː n,,Cowell2005,,,^ʕ ee n$,default
+Iraqi-25_eye-1,,Iraqi,25_eye,ʕeen,ʕeen,ʕ eː n,,Erwin1963,,,^ʕ ee n$,default
+Soukhne-25_eye-1,,Soukhne,25_eye,ʕeen,ʕeen,ʕ eː n,,Behnstedt1994,,,^ʕ ee n$,default
+AqraArbilArabic-25_eye-1,,AqraArbilArabic,25_eye,ʕajn,ʕajn,ʕ a j n,,Jastrow1990,,,^ʕ a j n$,default
+CypriotArabic-25_eye-1,,CypriotArabic,25_eye,ʕayn ʕ-y-  n,ʕayn_ʕ-y-_n,ʕ ai̯ n ʕ y n,,Borg1985,,,^ʕ ay n _ ʕ - y - _ n$,default
+GulfArabic-25_eye-1,,GulfArabic,25_eye,ʕeen,ʕeen,ʕ eː n,,Qafisheh1975;Holes1990,,,^ʕ ee n$,default
+YemeniticArabic-25_eye-1,,YemeniticArabic,25_eye,ʕajn,ʕajn,ʕ a j n,,Qafisheh1992,,,^ʕ a j n$,default
+NigerianArabic-25_eye-1,,NigerianArabic,25_eye,e:n,e:n,eː n,,Owens1993;Kaye1982,,,^e: n$,default
+Buxari-25_eye-1,,Buxari,25_eye,ʔayn,ʔayn,ʔ ai̯ n,,Zimmermann2002;Ratcliffe2005,,,^ʔ ay n$,default
+Kinubi-25_eye-1,,Kinubi,25_eye,‘ena,‘ena,ʔ e n a,,Wellens2003,,,^‘ e n a$,default
+CentralArabic-26_fatn-1,,CentralArabic,26_fatn,ʃaħ m,ʃaħ_m,ʃ a ħ m,,Ratcliffe2021,,,^ʃ a ħ _ m$,default
+MoroccanArabic-26_fatn-1,,MoroccanArabic,26_fatn,ʃħe m,ʃħe_m,ʃ ħ e m,,Harrell1962;Caubet1993,,,^ʃ ħ e _ m$,default
+Maltese-26_fatn-1,,Maltese,26_fatn,ʃaħ am,ʃaħ_am,ʃ a ħ a m,,Borg1997;Aquilina1965,,,^ʃ a ħ _ a m$,default
+Cairene-26_fatn-1,,Cairene,26_fatn,ʃaħ m,ʃaħ_m,ʃ a ħ m,,AbdelMassih2009,,,^ʃ a ħ _ m$,default
+Damascene-26_fatn-1,,Damascene,26_fatn,ʃaħə m,ʃaħə_m,ʃ a ħ ə m,,Cowell2005,,,^ʃ a ħ ə _ m$,default
+Iraqi-26_fatn-1,,Iraqi,26_fatn,ʃaħa m,ʃaħa_m,ʃ a ħ a m,,Erwin1963,,,^ʃ a ħ a _ m$,default
+Soukhne-26_fatn-1,,Soukhne,26_fatn,ʃaħm,ʃaħm,ʃ a ħ m,,Behnstedt1994,,,^ʃ a ħ m$,default
+AqraArbilArabic-26_fatn-1,,AqraArbilArabic,26_fatn,"samə n, ʃuma  :n",samə_n,s a m ə n,,Jastrow1990,,,^s a m ə _ n$,default
+CypriotArabic-26_fatn-1,,CypriotArabic,26_fatn,s-m- n,s-m-_n,s m n,,Borg1985,,,^s - m - _ n$,default
+GulfArabic-26_fatn-1,,GulfArabic,26_fatn,dihin,dihin,d i h i n,,Qafisheh1975;Holes1990,,,^d i h i n$,default
+NigerianArabic-26_fatn-1,,NigerianArabic,26_fatn,ʃahama,ʃahama,ʃ a h a m a,,Owens1993;Kaye1982,,,^ʃ a h a m a$,default
+Buxari-26_fatn-1,,Buxari,26_fatn,duhun,duhun,d u h u n,,Zimmermann2002;Ratcliffe2005,,,^d u h u n$,default
+Kinubi-26_fatn-1,,Kinubi,26_fatn,dikin,dikin,d i k i n,,Wellens2003,,,^d i k i n$,default
+CentralArabic-27_feather-1,,CentralArabic,27_feather,ri:ʃ at,ri:ʃ_at,r iː ʃ a t,,Ratcliffe2021,,,^r i: ʃ _ a t$,default
+MoroccanArabic-27_feather-1,,MoroccanArabic,27_feather,riʃa,riʃa,r i ʃ a,,Harrell1962;Caubet1993,,,^r i ʃ a$,default
+Maltese-27_feather-1,,Maltese,27_feather,riʃa,riʃa,r i ʃ a,,Borg1997;Aquilina1965,,,^r i ʃ a$,default
+Cairene-27_feather-1,,Cairene,27_feather,ri:ʃa *,ri:ʃa_*,r iː ʃ a,,AbdelMassih2009,,,^r i: ʃ a _ *$,default
+Damascene-27_feather-1,,Damascene,27_feather,ri:ʃe,ri:ʃe,r iː ʃ e,,Cowell2005,,,^r i: ʃ e$,default
+Iraqi-27_feather-1,,Iraqi,27_feather,ri:ʃa,ri:ʃa,r iː ʃ a,,Erwin1963,,,^r i: ʃ a$,default
+Soukhne-27_feather-1,,Soukhne,27_feather,ri:ʃi,ri:ʃi,r iː ʃ i,,Behnstedt1994,,,^r i: ʃ i$,default
+GulfArabic-27_feather-1,,GulfArabic,27_feather,riiʃa,riiʃa,r iː ʃ a,,Qafisheh1975;Holes1990,,,^r ii ʃ a$,default
+YemeniticArabic-27_feather-1,,YemeniticArabic,27_feather,ri:ʃeh,ri:ʃeh,r iː ʃ e h,,Qafisheh1992,,,^r i: ʃ e h$,default
+NigerianArabic-27_feather-1,,NigerianArabic,27_feather,su:fa,su:fa,s uː f a,,Owens1993;Kaye1982,,,^s u: f a$,default
+Kinubi-27_feather-1,,Kinubi,27_feather,*suu-  teri (hair of bird),*suu-_teri_,s uː t e r i,,Wellens2003,,,^*s uu - _ t e r i _$,default
+CentralArabic-28_fire-1,,CentralArabic,28_fire,na: r,na:_r,n aː r,,Ratcliffe2021,,,^n a: _ r$,default
+MoroccanArabic-28_fire-1,,MoroccanArabic,28_fire,ʕafj a,ʕafj_a,ʕ a f j a,,Harrell1962;Caubet1993,,,^ʕ a f j _ a$,default
+Maltese-28_fire-1,,Maltese,28_fire,nar,nar,n a r,,Borg1997;Aquilina1965,,,^n a r$,default
+Cairene-28_fire-1,,Cairene,28_fire,na:r,na:r,n aː r,,AbdelMassih2009,,,^n a: r$,default
+Damascene-28_fire-1,,Damascene,28_fire,nˁa:rˁ,nˁa:rˁ,nˤ aː rˤ,,Cowell2005,,,^nˁ a: rˁ$,default
+Iraqi-28_fire-1,,Iraqi,28_fire,na:r,na:r,n aː r,,Erwin1963,,,^n a: r$,default
+Soukhne-28_fire-1,,Soukhne,28_fire,na:rˁ,na:rˁ,n aː rˤ,,Behnstedt1994,,,^n a: rˁ$,default
+AqraArbilArabic-28_fire-1,,AqraArbilArabic,28_fire,na:rˁ,na:rˁ,n aː rˤ,,Jastrow1990,,,^n a: rˁ$,default
+CypriotArabic-28_fire-1,,CypriotArabic,28_fire,w-q- d,w-q-_d,w q d,,Borg1985,,,^w - q - _ d$,default
+GulfArabic-28_fire-1,,GulfArabic,28_fire,"dˤaw, naar",dˤaw,dˤ a w,,Qafisheh1975;Holes1990,,,^dˤ a w$,default
+YemeniticArabic-28_fire-1,,YemeniticArabic,28_fire,naar,naar,n aː r,,Qafisheh1992,,,^n aa r$,default
+NigerianArabic-28_fire-1,,NigerianArabic,28_fire,na:r,na:r,n aː r,,Owens1993;Kaye1982,,,^n a: r$,default
+Buxari-28_fire-1,,Buxari,28_fire,naar,naar,n aː r,,Zimmermann2002;Ratcliffe2005,,,^n aa r$,default
+Kinubi-28_fire-1,,Kinubi,28_fire,nari,nari,n a r i,,Wellens2003,,,^n a r i$,default
+CentralArabic-29_fish-1,,CentralArabic,29_fish,sa ma  k,sa_ma_k,s a m a k,,Ratcliffe2021,,,^s a _ m a _ k$,default
+MoroccanArabic-29_fish-1,,MoroccanArabic,29_fish,ħut,ħut,ħ u t,,Harrell1962;Caubet1993,,,^ħ u t$,default
+Maltese-29_fish-1,,Maltese,29_fish,Ħut a,Ħut_a,ħ u t a,,Borg1997;Aquilina1965,,,^Ħ u t _ a$,default
+Cairene-29_fish-1,,Cairene,29_fish,sam ak,sam_ak,s a m a k,,AbdelMassih2009,,,^s a m _ a k$,default
+Soukhne-29_fish-1,,Soukhne,29_fish,sama ʧi,sama_ʧi,s a m a tʃ i,,Behnstedt1994,,,^s a m a _ ʧ i$,default
+AqraArbilArabic-29_fish-1,,AqraArbilArabic,29_fish,sama k,sama_k,s a m a k,,Jastrow1990,,,^s a m a _ k$,default
+GulfArabic-29_fish-1,,GulfArabic,29_fish,sima ʧ,sima_ʧ,s i m a tʃ,,Qafisheh1975;Holes1990,,,^s i m a _ ʧ$,default
+YemeniticArabic-29_fish-1,,YemeniticArabic,29_fish,ħuut,ħuut,ħ uː t,,Qafisheh1992,,,^ħ uu t$,default
+NigerianArabic-29_fish-1,,NigerianArabic,29_fish,samaka ħu:tˁa,samaka_ħu:tˁa,s a m a k a ħ uː tˤ a,,Owens1993;Kaye1982,,,^s a m a k a _ ħ u: tˁ a$,default
+Buxari-29_fish-1,,Buxari,29_fish,samak,samak,s a m a k,,Zimmermann2002;Ratcliffe2005,,,^s a m a k$,default
+Kinubi-29_fish-1,,Kinubi,29_fish,samaga,samaga,s a m a g a,,Wellens2003,,,^s a m a g a$,default
+CentralArabic-30_fly-1,,CentralArabic,30_fly,tˁa: ra,tˁa:_ra,tˤ aː r a,,Ratcliffe2021,,,^tˁ a: _ r a$,default
+MoroccanArabic-30_fly-1,,MoroccanArabic,30_fly,tˁar,tˁar,tˤ a r,,Harrell1962;Caubet1993,,,^tˁ a r$,default
+Maltese-30_fly-1,,Maltese,30_fly,tar,tar,t a r,,Borg1997;Aquilina1965,,,^t a r$,default
+Cairene-30_fly-1,,Cairene,30_fly,tˁa:r ˁ,tˁa:r_ˁ,tˤ aː rˤ,,AbdelMassih2009,,,^tˁ a: r_ˁ$,default
+Damascene-30_fly-1,,Damascene,30_fly,tˁa:r,tˁa:r,tˤ aː r,,Cowell2005,,,^tˁ a: r$,default
+Iraqi-30_fly-1,,Iraqi,30_fly,tˁa:r,tˁa:r,tˤ aː r,,Erwin1963,,,^tˁ a: r$,default
+Soukhne-30_fly-1,,Soukhne,30_fly,tˁa:r,tˁa:r,tˤ aː r,,Behnstedt1994,,,^tˁ a: r$,default
+AqraArbilArabic-30_fly-1,,AqraArbilArabic,30_fly,tˁ-y- r,tˁ-y-_r,tˤ y r,,Jastrow1990,,,^tˁ - y - _ r$,default
+GulfArabic-30_fly-1,,GulfArabic,30_fly,tˤaar,tˤaar,tˤ aː r,,Qafisheh1975;Holes1990,,,^tˤ aa r$,default
+YemeniticArabic-30_fly-1,,YemeniticArabic,30_fly,tˁa:r,tˁa:r,tˤ aː r,,Qafisheh1992,,,^tˁ a: r$,default
+NigerianArabic-30_fly-1,,NigerianArabic,30_fly,tˁa:r,tˁa:r,tˤ aː r,,Owens1993;Kaye1982,,,^tˁ a: r$,default
+Buxari-30_fly-1,,Buxari,30_fly,nat’taa,nat’taa,n a tʼ t aː,,Zimmermann2002;Ratcliffe2005,,,^n a t’ t aa$,default
+CentralArabic-31_foot-1,,CentralArabic,31_foot,riʤ l,riʤ_l,r i dʒ l,,Ratcliffe2021,,,^r i ʤ _ l$,default
+MoroccanArabic-31_foot-1,,MoroccanArabic,31_foot,rʒel,rʒel,r ʒ e l,,Harrell1962;Caubet1993,,,^rʒ e l$,default
+Maltese-31_foot-1,,Maltese,31_foot,si:ʔ,si:ʔ,s iː ʔ,,Borg1997;Aquilina1965,,,^s i: ʔ$,default
+Cairene-31_foot-1,,Cairene,31_foot,rigl,rigl,r i g l,,AbdelMassih2009,,,^r i g l$,default
+Damascene-31_foot-1,,Damascene,31_foot,rəʤəl,rəʤəl,r ə dʒ ə l,,Cowell2005,,,^r ə ʤ ə l$,default
+Iraqi-31_foot-1,,Iraqi,31_foot,riʤil,riʤil,r i dʒ i l,,Erwin1963,,,^r i ʤ i l$,default
+Soukhne-31_foot-1,,Soukhne,31_foot,(r)iʦl,iʦl,i ts l,,Behnstedt1994,,,^i ʦ l$,default
+AqraArbilArabic-31_foot-1,,AqraArbilArabic,31_foot,əʤər,əʤər,ə dʒ ə r,,Jastrow1990,,,^ə ʤ ə r$,default
+CypriotArabic-31_foot-1,,CypriotArabic,31_foot,iʒr,iʒr,i ʒ r,,Borg1985,,,^i ʒ r$,default
+GulfArabic-31_foot-1,,GulfArabic,31_foot,riil,riil,r iː l,,Qafisheh1975;Holes1990,,,^r ii l$,default
+YemeniticArabic-31_foot-1,,YemeniticArabic,31_foot,riʤl,riʤl,r i dʒ l,,Qafisheh1992,,,^r i ʤ l$,default
+NigerianArabic-31_foot-1,,NigerianArabic,31_foot,riʤil,riʤil,r i dʒ i l,,Owens1993;Kaye1982,,,^r i ʤ i l$,default
+Buxari-31_foot-1,,Buxari,31_foot,ridƷil,ridƷil,r i d ʒ i l,,Zimmermann2002;Ratcliffe2005,,,^r i d Ʒ i l$,default
+Kinubi-31_foot-1,,Kinubi,31_foot,kura,kura,k u r a,,Wellens2003,,,^k u r a$,default
+CentralArabic-32_full-1,,CentralArabic,32_full,mal  ʔa:n,mal_ʔa:n,m a l ʔ aː n,,Ratcliffe2021,,,^m a l _ ʔ a: n$,default
+MoroccanArabic-32_full-1,,MoroccanArabic,32_full,ʕa me r,ʕa_me_r,ʕ a m e r,,Harrell1962;Caubet1993,,,^ʕ a _ m e _ r$,default
+Maltese-32_full-1,,Maltese,32_full,mi mli,mi_mli,m i m l i,,Borg1997;Aquilina1965,,,^m i _ m l i$,default
+Cairene-32_full-1,,Cairene,32_full,malj aan,malj_aan,m a l j aː n,,AbdelMassih2009,,,^m a l j _ aa n$,default
+Damascene-32_full-1,,Damascene,32_full,mal(j) a:n,mal_a:n,m a l aː n,,Cowell2005,,,^m a l _ a: n$,default
+Iraqi-32_full-1,,Iraqi,32_full,"malja: n, matru:  s",malja:_n,m a l j aː n,,Erwin1963,,,^m a l j a: _ n$,default
+Soukhne-32_full-1,,Soukhne,32_full,malja: n madm  u:ʦ,malja:_n_madm_u:ʦ,m a l j aː n m a d m uː ts,,Behnstedt1994,,,^m a l j a: _ n _ m a d m _ u: ʦ$,default
+AqraArbilArabic-32_full-1,,AqraArbilArabic,32_full,əmmal a,əmmal_a,ə mː a l a,,Jastrow1990,,,^ə mm a l _ a$,default
+CypriotArabic-32_full-1,,CypriotArabic,32_full,mpla n  m-l-',mpla_n_m-l-',m p l a n m l,,Borg1985,,,^m p l a _ n _ m - l - '$,default
+GulfArabic-32_full-1,,GulfArabic,32_full,matru us,matru_us,m a t r u u s,,Qafisheh1975;Holes1990,,,^m a t r u _ u s$,default
+YemeniticArabic-32_full-1,,YemeniticArabic,32_full,matru: s,matru:_s,m a t r uː s,,Qafisheh1992,,,^m a t r u: _ s$,default
+NigerianArabic-32_full-1,,NigerianArabic,32_full,malʔan,malʔan,m a l ʔ a n,,Owens1993;Kaye1982,,,^m a l ʔ a n$,default
+Kinubi-32_full-1,,Kinubi,32_full,mal’jan,mal’jan,m a lʼ j a n,,Wellens2003,,,^m a l’ j a n$,default
+CentralArabic-33_give-1,,CentralArabic,33_give,ʔaʕt ˁa:,ʔaʕt_ˁa:,ʔ a ʕ tˤ aː,,Ratcliffe2021,,,^ʔaʕt_ˁa: $,default
+MoroccanArabic-33_give-1,,MoroccanArabic,33_give,ʕtˁa,ʕtˁa,ʕ tˤ a,,Harrell1962;Caubet1993,,,^ʕ tˁ a$,default
+Maltese-33_give-1,,Maltese,33_give,ta,ta,t a,,Borg1997;Aquilina1965,,,^t a$,default
+Cairene-33_give-1,,Cairene,33_give,idda,idda,i dː a,,AbdelMassih2009,,,^i dd a$,default
+Damascene-33_give-1,,Damascene,33_give,ʕatˁa,ʕatˁa,ʕ a tˤ a,,Cowell2005,,,^ʕ a tˁ a$,default
+Iraqi-33_give-1,,Iraqi,33_give,nitˁa,nitˁa,n i tˤ a,,Erwin1963,,,^n i tˁ a$,default
+Soukhne-33_give-1,,Soukhne,33_give,intˤa,intˤa,i n tˤ a,,Behnstedt1994,,,^i n tˤ a$,default
+AqraArbilArabic-33_give-1,,AqraArbilArabic,33_give,ʕatˁa,ʕatˁa,ʕ a tˤ a,,Jastrow1990,,,^ʕ a tˁ a$,default
+CypriotArabic-33_give-1,,CypriotArabic,33_give,ʕ-tˁ- y,ʕ-tˁ-_y,ʕ tˤ y,,Borg1985,,,^ʕ - tˁ - _ y$,default
+GulfArabic-33_give-1,,GulfArabic,33_give,ʕatˤa,ʕatˤa,ʕ a tˤ a,,Qafisheh1975;Holes1990,,,^ʕ a tˤ a$,default
+YemeniticArabic-33_give-1,,YemeniticArabic,33_give,ʔadd a,ʔadd_a,ʔ a dː a,,Qafisheh1992,,,^ʔ a dd _ a$,default
+NigerianArabic-33_give-1,,NigerianArabic,33_give,tˁaʔan,tˁaʔan,tˤ a ʔ a n,,Owens1993;Kaye1982,,,^tˁ a ʔ a n$,default
+Buxari-33_give-1,,Buxari,33_give,an’taa,an’taa,a n tˤ aː,,Zimmermann2002;Ratcliffe2005,,,^a n ’t aa$,default
+Kinubi-33_give-1,,Kinubi,33_give,we’di,we’di,w e dˤ i,,Wellens2003,,,^w e ’d i$,default
+CentralArabic-34_goodadj-1,,CentralArabic,34_goodadj,tˁajj ib,tˁajj_ib,tˤ a jː i b,,Ratcliffe2021,,,^tˁ a jj _ i b$,default
+MoroccanArabic-34_goodadj-1,,MoroccanArabic,34_goodadj,me  zja n,me_zja_n,m e z j a n,,Harrell1962;Caubet1993,,,^m e _ z j a _ n$,default
+Maltese-34_goodadj-1,,Maltese,34_goodadj,Tajj eb,Tajj_eb,t a jː e b,,Borg1997;Aquilina1965,,,^T a jj _ e b$,default
+Cairene-34_goodadj-1,,Cairene,34_goodadj,kwa jjis,kwa_jjis,kʷ a jː i s,,AbdelMassih2009,,,^kw a _ jj i s$,default
+Damascene-34_goodadj-1,,Damascene,34_goodadj,mni: ħ,mni:_ħ,m n iː ħ,,Cowell2005,,,^m n i: _ ħ$,default
+Iraqi-34_goodadj-1,,Iraqi,34_goodadj,"zeen, xoos",zeen,z eː n,,Erwin1963,,,^z ee n$,default
+Soukhne-34_goodadj-1,,Soukhne,34_goodadj,mali: ħ,mali:_ħ,m a l iː ħ,,Behnstedt1994,,,^m a l i: _ ħ$,default
+AqraArbilArabic-34_goodadj-1,,AqraArbilArabic,34_goodadj,kəwa jjəs,kəwa_jjəs,k ə w a jː ə s,,Jastrow1990,,,^k ə w a _ jj ə s$,default
+CypriotArabic-34_goodadj-1,,CypriotArabic,34_goodadj,k-y- s,k-y-_s,k y s,,Borg1985,,,^k - y - _ s$,default
+GulfArabic-34_goodadj-1,,GulfArabic,34_goodadj,zeen,zeen,z eː n,,Qafisheh1975;Holes1990,,,^z ee n$,default
+YemeniticArabic-34_goodadj-1,,YemeniticArabic,34_goodadj,"tˁajji b, naaħiy",tˁajji_b,tˤ a jː i b,,Qafisheh1992,,,^tˁ a jj i _ b$,default
+NigerianArabic-34_goodadj-1,,NigerianArabic,34_goodadj,sa/eme,sa,s a,,Owens1993;Kaye1982,,,^s a$,default
+Buxari-34_goodadj-1,,Buxari,34_goodadj,zeen,zeen,z eː n,,Zimmermann2002;Ratcliffe2005,,,^z ee n$,default
+Kinubi-34_goodadj-1,,Kinubi,34_goodadj,kweis,kweis,kʷ ei̯ s,,Wellens2003,,,^kw ei s$,default
+CentralArabic-35_green-1,,CentralArabic,35_green,ʔax dˁa  r,ʔax_dˁa_r,ʔ a x dˤ a r,,Ratcliffe2021,,,^ʔ a x _ dˁ a _ r$,default
+MoroccanArabic-35_green-1,,MoroccanArabic,35_green,xdˁ er,xdˁ_er,x dˤ e r,,Harrell1962;Caubet1993,,,^x dˁ _ e r$,default
+Maltese-35_green-1,,Maltese,35_green,aħd ar,aħd_ar,a ħ d a r,,Borg1997;Aquilina1965,,,^a ħ d _ a r$,default
+Cairene-35_green-1,,Cairene,35_green,ʔax dˁar,ʔax_dˁar,ʔ a x dˤ a r,,AbdelMassih2009,,,^ʔ a x _ dˁ a r$,default
+Damascene-35_green-1,,Damascene,35_green,ʔaxdˁ  ar,ʔaxdˁ_ar,ʔ a x dˤ a r,,Cowell2005,,,^ʔ a x dˁ _ a r$,default
+Iraqi-35_green-1,,Iraqi,35_green,ʔaxðˁ  ar,ʔaxðˁ_ar,ʔ a x ðˤ a r,,Erwin1963,,,^ʔ a x ðˁ _ a r$,default
+Soukhne-35_green-1,,Soukhne,35_green,ʔaxðˁ  ar,ʔaxðˁ_ar,ʔ a x ðˤ a r,,Behnstedt1994,,,^ʔ a x ðˁ _ a r$,default
+AqraArbilArabic-35_green-1,,AqraArbilArabic,35_green,axdˁa r,axdˁa_r,a x dˤ a r,,Jastrow1990,,,^a x dˁ a _ r$,default
+CypriotArabic-35_green-1,,CypriotArabic,35_green,x- dˁ-r,x-_dˁ-r,x dˤ r,,Borg1985,,,^x - _ dˁ - r$,default
+GulfArabic-35_green-1,,GulfArabic,35_green,ʔaxdˤ  ar,ʔaxdˤ_ar,ʔ a x dˤ a r,,Qafisheh1975;Holes1990,,,^ʔ a x dˤ _ a r$,default
+YemeniticArabic-35_green-1,,YemeniticArabic,35_green,ʔaxðˁ  ar,ʔaxðˁ_ar,ʔ a x ðˤ a r,,Qafisheh1992,,,^ʔ a x ðˁ _ a r$,default
+NigerianArabic-35_green-1,,NigerianArabic,35_green,axadˁar,axadˁar,a x a dˤ a r,,Owens1993;Kaye1982,,,^a x a dˁ a r$,default
+Buxari-35_green-1,,Buxari,35_green,ʔaxzar,ʔaxzar,ʔ a x z a r,,Zimmermann2002;Ratcliffe2005,,,^ʔ a x z a r$,default
+Kinubi-35_green-1,,Kinubi,35_green,*manjan,*manjan,m a n j a n,,Wellens2003,,,^* m a n j a n$,default
+CentralArabic-36_hair-1,,CentralArabic,36_hair,ʃaʕr,ʃaʕr,ʃ a ʕ r,,Ratcliffe2021,,,^ʃ a ʕ r$,default
+MoroccanArabic-36_hair-1,,MoroccanArabic,36_hair,ʃʕer,ʃʕer,ʃ ʕ e r,,Harrell1962;Caubet1993,,,^ʃ ʕ e r$,default
+Maltese-36_hair-1,,Maltese,36_hair,ʃaʕa r,ʃaʕa_r,ʃ a ʕ a r,,Borg1997;Aquilina1965,,,^ʃ a ʕ a _ r$,default
+Cairene-36_hair-1,,Cairene,36_hair,ʃaʕr,ʃaʕr,ʃ a ʕ r,,AbdelMassih2009,,,^ʃ a ʕ r$,default
+Damascene-36_hair-1,,Damascene,36_hair,ʃaʕər,ʃaʕər,ʃ a ʕ ə r,,Cowell2005,,,^ʃ a ʕ ə r$,default
+Iraqi-36_hair-1,,Iraqi,36_hair,ʃaʕra,ʃaʕra,ʃ a ʕ r a,,Erwin1963,,,^ʃ a ʕ r a$,default
+Soukhne-36_hair-1,,Soukhne,36_hair,ʃaʕra,ʃaʕra,ʃ a ʕ r a,,Behnstedt1994,,,^ʃ a ʕ r a$,default
+CypriotArabic-36_hair-1,,CypriotArabic,36_hair,ʃaxve ʃ-ʕ-f,ʃaxve_ʃ-ʕ-f,ʃ a x v e ʃ ʕ f,,Borg1985,,,^ʃ a x v e _ ʃ - ʕ - f$,default
+GulfArabic-36_hair-1,,GulfArabic,36_hair,ʃaʕar,ʃaʕar,ʃ a ʕ a r,,Qafisheh1975;Holes1990,,,^ʃ a ʕ a r$,default
+YemeniticArabic-36_hair-1,,YemeniticArabic,36_hair,ʃaʕra,ʃaʕra,ʃ a ʕ r a,,Qafisheh1992,,,^ʃ a ʕ r a$,default
+NigerianArabic-36_hair-1,,NigerianArabic,36_hair,ʃiʔir,ʃiʔir,ʃ i ʔ i r,,Owens1993;Kaye1982,,,^ʃ i ʔ i r$,default
+Buxari-36_hair-1,,Buxari,36_hair,ʃar’ʕas,ʃar’ʕas,ʃ a r ʕ a s,,Zimmermann2002;Ratcliffe2005,,,^ʃ a r ’ʕ a s$,default
+Kinubi-36_hair-1,,Kinubi,36_hair,su,su,s u,,Wellens2003,,,^s u$,default
+CentralArabic-37_hand-1,,CentralArabic,37_hand,jad,jad,j a d,,Ratcliffe2021,,,^j a d$,default
+MoroccanArabic-37_hand-1,,MoroccanArabic,37_hand,idd,idd,i dː,,Harrell1962;Caubet1993,,,^i dd$,default
+Maltese-37_hand-1,,Maltese,37_hand,id,id,i d,,Borg1997;Aquilina1965,,,^i d$,default
+Cairene-37_hand-1,,Cairene,37_hand,i:d,i:d,iː d,,AbdelMassih2009,,,^i: d$,default
+Damascene-37_hand-1,,Damascene,37_hand,ʔi:d,ʔi:d,ʔ iː d,,Cowell2005,,,^ʔ i: d$,default
+Iraqi-37_hand-1,,Iraqi,37_hand,ʔi:d,ʔi:d,ʔ iː d,,Erwin1963,,,^ʔ i: d$,default
+Soukhne-37_hand-1,,Soukhne,37_hand,eed,eed,eː d,,Behnstedt1994,,,^ee d$,default
+AqraArbilArabic-37_hand-1,,AqraArbilArabic,37_hand,i:d,i:d,iː d,,Jastrow1990,,,^i: d$,default
+CypriotArabic-37_hand-1,,CypriotArabic,37_hand,ity-d,ity-d,i t y d,,Borg1985,,,^i t y - d$,default
+GulfArabic-37_hand-1,,GulfArabic,37_hand,yad,yad,j a d,,Qafisheh1975;Holes1990,,,^ya d$,default
+YemeniticArabic-37_hand-1,,YemeniticArabic,37_hand,yad,yad,j a d,,Qafisheh1992,,,^ya d$,default
+NigerianArabic-37_hand-1,,NigerianArabic,37_hand,i:d,i:d,iː d,,Owens1993;Kaye1982,,,^i: d$,default
+Buxari-37_hand-1,,Buxari,37_hand,yad,yad,j a d,,Zimmermann2002;Ratcliffe2005,,,^ya d$,default
+Kinubi-37_hand-1,,Kinubi,37_hand,ida,ida,i d a,,Wellens2003,,,^i d a$,default
+CentralArabic-38_head-1,,CentralArabic,38_head,raʔ s,raʔ_s,r a ʔ s,,Ratcliffe2021,,,^r a ʔ _ s$,default
+MoroccanArabic-38_head-1,,MoroccanArabic,38_head,rˁas ˁ,rˁas_ˁ,rˤ a sˁ,,Harrell1962;Caubet1993,,,^rˁ a s_ˁ $,default
+Maltese-38_head-1,,Maltese,38_head,ras,ras,r a s,,Borg1997;Aquilina1965,,,^r a s$,default
+Cairene-38_head-1,,Cairene,38_head,rˁaa s,rˁaa_s,rˤ aː s,,AbdelMassih2009,,,^rˁ aa _ s$,default
+Damascene-38_head-1,,Damascene,38_head,ra:s,ra:s,r aː s,,Cowell2005,,,^r a: s$,default
+Iraqi-38_head-1,,Iraqi,38_head,ra:s,ra:s,r aː s,,Erwin1963,,,^r a: s$,default
+Soukhne-38_head-1,,Soukhne,38_head,rˁa:s,rˁa:s,rˤ aː s,,Behnstedt1994,,,^rˁ a: s$,default
+AqraArbilArabic-38_head-1,,AqraArbilArabic,38_head,rˁa:s,rˁa:s,rˤ aː s,,Jastrow1990,,,^rˁ a: s$,default
+CypriotArabic-38_head-1,,CypriotArabic,38_head,m-x- x,m-x-_x,m x x,,Borg1985,,,^m - x - _ x$,default
+GulfArabic-38_head-1,,GulfArabic,38_head,raas,raas,r aː s,,Qafisheh1975;Holes1990,,,^r aa s$,default
+YemeniticArabic-38_head-1,,YemeniticArabic,38_head,raʔs,raʔs,r a ʔ s,,Qafisheh1992,,,^r a ʔs$,default
+NigerianArabic-38_head-1,,NigerianArabic,38_head,ra:s,ra:s,r aː s,,Owens1993;Kaye1982,,,^r a: s$,default
+Buxari-38_head-1,,Buxari,38_head,ṛaaṣ,ṛaaṣ,ṛ/r aː ṣ/s,,Zimmermann2002;Ratcliffe2005,,,^ṛ aa ṣ$,default
+Kinubi-38_head-1,,Kinubi,38_head,ras,ras,r a s,,Wellens2003,,,^r a s$,default
+CentralArabic-39_hear-1,,CentralArabic,39_hear,sa miʕ  a,sa_miʕ_a,s a m i ʕ a,,Ratcliffe2021,,,^s a _ m i ʕ _ a$,default
+MoroccanArabic-39_hear-1,,MoroccanArabic,39_hear,sm eʕ,sm_eʕ,s m e ʕ,,Harrell1962;Caubet1993,,,^s m _ e ʕ$,default
+Maltese-39_hear-1,,Maltese,39_hear,sam a’,sam_a’,s a m a ʔ,,Borg1997;Aquilina1965,,,^s a m _ a ’$,default
+Cairene-39_hear-1,,Cairene,39_hear,simi ʕ,simi_ʕ,s i m i ʕ,,AbdelMassih2009,,,^s i m i _ ʕ$,default
+Damascene-39_hear-1,,Damascene,39_hear,səme ʕ,səme_ʕ,s ə m e ʕ,,Cowell2005,,,^s ə m e _ ʕ$,default
+Iraqi-39_hear-1,,Iraqi,39_hear,sima ʕ,sima_ʕ,s i m a ʕ,,Erwin1963,,,^s i m a _ ʕ$,default
+Soukhne-39_hear-1,,Soukhne,39_hear,ismiʕ,ismiʕ,i s m i ʕ,,Behnstedt1994,,,^i s m i ʕ$,default
+AqraArbilArabic-39_hear-1,,AqraArbilArabic,39_hear,səmə ʕ,səmə_ʕ,s ə m ə ʕ,,Jastrow1990,,,^s ə m ə _ ʕ$,default
+CypriotArabic-39_hear-1,,CypriotArabic,39_hear,s-m- ʕ,s-m-_ʕ,s m ʕ,,Borg1985,,,^s - m - _ ʕ$,default
+GulfArabic-39_hear-1,,GulfArabic,39_hear,sima ʕ,sima_ʕ,s i m a ʕ,,Qafisheh1975;Holes1990,,,^s i m a _ ʕ$,default
+YemeniticArabic-39_hear-1,,YemeniticArabic,39_hear,simiʕ *,simiʕ_*,s i m i ʕ,,Qafisheh1992,,,^s i m i ʕ _ *$,default
+NigerianArabic-39_hear-1,,NigerianArabic,39_hear,simi,simi,s i m i,,Owens1993;Kaye1982,,,^s i m i$,default
+Buxari-39_hear-1,,Buxari,39_hear,samaʕ,samaʕ,s a m a ʕ,,Zimmermann2002;Ratcliffe2005,,,^s a m a ʕ$,default
+Kinubi-39_hear-1,,Kinubi,39_hear,‘asma,‘asma,ʔ a s m a,,Wellens2003,,,^‘ a s m a$,default
+CentralArabic-40_heart-1,,CentralArabic,40_heart,qal b,qal_b,q a l b,,Ratcliffe2021,,,^q a l _ b$,default
+MoroccanArabic-40_heart-1,,MoroccanArabic,40_heart,qel b,qel_b,q e l b,,Harrell1962;Caubet1993,,,^q e l _ b$,default
+Maltese-40_heart-1,,Maltese,40_heart,ʔalb,ʔalb,ʔ a l b,,Borg1997;Aquilina1965,,,^ʔ a l b$,default
+Cairene-40_heart-1,,Cairene,40_heart,ʔalb,ʔalb,ʔ a l b,,AbdelMassih2009,,,^ʔ a l b$,default
+Damascene-40_heart-1,,Damascene,40_heart,ʔalb,ʔalb,ʔ a l b,,Cowell2005,,,^ʔ a l b$,default
+Iraqi-40_heart-1,,Iraqi,40_heart,qalb,qalb,q a l b,,Erwin1963,,,^q a l b$,default
+Soukhne-40_heart-1,,Soukhne,40_heart,kalˤb,kalˤb,k a lˤ b,,Behnstedt1994,,,^k a lˤ b$,default
+AqraArbilArabic-40_heart-1,,AqraArbilArabic,40_heart,fa:d,fa:d,f aː d,,Jastrow1990,,,^f a: d$,default
+CypriotArabic-40_heart-1,,CypriotArabic,40_heart,kilep,kilep,k i l e p,,Borg1985,,,^k i l e p$,default
+GulfArabic-40_heart-1,,GulfArabic,40_heart,galb,galb,g a l b,,Qafisheh1975;Holes1990,,,^g a l b$,default
+YemeniticArabic-40_heart-1,,YemeniticArabic,40_heart,galb,galb,g a l b,,Qafisheh1992,,,^g a l b$,default
+NigerianArabic-40_heart-1,,NigerianArabic,40_heart,galib,galib,g a l i b,,Owens1993;Kaye1982,,,^g a l i b$,default
+Buxari-40_heart-1,,Buxari,40_heart,qalb,qalb,q a l b,,Zimmermann2002;Ratcliffe2005,,,^q a l b$,default
+Kinubi-40_heart-1,,Kinubi,40_heart,gelba,gelba,g e l b a,,Wellens2003,,,^g e l b a$,default
+CentralArabic-41_horn-1,,CentralArabic,41_horn,qar  n,qar_n,q a r n,,Ratcliffe2021,,,^q a r _ n$,default
+MoroccanArabic-41_horn-1,,MoroccanArabic,41_horn,qer  ˁn,qer_ˁn,q e rˤ n,,Harrell1962;Caubet1993,,,^q e r_ˁ n$,default
+Maltese-41_horn-1,,Maltese,41_horn,ʔarn,ʔarn,ʔ a r n,,Borg1997;Aquilina1965,,,^ʔ a r n$,default
+Cairene-41_horn-1,,Cairene,41_horn,ʔarn,ʔarn,ʔ a r n,,AbdelMassih2009,,,^ʔ a r n$,default
+Damascene-41_horn-1,,Damascene,41_horn,ʔarən,ʔarən,ʔ a r ə n,,Cowell2005,,,^ʔ a r ə n$,default
+Iraqi-41_horn-1,,Iraqi,41_horn,girin,girin,g i r i n,,Erwin1963,,,^g i r i n$,default
+Soukhne-41_horn-1,,Soukhne,41_horn,girin,girin,g i r i n,,Behnstedt1994,,,^g i r i n$,default
+CypriotArabic-41_horn-1,,CypriotArabic,41_horn,korn  e,korn_e,k o r n e,,Borg1985,,,^k o r n _ e$,default
+GulfArabic-41_horn-1,,GulfArabic,41_horn,garn,garn,g a r n,,Qafisheh1975;Holes1990,,,^g a r n$,default
+YemeniticArabic-41_horn-1,,YemeniticArabic,41_horn,garn*,garn*,g a r n,,Qafisheh1992,,,^g a r n *$,default
+NigerianArabic-41_horn-1,,NigerianArabic,41_horn,garn,garn,g a r n,,Owens1993;Kaye1982,,,^g a r n$,default
+Buxari-41_horn-1,,Buxari,41_horn,ʃɔx,ʃɔx,ʃ ɔ x,,Zimmermann2002;Ratcliffe2005,,,^ʃ ɔ x$,default
+Kinubi-41_horn-1,,Kinubi,41_horn,*gurun,*gurun,g u r u n,,Wellens2003,,,^* g u r u n$,default
+CentralArabic-42_i-1,,CentralArabic,42_i,ʔan a:,ʔan_a:,ʔ a n aː,,Ratcliffe2021,,,^ʔ a n _ a:$,default
+MoroccanArabic-42_i-1,,MoroccanArabic,42_i,ana,ana,a n a,,Harrell1962;Caubet1993,,,^a n a$,default
+Maltese-42_i-1,,Maltese,42_i,ji:n,ji:n,j iː n,,Borg1997;Aquilina1965,,,^j i: n$,default
+Cairene-42_i-1,,Cairene,42_i,ana,ana,a n a,,AbdelMassih2009,,,^a n a$,default
+Damascene-42_i-1,,Damascene,42_i,ʔana,ʔana,ʔ a n a,,Cowell2005,,,^ʔ a n a$,default
+Iraqi-42_i-1,,Iraqi,42_i,ʔa:ni,ʔa:ni,ʔ aː n i,,Erwin1963,,,^ʔ a: n i$,default
+Soukhne-42_i-1,,Soukhne,42_i,ana,ana,a n a,,Behnstedt1994,,,^a n a$,default
+AqraArbilArabic-42_i-1,,AqraArbilArabic,42_i,ana,ana,a n a,,Jastrow1990,,,^a n a$,default
+CypriotArabic-42_i-1,,CypriotArabic,42_i,ʔ-n- a,ʔ-n-_a,ʔ n a,,Borg1985,,,^ʔ - n - _ a$,default
+GulfArabic-42_i-1,,GulfArabic,42_i,ana,ana,a n a,,Qafisheh1975;Holes1990,,,^a n a$,default
+YemeniticArabic-42_i-1,,YemeniticArabic,42_i,ʔana,ʔana,ʔ a n a,,Qafisheh1992,,,^ʔ a n a$,default
+NigerianArabic-42_i-1,,NigerianArabic,42_i,ana,ana,a n a,,Owens1993;Kaye1982,,,^a n a$,default
+Buxari-42_i-1,,Buxari,42_i,anaa,anaa,a n aː,,Zimmermann2002;Ratcliffe2005,,,^a n aa$,default
+Kinubi-42_i-1,,Kinubi,42_i,‘ana,‘ana,ʔ a n a,,Wellens2003,,,^‘ a n a$,default
+CentralArabic-43_kill-1,,CentralArabic,43_kill,qat ala,qat_ala,q a t a l a,,Ratcliffe2021,,,^q a t _ a l a$,default
+MoroccanArabic-43_kill-1,,MoroccanArabic,43_kill,qtel,qtel,q t e l,,Harrell1962;Caubet1993,,,^q t e l$,default
+Maltese-43_kill-1,,Maltese,43_kill,ʔate l,ʔate_l,ʔ a t e l,,Borg1997;Aquilina1965,,,^ʔ a t e _ l$,default
+Cairene-43_kill-1,,Cairene,43_kill,ma  wwi t,ma_wwi_t,m a wː i t,,AbdelMassih2009,,,^m a _ ww i _ t$,default
+Damascene-43_kill-1,,Damascene,43_kill,ʔatal,ʔatal,ʔ a t a l,,Cowell2005,,,^ʔ a t a l$,default
+Iraqi-43_kill-1,,Iraqi,43_kill,kital,kital,k i t a l,,Erwin1963,,,^k i t a l$,default
+Soukhne-43_kill-1,,Soukhne,43_kill,katal,katal,k a t a l,,Behnstedt1994,,,^k a t a l$,default
+AqraArbilArabic-43_kill-1,,AqraArbilArabic,43_kill,qatal,qatal,q a t a l,,Jastrow1990,,,^q a t a l$,default
+CypriotArabic-43_kill-1,,CypriotArabic,43_kill,q-t-l,q-t-l,q t l,,Borg1985,,,^q - t - l$,default
+GulfArabic-43_kill-1,,GulfArabic,43_kill,gital,gital,g i t a l,,Qafisheh1975;Holes1990,,,^g i t a l$,default
+YemeniticArabic-43_kill-1,,YemeniticArabic,43_kill,gatal,gatal,g a t a l,,Qafisheh1992,,,^g a t a l$,default
+NigerianArabic-43_kill-1,,NigerianArabic,43_kill,katal,katal,k a t a l,,Owens1993;Kaye1982,,,^k a t a l$,default
+Buxari-43_kill-1,,Buxari,43_kill,qa’tal,qa’tal,q a tˤ a l,,Zimmermann2002;Ratcliffe2005,,,^q a ’t a l$,default
+Kinubi-43_kill-1,,Kinubi,43_kill,katul,katul,k a t u l,,Wellens2003,,,^k a t u l$,default
+CentralArabic-44_knee-1,,CentralArabic,44_knee,ruk bat,ruk_bat,r u k b a t,,Ratcliffe2021,,,^r u k _ b a t$,default
+MoroccanArabic-44_knee-1,,MoroccanArabic,44_knee,rok ba,rok_ba,r o k b a,,Harrell1962;Caubet1993,,,^r o k _ b a$,default
+Maltese-44_knee-1,,Maltese,44_knee,rko bba,rko_bba,r k o bː a,,Borg1997;Aquilina1965,,,^r k o _ bb a$,default
+Cairene-44_knee-1,,Cairene,44_knee,ruk ba*,ruk_ba*,r u k b a,,AbdelMassih2009,,,^r u k _ b a *$,default
+Damascene-44_knee-1,,Damascene,44_knee,rəkb e,rəkb_e,r ə k b e,,Cowell2005,,,^r ə k b _ e$,default
+Iraqi-44_knee-1,,Iraqi,44_knee,rukb a,rukb_a,r u k b a,,Erwin1963,,,^r u k b _ a$,default
+Soukhne-44_knee-1,,Soukhne,44_knee,rˤuʧb i,rˤuʧb_i,rˤ u tʃ b i,,Behnstedt1994,,,^rˤ u ʧ b _ i$,default
+GulfArabic-44_knee-1,,GulfArabic,44_knee,rikba,rikba,r i k b a,,Qafisheh1975;Holes1990,,,^r i k b a$,default
+YemeniticArabic-44_knee-1,,YemeniticArabic,44_knee,rukbi h*,rukbi_h*,r u k b i h,,Qafisheh1992,,,^r u k b i _ h *$,default
+NigerianArabic-44_knee-1,,NigerianArabic,44_knee,rukuba,rukuba,r u k u b a,,Owens1993;Kaye1982,,,^r u k u b a$,default
+Kinubi-44_knee-1,,Kinubi,44_knee,*rukuba,*rukuba,r u k u b a,,Wellens2003,,,^* r u k u b a$,default
+CentralArabic-45_know-1,,CentralArabic,45_know,ʕar  afa,ʕar_afa,ʕ a r a f a,,Ratcliffe2021,,,^ʕ a r _ a f a$,default
+MoroccanArabic-45_know-1,,MoroccanArabic,45_know,ʕrˁe  f,ʕrˁe_f,ʕ rˤ e f,,Harrell1962;Caubet1993,,,^ʕ rˁ e _ f$,default
+Maltese-45_know-1,,Maltese,45_know,jaf,jaf,j a f,,Borg1997;Aquilina1965,,,^j a f$,default
+Cairene-45_know-1,,Cairene,45_know,ʕirif,ʕirif,ʕ i r i f,,AbdelMassih2009,,,^ʕ i r i f$,default
+Damascene-45_know-1,,Damascene,45_know,ʕəref,ʕəref,ʕ ə r e f,,Cowell2005,,,^ʕ ə r e f$,default
+Iraqi-45_know-1,,Iraqi,45_know,ʕiraf,ʕiraf,ʕ i r a f,,Erwin1963,,,^ʕ i r a f$,default
+Soukhne-45_know-1,,Soukhne,45_know,ʕarˤaf,ʕarˤaf,ʕ a rˤ a f,,Behnstedt1994,,,^ʕ a rˤ a f$,default
+AqraArbilArabic-45_know-1,,AqraArbilArabic,45_know,ʕərəf,ʕərəf,ʕ ə r ə f,,Jastrow1990,,,^ʕ ə r ə f$,default
+CypriotArabic-45_know-1,,CypriotArabic,45_know,ʕ-r-f,ʕ-r-f,ʕ r f,,Borg1985,,,^ʕ - r - f$,default
+GulfArabic-45_know-1,,GulfArabic,45_know,"ʕaraf,  dara",ʕaraf,ʕ a r a f,,Qafisheh1975;Holes1990,,,^ʕ a r a f$,default
+YemeniticArabic-45_know-1,,YemeniticArabic,45_know,diri  ʕaraf,diri_ʕaraf,d i r i ʕ a r a f,,Qafisheh1992,,,^d i r i _ ʕ a r a f$,default
+NigerianArabic-45_know-1,,NigerianArabic,45_know,ʕirif,ʕirif,ʕ i r i f,,Owens1993;Kaye1982,,,^ʕ i r i f$,default
+Buxari-45_know-1,,Buxari,45_know,ʔaraf,ʔaraf,ʔ a r a f,,Zimmermann2002;Ratcliffe2005,,,^ʔ a r a f$,default
+Kinubi-45_know-1,,Kinubi,45_know,‘arufu,‘arufu,ʔ a r u f u,,Wellens2003,,,^‘ a r u f u$,default
+CentralArabic-46_leaf-1,,CentralArabic,46_leaf,war aqa  t,war_aqa_t,w a r a q a t,,Ratcliffe2021,,,^w a r _ a q a _ t$,default
+MoroccanArabic-46_leaf-1,,MoroccanArabic,46_leaf,wer qa,wer_qa,w e r q a,,Harrell1962;Caubet1993,,,^w e r _ q a$,default
+Maltese-46_leaf-1,,Maltese,46_leaf,wer ʔa,wer_ʔa,w e r ʔ a,,Borg1997;Aquilina1965,,,^w e r _ ʔ a$,default
+Cairene-46_leaf-1,,Cairene,46_leaf,war ʔa*,war_ʔa*,w a r ʔ a,,AbdelMassih2009,,,^w a r _ ʔ a *$,default
+Damascene-46_leaf-1,,Damascene,46_leaf,wara ʔa,wara_ʔa,w a r a ʔ a,,Cowell2005,,,^w a r a _ ʔ a$,default
+Iraqi-46_leaf-1,,Iraqi,46_leaf,warg a,warg_a,w a r g a,,Erwin1963,,,^w a r g _ a$,default
+Soukhne-46_leaf-1,,Soukhne,46_leaf,wara ka,wara_ka,w a r a k a,,Behnstedt1994,,,^w a r a _ k a$,default
+AqraArbilArabic-46_leaf-1,,AqraArbilArabic,46_leaf,wara qa,wara_qa,w a r a q a,,Jastrow1990,,,^w a r a _ q a$,default
+GulfArabic-46_leaf-1,,GulfArabic,46_leaf,wriga,wriga,w r i g a,,Qafisheh1975;Holes1990,,,^w r i g a$,default
+YemeniticArabic-46_leaf-1,,YemeniticArabic,46_leaf,wara gih*,wara_gih*,w a r a g i h,,Qafisheh1992,,,^w a r a _ g i h *$,default
+NigerianArabic-46_leaf-1,,NigerianArabic,46_leaf,waraga,waraga,w a r a g a,,Owens1993;Kaye1982,,,^w a r a g a$,default
+Buxari-46_leaf-1,,Buxari,46_leaf,varaq,varaq,v a r a q,,Zimmermann2002;Ratcliffe2005,,,^v a r a q$,default
+Kinubi-46_leaf-1,,Kinubi,46_leaf,korofo,korofo,k o r o f o,,Wellens2003,,,^k o r o f o$,default
+CentralArabic-47_lie-1,,CentralArabic,47_lie,raq ada,raq_ada,r a q a d a,,Ratcliffe2021,,,^r a q _ a d a$,default
+MoroccanArabic-47_lie-1,,MoroccanArabic,47_lie,ttm ed,ttm_ed,tː m e d,,Harrell1962;Caubet1993,,,^tt m _ e d$,default
+Maltese-47_lie-1,,Maltese,47_lie,mte dd,mte_dd,m t e dː,,Borg1997;Aquilina1965,,,^m t e _ dd$,default
+Cairene-47_lie-1,,Cairene,47_lie,itma ddad  *,itma_ddad_*,i t m a dː a d,,AbdelMassih2009,,,^i t m a _ dd a d _ *$,default
+Damascene-47_lie-1,,Damascene,47_lie,tlaʔʔa h,tlaʔʔa_h,t l a ʔː a h,,Cowell2005,,,^t l a ʔʔ a _ h$,default
+Iraqi-47_lie-1,,Iraqi,47_lie,tmadd ad,tmadd_ad,t m a dː a d,,Erwin1963,,,^t m a dd _ a d$,default
+Soukhne-47_lie-1,,Soukhne,47_lie,tʦall as,tʦall_as,t ts a lː a s,,Behnstedt1994,,,^t ʦ a ll _ a s$,default
+GulfArabic-47_lie-1,,GulfArabic,47_lie,tamad dad,tamad_dad,t a m a d d a d,,Qafisheh1975;Holes1990,,,^t a m a d _ d a d$,default
+YemeniticArabic-47_lie-1,,YemeniticArabic,47_lie,ragad*,ragad*,r a g a d,,Qafisheh1992,,,^r a g a d *$,default
+NigerianArabic-47_lie-1,,NigerianArabic,47_lie,ragad,ragad,r a g a d,,Owens1993;Kaye1982,,,^r a g a d$,default
+Buxari-47_lie-1,,Buxari,47_lie,daaʕa,daaʕa,d aː ʕ a,,Zimmermann2002;Ratcliffe2005,,,^d aa ʕ a$,default
+CentralArabic-48_liver-1,,CentralArabic,48_liver,kab id,kab_id,k a b i d,,Ratcliffe2021,,,^k a b _ i d$,default
+MoroccanArabic-48_liver-1,,MoroccanArabic,48_liver,keb da,keb_da,k e b d a,,Harrell1962;Caubet1993,,,^k e b _ d a$,default
+Maltese-48_liver-1,,Maltese,48_liver,fwi:d,fwi:d,f w iː d,,Borg1997;Aquilina1965,,,^fw i: d$,default
+Cairene-48_liver-1,,Cairene,48_liver,kibda*,kibda*,k i b d a,,AbdelMassih2009,,,^k i b d a *$,default
+Damascene-48_liver-1,,Damascene,48_liver,kəbəd,kəbəd,k ə b ə d,,Cowell2005,,,^k ə b ə d$,default
+Iraqi-48_liver-1,,Iraqi,48_liver,kabda,kabda,k a b d a,,Erwin1963,,,^k a b d a$,default
+CypriotArabic-48_liver-1,,CypriotArabic,48_liver,q-sˁ-b,q-sˁ-b,q sˤ b,,Borg1985,,,^q - sˁ - b$,default
+GulfArabic-48_liver-1,,GulfArabic,48_liver,ʧibd,ʧibd,tʃ i b d,,Qafisheh1975;Holes1990,,,^ʧ i b d$,default
+YemeniticArabic-48_liver-1,,YemeniticArabic,48_liver,kabdih*,kabdih*,k a b d i h,,Qafisheh1992,,,^k a b d i h *$,default
+NigerianArabic-48_liver-1,,NigerianArabic,48_liver,kibde,kibde,k i b d e,,Owens1993;Kaye1982,,,^k i b d e$,default
+Buxari-48_liver-1,,Buxari,48_liver,kabda,kabda,k a b d a,,Zimmermann2002;Ratcliffe2005,,,^k a b d a$,default
+Kinubi-48_liver-1,,Kinubi,48_liver,*koobda,*koobda,k oː b d a,,Wellens2003,,,^* k oo b d a$,default
+CentralArabic-49_long-1,,CentralArabic,49_long,tˁa wi:l,tˁa_wi:l,tˤ a w iː l,,Ratcliffe2021,,,^tˁ a _ w i: l$,default
+MoroccanArabic-49_long-1,,MoroccanArabic,49_long,tˁwi l,tˁwi_l,tˤ w i l,,Harrell1962;Caubet1993,,,^tˁw i _ l$,default
+Maltese-49_long-1,,Maltese,49_long,twil,twil,t w i l,,Borg1997;Aquilina1965,,,^tw i l$,default
+Cairene-49_long-1,,Cairene,49_long,tˁaw i:l,tˁaw_i:l,tˤ a w iː l,,AbdelMassih2009,,,^tˁ a w _ i: l$,default
+Damascene-49_long-1,,Damascene,49_long,tˁawi: l,tˁawi:_l,tˤ a w iː l,,Cowell2005,,,^tˁ a w i: _ l$,default
+Iraqi-49_long-1,,Iraqi,49_long,tˁuwi: l,tˁuwi:_l,tˤ u w iː l,,Erwin1963,,,^tˁ u w i: _ l$,default
+Soukhne-49_long-1,,Soukhne,49_long,tˁawi: l,tˁawi:_l,tˤ a w iː l,,Behnstedt1994,,,^tˁ a w i: _ l$,default
+AqraArbilArabic-49_long-1,,AqraArbilArabic,49_long,tˁ-w- l,tˁ-w-_l,tˤ w l,,Jastrow1990,,,^tˁ - w - _ l$,default
+CypriotArabic-49_long-1,,CypriotArabic,49_long,tˁ-w- l,tˁ-w-_l,tˤ w l,,Borg1985,,,^tˁ - w - _ l$,default
+GulfArabic-49_long-1,,GulfArabic,49_long,tˤawii l,tˤawii_l,tˤ a w iː l,,Qafisheh1975;Holes1990,,,^tˤ a w ii _ l$,default
+YemeniticArabic-49_long-1,,YemeniticArabic,49_long,tˁawi: l,tˁawi:_l,tˤ a w iː l,,Qafisheh1992,,,^tˁ a w i: _ l$,default
+NigerianArabic-49_long-1,,NigerianArabic,49_long,tˁawil,tˁawil,tˤ a w i l,,Owens1993;Kaye1982,,,^tˁ a w i l$,default
+Buxari-49_long-1,,Buxari,49_long,ta’viil,ta’viil,t a vˤ iː l,,Zimmermann2002;Ratcliffe2005,,,^t a ’v ii l$,default
+Kinubi-49_long-1,,Kinubi,49_long,towil,towil,t o w i l,,Wellens2003,,,^t o w i l$,default
+CentralArabic-50_louse-1,,CentralArabic,50_louse,qa mla  h,qa_mla_h,q a m l a h,,Ratcliffe2021,,,^q a _ m l a _ h$,default
+MoroccanArabic-50_louse-1,,MoroccanArabic,50_louse,qe mla,qe_mla,q e m l a,,Harrell1962;Caubet1993,,,^q e _ m l a$,default
+Maltese-50_louse-1,,Maltese,50_louse,ʔam la,ʔam_la,ʔ a m l a,,Borg1997;Aquilina1965,,,^ʔ a m _ l a$,default
+Cairene-50_louse-1,,Cairene,50_louse,ʔam la*,ʔam_la*,ʔ a m l a,,AbdelMassih2009,,,^ʔ a m _ l a *$,default
+Damascene-50_louse-1,,Damascene,50_louse,ʔaml e,ʔaml_e,ʔ a m l e,,Cowell2005,,,^ʔ a m l _ e$,default
+Iraqi-50_louse-1,,Iraqi,50_louse,gamlˁ a,gamlˁ_a,g a m lˤ a,,Erwin1963,,,^g a m lˁ _ a$,default
+Soukhne-50_louse-1,,Soukhne,50_louse,kamlˤ,kamlˤ,k a m lˤ,,Behnstedt1994,,,^k a m lˤ$,default
+CypriotArabic-50_louse-1,,CypriotArabic,50_louse,q-m- l,q-m-_l,q m l,,Borg1985,,,^q - m - _ l$,default
+GulfArabic-50_louse-1,,GulfArabic,50_louse,gaml a,gaml_a,g a m l a,,Qafisheh1975;Holes1990,,,^g a m l _ a$,default
+YemeniticArabic-50_louse-1,,YemeniticArabic,50_louse,gaml eh,gaml_eh,g a m l e h,,Qafisheh1992,,,^g a m l _ e h$,default
+Buxari-50_louse-1,,Buxari,50_louse,qamla,qamla,q a m l a,,Zimmermann2002;Ratcliffe2005,,,^q a m l a$,default
+CentralArabic-51_man-1,,CentralArabic,51_man,ra ʤu  l,ra_ʤu_l,r a dʒ u l,,Ratcliffe2021,,,^r a _ ʤ u _ l$,default
+MoroccanArabic-51_man-1,,MoroccanArabic,51_man,rˁaʒ el,rˁaʒ_el,rˤ a ʒ e l,,Harrell1962;Caubet1993,,,^rˁ a ʒ _ e l$,default
+Maltese-51_man-1,,Maltese,51_man,raʤ el,raʤ_el,r a dʒ e l,,Borg1997;Aquilina1965,,,^r a ʤ _ e l$,default
+Cairene-51_man-1,,Cairene,51_man,rˁa: gil,rˁa:_gil,rˤ aː g i l,,AbdelMassih2009,,,^rˁ a: _ g i l$,default
+Damascene-51_man-1,,Damascene,51_man,rəʤʤ a:l,rəʤʤ_a:l,r ə dʒː aː l,,Cowell2005,,,^r ə ʤʤ _ a: l$,default
+Iraqi-51_man-1,,Iraqi,51_man,riʤʤ a:l,riʤʤ_a:l,r i dʒː aː l,,Erwin1963,,,^r i ʤʤ _ a: l$,default
+Soukhne-51_man-1,,Soukhne,51_man,zala mi,zala_mi,z a l a m i,,Behnstedt1994,,,^z a l a _ m i$,default
+AqraArbilArabic-51_man-1,,AqraArbilArabic,51_man,raʤə l,raʤə_l,r a dʒ ə l,,Jastrow1990,,,^r a ʤ ə _ l$,default
+CypriotArabic-51_man-1,,CypriotArabic,51_man,Intsa n,Intsa_n,i n ts a n,,Borg1985,,,^I n ts a _ n$,default
+GulfArabic-51_man-1,,GulfArabic,51_man,rayya al,rayya_al,r a jː a a l,,Qafisheh1975;Holes1990,,,^r ayya _ a l$,default
+YemeniticArabic-51_man-1,,YemeniticArabic,51_man,raʤʤ a:l,raʤʤ_a:l,r a dʒː aː l,,Qafisheh1992,,,^r a ʤʤ _ a: l$,default
+NigerianArabic-51_man-1,,NigerianArabic,51_man,raʤil,raʤil,r a dʒ i l,,Owens1993;Kaye1982,,,^r a ʤ i l$,default
+Buxari-51_man-1,,Buxari,51_man,"‘zaaker, ra’Ʒul",‘zaaker,ʔ z aː k e r,,Zimmermann2002;Ratcliffe2005,,,^‘ z aa k e r$,default
+Kinubi-51_man-1,,Kinubi,51_man,ragi,ragi,r a g i,,Wellens2003,,,^r a g i$,default
+CentralArabic-52_many-1,,CentralArabic,52_many,kaθ i:r,kaθ_i:r,k a θ iː r,,Ratcliffe2021,,,^k a θ _ i: r$,default
+MoroccanArabic-52_many-1,,MoroccanArabic,52_many,bez zaf,bez_zaf,b e z z a f,,Harrell1962;Caubet1993,,,^b e z _ z a f$,default
+Maltese-52_many-1,,Maltese,52_many,ħaf na,ħaf_na,ħ a f n a,,Borg1997;Aquilina1965,,,^ħ a f _ n a$,default
+Cairene-52_many-1,,Cairene,52_many,kitii r,kitii_r,k i t iː r,,AbdelMassih2009,,,^k i t ii _ r$,default
+Damascene-52_many-1,,Damascene,52_many,kti:r,kti:r,k t iː r,,Cowell2005,,,^k t i: r$,default
+Iraqi-52_many-1,,Iraqi,52_many,hwa:j a,hwa:j_a,h w aː j a,,Erwin1963,,,^hw a: j _ a$,default
+Soukhne-52_many-1,,Soukhne,52_many,ʧθi:r,ʧθi:r,tʃ θ iː r,,Behnstedt1994,,,^ʧ θ i: r$,default
+AqraArbilArabic-52_many-1,,AqraArbilArabic,52_many,kəti:r,kəti:r,k ə t iː r,,Jastrow1990,,,^k ə t i: r$,default
+CypriotArabic-52_many-1,,CypriotArabic,52_many,xtir,xtir,x t i r,,Borg1985,,,^x t i r$,default
+GulfArabic-52_many-1,,GulfArabic,52_many,waa ʤid,waa_ʤid,w aː dʒ i d,,Qafisheh1975;Holes1990,,,^w aa _ ʤ i d$,default
+YemeniticArabic-52_many-1,,YemeniticArabic,52_many,kaθi: r,kaθi:_r,k a θ iː r,,Qafisheh1992,,,^k a θ i: _ r$,default
+NigerianArabic-52_many-1,,NigerianArabic,52_many,kati:r,kati:r,k a t iː r,,Owens1993;Kaye1982,,,^k a t i: r$,default
+Buxari-52_many-1,,Buxari,52_many,ka’siir,ka’siir,k a ʔ iː r,,Zimmermann2002;Ratcliffe2005,,,^k a ’s ii r$,default
+Kinubi-52_many-1,,Kinubi,52_many,*milan,*milan,m i l a n,,Wellens2003,,,^* m i l a n$,default
+CentralArabic-53_meat-1,,CentralArabic,53_meat,laħ m,laħ_m,l a ħ m,,Ratcliffe2021,,,^l a ħ _ m$,default
+MoroccanArabic-53_meat-1,,MoroccanArabic,53_meat,lħa m,lħa_m,l ħ a m,,Harrell1962;Caubet1993,,,^l ħ a _ m$,default
+Maltese-53_meat-1,,Maltese,53_meat,laħa m,laħa_m,l a ħ a m,,Borg1997;Aquilina1965,,,^l a ħ a _ m$,default
+Cairene-53_meat-1,,Cairene,53_meat,laħ ma,laħ_ma,l a ħ m a,,AbdelMassih2009,,,^l a ħ _ m a$,default
+Iraqi-53_meat-1,,Iraqi,53_meat,laħa m,laħa_m,l a ħ a m,,Erwin1963,,,^l a ħ a _ m$,default
+Soukhne-53_meat-1,,Soukhne,53_meat,laħm,laħm,l a ħ m,,Behnstedt1994,,,^l a ħ m$,default
+AqraArbilArabic-53_meat-1,,AqraArbilArabic,53_meat,laħə m,laħə_m,l a ħ ə m,,Jastrow1990,,,^l a ħ ə _ m$,default
+CypriotArabic-53_meat-1,,CypriotArabic,53_meat,l-ħ- m,l-ħ-_m,l ħ m,,Borg1985,,,^l - ħ - _ m$,default
+GulfArabic-53_meat-1,,GulfArabic,53_meat,laħa m,laħa_m,l a ħ a m,,Qafisheh1975;Holes1990,,,^l a ħ a _ m$,default
+YemeniticArabic-53_meat-1,,YemeniticArabic,53_meat,laħm,laħm,l a ħ m,,Qafisheh1992,,,^l a ħ m$,default
+NigerianArabic-53_meat-1,,NigerianArabic,53_meat,la:ma,la:ma,l aː m a,,Owens1993;Kaye1982,,,^l a: m a$,default
+Buxari-53_meat-1,,Buxari,53_meat,læħəm,læħəm,l æ ħ ə m,,Zimmermann2002;Ratcliffe2005,,,^l æ ħ ə m$,default
+Kinubi-53_meat-1,,Kinubi,53_meat,la:m,la:m,l aː m,,Wellens2003,,,^l a: m$,default
+CentralArabic-54_moon-1,,CentralArabic,54_moon,qa ma  r,qa_ma_r,q a m a r,,Ratcliffe2021,,,^q a _ m a _ r$,default
+MoroccanArabic-54_moon-1,,MoroccanArabic,54_moon,ga mrˁ  a,ga_mrˁ_a,g a m rˤ a,,Harrell1962;Caubet1993,,,^g a _ m rˁ _ a$,default
+Maltese-54_moon-1,,Maltese,54_moon,ʔam ar,ʔam_ar,ʔ a m a r,,Borg1997;Aquilina1965,,,^ʔ a m _ a r$,default
+Cairene-54_moon-1,,Cairene,54_moon,ʔam ar,ʔam_ar,ʔ a m a r,,AbdelMassih2009,,,^ʔ a m _ a r$,default
+Damascene-54_moon-1,,Damascene,54_moon,ʔama rˁ,ʔama_rˁ,ʔ a m a rˤ,,Cowell2005,,,^ʔ a m a _ rˁ$,default
+Iraqi-54_moon-1,,Iraqi,54_moon,gum ar,gum_ar,g u m a r,,Erwin1963,,,^g u m _ a r$,default
+Soukhne-54_moon-1,,Soukhne,54_moon,kama rˤ,kama_rˤ,k a m a rˤ,,Behnstedt1994,,,^k a m a _ rˤ$,default
+CypriotArabic-54_moon-1,,CypriotArabic,54_moon,q-m- r,q-m-_r,q m r,,Borg1985,,,^q - m - _ r$,default
+GulfArabic-54_moon-1,,GulfArabic,54_moon,gama r,gama_r,g a m a r,,Qafisheh1975;Holes1990,,,^g a m a _ r$,default
+YemeniticArabic-54_moon-1,,YemeniticArabic,54_moon,gama r,gama_r,g a m a r,,Qafisheh1992,,,^g a m a _ r$,default
+NigerianArabic-54_moon-1,,NigerianArabic,54_moon,gamar,gamar,g a m a r,,Owens1993;Kaye1982,,,^g a m a r$,default
+Buxari-54_moon-1,,Buxari,54_moon,qamar,qamar,q a m a r,,Zimmermann2002;Ratcliffe2005,,,^q a m a r$,default
+Kinubi-54_moon-1,,Kinubi,54_moon,*ʃa(h)ari,*ʃaari,ʃ aː r i,,Wellens2003,,,^*ʃ aa r i$,default
+CentralArabic-55_mountain-1,,CentralArabic,55_mountain,ʤa bal,ʤa_bal,dʒ a b a l,,Ratcliffe2021,,,^ʤ a _ b a l$,default
+MoroccanArabic-55_mountain-1,,MoroccanArabic,55_mountain,ʒbe l,ʒbe_l,ʒ b e l,,Harrell1962;Caubet1993,,,^ʒ b e _ l$,default
+Maltese-55_mountain-1,,Maltese,55_mountain,mu nta  nja,mu_nta_nja,m u n t a n j a,,Borg1997;Aquilina1965,,,^m u _ n t a _ n j a$,default
+Cairene-55_mountain-1,,Cairene,55_mountain,gab al*,gab_al*,g a b a l,,AbdelMassih2009,,,^g a b _ a l *$,default
+Damascene-55_mountain-1,,Damascene,55_mountain,ʤab al,ʤab_al,dʒ a b a l,,Cowell2005,,,^ʤ a b _ a l$,default
+Iraqi-55_mountain-1,,Iraqi,55_mountain,ʤiba l,ʤiba_l,dʒ i b a l,,Erwin1963,,,^ʤ i b a _ l$,default
+Soukhne-55_mountain-1,,Soukhne,55_mountain,ʦaba l,ʦaba_l,ts a b a l,,Behnstedt1994,,,^ʦ a b a _ l$,default
+AqraArbilArabic-55_mountain-1,,AqraArbilArabic,55_mountain,ʤab al,ʤab_al,dʒ a b a l,,Jastrow1990,,,^ʤ a b _ a l$,default
+CypriotArabic-55_mountain-1,,CypriotArabic,55_mountain,ʒipel,ʒipel,ʒ i p e l,,Borg1985,,,^ʒ i p e l$,default
+GulfArabic-55_mountain-1,,GulfArabic,55_mountain,ʤiba l,ʤiba_l,dʒ i b a l,,Qafisheh1975;Holes1990,,,^ʤ i b a _ l$,default
+YemeniticArabic-55_mountain-1,,YemeniticArabic,55_mountain,ʤab al*,ʤab_al*,dʒ a b a l,,Qafisheh1992,,,^ʤ a b _ a l *$,default
+NigerianArabic-55_mountain-1,,NigerianArabic,55_mountain,haʤar,haʤar,h a dʒ a r,,Owens1993;Kaye1982,,,^h a ʤ a r$,default
+Buxari-55_mountain-1,,Buxari,55_mountain,dƷabal,dƷabal,d ʒ a b a l,,Zimmermann2002;Ratcliffe2005,,,^d Ʒ a b a l$,default
+Kinubi-55_mountain-1,,Kinubi,55_mountain,ʤebel,ʤebel,dʒ e b e l,,Wellens2003,,,^ʤ e b e l$,default
+CentralArabic-56_mouth-1,,CentralArabic,56_mouth,fam,fam,f a m,,Ratcliffe2021,,,^f a m$,default
+MoroccanArabic-56_mouth-1,,MoroccanArabic,56_mouth,fo mm,fo_mm,f o mː,,Harrell1962;Caubet1993,,,^f o _ mm$,default
+Maltese-56_mouth-1,,Maltese,56_mouth,ħalʔ,ħalʔ,ħ a l ʔ,,Borg1997;Aquilina1965,,,^ħ a l ʔ$,default
+Cairene-56_mouth-1,,Cairene,56_mouth,buʔ ʔ,buʔ_ʔ,b u ʔ ʔ,,AbdelMassih2009,,,^b u ʔ _ ʔ$,default
+Damascene-56_mouth-1,,Damascene,56_mouth,təm m,təm_m,t ə m m,,Cowell2005,,,^t ə m _ m$,default
+Iraqi-56_mouth-1,,Iraqi,56_mouth,ħaliq,ħaliq,ħ a l i q,,Erwin1963,,,^ħ a l i q$,default
+Soukhne-56_mouth-1,,Soukhne,56_mouth,"ħalk, bu:z",ħalk,ħ a l k,,Behnstedt1994,,,^ħ a l k$,default
+AqraArbilArabic-56_mouth-1,,AqraArbilArabic,56_mouth,təm m,təm_m,t ə m m,,Jastrow1990,,,^t ə m _ m$,default
+CypriotArabic-56_mouth-1,,CypriotArabic,56_mouth,*xan k  ħ-n- k,*xan_k_ħ-n-_k,x a n k ħ n k,,Borg1985,,,^* x a n _ k _ ħ - n - _ k$,default
+GulfArabic-56_mouth-1,,GulfArabic,56_mouth,"ħalʤ , buuz",ħalʤ,ħ a l dʒ,,Qafisheh1975;Holes1990,,,^ħ a l ʤ$,default
+YemeniticArabic-56_mouth-1,,YemeniticArabic,56_mouth,fum m*,fum_m*,f u m m,,Qafisheh1992,,,^f u m _ m *$,default
+NigerianArabic-56_mouth-1,,NigerianArabic,56_mouth,gaddu:ma,gaddu:ma,g a dː uː m a,,Owens1993;Kaye1982,,,^g a dd u: m a$,default
+Buxari-56_mouth-1,,Buxari,56_mouth,bæb,bæb,b æ b,,Zimmermann2002;Ratcliffe2005,,,^b æ b$,default
+Kinubi-56_mouth-1,,Kinubi,56_mouth,*kasma,*kasma,k a s m a,,Wellens2003,,,^* k a s m a$,default
+CentralArabic-57_name-1,,CentralArabic,57_name,ism,ism,i s m,,Ratcliffe2021,,,^i s m$,default
+MoroccanArabic-57_name-1,,MoroccanArabic,57_name,smi  ja,smi_ja,s m i j a,,Harrell1962;Caubet1993,,,^s m i _ j a$,default
+Maltese-57_name-1,,Maltese,57_name,ise  m,ise_m,i s e m,,Borg1997;Aquilina1965,,,^i s e _ m$,default
+Cairene-57_name-1,,Cairene,57_name,ism,ism,i s m,,AbdelMassih2009,,,^i s m$,default
+Damascene-57_name-1,,Damascene,57_name,ʔəsə  m,ʔəsə_m,ʔ ə s ə m,,Cowell2005,,,^ʔ ə s ə _ m$,default
+Iraqi-57_name-1,,Iraqi,57_name,ʔisim,ʔisim,ʔ i s i m,,Erwin1963,,,^ʔ i s i m$,default
+Soukhne-57_name-1,,Soukhne,57_name,ism,ism,i s m,,Behnstedt1994,,,^i s m$,default
+AqraArbilArabic-57_name-1,,AqraArbilArabic,57_name,əsəm,əsəm,ə s ə m,,Jastrow1990,,,^ə s ə m$,default
+CypriotArabic-57_name-1,,CypriotArabic,57_name,ʔ-s-  m,ʔ-s-_m,ʔ s m,,Borg1985,,,^ʔ - s - _ m$,default
+GulfArabic-57_name-1,,GulfArabic,57_name,isim,isim,i s i m,,Qafisheh1975;Holes1990,,,^i s i m$,default
+YemeniticArabic-57_name-1,,YemeniticArabic,57_name,ʔism,ʔism,ʔ i s m,,Qafisheh1992,,,^ʔ i s m$,default
+NigerianArabic-57_name-1,,NigerianArabic,57_name,isim,isim,i s i m,,Owens1993;Kaye1982,,,^i s i m$,default
+Buxari-57_name-1,,Buxari,57_name,ʔisim,ʔisim,ʔ i s i m,,Zimmermann2002;Ratcliffe2005,,,^ʔ i s i m$,default
+Kinubi-57_name-1,,Kinubi,57_name,*asma,*asma,a s m a,,Wellens2003,,,^* a s m a$,default
+CentralArabic-58_neck-1,,CentralArabic,58_neck,ʕunq,ʕunq,ʕ u n q,,Ratcliffe2021,,,^ʕ u n q$,default
+MoroccanArabic-58_neck-1,,MoroccanArabic,58_neck,ʕenq,ʕenq,ʕ e n q,,Harrell1962;Caubet1993,,,^ʕ e n q$,default
+Maltese-58_neck-1,,Maltese,58_neck,ʕonʔ,ʕonʔ,ʕ o n ʔ,,Borg1997;Aquilina1965,,,^ʕ o n ʔ$,default
+Cairene-58_neck-1,,Cairene,58_neck,raʔaba*,raʔaba*,r a ʔ a b a,,AbdelMassih2009,,,^r a ʔ a b a *$,default
+Damascene-58_neck-1,,Damascene,58_neck,raʔbe,raʔbe,r a ʔ b e,,Cowell2005,,,^r a ʔ b e$,default
+Iraqi-58_neck-1,,Iraqi,58_neck,rugba,rugba,r u g b a,,Erwin1963,,,^r u g b a$,default
+Soukhne-58_neck-1,,Soukhne,58_neck,rakaba,rakaba,r a k a b a,,Behnstedt1994,,,^r a k a b a$,default
+CypriotArabic-58_neck-1,,CypriotArabic,58_neck,r-q-b,r-q-b,r q b,,Borg1985,,,^r - q - b$,default
+GulfArabic-58_neck-1,,GulfArabic,58_neck,rguba,rguba,r g u b a,,Qafisheh1975;Holes1990,,,^r g u b a$,default
+YemeniticArabic-58_neck-1,,YemeniticArabic,58_neck,rugbeh,rugbeh,r u g b e h,,Qafisheh1992,,,^r u g b e h$,default
+NigerianArabic-58_neck-1,,NigerianArabic,58_neck,ragaba,ragaba,r a g a b a,,Owens1993;Kaye1982,,,^r a g a b a$,default
+Kinubi-58_neck-1,,Kinubi,58_neck,*ragabtu,*ragabtu,r a g a b t u,,Wellens2003,,,^* r a g a b t u$,default
+CentralArabic-59_new-1,,CentralArabic,59_new,ʤa di:d,ʤa_di:d,dʒ a d iː d,,Ratcliffe2021,,,^ʤ a _ d i: d$,default
+MoroccanArabic-59_new-1,,MoroccanArabic,59_new,ʒdi d,ʒdi_d,ʒ d i d,,Harrell1962;Caubet1993,,,^ʒ d i _ d$,default
+Maltese-59_new-1,,Maltese,59_new,ʤdi da,ʤdi_da,dʒ d i d a,,Borg1997;Aquilina1965,,,^ʤ d i _ d a$,default
+Cairene-59_new-1,,Cairene,59_new,gidii d,gidii_d,g i d iː d,,AbdelMassih2009,,,^g i d ii _ d$,default
+Damascene-59_new-1,,Damascene,59_new,ʤdi: d,ʤdi:_d,dʒ d iː d,,Cowell2005,,,^ʤ d i: _ d$,default
+Iraqi-59_new-1,,Iraqi,59_new,ʤidi: d,ʤidi:_d,dʒ i d iː d,,Erwin1963,,,^ʤ i d i: _ d$,default
+Soukhne-59_new-1,,Soukhne,59_new,ʦadi: d,ʦadi:_d,ts a d iː d,,Behnstedt1994,,,^ʦ a d i: _ d$,default
+AqraArbilArabic-59_new-1,,AqraArbilArabic,59_new,ʤədi :d,ʤədi_:d,dʒ ə d iː d,,Jastrow1990,,,^ʤ ə d i_: d$,default
+CypriotArabic-59_new-1,,CypriotArabic,59_new,ʒtit ʤ-  d-d,ʒtit_ʤ-_d-d,ʒ t i t dʒ d d,,Borg1985,,,^ʒ t i t _ ʤ - _ d - d$,default
+GulfArabic-59_new-1,,GulfArabic,59_new,ʤadi id,ʤadi_id,dʒ a d i i d,,Qafisheh1975;Holes1990,,,^ʤ a d i _ i d$,default
+YemeniticArabic-59_new-1,,YemeniticArabic,59_new,ʤadi :d,ʤadi_:d,dʒ a d iː d,,Qafisheh1992,,,^ʤ a d i_: d$,default
+NigerianArabic-59_new-1,,NigerianArabic,59_new,ʤadi:d,ʤadi:d,dʒ a d iː d,,Owens1993;Kaye1982,,,^ʤ a d i: d$,default
+Buxari-59_new-1,,Buxari,59_new,dƷadiid,dƷadiid,d ʒ a d iː d,,Zimmermann2002;Ratcliffe2005,,,^d Ʒ a d ii d$,default
+Kinubi-59_new-1,,Kinubi,59_new,ʤedid,ʤedid,dʒ e d i d,,Wellens2003,,,^ʤ e d i d$,default
+CentralArabic-60_night-1,,CentralArabic,60_night,lail ah,lail_ah,l ai̯ l a h,,Ratcliffe2021,,,^l ai l _ a h$,default
+MoroccanArabic-60_night-1,,MoroccanArabic,60_night,lila,lila,l i l a,,Harrell1962;Caubet1993,,,^l i l a$,default
+Maltese-60_night-1,,Maltese,60_night,lejl,lejl,l e j l,,Borg1997;Aquilina1965,,,^l e j l$,default
+Cairene-60_night-1,,Cairene,60_night,leel a,leel_a,l eː l a,,AbdelMassih2009,,,^l ee l _ a$,default
+Damascene-60_night-1,,Damascene,60_night,leele,leele,l eː l e,,Cowell2005,,,^l ee l e$,default
+Iraqi-60_night-1,,Iraqi,60_night,leela,leela,l eː l a,,Erwin1963,,,^l ee l a$,default
+Soukhne-60_night-1,,Soukhne,60_night,leeli,leeli,l eː l i,,Behnstedt1994,,,^l ee l i$,default
+AqraArbilArabic-60_night-1,,AqraArbilArabic,60_night,lajl,lajl,l a j l,,Jastrow1990,,,^l a j l$,default
+CypriotArabic-60_night-1,,CypriotArabic,60_night,l-y-l,l-y-l,l y l,,Borg1985,,,^l - y - l$,default
+GulfArabic-60_night-1,,GulfArabic,60_night,leel,leel,l eː l,,Qafisheh1975;Holes1990,,,^l ee l$,default
+YemeniticArabic-60_night-1,,YemeniticArabic,60_night,lajl,lajl,l a j l,,Qafisheh1992,,,^l a j l$,default
+NigerianArabic-60_night-1,,NigerianArabic,60_night,le:le,le:le,l eː l e,,Owens1993;Kaye1982,,,^l e: l e$,default
+Buxari-60_night-1,,Buxari,60_night,layl,layl,l ai̯ l,,Zimmermann2002;Ratcliffe2005,,,^l ay l$,default
+CentralArabic-61_nose-1,,CentralArabic,61_nose,ʔun f,ʔun_f,ʔ u n f,,Ratcliffe2021,,,^ʔ u n _ f$,default
+MoroccanArabic-61_nose-1,,MoroccanArabic,61_nose,nif,nif,n i f,,Harrell1962;Caubet1993,,,^n i f$,default
+Maltese-61_nose-1,,Maltese,61_nose,imni  :ħer,imni_:ħer,i m n iː ħ e r,,Borg1997;Aquilina1965,,,^i m n i_: ħ e r$,default
+Cairene-61_nose-1,,Cairene,61_nose,man axii  r*,man_axii_r*,m a n a x iː r,,AbdelMassih2009,,,^m a n _ a x ii _ r *$,default
+Damascene-61_nose-1,,Damascene,61_nose,ʔənf,ʔənf,ʔ ə n f,,Cowell2005,,,^ʔ ə n f$,default
+Iraqi-61_nose-1,,Iraqi,61_nose,xaʃi m,xaʃi_m,x a ʃ i m,,Erwin1963,,,^x a ʃ i _ m$,default
+Soukhne-61_nose-1,,Soukhne,61_nose,xiʃm,xiʃm,x i ʃ m,,Behnstedt1994,,,^x i ʃ m$,default
+AqraArbilArabic-61_nose-1,,AqraArbilArabic,61_nose,ənf,ənf,ə n f,,Jastrow1990,,,^ə n f$,default
+CypriotArabic-61_nose-1,,CypriotArabic,61_nose,maxu r  n-x-r,maxu_r_n-x-r,m a x u r n x r,,Borg1985,,,^m a x u _ r _ n - x - r$,default
+GulfArabic-61_nose-1,,GulfArabic,61_nose,xaʃi m,xaʃi_m,x a ʃ i m,,Qafisheh1975;Holes1990,,,^x a ʃ i _ m$,default
+YemeniticArabic-61_nose-1,,YemeniticArabic,61_nose,nuxr eh,nuxr_eh,n u x r e h,,Qafisheh1992,,,^n u x r _ e h$,default
+NigerianArabic-61_nose-1,,NigerianArabic,61_nose,munxur,munxur,m u n x u r,,Owens1993;Kaye1982,,,^m u n x u r$,default
+Buxari-61_nose-1,,Buxari,61_nose,ʔanf,ʔanf,ʔ a n f,,Zimmermann2002;Ratcliffe2005,,,^ʔ a n f$,default
+Kinubi-61_nose-1,,Kinubi,61_nose,*nyanga ratu,*nyanga_ratu,n j a n g a r a t u,,Wellens2003,,,^* n ya n g a _ r a t u$,default
+CentralArabic-62_not-1,,CentralArabic,62_not,la:,la:,l aː,,Ratcliffe2021,,,^l a:$,default
+MoroccanArabic-62_not-1,,MoroccanArabic,62_not,ma -ʃ,ma_-ʃ,m a ʃ,,Harrell1962;Caubet1993,,,^m a _ - ʃ$,default
+Maltese-62_not-1,,Maltese,62_not,mh uʃ,mh_uʃ,mʰ u ʃ,,Borg1997;Aquilina1965,,,^mh _ u ʃ$,default
+Cairene-62_not-1,,Cairene,62_not,mi ʃ,mi_ʃ,m i ʃ,,AbdelMassih2009,,,^m i _ ʃ$,default
+Damascene-62_not-1,,Damascene,62_not,ma:,ma:,m aː,,Cowell2005,,,^m a:$,default
+Iraqi-62_not-1,,Iraqi,62_not,mu:,mu:,m uː,,Erwin1963,,,^m u:$,default
+Soukhne-62_not-1,,Soukhne,62_not,ma:,ma:,m aː,,Behnstedt1994,,,^m a:$,default
+AqraArbilArabic-62_not-1,,AqraArbilArabic,62_not,ma:,ma:,m aː,,Jastrow1990,,,^m a:$,default
+CypriotArabic-62_not-1,,CypriotArabic,62_not,l-ʔ,l-ʔ,l ʔ,,Borg1985,,,^l - ʔ$,default
+GulfArabic-62_not-1,,GulfArabic,62_not,ma/ mu,ma,m a,,Qafisheh1975;Holes1990,,,^m a$,default
+YemeniticArabic-62_not-1,,YemeniticArabic,62_not,ma:,ma:,m aː,,Qafisheh1992,,,^m a:$,default
+NigerianArabic-62_not-1,,NigerianArabic,62_not,mi/a,mi,m i,,Owens1993;Kaye1982,,,^m i$,default
+Kinubi-62_not-1,,Kinubi,62_not,ma,ma,m a,,Wellens2003,,,^m a$,default
+CentralArabic-63_one-1,,CentralArabic,63_one,ʔaħ ad,ʔaħ_ad,ʔ a ħ a d,,Ratcliffe2021,,,^ʔ a ħ _ a d$,default
+MoroccanArabic-63_one-1,,MoroccanArabic,63_one,wa ħed,wa_ħed,w a ħ e d,,Harrell1962;Caubet1993,,,^w a _ ħ e d$,default
+Maltese-63_one-1,,Maltese,63_one,wi:ħ ed,wi:ħ_ed,w iː ħ e d,,Borg1997;Aquilina1965,,,^w i: ħ _ e d$,default
+Cairene-63_one-1,,Cairene,63_one,wa: ħid,wa:_ħid,w aː ħ i d,,AbdelMassih2009,,,^w a: _ ħ i d$,default
+Damascene-63_one-1,,Damascene,63_one,wa:ħ ed,wa:ħ_ed,w aː ħ e d,,Cowell2005,,,^w a: ħ _ e d$,default
+Iraqi-63_one-1,,Iraqi,63_one,wa:ħi d,wa:ħi_d,w aː ħ i d,,Erwin1963,,,^w a: ħ i _ d$,default
+Soukhne-63_one-1,,Soukhne,63_one,weeħ di,weeħ_di,w eː ħ d i,,Behnstedt1994,,,^w ee ħ _ d i$,default
+AqraArbilArabic-63_one-1,,AqraArbilArabic,63_one,weeħ əd,weeħ_əd,w eː ħ ə d,,Jastrow1990,,,^w ee ħ _ ə d$,default
+CypriotArabic-63_one-1,,CypriotArabic,63_one,"exen, exte  w-ħ- d",exen,e x e n,,Borg1985,,,^e x e n$,default
+GulfArabic-63_one-1,,GulfArabic,63_one,waaħ id,waaħ_id,w aː ħ i d,,Qafisheh1975;Holes1990,,,^w aa ħ _ i d$,default
+YemeniticArabic-63_one-1,,YemeniticArabic,63_one,wa:ħi d,wa:ħi_d,w aː ħ i d,,Qafisheh1992,,,^w a: ħ i _ d$,default
+NigerianArabic-63_one-1,,NigerianArabic,63_one,wa:hid,wa:hid,w aː h i d,,Owens1993;Kaye1982,,,^w a: h i d$,default
+Buxari-63_one-1,,Buxari,63_one,waaħid,waaħid,w aː ħ i d,,Zimmermann2002;Ratcliffe2005,,,^w aa ħ i d$,default
+Kinubi-63_one-1,,Kinubi,63_one,wai,wai,w ai,,Wellens2003,,,^w ai$,default
+CentralArabic-64_person-1,,CentralArabic,64_person,ʔins a:n,ʔins_a:n,ʔ i n s aː n,,Ratcliffe2021,,,^ʔ i ns _ a: n$,default
+MoroccanArabic-64_person-1,,MoroccanArabic,64_person,sije d,sije_d,s i j e d,,Harrell1962;Caubet1993,,,^s i j e _ d$,default
+Maltese-64_person-1,,Maltese,64_person,pers una,pers_una,p e r s u n a,,Borg1997;Aquilina1965,,,^p e rs _ u n a$,default
+Cairene-64_person-1,,Cairene,64_person,ʃaxs ˁ*,ʃaxs_ˁ*,ʃ a x sˁ,,AbdelMassih2009,,,^ʃaxs_ˁ* $,default
+Damascene-64_person-1,,Damascene,64_person,zala me,zala_me,z a l a m e,,Cowell2005,,,^z a l a _ m e$,default
+Iraqi-64_person-1,,Iraqi,64_person,ʃaxisˁ,ʃaxisˁ,ʃ a x i sˤ,,Erwin1963,,,^ʃ a x i sˁ$,default
+Soukhne-64_person-1,,Soukhne,64_person,insa: n a:da  mi,insa:_n_a:da_mi,i n s aː n aː d a m i,,Behnstedt1994,,,^i ns a: _ n _ a: d a _ m i$,default
+AqraArbilArabic-64_person-1,,AqraArbilArabic,64_person,nafar  ˁ,nafar_ˁ,n a f a rˤ,,Jastrow1990,,,^n a f a r_ˁ$,default
+CypriotArabic-64_person-1,,CypriotArabic,64_person,insan  ʔ-n-s,insan_ʔ-n-s,i n s a n ʔ n s,,Borg1985,,,^i ns a n _ ʔ - n - s$,default
+GulfArabic-64_person-1,,GulfArabic,64_person,nafar,nafar,n a f a r,,Qafisheh1975;Holes1990,,,^n a f a r$,default
+YemeniticArabic-64_person-1,,YemeniticArabic,64_person,ʃaybe h?,ʃaybe_h?,ʃ ai̯ b e h,,Qafisheh1992,,,^ʃ ay b e _ h ?$,default
+NigerianArabic-64_person-1,,NigerianArabic,64_person,na:di/u m,na:di,n aː d i,,Owens1993;Kaye1982,,,^n a: d i$,default
+Buxari-64_person-1,,Buxari,64_person,adami,adami,a d a m i,,Zimmermann2002;Ratcliffe2005,,,^a d a m i$,default
+Kinubi-64_person-1,,Kinubi,64_person,"azol  (EAzol, p.210)",azol_,a z o l,,Wellens2003,,,^a z o l _$,default
+CentralArabic-65_rain-1,,CentralArabic,65_rain,mat ˁar,mat_ˁar,m a t ʕ a r,,Ratcliffe2021,,,^m a t _ˁa r$,default
+MoroccanArabic-65_rain-1,,MoroccanArabic,65_rain,ʃta,ʃta,ʃ t a,,Harrell1962;Caubet1993,,,^ʃ t a$,default
+Maltese-65_rain-1,,Maltese,65_rain,ʃita,ʃita,ʃ i t a,,Borg1997;Aquilina1965,,,^ʃ i t a$,default
+Cairene-65_rain-1,,Cairene,65_rain,mat ˁar,mat_ˁar,m a t ʕ a r,,AbdelMassih2009,,,^m a t _ˁa r$,default
+Damascene-65_rain-1,,Damascene,65_rain,mˁatˁ arˁ,mˁatˁ_arˁ,mˤ a tˤ a rˤ,,Cowell2005,,,^mˁ a tˁ _ a rˁ$,default
+Iraqi-65_rain-1,,Iraqi,65_rain,mutˁ ar,mutˁ_ar,m u tˤ a r,,Erwin1963,,,^m u tˁ _ a r$,default
+Soukhne-65_rain-1,,Soukhne,65_rain,matˁ ar,matˁ_ar,m a tˤ a r,,Behnstedt1994,,,^m a tˁ _ a r$,default
+AqraArbilArabic-65_rain-1,,AqraArbilArabic,65_rain,matˁ ar,matˁ_ar,m a tˤ a r,,Jastrow1990,,,^m a tˁ _ a r$,default
+CypriotArabic-65_rain-1,,CypriotArabic,65_rain,ʃ-t-y,ʃ-t-y,ʃ t y,,Borg1985,,,^ʃ - t - y$,default
+GulfArabic-65_rain-1,,GulfArabic,65_rain,matˤ ar,matˤ_ar,m a tˤ a r,,Qafisheh1975;Holes1990,,,^m a tˤ _ a r$,default
+YemeniticArabic-65_rain-1,,YemeniticArabic,65_rain,matˁ ar,matˁ_ar,m a tˤ a r,,Qafisheh1992,,,^m a tˁ _ a r$,default
+NigerianArabic-65_rain-1,,NigerianArabic,65_rain,almatˁara,almatˁara,a l m a tˤ a r a,,Owens1993;Kaye1982,,,^a l m a tˁ a r a$,default
+Buxari-65_rain-1,,Buxari,65_rain,mata’ra,mata’ra,m a t a rˤ a,,Zimmermann2002;Ratcliffe2005,,,^m a t a ’r a$,default
+Kinubi-65_rain-1,,Kinubi,65_rain,matara,matara,m a t a r a,,Wellens2003,,,^m a t a r a$,default
+CentralArabic-66_red-1,,CentralArabic,66_red,ʔaħ ma r,ʔaħ_ma_r,ʔ a ħ m a r,,Ratcliffe2021,,,^ʔ a ħ _ m a _ r$,default
+MoroccanArabic-66_red-1,,MoroccanArabic,66_red,ħm erˁ,ħm_erˁ,ħ m e rˤ,,Harrell1962;Caubet1993,,,^ħ m _ e rˁ$,default
+Maltese-66_red-1,,Maltese,66_red,aħm ar,aħm_ar,a ħ m a r,,Borg1997;Aquilina1965,,,^a ħ m _ a r$,default
+Cairene-66_red-1,,Cairene,66_red,aħm ar,aħm_ar,a ħ m a r,,AbdelMassih2009,,,^a ħ m _ a r$,default
+Damascene-66_red-1,,Damascene,66_red,ʔaħm ar,ʔaħm_ar,ʔ a ħ m a r,,Cowell2005,,,^ʔ a ħ m _ a r$,default
+Iraqi-66_red-1,,Iraqi,66_red,ʔaħm ar,ʔaħm_ar,ʔ a ħ m a r,,Erwin1963,,,^ʔ a ħ m _ a r$,default
+Soukhne-66_red-1,,Soukhne,66_red,ʔaħm arˁ,ʔaħm_arˁ,ʔ a ħ m a rˤ,,Behnstedt1994,,,^ʔ a ħ m _ a rˁ$,default
+AqraArbilArabic-66_red-1,,AqraArbilArabic,66_red,aħma r,aħma_r,a ħ m a r,,Jastrow1990,,,^a ħ m a _ r$,default
+CypriotArabic-66_red-1,,CypriotArabic,66_red,axma r  ħ-m-  r,axma_r_ħ-m-_r,a x m a r ħ m r,,Borg1985,,,^a x m a _ r _ ħ - m - _ r$,default
+GulfArabic-66_red-1,,GulfArabic,66_red,ʔaħm ar,ʔaħm_ar,ʔ a ħ m a r,,Qafisheh1975;Holes1990,,,^ʔ a ħ m _ a r$,default
+YemeniticArabic-66_red-1,,YemeniticArabic,66_red,ʔaħm ar,ʔaħm_ar,ʔ a ħ m a r,,Qafisheh1992,,,^ʔ a ħ m _ a r$,default
+NigerianArabic-66_red-1,,NigerianArabic,66_red,e:mar,e:mar,eː m a r,,Owens1993;Kaye1982,,,^e: m a r$,default
+Buxari-66_red-1,,Buxari,66_red,ʔaħmar,ʔaħmar,ʔ a ħ m a r,,Zimmermann2002;Ratcliffe2005,,,^ʔ a ħ m a r$,default
+Kinubi-66_red-1,,Kinubi,66_red,‘amer,‘amer,ʔ a m e r,,Wellens2003,,,^‘ a m e r$,default
+CentralArabic-67_road-1,,CentralArabic,67_road,tˁari:q,tˁari:q,tˤ a r iː q,,Ratcliffe2021,,,^tˁ a r i: q$,default
+MoroccanArabic-67_road-1,,MoroccanArabic,67_road,tˁrˁiq,tˁrˁiq,tˤ rˤ i q,,Harrell1962;Caubet1993,,,^tˁ rˁ i q$,default
+Maltese-67_road-1,,Maltese,67_road,triʔ,triʔ,t r i ʔ,,Borg1997;Aquilina1965,,,^t r i ʔ$,default
+Cairene-67_road-1,,Cairene,67_road,tˁari:ʔ,tˁari:ʔ,tˤ a r iː ʔ,,AbdelMassih2009,,,^tˁ a r i: ʔ$,default
+Damascene-67_road-1,,Damascene,67_road,tˁari:ʔ,tˁari:ʔ,tˤ a r iː ʔ,,Cowell2005,,,^tˁ a r i: ʔ$,default
+Iraqi-67_road-1,,Iraqi,67_road,tˁari:q,tˁari:q,tˤ a r iː q,,Erwin1963,,,^tˁ a r i: q$,default
+Soukhne-67_road-1,,Soukhne,67_road,tˁari:k,tˁari:k,tˤ a r iː k,,Behnstedt1994,,,^tˁ a r i: k$,default
+AqraArbilArabic-67_road-1,,AqraArbilArabic,67_road,tˁareeq,tˁareeq,tˤ a r eː q,,Jastrow1990,,,^tˁ a r ee q$,default
+CypriotArabic-67_road-1,,CypriotArabic,67_road,trup (pl)  d-r- b,trup__d-r-_b,t r u p d r b,,Borg1985,,,^t r u p __ d - r - _ b$,default
+GulfArabic-67_road-1,,GulfArabic,67_road,tˤariig,tˤariig,tˤ a r iː g,,Qafisheh1975;Holes1990,,,^tˤ a r ii g$,default
+YemeniticArabic-67_road-1,,YemeniticArabic,67_road,tˁari:g,tˁari:g,tˤ a r iː g,,Qafisheh1992,,,^tˁ a r i: g$,default
+Buxari-67_road-1,,Buxari,67_road,darb,darb,d a r b,,Zimmermann2002;Ratcliffe2005,,,^d a r b$,default
+Kinubi-67_road-1,,Kinubi,67_road,*siika,*siika,s iː k a,,Wellens2003,,,^*s ii k a$,default
+CentralArabic-68_root-1,,CentralArabic,68_root,ʤa ðr,ʤa_ðr,dʒ a ð r,,Ratcliffe2021,,,^ʤ a _ ð r$,default
+MoroccanArabic-68_root-1,,MoroccanArabic,68_root,ʒde r,ʒde_r,ʒ d e r,,Harrell1962;Caubet1993,,,^ʒ d e _ r$,default
+Maltese-68_root-1,,Maltese,68_root,ʕerʔ,ʕerʔ,ʕ e r ʔ,,Borg1997;Aquilina1965,,,^ʕ e r ʔ$,default
+Damascene-68_root-1,,Damascene,68_root,ʃərəʃ,ʃərəʃ,ʃ ə r ə ʃ,,Cowell2005,,,^ʃ ə r ə ʃ$,default
+Iraqi-68_root-1,,Iraqi,68_root,ʕirig,ʕirig,ʕ i r i g,,Erwin1963,,,^ʕ i r i g$,default
+Soukhne-68_root-1,,Soukhne,68_root,"gaʕr,  ʃirʃ ʦidir",gaʕr,g a ʕ r,,Behnstedt1994,,,^g a ʕ r$,default
+AqraArbilArabic-68_root-1,,AqraArbilArabic,68_root,ʕəroo q,ʕəroo_q,ʕ ə r oː q,,Jastrow1990,,,^ʕ ə r oo _ q$,default
+GulfArabic-68_root-1,,GulfArabic,68_root,jiðir,jiðir,j i ð i r,,Qafisheh1975;Holes1990,,,^j i ð i r$,default
+YemeniticArabic-68_root-1,,YemeniticArabic,68_root,ʕirgin **,ʕirgin_**,ʕ i r g i n,,Qafisheh1992,,,^ʕ i r g i n _ **$,default
+NigerianArabic-68_root-1,,NigerianArabic,68_root,Irg,Irg,i r g,,Owens1993;Kaye1982,,,^I r g$,default
+Kinubi-68_root-1,,Kinubi,68_root,asab,asab,a s a b,,Wellens2003,,,^a s a b$,default
+CentralArabic-69_round-1,,CentralArabic,69_round,mud aww ar,mud_aww_ar,m u d a wː a r,,Ratcliffe2021,,,^m u d _ a ww _ a r$,default
+MoroccanArabic-69_round-1,,MoroccanArabic,69_round,mdˁ uww er,mdˁ_uww_er,m dˤ u wː e r,,Harrell1962;Caubet1993,,,^m dˁ _ u ww _ e r$,default
+Maltese-69_round-1,,Maltese,69_round,Ton d,Ton_d,t o n d,,Borg1997;Aquilina1965,,,^T o n _ d$,default
+Cairene-69_round-1,,Cairene,69_round,mid aww  ar*,mid_aww_ar*,m i d a wː a r,,AbdelMassih2009,,,^m i d _ a ww _ a r *$,default
+Damascene-69_round-1,,Damascene,69_round,mdaw war,mdaw_war,m d a w w a r,,Cowell2005,,,^m d a w _ w a r$,default
+Iraqi-69_round-1,,Iraqi,69_round,mdaw war,mdaw_war,m d a w w a r,,Erwin1963,,,^m d a w _ w a r$,default
+Soukhne-69_round-1,,Soukhne,69_round,mda wwar  ˁ,mda_wwar_ˁ,m d a wː a rˤ,,Behnstedt1994,,,^m d a _ ww a r_ˁ$,default
+AqraArbilArabic-69_round-1,,AqraArbilArabic,69_round,məda wwər  ˁ,məda_wwər_ˁ,m ə d a wː ə rˤ,,Jastrow1990,,,^m ə d a _ ww ə r_ˁ$,default
+GulfArabic-69_round-1,,GulfArabic,69_round,muda wwar,muda_wwar,m u d a wː a r,,Qafisheh1975;Holes1990,,,^m u d a _ ww a r$,default
+YemeniticArabic-69_round-1,,YemeniticArabic,69_round,muda wwar*,muda_wwar*,m u d a wː a r,,Qafisheh1992,,,^m u d a _ ww a r *$,default
+NigerianArabic-69_round-1,,NigerianArabic,69_round,da:jir,da:jir,d aː j i r,,Owens1993;Kaye1982,,,^d a: j i r$,default
+CentralArabic-70_sand-1,,CentralArabic,70_sand,ra ml,ra_ml,r a m l,,Ratcliffe2021,,,^r a _ m l$,default
+MoroccanArabic-70_sand-1,,MoroccanArabic,70_sand,rˁe mla,rˁe_mla,rˤ e m l a,,Harrell1962;Caubet1993,,,^rˁ e _ m l a$,default
+Maltese-70_sand-1,,Maltese,70_sand,ram el,ram_el,r a m e l,,Borg1997;Aquilina1965,,,^r a m _ e l$,default
+Cairene-70_sand-1,,Cairene,70_sand,ram l*,ram_l*,r a m l,,AbdelMassih2009,,,^r a m _ l *$,default
+Damascene-70_sand-1,,Damascene,70_sand,raməl,raməl,r a m ə l,,Cowell2005,,,^r a m ə l$,default
+Iraqi-70_sand-1,,Iraqi,70_sand,ramu lˁ,ramu_lˁ,r a m u lˤ,,Erwin1963,,,^r a m u _ lˁ$,default
+Soukhne-70_sand-1,,Soukhne,70_sand,ramlˁ,ramlˁ,r a m lˤ,,Behnstedt1994,,,^r a m lˁ$,default
+GulfArabic-70_sand-1,,GulfArabic,70_sand,ramil,ramil,r a m i l,,Qafisheh1975;Holes1990,,,^r a m i l$,default
+NigerianArabic-70_sand-1,,NigerianArabic,70_sand,keesa,keesa,k eː s a,,Owens1993;Kaye1982,,,^k ee s a$,default
+Kinubi-70_sand-1,,Kinubi,70_sand,lumra,lumra,l u m r a,,Wellens2003,,,^l u m r a$,default
+CentralArabic-71_say-1,,CentralArabic,71_say,qa:l a,qa:l_a,q aː l a,,Ratcliffe2021,,,^q a: l _ a$,default
+MoroccanArabic-71_say-1,,MoroccanArabic,71_say,q(g )al,qal,q a l,,Harrell1962;Caubet1993,,,^q a l$,default
+Maltese-71_say-1,,Maltese,71_say,ʔal,ʔal,ʔ a l,,Borg1997;Aquilina1965,,,^ʔ a l$,default
+Cairene-71_say-1,,Cairene,71_say,ʔa:l*,ʔa:l*,ʔ aː l,,AbdelMassih2009,,,^ʔ a: l *$,default
+Damascene-71_say-1,,Damascene,71_say,ʔa:l,ʔa:l,ʔ aː l,,Cowell2005,,,^ʔ a: l$,default
+Iraqi-71_say-1,,Iraqi,71_say,ga:l,ga:l,g aː l,,Erwin1963,,,^g a: l$,default
+Soukhne-71_say-1,,Soukhne,71_say,ka:lˤ,ka:lˤ,k aː lˤ,,Behnstedt1994,,,^k a: lˤ$,default
+AqraArbilArabic-71_say-1,,AqraArbilArabic,71_say,qa:l,qa:l,q aː l,,Jastrow1990,,,^q a: l$,default
+CypriotArabic-71_say-1,,CypriotArabic,71_say,q-w- l,q-w-_l,q w l,,Borg1985,,,^q - w - _ l$,default
+GulfArabic-71_say-1,,GulfArabic,71_say,gaal,gaal,g aː l,,Qafisheh1975;Holes1990,,,^g aa l$,default
+YemeniticArabic-71_say-1,,YemeniticArabic,71_say,ga:l,ga:l,g aː l,,Qafisheh1992,,,^g a: l$,default
+NigerianArabic-71_say-1,,NigerianArabic,71_say,ga:l,ga:l,g aː l,,Owens1993;Kaye1982,,,^g a: l$,default
+Buxari-71_say-1,,Buxari,71_say,qɔɔl,qɔɔl,q ɔː l,,Zimmermann2002;Ratcliffe2005,,,^q ɔɔ l$,default
+Kinubi-71_say-1,,Kinubi,71_say,ke lemu,ke_lemu,k e l e m u,,Wellens2003,,,^k e _ l e m u$,default
+CentralArabic-72_see-1,,CentralArabic,72_see,raʔ a:,raʔ_a:,r a ʔ aː,,Ratcliffe2021,,,^r a ʔ _ a:$,default
+MoroccanArabic-72_see-1,,MoroccanArabic,72_see,ʃaf,ʃaf,ʃ a f,,Harrell1962;Caubet1993,,,^ʃ a f$,default
+Maltese-72_see-1,,Maltese,72_see,ra,ra,r a,,Borg1997;Aquilina1965,,,^r a$,default
+Cairene-72_see-1,,Cairene,72_see,ʃa:f,ʃa:f,ʃ aː f,,AbdelMassih2009,,,^ʃ a: f$,default
+Damascene-72_see-1,,Damascene,72_see,ʃa:f,ʃa:f,ʃ aː f,,Cowell2005,,,^ʃ a: f$,default
+Iraqi-72_see-1,,Iraqi,72_see,ʃa:f,ʃa:f,ʃ aː f,,Erwin1963,,,^ʃ a: f$,default
+Soukhne-72_see-1,,Soukhne,72_see,"ʃa:f, tˤass",ʃa:f,ʃ aː f,,Behnstedt1994,,,^ʃ a: f$,default
+AqraArbilArabic-72_see-1,,AqraArbilArabic,72_see,arˁa,arˁa,a rˤ a,,Jastrow1990,,,^a rˁ a$,default
+CypriotArabic-72_see-1,,CypriotArabic,72_see,q-ʃ-ʕ,q-ʃ-ʕ,q ʃ ʕ,,Borg1985,,,^q - ʃ - ʕ$,default
+GulfArabic-72_see-1,,GulfArabic,72_see,ʃaaf,ʃaaf,ʃ aː f,,Qafisheh1975;Holes1990,,,^ʃ aa f$,default
+YemeniticArabic-72_see-1,,YemeniticArabic,72_see,ibsˁar,ibsˁar,i b sˤ a r,,Qafisheh1992,,,^i bsˁ a r$,default
+NigerianArabic-72_see-1,,NigerianArabic,72_see,ʃa:f,ʃa:f,ʃ aː f,,Owens1993;Kaye1982,,,^ʃ a: f$,default
+Buxari-72_see-1,,Buxari,72_see,ʃaaf,ʃaaf,ʃ aː f,,Zimmermann2002;Ratcliffe2005,,,^ʃ aa f$,default
+Kinubi-72_see-1,,Kinubi,72_see,aainu,aainu,aːi̯ n u,,Wellens2003,,,^aai n u$,default
+CentralArabic-73_seed-1,,CentralArabic,73_seed,biz r,biz_r,b i z r,,Ratcliffe2021,,,^b i z _ r$,default
+MoroccanArabic-73_seed-1,,MoroccanArabic,73_seed,ʒerr iʕa,ʒerr_iʕa,ʒ e rː i ʕ a,,Harrell1962;Caubet1993,,,^ʒ e rr _ i ʕ a$,default
+Maltese-73_seed-1,,Maltese,73_seed,zerr i:ʕa,zerr_i:ʕa,z e rː iː ʕ a,,Borg1997;Aquilina1965,,,^z e rr _ i: ʕ a$,default
+Cairene-73_seed-1,,Cairene,73_seed,ħab ba,ħab_ba,ħ a b b a,,AbdelMassih2009,,,^ħ a b _ b a$,default
+Damascene-73_seed-1,,Damascene,73_seed,bəzr e,bəzr_e,b ə z r e,,Cowell2005,,,^b ə z r _ e$,default
+Iraqi-73_seed-1,,Iraqi,73_seed,bazra,bazra,b a z r a,,Erwin1963,,,^b a z r a$,default
+Soukhne-73_seed-1,,Soukhne,73_seed,biðr,biðr,b i ð r,,Behnstedt1994,,,^b i ð r$,default
+AqraArbilArabic-73_seed-1,,AqraArbilArabic,73_seed,bazər  ħabb,bazər_ħabb,b a z ə r ħ a bː,,Jastrow1990,,,^b a z ə r _ ħ a bb$,default
+CypriotArabic-73_seed-1,,CypriotArabic,73_seed,ptar b-z-  r,ptar_b-z-_r,p t a r b z r,,Borg1985,,,^p t a r _ b - z - _ r$,default
+GulfArabic-73_seed-1,,GulfArabic,73_seed,baðr a,baðr_a,b a ð r a,,Qafisheh1975;Holes1990,,,^b a ð r _ a$,default
+YemeniticArabic-73_seed-1,,YemeniticArabic,73_seed,habb eh,habb_eh,h a bː e h,,Qafisheh1992,,,^h a bb _ e h$,default
+NigerianArabic-73_seed-1,,NigerianArabic,73_seed,te:rab,te:rab,t eː r a b,,Owens1993;Kaye1982,,,^t e: r a b$,default
+Kinubi-73_seed-1,,Kinubi,73_seed,eena (eye),eena_,eː n a,,Wellens2003,,,^ee n a _$,default
+CentralArabic-74_sit-1,,CentralArabic,74_sit,"qaʕ ada  ,ʤa las a",qaʕ_ada,q a ʕ a d a,,Ratcliffe2021,,,^q a ʕ _ a d a$,default
+MoroccanArabic-74_sit-1,,MoroccanArabic,74_sit,gle s,gle_s,g l e s,,Harrell1962;Caubet1993,,,^g l e _ s$,default
+Maltese-74_sit-1,,Maltese,74_sit,ʔaʕa d,ʔaʕa_d,ʔ a ʕ a d,,Borg1997;Aquilina1965,,,^ʔ a ʕ a _ d$,default
+Cairene-74_sit-1,,Cairene,74_sit,ʔaʕa d,ʔaʕa_d,ʔ a ʕ a d,,AbdelMassih2009,,,^ʔ a ʕ a _ d$,default
+Damascene-74_sit-1,,Damascene,74_sit,ʔaʕad,ʔaʕad,ʔ a ʕ a d,,Cowell2005,,,^ʔ a ʕ a d$,default
+Iraqi-74_sit-1,,Iraqi,74_sit,giʕad,giʕad,g i ʕ a d,,Erwin1963,,,^g i ʕ a d$,default
+Soukhne-74_sit-1,,Soukhne,74_sit,kaʕa d,kaʕa_d,k a ʕ a d,,Behnstedt1994,,,^k a ʕ a _ d$,default
+AqraArbilArabic-74_sit-1,,AqraArbilArabic,74_sit,qəʕə d,qəʕə_d,q ə ʕ ə d,,Jastrow1990,,,^q ə ʕ ə _ d$,default
+CypriotArabic-74_sit-1,,CypriotArabic,74_sit,q-ʕ- d,q-ʕ-_d,q ʕ d,,Borg1985,,,^q - ʕ - _ d$,default
+GulfArabic-74_sit-1,,GulfArabic,74_sit,gaʕa d,gaʕa_d,g a ʕ a d,,Qafisheh1975;Holes1990,,,^g a ʕ a _ d$,default
+YemeniticArabic-74_sit-1,,YemeniticArabic,74_sit,ʤala s,ʤala_s,dʒ a l a s,,Qafisheh1992,,,^ʤ a l a _ s$,default
+NigerianArabic-74_sit-1,,NigerianArabic,74_sit,ga’ad,ga’ad,g a ʔ a d,,Owens1993;Kaye1982,,,^g a’a d$,default
+Buxari-74_sit-1,,Buxari,74_sit,qaʕad,qaʕad,q a ʕ a d,,Zimmermann2002;Ratcliffe2005,,,^q a ʕ a d$,default
+Kinubi-74_sit-1,,Kinubi,74_sit,*ge(e)n,*gen,g e n,,Wellens2003,,,^* g e n$,default
+CentralArabic-75_skin-1,,CentralArabic,75_skin,ʤil d,ʤil_d,dʒ i l d,,Ratcliffe2021,,,^ʤ i l _ d$,default
+MoroccanArabic-75_skin-1,,MoroccanArabic,75_skin,ʒel d,ʒel_d,ʒ e l d,,Harrell1962;Caubet1993,,,^ʒ e l _ d$,default
+Maltese-75_skin-1,,Maltese,75_skin,ʤil da,ʤil_da,dʒ i l d a,,Borg1997;Aquilina1965,,,^ʤ i l _ d a$,default
+Cairene-75_skin-1,,Cairene,75_skin,gild *,gild_*,g i l d,,AbdelMassih2009,,,^g i l d _ *$,default
+Damascene-75_skin-1,,Damascene,75_skin,ʤələ d,ʤələ_d,dʒ ə l ə d,,Cowell2005,,,^ʤ ə l ə _ d$,default
+Iraqi-75_skin-1,,Iraqi,75_skin,ʤilid,ʤilid,dʒ i l i d,,Erwin1963,,,^ʤ i l i d$,default
+Soukhne-75_skin-1,,Soukhne,75_skin,ʦild,ʦild,ts i l d,,Behnstedt1994,,,^ʦ i l d$,default
+AqraArbilArabic-75_skin-1,,AqraArbilArabic,75_skin,ʤəld,ʤəld,dʒ ə l d,,Jastrow1990,,,^ʤ ə l d$,default
+CypriotArabic-75_skin-1,,CypriotArabic,75_skin,s-l-x,s-l-x,s l x,,Borg1985,,,^s - l - x$,default
+GulfArabic-75_skin-1,,GulfArabic,75_skin,ʤild,ʤild,dʒ i l d,,Qafisheh1975;Holes1990,,,^ʤ i l d$,default
+YemeniticArabic-75_skin-1,,YemeniticArabic,75_skin,ʤild,ʤild,dʒ i l d,,Qafisheh1992,,,^ʤ i l d$,default
+NigerianArabic-75_skin-1,,NigerianArabic,75_skin,ʤilde,ʤilde,dʒ i l d e,,Owens1993;Kaye1982,,,^ʤ i l d e$,default
+Buxari-75_skin-1,,Buxari,75_skin,dƷild,dƷild,d ʒ i l d,,Zimmermann2002;Ratcliffe2005,,,^d Ʒ i l d$,default
+Kinubi-75_skin-1,,Kinubi,75_skin,Gildu,Gildu,g i l d u,,Wellens2003,,,^G i l d u$,default
+CentralArabic-76_sleep-1,,CentralArabic,76_sleep,na:ma,na:ma,n aː m a,,Ratcliffe2021,,,^n a: m a$,default
+MoroccanArabic-76_sleep-1,,MoroccanArabic,76_sleep,nʕes,nʕes,n ʕ e s,,Harrell1962;Caubet1993,,,^n ʕ e s$,default
+Maltese-76_sleep-1,,Maltese,76_sleep,irʔad,irʔad,i r ʔ a d,,Borg1997;Aquilina1965,,,^i r ʔ a d$,default
+Cairene-76_sleep-1,,Cairene,76_sleep,naam,naam,n aː m,,AbdelMassih2009,,,^n aa m$,default
+Damascene-76_sleep-1,,Damascene,76_sleep,na:m,na:m,n aː m,,Cowell2005,,,^n a: m$,default
+Iraqi-76_sleep-1,,Iraqi,76_sleep,na:m,na:m,n aː m,,Erwin1963,,,^n a: m$,default
+Soukhne-76_sleep-1,,Soukhne,76_sleep,na:m,na:m,n aː m,,Behnstedt1994,,,^n a: m$,default
+AqraArbilArabic-76_sleep-1,,AqraArbilArabic,76_sleep,na:m,na:m,n aː m,,Jastrow1990,,,^n a: m$,default
+CypriotArabic-76_sleep-1,,CypriotArabic,76_sleep,n-w-m,n-w-m,n w m,,Borg1985,,,^n - w - m$,default
+GulfArabic-76_sleep-1,,GulfArabic,76_sleep,"naam, rigad",naam,n aː m,,Qafisheh1975;Holes1990,,,^n aa m$,default
+YemeniticArabic-76_sleep-1,,YemeniticArabic,76_sleep,ragad,ragad,r a g a d,,Qafisheh1992,,,^r a g a d$,default
+NigerianArabic-76_sleep-1,,NigerianArabic,76_sleep,no:m,no:m,n oː m,,Owens1993;Kaye1982,,,^n o: m$,default
+Buxari-76_sleep-1,,Buxari,76_sleep,naum,naum,n au̯ m,,Zimmermann2002;Ratcliffe2005,,,^n au m$,default
+Kinubi-76_sleep-1,,Kinubi,76_sleep,num,num,n u m,,Wellens2003,,,^n u m$,default
+CentralArabic-77_small-1,,CentralArabic,77_small,sˁa γi:r,sˁa_γi:r,sˤ a ɣ iː r,,Ratcliffe2021,,,^sˁ a _ γ i: r$,default
+MoroccanArabic-77_small-1,,MoroccanArabic,77_small,sˁγi rˁ,sˁγi_rˁ,sˤ ɣ i rˤ,,Harrell1962;Caubet1993,,,^sˁ γ i _ rˁ$,default
+Maltese-77_small-1,,Maltese,77_small,zγir,zγir,z ɣ i r,,Borg1997;Aquilina1965,,,^z γ i r$,default
+Cairene-77_small-1,,Cairene,77_small,sˁuγ ajjar,sˁuγ_ajjar,sˤ u ɣ a jː a r,,AbdelMassih2009,,,^sˁ u γ _ a jj a r$,default
+Damascene-77_small-1,,Damascene,77_small,zˁγi:r,zˁγi:r,zˤ ɣ iː r,,Cowell2005,,,^zˁ γ i: r$,default
+Iraqi-77_small-1,,Iraqi,77_small,sˁγajj ir,sˁγajj_ir,sˤ ɣ a jː i r,,Erwin1963,,,^sˁ γ a jj _ i r$,default
+Soukhne-77_small-1,,Soukhne,77_small,sˁaγi: r,sˁaγi:_r,sˤ a ɣ iː r,,Behnstedt1994,,,^sˁ a γ i: _ r$,default
+AqraArbilArabic-77_small-1,,AqraArbilArabic,77_small,γəzi:r (aq) zəγaj jər  (arb),γəzi:r__zəγaj_jər_,ɣ ə z iː r z ə ɣ a j j ə r,,Jastrow1990,,,^γ ə z i: r __ z ə γ a j _ j ə r _$,default
+CypriotArabic-77_small-1,,CypriotArabic,77_small,sˁ-ɣ- r,sˁ-ɣ-_r,sˤ ɣ r,,Borg1985,,,^sˁ - ɣ - _ r$,default
+GulfArabic-77_small-1,,GulfArabic,77_small,sˤaγii r,sˤaγii_r,sˤ a ɣ iː r,,Qafisheh1975;Holes1990,,,^sˤ a γ ii _ r$,default
+YemeniticArabic-77_small-1,,YemeniticArabic,77_small,sˁaγi: r,sˁaγi:_r,sˤ a ɣ iː r,,Qafisheh1992,,,^sˁ a γ i: _ r$,default
+NigerianArabic-77_small-1,,NigerianArabic,77_small,dagi:g,dagi:g,d a g iː g,,Owens1993;Kaye1982,,,^d a g i: g$,default
+Buxari-77_small-1,,Buxari,77_small,sa;γiir,sa,s a,,Zimmermann2002;Ratcliffe2005,,,^s a$,default
+Kinubi-77_small-1,,Kinubi,77_small,Sakar,Sakar,s a k a r,,Wellens2003,,,^S a k a r$,default
+CentralArabic-78_smoke-1,,CentralArabic,78_smoke,dux a:n,dux_a:n,d u x aː n,,Ratcliffe2021,,,^d u x _ a: n$,default
+MoroccanArabic-78_smoke-1,,MoroccanArabic,78_smoke,dox xan,dox_xan,d o x x a n,,Harrell1962;Caubet1993,,,^d o x _ x a n$,default
+Maltese-78_smoke-1,,Maltese,78_smoke,duħ ħan,duħ_ħan,d u ħ ħ a n,,Borg1997;Aquilina1965,,,^d u ħ _ ħ a n$,default
+Cairene-78_smoke-1,,Cairene,78_smoke,dux xa:n,dux_xa:n,d u x x aː n,,AbdelMassih2009,,,^d u x _ x a: n$,default
+Damascene-78_smoke-1,,Damascene,78_smoke,dəxxa  :n,dəxxa_:n,d ə xː aː n,,Cowell2005,,,^d ə xx a_: n$,default
+Iraqi-78_smoke-1,,Iraqi,78_smoke,duxx a:n,duxx_a:n,d u xː aː n,,Erwin1963,,,^d u xx _ a: n$,default
+Soukhne-78_smoke-1,,Soukhne,78_smoke,daxan i,daxan_i,d a x a n i,,Behnstedt1994,,,^d a x a n _ i$,default
+CypriotArabic-78_smoke-1,,CypriotArabic,78_smoke,d-x- n,d-x-_n,d x n,,Borg1985,,,^d - x - _ n$,default
+GulfArabic-78_smoke-1,,GulfArabic,78_smoke,duxa an,duxa_an,d u x a a n,,Qafisheh1975;Holes1990,,,^d u x a _ a n$,default
+YemeniticArabic-78_smoke-1,,YemeniticArabic,78_smoke,duxx a:n,duxx_a:n,d u xː aː n,,Qafisheh1992,,,^d u xx _ a: n$,default
+NigerianArabic-78_smoke-1,,NigerianArabic,78_smoke,duxa:n,duxa:n,d u x aː n,,Owens1993;Kaye1982,,,^d u x a: n$,default
+Buxari-78_smoke-1,,Buxari,78_smoke,dƷarra,dƷarra,d ʒ a rː a,,Zimmermann2002;Ratcliffe2005,,,^d Ʒ a rr a$,default
+Kinubi-78_smoke-1,,Kinubi,78_smoke,Dukan,Dukan,d u k a n,,Wellens2003,,,^D u k a n$,default
+CentralArabic-79_stand-1,,CentralArabic,79_stand,qa: ma,qa:_ma,q aː m a,,Ratcliffe2021,,,^q a: _ m a$,default
+MoroccanArabic-79_stand-1,,MoroccanArabic,79_stand,wq ef,wq_ef,w q e f,,Harrell1962;Caubet1993,,,^w q _ e f$,default
+Maltese-79_stand-1,,Maltese,79_stand,ʔam,ʔam,ʔ a m,,Borg1997;Aquilina1965,,,^ʔ a m$,default
+Cairene-79_stand-1,,Cairene,79_stand,wiʔi f,wiʔi_f,w i ʔ i f,,AbdelMassih2009,,,^w i ʔ i _ f$,default
+Damascene-79_stand-1,,Damascene,79_stand,waʔʔ af,waʔʔ_af,w a ʔː a f,,Cowell2005,,,^w a ʔʔ _ a f$,default
+Iraqi-79_stand-1,,Iraqi,79_stand,wuga f,wuga_f,w u g a f,,Erwin1963,,,^w u g a _ f$,default
+Soukhne-79_stand-1,,Soukhne,79_stand,"kaʕa  d, ka:m",kaʕa_d,k a ʕ a d,,Behnstedt1994,,,^k a ʕ a _ d$,default
+AqraArbilArabic-79_stand-1,,AqraArbilArabic,79_stand,qa:m,qa:m,q aː m,,Jastrow1990,,,^q a: m$,default
+CypriotArabic-79_stand-1,,CypriotArabic,79_stand,w-q- f,w-q-_f,w q f,,Borg1985,,,^w - q - _ f$,default
+GulfArabic-79_stand-1,,GulfArabic,79_stand,wuga f,wuga_f,w u g a f,,Qafisheh1975;Holes1990,,,^w u g a _ f$,default
+YemeniticArabic-79_stand-1,,YemeniticArabic,79_stand,sann ab,sann_ab,s a nː a b,,Qafisheh1992,,,^s a nn _ a b$,default
+NigerianArabic-79_stand-1,,NigerianArabic,79_stand,anʔadal,anʔadal,a n ʔ a d a l,,Owens1993;Kaye1982,,,^a n ʔ a d a l$,default
+Buxari-79_stand-1,,Buxari,79_stand,qɔm,qɔm,q ɔ m,,Zimmermann2002;Ratcliffe2005,,,^q ɔ m$,default
+Kinubi-79_stand-1,,Kinubi,79_stand,Gum,Gum,g u m,,Wellens2003,,,^G u m$,default
+CentralArabic-80_star-1,,CentralArabic,80_star,na ʤ ma,na_ʤ_ma,n a dʒ m a,,Ratcliffe2021,,,^n a _ ʤ _ m a$,default
+MoroccanArabic-80_star-1,,MoroccanArabic,80_star,neʒ ma,neʒ_ma,n e ʒ m a,,Harrell1962;Caubet1993,,,^n e ʒ _ m a$,default
+Maltese-80_star-1,,Maltese,80_star,"still a, kew  kba",still_a,s t i lː a,,Borg1997;Aquilina1965,,,^s t i ll _ a$,default
+Cairene-80_star-1,,Cairene,80_star,nig ma*,nig_ma*,n i g m a,,AbdelMassih2009,,,^n i g _ m a *$,default
+Damascene-80_star-1,,Damascene,80_star,naʤ me,naʤ_me,n a dʒ m e,,Cowell2005,,,^n a ʤ _ m e$,default
+Iraqi-80_star-1,,Iraqi,80_star,naʤ ma,naʤ_ma,n a dʒ m a,,Erwin1963,,,^n a ʤ _ m a$,default
+Soukhne-80_star-1,,Soukhne,80_star,niʦm i,niʦm_i,n i ts m i,,Behnstedt1994,,,^n i ʦ m _ i$,default
+CypriotArabic-80_star-1,,CypriotArabic,80_star,n- ʤ-m,n-_ʤ-m,n dʒ m,,Borg1985,,,^n - _ ʤ - m$,default
+GulfArabic-80_star-1,,GulfArabic,80_star,naʤ ma,naʤ_ma,n a dʒ m a,,Qafisheh1975;Holes1990,,,^n a ʤ _ m a$,default
+YemeniticArabic-80_star-1,,YemeniticArabic,80_star,naʤ m,naʤ_m,n a dʒ m,,Qafisheh1992,,,^n a ʤ _ m$,default
+NigerianArabic-80_star-1,,NigerianArabic,80_star,naʤima,naʤima,n a dʒ i m a,,Owens1993;Kaye1982,,,^n a ʤ i m a$,default
+Buxari-80_star-1,,Buxari,80_star,nudƷum,nudƷum,n u d ʒ u m,,Zimmermann2002;Ratcliffe2005,,,^n u d Ʒ u m$,default
+Kinubi-80_star-1,,Kinubi,80_star,*nezma,*nezma,n e z m a,,Wellens2003,,,^* n e z m a$,default
+CentralArabic-81_stone-1,,CentralArabic,81_stone,ħa ʤa  rah,ħa_ʤa_rah,ħ a dʒ a r a h,,Ratcliffe2021,,,^ħ a _ ʤ a _ r a h$,default
+MoroccanArabic-81_stone-1,,MoroccanArabic,81_stone,ħeʒ ra,ħeʒ_ra,ħ e ʒ r a,,Harrell1962;Caubet1993,,,^ħ e ʒ _ r a$,default
+Maltese-81_stone-1,,Maltese,81_stone,ʤe bla,ʤe_bla,dʒ e b l a,,Borg1997;Aquilina1965,,,^ʤ e _ b l a$,default
+Cairene-81_stone-1,,Cairene,81_stone,ħag arˁa  *,ħag_arˁa_*,ħ a g a rˤ a,,AbdelMassih2009,,,^ħ a g _ a rˁ a _ *$,default
+Damascene-81_stone-1,,Damascene,81_stone,ħaʤa ra,ħaʤa_ra,ħ a dʒ a r a,,Cowell2005,,,^ħ a ʤ a _ r a$,default
+Iraqi-81_stone-1,,Iraqi,81_stone,ħʤa: ra,ħʤa:_ra,ħ dʒ aː r a,,Erwin1963,,,^ħ ʤ a: _ r a$,default
+Soukhne-81_stone-1,,Soukhne,81_stone,ħaʦa r,ħaʦa_r,ħ a ts a r,,Behnstedt1994,,,^ħ a ʦ a _ r$,default
+AqraArbilArabic-81_stone-1,,AqraArbilArabic,81_stone,ħaʤa r,ħaʤa_r,ħ a dʒ a r,,Jastrow1990,,,^ħ a ʤ a _ r$,default
+CypriotArabic-81_stone-1,,CypriotArabic,81_stone,ħ- ʤ-r,ħ-_ʤ-r,ħ dʒ r,,Borg1985,,,^ħ - _ ʤ - r$,default
+GulfArabic-81_stone-1,,GulfArabic,81_stone,ħaʤa r,ħaʤa_r,ħ a dʒ a r,,Qafisheh1975;Holes1990,,,^ħ a ʤ a _ r$,default
+YemeniticArabic-81_stone-1,,YemeniticArabic,81_stone,ħaʤa r,ħaʤa_r,ħ a dʒ a r,,Qafisheh1992,,,^ħ a ʤ a _ r$,default
+NigerianArabic-81_stone-1,,NigerianArabic,81_stone,hiʤer,hiʤer,h i dʒ e r,,Owens1993;Kaye1982,,,^h i ʤ e r$,default
+Buxari-81_stone-1,,Buxari,81_stone,hadƷar,hadƷar,h a d ʒ a r,,Zimmermann2002;Ratcliffe2005,,,^h a d Ʒ a r$,default
+Kinubi-81_stone-1,,Kinubi,81_stone,Lager,Lager,l a g e r,,Wellens2003,,,^L a g e r$,default
+CentralArabic-82_sun-1,,CentralArabic,82_sun,ʃa ms,ʃa_ms,ʃ a m s,,Ratcliffe2021,,,^ʃ a _ ms$,default
+MoroccanArabic-82_sun-1,,MoroccanArabic,82_sun,ʃe mʃ,ʃe_mʃ,ʃ e m ʃ,,Harrell1962;Caubet1993,,,^ʃ e _ mʃ$,default
+Maltese-82_sun-1,,Maltese,82_sun,ʃem ʃ,ʃem_ʃ,ʃ e m ʃ,,Borg1997;Aquilina1965,,,^ʃ e m _ ʃ$,default
+Cairene-82_sun-1,,Cairene,82_sun,ʃam s,ʃam_s,ʃ a m s,,AbdelMassih2009,,,^ʃ a m _ s$,default
+Damascene-82_sun-1,,Damascene,82_sun,ʃamə s,ʃamə_s,ʃ a m ə s,,Cowell2005,,,^ʃ a m ə _ s$,default
+Iraqi-82_sun-1,,Iraqi,82_sun,ʃamis,ʃamis,ʃ a m i s,,Erwin1963,,,^ʃ a m i s$,default
+Soukhne-82_sun-1,,Soukhne,82_sun,ʃams,ʃams,ʃ a m s,,Behnstedt1994,,,^ʃ a ms$,default
+AqraArbilArabic-82_sun-1,,AqraArbilArabic,82_sun,ʃams,ʃams,ʃ a m s,,Jastrow1990,,,^ʃ a ms$,default
+CypriotArabic-82_sun-1,,CypriotArabic,82_sun,ʃimp s,ʃimp_s,ʃ i m p s,,Borg1985,,,^ʃ i m p _ s$,default
+GulfArabic-82_sun-1,,GulfArabic,82_sun,ʃams,ʃams,ʃ a m s,,Qafisheh1975;Holes1990,,,^ʃ a ms$,default
+YemeniticArabic-82_sun-1,,YemeniticArabic,82_sun,ʃams,ʃams,ʃ a m s,,Qafisheh1992,,,^ʃ a ms$,default
+NigerianArabic-82_sun-1,,NigerianArabic,82_sun,ʃam,ʃam,ʃ a m,,Owens1993;Kaye1982,,,^ʃ a m$,default
+Buxari-82_sun-1,,Buxari,82_sun,ʃams,ʃams,ʃ a m s,,Zimmermann2002;Ratcliffe2005,,,^ʃ a ms$,default
+Kinubi-82_sun-1,,Kinubi,82_sun,*semsi,*semsi,s e m s i,,Wellens2003,,,^*s e ms i$,default
+CentralArabic-83_swim-1,,CentralArabic,83_swim,sab aħa,sab_aħa,s a b a ħ a,,Ratcliffe2021,,,^s a b _ a ħ a$,default
+MoroccanArabic-83_swim-1,,MoroccanArabic,83_swim,ʕa m,ʕa_m,ʕ a m,,Harrell1962;Caubet1993,,,^ʕ a _ m$,default
+Maltese-83_swim-1,,Maltese,83_swim,ʕam,ʕam,ʕ a m,,Borg1997;Aquilina1965,,,^ʕ a m$,default
+Cairene-83_swim-1,,Cairene,83_swim,ʕa: m,ʕa:_m,ʕ aː m,,AbdelMassih2009,,,^ʕ a: _ m$,default
+Damascene-83_swim-1,,Damascene,83_swim,saba ħ,saba_ħ,s a b a ħ,,Cowell2005,,,^s a b a _ ħ$,default
+Iraqi-83_swim-1,,Iraqi,83_swim,sibaħ,sibaħ,s i b a ħ,,Erwin1963,,,^s i b a ħ$,default
+Soukhne-83_swim-1,,Soukhne,83_swim,saba ħ,saba_ħ,s a b a ħ,,Behnstedt1994,,,^s a b a _ ħ$,default
+AqraArbilArabic-83_swim-1,,AqraArbilArabic,83_swim,zəbə ħ,zəbə_ħ,z ə b ə ħ,,Jastrow1990,,,^z ə b ə _ ħ$,default
+CypriotArabic-83_swim-1,,CypriotArabic,83_swim,ɣ-s-l,ɣ-s-l,ɣ s l,,Borg1985,,,^ɣ - s - l$,default
+GulfArabic-83_swim-1,,GulfArabic,83_swim,sibaħ,sibaħ,s i b a ħ,,Qafisheh1975;Holes1990,,,^s i b a ħ$,default
+YemeniticArabic-83_swim-1,,YemeniticArabic,83_swim,ʕa:m,ʕa:m,ʕ aː m,,Qafisheh1992,,,^ʕ a: m$,default
+NigerianArabic-83_swim-1,,NigerianArabic,83_swim,a:m,a:m,aː m,,Owens1993;Kaye1982,,,^a: m$,default
+Buxari-83_swim-1,,Buxari,83_swim,ṣobħaya an,ṣobħaya_an,ṣ/s o b ħ a y/j a a n,,Zimmermann2002;Ratcliffe2005,,,^ṣ o b ħ aya _ a n$,default
+Kinubi-83_swim-1,,Kinubi,83_swim,‘hum,‘hum,hˤ u m,,Wellens2003,,,^‘h u m$,default
+CentralArabic-84_tail-1,,CentralArabic,84_tail,ðan ab,ðan_ab,ð a n a b,,Ratcliffe2021,,,^ð a n _ a b$,default
+MoroccanArabic-84_tail-1,,MoroccanArabic,84_tail,ʃuw wal,ʃuw_wal,ʃ u w w a l,,Harrell1962;Caubet1993,,,^ʃ u w _ w a l$,default
+Maltese-84_tail-1,,Maltese,84_tail,Den b,Den_b,d e n b,,Borg1997;Aquilina1965,,,^D e n _ b$,default
+Cairene-84_tail-1,,Cairene,84_tail,dan ab,dan_ab,d a n a b,,AbdelMassih2009,,,^d a n _ a b$,default
+Damascene-84_tail-1,,Damascene,84_tail,dana b,dana_b,d a n a b,,Cowell2005,,,^d a n a _ b$,default
+Iraqi-84_tail-1,,Iraqi,84_tail,ðeel,ðeel,ð eː l,,Erwin1963,,,^ð ee l$,default
+Soukhne-84_tail-1,,Soukhne,84_tail,ðeel,ðeel,ð eː l,,Behnstedt1994,,,^ð ee l$,default
+CypriotArabic-84_tail-1,,CypriotArabic,84_tail,ð-n- b,ð-n-_b,ð n b,,Borg1985,,,^ð - n - _ b$,default
+GulfArabic-84_tail-1,,GulfArabic,84_tail,"ðeel, iʧwa",ðeel,ð eː l,,Qafisheh1975;Holes1990,,,^ð ee l$,default
+YemeniticArabic-84_tail-1,,YemeniticArabic,84_tail,ðeeli n**,ðeeli_n**,ð eː l i n,,Qafisheh1992,,,^ð ee l i _ n **$,default
+NigerianArabic-84_tail-1,,NigerianArabic,84_tail,danab,danab,d a n a b,,Owens1993;Kaye1982,,,^d a n a b$,default
+Buxari-84_tail-1,,Buxari,84_tail,zeel,zeel,z eː l,,Zimmermann2002;Ratcliffe2005,,,^z ee l$,default
+Kinubi-84_tail-1,,Kinubi,84_tail,Danab,Danab,d a n a b,,Wellens2003,,,^D a n a b$,default
+CentralArabic-85_that-1,,CentralArabic,85_that,ðalika,ðalika,ð a l i k a,,Ratcliffe2021,,,^ð a l i k a$,default
+MoroccanArabic-85_that-1,,MoroccanArabic,85_that,dak,dak,d a k,,Harrell1962;Caubet1993,,,^d a k$,default
+Maltese-85_that-1,,Maltese,85_that,dak,dak,d a k,,Borg1997;Aquilina1965,,,^d a k$,default
+Cairene-85_that-1,,Cairene,85_that,da,da,d a,,AbdelMassih2009,,,^d a$,default
+Damascene-85_that-1,,Damascene,85_that,hada:k,hada:k,h a d aː k,,Cowell2005,,,^h a d a: k$,default
+Iraqi-85_that-1,,Iraqi,85_that,(ha:)ða:k,ða:k,ð aː k,,Erwin1963,,,^ð a: k$,default
+Soukhne-85_that-1,,Soukhne,85_that,(ha)ða:ʧ,ða:ʧ,ð aː tʃ,,Behnstedt1994,,,^ð a: ʧ$,default
+AqraArbilArabic-85_that-1,,AqraArbilArabic,85_that,hada:k,hada:k,h a d aː k,,Jastrow1990,,,^h a d a: k$,default
+CypriotArabic-85_that-1,,CypriotArabic,85_that,ʔ-x-ð,ʔ-x-ð,ʔ x ð,,Borg1985,,,^ʔ - x - ð$,default
+GulfArabic-85_that-1,,GulfArabic,85_that,(ha)ðaak,ðaak,ð aː k,,Qafisheh1975;Holes1990,,,^ð aa k$,default
+YemeniticArabic-85_that-1,,YemeniticArabic,85_that,"ðajjik, tajjik",ðajjik,ð a jː i k,,Qafisheh1992,,,^ð a jj i k$,default
+NigerianArabic-85_that-1,,NigerianArabic,85_that,ɖˁa:ka,ɖˁa:ka,ɖˤ aː k a,,Owens1993;Kaye1982,,,^ɖˁ a: k a$,default
+Buxari-85_that-1,,Buxari,85_that,duuk,duuk,d uː k,,Zimmermann2002;Ratcliffe2005,,,^d uu k$,default
+Kinubi-85_that-1,,Kinubi,85_that,Nade,Nade,n a d e,,Wellens2003,,,^N a d e$,default
+CentralArabic-86_this-1,,CentralArabic,86_this,ha: ða:,ha:_ða:,h aː ð aː,,Ratcliffe2021,,,^h a: _ ð a:$,default
+MoroccanArabic-86_this-1,,MoroccanArabic,86_this,had,had,h a d,,Harrell1962;Caubet1993,,,^h a d$,default
+Maltese-86_this-1,,Maltese,86_this,din,din,d i n,,Borg1997;Aquilina1965,,,^d i n$,default
+Cairene-86_this-1,,Cairene,86_this,da,da,d a,,AbdelMassih2009,,,^d a$,default
+Damascene-86_this-1,,Damascene,86_this,ha:da,ha:da,h aː d a,,Cowell2005,,,^h a: d a$,default
+Iraqi-86_this-1,,Iraqi,86_this,ha:ða,ha:ða,h aː ð a,,Erwin1963,,,^h a: ð a$,default
+Soukhne-86_this-1,,Soukhne,86_this,ha:(ði ),ha:,h aː,,Behnstedt1994,,,^h a:$,default
+AqraArbilArabic-86_this-1,,AqraArbilArabic,86_this,hada:,hada:,h a d aː,,Jastrow1990,,,^h a d a:$,default
+CypriotArabic-86_this-1,,CypriotArabic,86_this,h-ʔ,h-ʔ,h ʔ,,Borg1985,,,^h - ʔ$,default
+GulfArabic-86_this-1,,GulfArabic,86_this,haað a,haað_a,h aː ð a,,Qafisheh1975;Holes1990,,,^h aa ð _ a$,default
+YemeniticArabic-86_this-1,,YemeniticArabic,86_this,"ðajjih , tajjeh",ðajjih,ð a jː i h,,Qafisheh1992,,,^ð a jj i h$,default
+NigerianArabic-86_this-1,,NigerianArabic,86_this,da:,da:,d aː,,Owens1993;Kaye1982,,,^d a:$,default
+Buxari-86_this-1,,Buxari,86_this,haa,haa,h aː,,Zimmermann2002;Ratcliffe2005,,,^h aa$,default
+Kinubi-86_this-1,,Kinubi,86_this,Wede,Wede,w e d e,,Wellens2003,,,^W e d e$,default
+CentralArabic-87_thou-1,,CentralArabic,87_thou,ʔan ta,ʔan_ta,ʔ a n t a,,Ratcliffe2021,,,^ʔ a n _ t a$,default
+MoroccanArabic-87_thou-1,,MoroccanArabic,87_thou,nta,nta,n t a,,Harrell1962;Caubet1993,,,^n t a$,default
+Maltese-87_thou-1,,Maltese,87_thou,int,int,i n t,,Borg1997;Aquilina1965,,,^i n t$,default
+Cairene-87_thou-1,,Cairene,87_thou,inta,inta,i n t a,,AbdelMassih2009,,,^i n t a$,default
+Damascene-87_thou-1,,Damascene,87_thou,ʔənte,ʔənte,ʔ ə n t e,,Cowell2005,,,^ʔ ə n t e$,default
+Iraqi-87_thou-1,,Iraqi,87_thou,ʔinta,ʔinta,ʔ i n t a,,Erwin1963,,,^ʔ i n t a$,default
+Soukhne-87_thou-1,,Soukhne,87_thou,int,int,i n t,,Behnstedt1994,,,^i n t$,default
+AqraArbilArabic-87_thou-1,,AqraArbilArabic,87_thou,ənta,ənta,ə n t a,,Jastrow1990,,,^ə n t a$,default
+CypriotArabic-87_thou-1,,CypriotArabic,87_thou,ʔ-n-t,ʔ-n-t,ʔ n t,,Borg1985,,,^ʔ - n - t$,default
+GulfArabic-87_thou-1,,GulfArabic,87_thou,inta,inta,i n t a,,Qafisheh1975;Holes1990,,,^i n t a$,default
+YemeniticArabic-87_thou-1,,YemeniticArabic,87_thou,ʔant,ʔant,ʔ a n t,,Qafisheh1992,,,^ʔ a n t$,default
+NigerianArabic-87_thou-1,,NigerianArabic,87_thou,inta,inta,i n t a,,Owens1993;Kaye1982,,,^i n t a$,default
+Buxari-87_thou-1,,Buxari,87_thou,hint,hint,h i n t,,Zimmermann2002;Ratcliffe2005,,,^h i n t$,default
+Kinubi-87_thou-1,,Kinubi,87_thou,‘ita,‘ita,ʔ i t a,,Wellens2003,,,^‘ i t a$,default
+CentralArabic-88_tongue-1,,CentralArabic,88_tongue,lisa  :n,lisa_:n,l i s aː n,,Ratcliffe2021,,,^l i s a_: n$,default
+MoroccanArabic-88_tongue-1,,MoroccanArabic,88_tongue,lsa  n,lsa_n,l s a n,,Harrell1962;Caubet1993,,,^ls a _ n$,default
+Maltese-88_tongue-1,,Maltese,88_tongue,lsi:n,lsi:n,l s iː n,,Borg1997;Aquilina1965,,,^ls i: n$,default
+Cairene-88_tongue-1,,Cairene,88_tongue,lisa  an*,lisa_an*,l i s a a n,,AbdelMassih2009,,,^l i s a _ a n *$,default
+Damascene-88_tongue-1,,Damascene,88_tongue,lsa:n,lsa:n,l s aː n,,Cowell2005,,,^ls a: n$,default
+Iraqi-88_tongue-1,,Iraqi,88_tongue,lisa:n,lisa:n,l i s aː n,,Erwin1963,,,^l i s a: n$,default
+Soukhne-88_tongue-1,,Soukhne,88_tongue,lsi:in,lsi:in,l s iː i n,,Behnstedt1994,,,^ls i:i n$,default
+AqraArbilArabic-88_tongue-1,,AqraArbilArabic,88_tongue,seen,seen,s eː n,,Jastrow1990,,,^s ee n$,default
+CypriotArabic-88_tongue-1,,CypriotArabic,88_tongue,l-s-n,l-s-n,l s n,,Borg1985,,,^l - s - n$,default
+GulfArabic-88_tongue-1,,GulfArabic,88_tongue,lisaa  n,lisaa_n,l i s aː n,,Qafisheh1975;Holes1990,,,^l i s aa _ n$,default
+YemeniticArabic-88_tongue-1,,YemeniticArabic,88_tongue,lisaa  n,lisaa_n,l i s aː n,,Qafisheh1992,,,^l i s aa _ n$,default
+NigerianArabic-88_tongue-1,,NigerianArabic,88_tongue,lisa:n,lisa:n,l i s aː n,,Owens1993;Kaye1982,,,^l i s a: n$,default
+Buxari-88_tongue-1,,Buxari,88_tongue,li’saan,li’saan,l i ʔ aː n,,Zimmermann2002;Ratcliffe2005,,,^l i ’s aa n$,default
+Kinubi-88_tongue-1,,Kinubi,88_tongue,*lisaan,*lisaan,l i s aː n,,Wellens2003,,,^* l i s aa n$,default
+CentralArabic-89_tooth-1,,CentralArabic,89_tooth,sin n,sin_n,s i n n,,Ratcliffe2021,,,^s i n _ n$,default
+MoroccanArabic-89_tooth-1,,MoroccanArabic,89_tooth,sen n,sen_n,s e n n,,Harrell1962;Caubet1993,,,^s e n _ n$,default
+Maltese-89_tooth-1,,Maltese,89_tooth,sins,sins,s i n s,,Borg1997;Aquilina1965,,,^s i ns$,default
+Cairene-89_tooth-1,,Cairene,89_tooth,sinn,sinn,s i nː,,AbdelMassih2009,,,^s i nn$,default
+Damascene-89_tooth-1,,Damascene,89_tooth,sənn,sənn,s ə nː,,Cowell2005,,,^s ə nn$,default
+Iraqi-89_tooth-1,,Iraqi,89_tooth,sinn,sinn,s i nː,,Erwin1963,,,^s i nn$,default
+Soukhne-89_tooth-1,,Soukhne,89_tooth,sinn,sinn,s i nː,,Behnstedt1994,,,^s i nn$,default
+AqraArbilArabic-89_tooth-1,,AqraArbilArabic,89_tooth,s-n- n,s-n-_n,s n n,,Jastrow1990,,,^s - n - _ n$,default
+CypriotArabic-89_tooth-1,,CypriotArabic,89_tooth,snan( pl)  s-n- n,snan_s-n-_n,s n a n s n n,,Borg1985,,,^s n a n _ s - n - _ n$,default
+GulfArabic-89_tooth-1,,GulfArabic,89_tooth,sinn,sinn,s i nː,,Qafisheh1975;Holes1990,,,^s i nn$,default
+YemeniticArabic-89_tooth-1,,YemeniticArabic,89_tooth,sinn,sinn,s i nː,,Qafisheh1992,,,^s i nn$,default
+NigerianArabic-89_tooth-1,,NigerianArabic,89_tooth,sinn,sinn,s i nː,,Owens1993;Kaye1982,,,^s i nn$,default
+Kinubi-89_tooth-1,,Kinubi,89_tooth,"sunun, sin",sunun,s u n u n,,Wellens2003,,,^s u n u n$,default
+CentralArabic-90_tree-1,,CentralArabic,90_tree,ʃa ʤa rah,ʃa_ʤa_rah,ʃ a dʒ a r a h,,Ratcliffe2021,,,^ʃ a _ ʤ a _ r a h$,default
+MoroccanArabic-90_tree-1,,MoroccanArabic,90_tree,ʃeʒ ra,ʃeʒ_ra,ʃ e ʒ r a,,Harrell1962;Caubet1993,,,^ʃ e ʒ _ r a$,default
+Maltese-90_tree-1,,Maltese,90_tree,siʤ ra,siʤ_ra,s i dʒ r a,,Borg1997;Aquilina1965,,,^s i ʤ _ r a$,default
+Cairene-90_tree-1,,Cairene,90_tree,ʃag ara,ʃag_ara,ʃ a g a r a,,AbdelMassih2009,,,^ʃ a g _ a r a$,default
+Damascene-90_tree-1,,Damascene,90_tree,ʃaʤa ra,ʃaʤa_ra,ʃ a dʒ a r a,,Cowell2005,,,^ʃ a ʤ a _ r a$,default
+Iraqi-90_tree-1,,Iraqi,90_tree,ʃaʤa ra,ʃaʤa_ra,ʃ a dʒ a r a,,Erwin1963,,,^ʃ a ʤ a _ r a$,default
+Soukhne-90_tree-1,,Soukhne,90_tree,ʃaʦa rˁa,ʃaʦa_rˁa,ʃ a ts a rˤ a,,Behnstedt1994,,,^ʃ a ʦ a _ rˁ a$,default
+AqraArbilArabic-90_tree-1,,AqraArbilArabic,90_tree,"ʃəʤa rˁa,d a:re  (arb)",ʃəʤa_rˁa,ʃ ə dʒ a rˤ a,,Jastrow1990,,,^ʃ ə ʤ a _ rˁ a$,default
+GulfArabic-90_tree-1,,GulfArabic,90_tree,ʃiʤar a,ʃiʤar_a,ʃ i dʒ a r a,,Qafisheh1975;Holes1990,,,^ʃ i ʤ a r _ a$,default
+YemeniticArabic-90_tree-1,,YemeniticArabic,90_tree,ʃiʤar eh,ʃiʤar_eh,ʃ i dʒ a r e h,,Qafisheh1992,,,^ʃ i ʤ a r _ e h$,default
+NigerianArabic-90_tree-1,,NigerianArabic,90_tree,ʃadara,ʃadara,ʃ a d a r a,,Owens1993;Kaye1982,,,^ʃ a d a r a$,default
+Buxari-90_tree-1,,Buxari,90_tree,γarab,γarab,ɣ a r a b,,Zimmermann2002;Ratcliffe2005,,,^γ a r a b$,default
+Kinubi-90_tree-1,,Kinubi,90_tree,ʃeder/se der,ʃeder,ʃ e d e r,,Wellens2003,,,^ʃ e d e r$,default
+CentralArabic-91_two-1,,CentralArabic,91_two,iθn a:ni,iθn_a:ni,i θ n aː n i,,Ratcliffe2021,,,^i θ n _ a: n i$,default
+MoroccanArabic-91_two-1,,MoroccanArabic,91_two,ʒuʒ,ʒuʒ,ʒ u ʒ,,Harrell1962;Caubet1993,,,^ʒ u ʒ$,default
+Maltese-91_two-1,,Maltese,91_two,Tnej n,Tnej_n,t n e j n,,Borg1997;Aquilina1965,,,^T n e j _ n$,default
+Cairene-91_two-1,,Cairene,91_two,itne en,itne_en,i t n e e n,,AbdelMassih2009,,,^i t n e _ e n$,default
+Damascene-91_two-1,,Damascene,91_two,"tnee n,  ?tinte en",tnee_n,t n eː n,,Cowell2005,,,^t n ee _ n$,default
+Iraqi-91_two-1,,Iraqi,91_two,θnee n,θnee_n,θ n eː n,,Erwin1963,,,^θ n ee _ n$,default
+Soukhne-91_two-1,,Soukhne,91_two,"θnee n, neel",θnee_n,θ n eː n,,Behnstedt1994,,,^θ n ee _ n$,default
+AqraArbilArabic-91_two-1,,AqraArbilArabic,91_two,tənaj n,tənaj_n,t ə n a j n,,Jastrow1990,,,^t ə n a j _ n$,default
+CypriotArabic-91_two-1,,CypriotArabic,91_two,xnay n  θ-n- y,xnay_n_θ-n-_y,x n ai̯ n θ n y,,Borg1985,,,^x n ay _ n _ θ - n - _ y$,default
+GulfArabic-91_two-1,,GulfArabic,91_two,iθnee n,iθnee_n,i θ n eː n,,Qafisheh1975;Holes1990,,,^i θ n ee _ n$,default
+YemeniticArabic-91_two-1,,YemeniticArabic,91_two,θinta jn,θinta_jn,θ i n t a j n,,Qafisheh1992,,,^θ i n t a _ j n$,default
+NigerianArabic-91_two-1,,NigerianArabic,91_two,tine:n,tine:n,t i n eː n,,Owens1993;Kaye1982,,,^t i n e: n$,default
+Buxari-91_two-1,,Buxari,91_two,usnaa,usnaa,u s n aː,,Zimmermann2002;Ratcliffe2005,,,^u s n aa$,default
+Kinubi-91_two-1,,Kinubi,91_two,Tinin,Tinin,t i n i n,,Wellens2003,,,^T i n i n$,default
+CentralArabic-92_walk-1,,CentralArabic,92_walk,ma ʃa:,ma_ʃa:,m a ʃ aː,,Ratcliffe2021,,,^m a _ ʃ a:$,default
+MoroccanArabic-92_walk-1,,MoroccanArabic,92_walk,mʃ a,mʃ_a,m ʃ a,,Harrell1962;Caubet1993,,,^mʃ _ a$,default
+Maltese-92_walk-1,,Maltese,92_walk,meʃ a,meʃ_a,m e ʃ a,,Borg1997;Aquilina1965,,,^m e ʃ _ a$,default
+Cairene-92_walk-1,,Cairene,92_walk,miʃi,miʃi,m i ʃ i,,AbdelMassih2009,,,^m i ʃ i$,default
+Damascene-92_walk-1,,Damascene,92_walk,məʃi,məʃi,m ə ʃ i,,Cowell2005,,,^m ə ʃ i$,default
+Iraqi-92_walk-1,,Iraqi,92_walk,miʃa,miʃa,m i ʃ a,,Erwin1963,,,^m i ʃ a$,default
+Soukhne-92_walk-1,,Soukhne,92_walk,maʃa,maʃa,m a ʃ a,,Behnstedt1994,,,^m a ʃ a$,default
+AqraArbilArabic-92_walk-1,,AqraArbilArabic,92_walk,məʃi,məʃi,m ə ʃ i,,Jastrow1990,,,^m ə ʃ i$,default
+CypriotArabic-92_walk-1,,CypriotArabic,92_walk,"miʃi, mpʃa m-ʃ-  y",miʃi,m i ʃ i,,Borg1985,,,^m i ʃ i$,default
+GulfArabic-92_walk-1,,GulfArabic,92_walk,miʃa,miʃa,m i ʃ a,,Qafisheh1975;Holes1990,,,^m i ʃ a$,default
+YemeniticArabic-92_walk-1,,YemeniticArabic,92_walk,xutˁi,xutˁi,x u tˤ i,,Qafisheh1992,,,^x u tˁ i$,default
+NigerianArabic-92_walk-1,,NigerianArabic,92_walk,maʃa,maʃa,m a ʃ a,,Owens1993;Kaye1982,,,^m a ʃ a$,default
+Buxari-92_walk-1,,Buxari,92_walk,γadak,γadak,ɣ a d a k,,Zimmermann2002;Ratcliffe2005,,,^γ a d a k$,default
+Kinubi-92_walk-1,,Kinubi,92_walk,Mashi,Mashi,m a ʃ i,,Wellens2003,,,^M a sh i$,default
+CentralArabic-93_warm-1,,CentralArabic,93_warm,ħa:mm,ħa:mm,ħ aː mː,,Ratcliffe2021,,,^ħ a: mm$,default
+MoroccanArabic-93_warm-1,,MoroccanArabic,93_warm,"dafi,  sxu n",dafi,d a f i,,Harrell1962;Caubet1993,,,^d a f i$,default
+Maltese-93_warm-1,,Maltese,93_warm,sħuna,sħuna,s ħ u n a,,Borg1997;Aquilina1965,,,^s ħ u n a$,default
+Cairene-93_warm-1,,Cairene,93_warm,da:fi:*,da:fi:*,d aː f iː,,AbdelMassih2009,,,^d a: f i: *$,default
+Damascene-93_warm-1,,Damascene,93_warm,ʃoob,ʃoob,ʃ oː b,,Cowell2005,,,^ʃ oo b$,default
+Iraqi-93_warm-1,,Iraqi,93_warm,da:fi,da:fi,d aː f i,,Erwin1963,,,^d a: f i$,default
+Soukhne-93_warm-1,,Soukhne,93_warm,di:fi,di:fi,d iː f i,,Behnstedt1994,,,^d i: f i$,default
+CypriotArabic-93_warm-1,,CypriotArabic,93_warm,*saxan (v),*saxan_,s a x a n,,Borg1985,,,^*s a x a n _$,default
+GulfArabic-93_warm-1,,GulfArabic,93_warm,ħaami,ħaami,ħ aː m i,,Qafisheh1975;Holes1990,,,^ħ aa m i$,default
+YemeniticArabic-93_warm-1,,YemeniticArabic,93_warm,da:fi*,da:fi*,d aː f i,,Qafisheh1992,,,^d a: f i *$,default
+NigerianArabic-93_warm-1,,NigerianArabic,93_warm,sa:xin,sa:xin,s aː x i n,,Owens1993;Kaye1982,,,^s a: x i n$,default
+Buxari-93_warm-1,,Buxari,93_warm,ħarr,ħarr,ħ a rː,,Zimmermann2002;Ratcliffe2005,,,^ħ a rr$,default
+Kinubi-93_warm-1,,Kinubi,93_warm,Hari,Hari,h a r i,,Wellens2003,,,^H a r i$,default
+CentralArabic-94_water-1,,CentralArabic,94_water,ma: ʔ,ma:_ʔ,m aː ʔ,,Ratcliffe2021,,,^m a: _ ʔ$,default
+MoroccanArabic-94_water-1,,MoroccanArabic,94_water,ma,ma,m a,,Harrell1962;Caubet1993,,,^m a$,default
+Maltese-94_water-1,,Maltese,94_water,ilma,ilma,i l m a,,Borg1997;Aquilina1965,,,^i l m a$,default
+Cairene-94_water-1,,Cairene,94_water,may ya*,may_ya*,m ai̯ j a,,AbdelMassih2009,,,^m ay _ ya *$,default
+Damascene-94_water-1,,Damascene,94_water,mˁajj (e),mˁajj_,mˤ a jː,,Cowell2005,,,^mˁ a jj _$,default
+Iraqi-94_water-1,,Iraqi,94_water,ma:j,ma:j,m aː j,,Erwin1963,,,^m a: j$,default
+Soukhne-94_water-1,,Soukhne,94_water,imi,imi,i m i,,Behnstedt1994,,,^i m i$,default
+AqraArbilArabic-94_water-1,,AqraArbilArabic,94_water,ma:j,ma:j,m aː j,,Jastrow1990,,,^m a: j$,default
+CypriotArabic-94_water-1,,CypriotArabic,94_water,m- w-h,m-_w-h,m w h,,Borg1985,,,^m - _ w - h$,default
+GulfArabic-94_water-1,,GulfArabic,94_water,maay,maay,m aːi̯,,Qafisheh1975;Holes1990,,,^m aay$,default
+YemeniticArabic-94_water-1,,YemeniticArabic,94_water,maaʔ,maaʔ,m aː ʔ,,Qafisheh1992,,,^m aa ʔ$,default
+NigerianArabic-94_water-1,,NigerianArabic,94_water,alme,alme,a l m e,,Owens1993;Kaye1982,,,^a l m e$,default
+Buxari-94_water-1,,Buxari,94_water,maa,maa,m aː,,Zimmermann2002;Ratcliffe2005,,,^m aa$,default
+Kinubi-94_water-1,,Kinubi,94_water,"mojo, alme",mojo,m o j o,,Wellens2003,,,^m o j o$,default
+CentralArabic-95_we-1,,CentralArabic,95_we,naħ nu,naħ_nu,n a ħ n u,,Ratcliffe2021,,,^n a ħ _ n u$,default
+MoroccanArabic-95_we-1,,MoroccanArabic,95_we,ħna,ħna,ħ n a,,Harrell1962;Caubet1993,,,^ħ n a$,default
+Maltese-95_we-1,,Maltese,95_we,aħn a,aħn_a,a ħ n a,,Borg1997;Aquilina1965,,,^a ħ n _ a$,default
+Cairene-95_we-1,,Cairene,95_we,iħna,iħna,i ħ n a,,AbdelMassih2009,,,^i ħ n a$,default
+Damascene-95_we-1,,Damascene,95_we,nəħn a,nəħn_a,n ə ħ n a,,Cowell2005,,,^n ə ħ n _ a$,default
+Iraqi-95_we-1,,Iraqi,95_we,ʔiħna,ʔiħna,ʔ i ħ n a,,Erwin1963,,,^ʔ i ħ n a$,default
+Soukhne-95_we-1,,Soukhne,95_we,iħna,iħna,i ħ n a,,Behnstedt1994,,,^i ħ n a$,default
+AqraArbilArabic-95_we-1,,AqraArbilArabic,95_we,nəħn a,nəħn_a,n ə ħ n a,,Jastrow1990,,,^n ə ħ n _ a$,default
+CypriotArabic-95_we-1,,CypriotArabic,95_we,n-ħ- n,n-ħ-_n,n ħ n,,Borg1985,,,^n - ħ - _ n$,default
+GulfArabic-95_we-1,,GulfArabic,95_we,iħna,iħna,i ħ n a,,Qafisheh1975;Holes1990,,,^i ħ n a$,default
+YemeniticArabic-95_we-1,,YemeniticArabic,95_we,ħna,ħna,ħ n a,,Qafisheh1992,,,^ħ n a$,default
+NigerianArabic-95_we-1,,NigerianArabic,95_we,ani:na,ani:na,a n iː n a,,Owens1993;Kaye1982,,,^a n i: n a$,default
+Buxari-95_we-1,,Buxari,95_we,nəħna,nəħna,n ə ħ n a,,Zimmermann2002;Ratcliffe2005,,,^n ə ħ n a$,default
+Kinubi-95_we-1,,Kinubi,95_we,Ina,Ina,i n a,,Wellens2003,,,^I n a$,default
+CentralArabic-96_what-1,,CentralArabic,96_what,ma:,ma:,m aː,,Ratcliffe2021,,,^m a:$,default
+MoroccanArabic-96_what-1,,MoroccanArabic,96_what,aʃ(  nu),aʃ,a ʃ,,Harrell1962;Caubet1993,,,^a ʃ$,default
+Maltese-96_what-1,,Maltese,96_what,ʃ,ʃ,ʃ,,Borg1997;Aquilina1965,,,^ʃ$,default
+Cairene-96_what-1,,Cairene,96_what,eeh,eeh,eː h,,AbdelMassih2009,,,^ee h$,default
+Damascene-96_what-1,,Damascene,96_what,ʃu:,ʃu:,ʃ uː,,Cowell2005,,,^ʃ u:$,default
+Iraqi-96_what-1,,Iraqi,96_what,ʃ(nu),ʃ,ʃ,,Erwin1963,,,^ʃ$,default
+Soukhne-96_what-1,,Soukhne,96_what,"eeʃ,  ʃnu:,ʃ ni:",eeʃ,eː ʃ,,Behnstedt1994,,,^ee ʃ$,default
+AqraArbilArabic-96_what-1,,AqraArbilArabic,96_what,aʃ,aʃ,a ʃ,,Jastrow1990,,,^a ʃ$,default
+CypriotArabic-96_what-1,,CypriotArabic,96_what,ʔ-y-y,ʔ-y-y,ʔ y y,,Borg1985,,,^ʔ - y - y$,default
+GulfArabic-96_what-1,,GulfArabic,96_what,"ʃinhu  , ʃ-, weeʃ",ʃinhu,ʃ i nʰ u,,Qafisheh1975;Holes1990,,,^ʃ i nh u$,default
+YemeniticArabic-96_what-1,,YemeniticArabic,96_what,ma:  ʔajʃ,ma:_ʔajʃ,m aː ʔ ai̯ ʃ,,Qafisheh1992,,,^m a: _ ʔ ajʃ$,default
+NigerianArabic-96_what-1,,NigerianArabic,96_what,ʃinu,ʃinu,ʃ i n u,,Owens1993;Kaye1982,,,^ʃ i n u$,default
+Buxari-96_what-1,,Buxari,96_what,iʃ,iʃ,i ʃ,,Zimmermann2002;Ratcliffe2005,,,^i ʃ$,default
+Kinubi-96_what-1,,Kinubi,96_what,su’nu,su’nu,s u nˤ u,,Wellens2003,,,^s u ’n u$,default
+CentralArabic-97_white-1,,CentralArabic,97_white,ʔab jadˁ,ʔab_jadˁ,ʔ a b j a dˤ,,Ratcliffe2021,,,^ʔ a b _ j a dˁ$,default
+MoroccanArabic-97_white-1,,MoroccanArabic,97_white,bje dˁ,bje_dˁ,b j e dˤ,,Harrell1962;Caubet1993,,,^b j e _ dˁ$,default
+Maltese-97_white-1,,Maltese,97_white,abja d,abja_d,a b j a d,,Borg1997;Aquilina1965,,,^a b j a _ d$,default
+Cairene-97_white-1,,Cairene,97_white,abja dˁ,abja_dˁ,a b j a dˤ,,AbdelMassih2009,,,^a b j a _ dˁ$,default
+Damascene-97_white-1,,Damascene,97_white,ʔabja dˁ,ʔabja_dˁ,ʔ a b j a dˤ,,Cowell2005,,,^ʔ a b j a _ dˁ$,default
+Iraqi-97_white-1,,Iraqi,97_white,ʔabja ðˁ,ʔabja_ðˁ,ʔ a b j a ðˤ,,Erwin1963,,,^ʔ a b j a _ ðˁ$,default
+Soukhne-97_white-1,,Soukhne,97_white,ʔabja ðˁ,ʔabja_ðˁ,ʔ a b j a ðˤ,,Behnstedt1994,,,^ʔ a b j a _ ðˁ$,default
+AqraArbilArabic-97_white-1,,AqraArbilArabic,97_white,ʔabja dˁ,ʔabja_dˁ,ʔ a b j a dˤ,,Jastrow1990,,,^ʔ a b j a _ dˁ$,default
+CypriotArabic-97_white-1,,CypriotArabic,97_white,apky að  b-y- dˁ,apky_að_b-y-_dˁ,a p k y a ð b y dˤ,,Borg1985,,,^a p k y _ a ð _ b - y - _ dˁ$,default
+GulfArabic-97_white-1,,GulfArabic,97_white,ʔabja dˤ,ʔabja_dˤ,ʔ a b j a dˤ,,Qafisheh1975;Holes1990,,,^ʔ a b j a _ dˤ$,default
+YemeniticArabic-97_white-1,,YemeniticArabic,97_white,ʔabja ðˁ,ʔabja_ðˁ,ʔ a b j a ðˤ,,Qafisheh1992,,,^ʔ a b j a _ ðˁ$,default
+NigerianArabic-97_white-1,,NigerianArabic,97_white,abjadˁ,abjadˁ,a b j a dˤ,,Owens1993;Kaye1982,,,^a b j a dˁ$,default
+Buxari-97_white-1,,Buxari,97_white,ʔabiyad,ʔabiyad,ʔ a b i j a d,,Zimmermann2002;Ratcliffe2005,,,^ʔ a b iya d$,default
+Kinubi-97_white-1,,Kinubi,97_white,abja,abja,a b j a,,Wellens2003,,,^a b j a$,default
+CentralArabic-98_who-1,,CentralArabic,98_who,ma  n,ma_n,m a n,,Ratcliffe2021,,,^m a _ n$,default
+MoroccanArabic-98_who-1,,MoroccanArabic,98_who,ʃku  n,ʃku_n,ʃ k u n,,Harrell1962;Caubet1993,,,^ʃ k u _ n$,default
+Maltese-98_who-1,,Maltese,98_who,min,min,m i n,,Borg1997;Aquilina1965,,,^m i n$,default
+Cairene-98_who-1,,Cairene,98_who,mi:  n,mi:_n,m iː n,,AbdelMassih2009,,,^m i: _ n$,default
+Damascene-98_who-1,,Damascene,98_who,mi:n,mi:n,m iː n,,Cowell2005,,,^m i: n$,default
+Iraqi-98_who-1,,Iraqi,98_who,minu,minu,m i n u,,Erwin1963,,,^m i n u$,default
+Soukhne-98_who-1,,Soukhne,98_who,ma:n,ma:n,m aː n,,Behnstedt1994,,,^m a: n$,default
+AqraArbilArabic-98_who-1,,AqraArbilArabic,98_who,məni,məni,m ə n i,,Jastrow1990,,,^m ə n i$,default
+CypriotArabic-98_who-1,,CypriotArabic,98_who,m-n,m-n,m n,,Borg1985,,,^m - n$,default
+GulfArabic-98_who-1,,GulfArabic,98_who,min,min,m i n,,Qafisheh1975;Holes1990,,,^m i n$,default
+YemeniticArabic-98_who-1,,YemeniticArabic,98_who,man,man,m a n,,Qafisheh1992,,,^m a n$,default
+NigerianArabic-98_who-1,,NigerianArabic,98_who,mine  ja:tu,mine_ja:tu,m i n e j aː t u,,Owens1993;Kaye1982,,,^m i n e _ j a: t u$,default
+Buxari-98_who-1,,Buxari,98_who,miin,miin,m iː n,,Zimmermann2002;Ratcliffe2005,,,^m ii n$,default
+Kinubi-98_who-1,,Kinubi,98_who,munu,munu,m u n u,,Wellens2003,,,^m u n u$,default
+CentralArabic-99_woman-1,,CentralArabic,99_woman,imr  aʔa h,imr_aʔa_h,i m r a ʔ a h,,Ratcliffe2021,,,^i m r _ a ʔ a _ h$,default
+MoroccanArabic-99_woman-1,,MoroccanArabic,99_woman,mr a,mr_a,m r a,,Harrell1962;Caubet1993,,,^m r _ a$,default
+Maltese-99_woman-1,,Maltese,99_woman,mar a,mar_a,m a r a,,Borg1997;Aquilina1965,,,^m a r _ a$,default
+Cairene-99_woman-1,,Cairene,99_woman,sitt,sitt,s i tː,,AbdelMassih2009,,,^s i tt$,default
+Damascene-99_woman-1,,Damascene,99_woman,mara,mara,m a r a,,Cowell2005,,,^m a r a$,default
+Iraqi-99_woman-1,,Iraqi,99_woman,mara,mara,m a r a,,Erwin1963,,,^m a r a$,default
+Soukhne-99_woman-1,,Soukhne,99_woman,mrajj i,mrajj_i,m r a jː i,,Behnstedt1994,,,^m r a jj _ i$,default
+AqraArbilArabic-99_woman-1,,AqraArbilArabic,99_woman,marˁ a,marˁ_a,m a rˤ a,,Jastrow1990,,,^m a rˁ _ a$,default
+CypriotArabic-99_woman-1,,CypriotArabic,99_woman,mara m-r-  ʔ,mara_m-r-_ʔ,m a r a m r ʔ,,Borg1985,,,^m a r a _ m - r - _ ʔ$,default
+GulfArabic-99_woman-1,,GulfArabic,99_woman,mara,mara,m a r a,,Qafisheh1975;Holes1990,,,^m a r a$,default
+YemeniticArabic-99_woman-1,,YemeniticArabic,99_woman,mare h,mare_h,m a r e h,,Qafisheh1992,,,^m a r e _ h$,default
+NigerianArabic-99_woman-1,,NigerianArabic,99_woman,mara,mara,m a r a,,Owens1993;Kaye1982,,,^m a r a$,default
+Buxari-99_woman-1,,Buxari,99_woman,ʔimraʔat,ʔimraʔat,ʔ i m r a ʔ a t,,Zimmermann2002;Ratcliffe2005,,,^ʔ i m r a ʔ a t$,default
+Kinubi-99_woman-1,,Kinubi,99_woman,marja,marja,m a r j a,,Wellens2003,,,^m a r j a$,default
+CentralArabic-100_yellow-1,,CentralArabic,100_yellow,ʔasˁ far,ʔasˁ_far,ʔ a sˤ f a r,,Ratcliffe2021,,,^ʔ a sˁ _ f a r$,default
+MoroccanArabic-100_yellow-1,,MoroccanArabic,100_yellow,sˁfe r,sˁfe_r,sˤ f e r,,Harrell1962;Caubet1993,,,^sˁ f e _ r$,default
+Maltese-100_yellow-1,,Maltese,100_yellow,sfajj ar,sfajj_ar,s f a jː a r,,Borg1997;Aquilina1965,,,^s f a jj _ a r$,default
+Cairene-100_yellow-1,,Cairene,100_yellow,asˁf ar,asˁf_ar,a sˤ f a r,,AbdelMassih2009,,,^a sˁ f _ a r$,default
+Damascene-100_yellow-1,,Damascene,100_yellow,ʔasˁf ar,ʔasˁf_ar,ʔ a sˤ f a r,,Cowell2005,,,^ʔ a sˁ f _ a r$,default
+Iraqi-100_yellow-1,,Iraqi,100_yellow,ʔasˁf ar,ʔasˁf_ar,ʔ a sˤ f a r,,Erwin1963,,,^ʔ a sˁ f _ a r$,default
+Soukhne-100_yellow-1,,Soukhne,100_yellow,ʔasˁf ar,ʔasˁf_ar,ʔ a sˤ f a r,,Behnstedt1994,,,^ʔ a sˁ f _ a r$,default
+AqraArbilArabic-100_yellow-1,,AqraArbilArabic,100_yellow,asˁfar,asˁfar,a sˤ f a r,,Jastrow1990,,,^a sˁ f a r$,default
+CypriotArabic-100_yellow-1,,CypriotArabic,100_yellow,sˁ-f- r,sˁ-f-_r,sˤ f r,,Borg1985,,,^sˁ - f - _ r$,default
+GulfArabic-100_yellow-1,,GulfArabic,100_yellow,ʔasˤf ar,ʔasˤf_ar,ʔ a sˤ f a r,,Qafisheh1975;Holes1990,,,^ʔ a sˤ f _ a r$,default
+YemeniticArabic-100_yellow-1,,YemeniticArabic,100_yellow,ʔasˁf ar,ʔasˁf_ar,ʔ a sˤ f a r,,Qafisheh1992,,,^ʔ a sˁ f _ a r$,default
+NigerianArabic-100_yellow-1,,NigerianArabic,100_yellow,asˁfar,asˁfar,a sˤ f a r,,Owens1993;Kaye1982,,,^a sˁ f a r$,default
+Buxari-100_yellow-1,,Buxari,100_yellow,ʔasfar,ʔasfar,ʔ a s f a r,,Zimmermann2002;Ratcliffe2005,,,^ʔ a s f a r$,default
+Kinubi-100_yellow-1,,Kinubi,100_yellow,*kuruku m,*kuruku_m,k u r u k u m,,Wellens2003,,,^* k u r u k u _ m$,default

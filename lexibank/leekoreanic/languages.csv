@@ -1,0 +1,16 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family
+Jeju,Jeju,jeju1234,Jejueo,jje,Eurasia,33.3805,126.5554,Koreanic
+SJeolla,Southern Jeolla,chol1278,Jollado,,Eurasia,35.14,126.84,Koreanic
+NJeolla,Northern Jeolla,chol1278,Jollado,,Eurasia,35.14,126.84,Koreanic
+SGyeongsang,Southern Gyeongsang,kyon1247,Kyongsangdo,,Eurasia,35.3,128.3,Koreanic
+NGyeongsang,Northern Gyeongsang,kyon1247,Kyongsangdo,,Eurasia,35.3,128.3,Koreanic
+SChungcheong,Southern Chungcheong,chun1247,Ch'ungch'ongdo,,Eurasia,36.63,127.31,Koreanic
+NChungcheong,Northern Chungcheong,chun1247,Ch'ungch'ongdo,,Eurasia,36.63,127.31,Koreanic
+Gyeonggi,Gyeonggi,seou1239,Seoul,,Eurasia,37.54,126.98,Koreanic
+Gangwon,Gangwon,,,,,,,
+Hwanghae,Hwanghae,hwan1238,Hwanghaedo,,Eurasia,38.29,125.47,Koreanic
+SHamgyong,Southern Hamgyong,hamg1238,Hamgyongdo,,Eurasia,42.34,129.84,Koreanic
+NHamgyong,Northern Hamgyong,hamg1238,Hamgyongdo,,Eurasia,42.34,129.84,Koreanic
+SPyongan,Southern Pyongan,pyon1239,P'yong'ando,,Eurasia,39.44,126.16,Koreanic
+NPyongan,Northern Pyongan,pyon1239,P'yong'ando,,Eurasia,39.44,126.16,Koreanic
+MKorean,Middle Korean,midd1372,Middle Korean,,Eurasia,,,Koreanic

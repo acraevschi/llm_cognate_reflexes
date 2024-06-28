@@ -1,0 +1,16 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,Abbreviation
+EudeveNorth,North Eudeve,eude1234,Eudeve,eud,North America,28.5,-110.0,Uto-Aztecan,En
+EudeveSouth,South Eudeve,eude1234,Eudeve,eud,North America,28.5,-110.0,Uto-Aztecan,Es
+Mayo,Mayo,mayo1264,Mayo,mfy,North America,26.4522,-108.981,Uto-Aztecan,MA
+Opata,Opata,opat1246,Teguima,opt,North America,31.15211,-110.06212,Uto-Aztecan,O
+TohonoOdam,Tohono O'odam,toho1246,Tohono O'odam,,North America,,,Uto-Aztecan,P
+SonoraPimaBajo,Sonora Pima Bajo (Nevome),sono1245,Sonora Pima Bajo,,North America,,,Uto-Aztecan,PI
+ProtoSonoran,Proto-Sonoran,sout3136,Southern Uto-Aztecan,,,,,Uto-Aztecan,Proto
+TarahumaraCentral,Central Tarahumara,cent2131,Central Tarahumara,tar,North America,27.5648,-107.154,Uto-Aztecan,TA
+ProtoTepiman,Proto-Tepiman,tepi1240,Tepiman,,,,,Uto-Aztecan,TEP
+TepehuanNorth,Tepehuán del Norte,nort2959,Northern Tepehuan,ntp,North America,26.4348,-107.379,Uto-Aztecan,Tn
+Tubar,Tubar,tuba1279,Tubar,tbu,North America,30.0,-111.0,Uto-Aztecan,TR
+TepehuanSouth,Tepehuán del Sur,sout2976,Southeastern Tepehuan,stp,North America,23.1584,-103.983,Uto-Aztecan,Ts
+WarihioHighland,Highland Warihío,high1277,Highland Huarijío,,North America,,,Uto-Aztecan,Va
+WarihioLowland,Lowland Warihío,lowl1264,Lowland Huarijío,,North America,,,Uto-Aztecan,Vb
+Yaqui,Yaqui,yaqu1251,Yaqui,yaq,North America,29.9446,-110.681,Uto-Aztecan,Y

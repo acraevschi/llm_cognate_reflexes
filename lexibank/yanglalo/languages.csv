@@ -1,0 +1,9 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,Location,Source_ID,SubGroup
+ProtoLalo,Proto-Lalo,,,,,,,Sino-Tibetan,,Pla,Lalo
+Qingyun,Qingyun,xish1235,Xishanba Lalo,ywt,Eurasia,24.8709,100.711,Sino-Tibetan,"Dali Prefecture, Weishan County, Ma'anshan, Qingyun",CW-QY,Lalo
+Shuizhuping,Shuizhuping,west1506,Western Lalu,ywl,Eurasia,24.73,98.9,Sino-Tibetan,"Dali Prefecture, Yangbi County, Longtan, Shuizhuping",W-SZP,Lalo
+Diaocao,Diaocao,dong1286,Dongshanba Lalo,yik,Eurasia,25.435,100.178,Sino-Tibetan,"Dali Prefecture, Dali Municipality, Shijiao qu Diaocao",E-DC,Lalo
+Xuzhang,Xuzhang,xuzh1234,Xuzhang Lalo,,Eurasia,25.344026,99.112244,Sino-Tibetan,"Baoshan Prefecture, Longyang Area, Wafang, Xuzhang",XZ,Lalo
+Mangdi,Mangdi,sout3210,Southern Lalo,,Eurasia,23.5,99.33,Sino-Tibetan,"Lincang Prefecture, Gengma County, Hepai, Mangdi",MD,Lalo
+Yijiacun,Yijiacun,ekaa1234,Eka,,Eurasia,23.475,99.865,Sino-Tibetan,"Lincang Prefecture, Shuangjiang County, Heliu, Yijiacun",Eka,Lalo
+Yangliu,Yangliu,yang1304,Yangliu,,Eurasia,25.22482,99.046326,Sino-Tibetan,"Baoshan Prefecture, Longyang Area, Yangliu",YL,Lalo

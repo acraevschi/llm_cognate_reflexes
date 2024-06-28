@@ -1,0 +1,10 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family
+Cora,Cora,cora1259,Corachol,,,,,Uto-Aztecan
+Huichol,Huichol,huic1243,Huichol,hch,North America,21.954,-104.062,Uto-Aztecan
+ProtoNahua,Proto-Nahua,azte1234,Aztec,,,,,Uto-Aztecan
+Tepiman,Tepiman,tepi1240,Tepiman,,,,,Uto-Aztecan
+Cahita,Cahita,cahi1243,Cahitan,,,,,Uto-Aztecan
+Tarahumaran,Tarahumaran,tara1321,Tarahumaran,,,,,Uto-Aztecan
+ProtoCoracholNahua,Proto-Corachol-Nahua,cora1261,Corachol-Aztecan,,,,,Uto-Aztecan
+ProtoUtoAztecan,PUA,utoa1244,Uto-Aztecan,,,,,Uto-Aztecan
+ProtoSouthernUtoAztecan,SUA,sout3136,Southern Uto-Aztecan,,,,,Uto-Aztecan

@@ -1,0 +1,15 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,NameInSource,NameInCognates,Sources
+CentralArabic,CentralArabic,stan1318,Standard Arabic,arb,Eurasia,27.9625,43.8525,Afro-Asiatic,CA,CA,Ratcliffe2021
+MoroccanArabic,MoroccoArabic,moro1292,Moroccan Arabic,ary,Africa,32.5,-7.5,Afro-Asiatic,Mor,CA-  Mor,"Harrell1962,Caubet1993"
+Maltese,MalteseArabic,malt1254,Maltese,mlt,Eurasia,35.8884,14.4508,Afro-Asiatic,Mlt,CA-  Mlt,"Borg1997,Aquilina1965"
+Cairene,CaireneArabic,egyp1253,Egyptian Arabic,arz,Africa,31.0,31.0,Afro-Asiatic,Cai,CA-  Cai,AbdelMassih2009
+Damascene,DamasceneArabic,nort3139,North Levantine Arabic,apc,Eurasia,34.1709,36.0468,Afro-Asiatic,Dms,CA-  Dms,Cowell2005
+Iraqi,IraqiArabic,jude1266,Judeo-Iraqi Arabic,yhd,Eurasia,31.5339,41.2595,Afro-Asiatic,Irq,CA-  Irq,Erwin1963
+Soukhne,SoukhneArabic,nort3139,North Levantine Arabic,apc,Eurasia,34.1709,36.0468,Afro-Asiatic,Skh,CA-  Skh,Behnstedt1994
+AqraArbilArabic,AqraArbilArabic,jude1266,Judeo-Iraqi Arabic,yhd,Eurasia,31.5339,41.2595,Afro-Asiatic,AqArb,CA- AqArb,Jastrow1990
+CypriotArabic,CypriotArabic,cypr1248,Cypriot Arabic,acy,Eurasia,35.1674,33.0943,Afro-Asiatic,Cyp,CA-  Cyp,Borg1985
+GulfArabic,United Arab Emirates,gulf1241,Gulf Arabic,afb,Eurasia,30.17,47.5,Afro-Asiatic,Glf,CA-  Glf,"Qafisheh1975,Holes1990"
+YemeniticArabic,YemeniticArabic,jude1267,Judeo-Yemeni Arabic,jye,Eurasia,15.0,45.0,Afro-Asiatic,Ymn,CA-  Ymn,Qafisheh1992
+NigerianArabic,NigerianArabic,chad1249,Chadian Arabic,shu,Africa,14.67,13.5,Afro-Asiatic,Nig,CA-  Nig,"Owens1993,Kaye1982"
+Buxari,BuxariArabic,uzbe1248,Uzbeki Arabic,auz,Eurasia,40.2612,65.3864,Afro-Asiatic,Bux,CA-  Bux,"Zimmermann2002,Ratcliffe2005"
+Kinubi,Ki-nubi,nubi1253,Nubi,kcn,Africa,-0.183215,34.7552,Afro-Asiatic,Nub,CA-  Nubi,Wellens2003

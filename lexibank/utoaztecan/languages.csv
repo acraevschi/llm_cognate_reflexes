@@ -1,0 +1,47 @@
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,DatabaseID
+Mono,Mono,mono1275,Mono (USA),mnr,North America,37.1935,-119.347,Uto-Aztecan,1
+NorthernPaiute,Northern Paiute,nort2954,Northern Paiute,pao,North America,40.0799,-119.536,Uto-Aztecan,2
+Pannamint,Timbisha (Panamint),pana1305,Panamint,par,North America,36.0007,-117.901,Uto-Aztecan,3
+ShoshoniGosiute,Shoshone (Gosiute),gosi1242,Gosiute,shh,North America,,,Uto-Aztecan,4
+Comanche,Comanche,coma1245,Comanche,com,North America,34.0,-101.0,Uto-Aztecan,5
+Kawaiisu,Kawaiisu,kawa1283,Kawaiisu,xaw,North America,36.0538,-118.679,Uto-Aztecan,6
+Chemehuevi,Chemehuevi,chem1251,Chemehuevi,ute,North America,35.356093,-116.438436,Uto-Aztecan,7
+SouthernPaiute,Southern Paiute,sout2969,Southern Paiute,ute,North America,37.0,-114.0,Uto-Aztecan,8
+SouthernUte,Southern Ute,utee1244,Ute,ute,North America,38.0,-109.0,Uto-Aztecan,9
+Tubatulabel,Tübatulabal,tuba1278,Tübatulabal,tub,North America,35.327,-117.163,Uto-Aztecan,10
+Serrano,Serrano,serr1255,Serrano,ser,North America,33.9479,-116.772,Uto-Aztecan,11
+Cahuilla,Cahuilla,cahu1264,Cahuilla,chl,North America,33.5324,-116.691,Uto-Aztecan,12
+Cupeno,Cupeño,cupe1243,Cupeño,cup,North America,33.3148,-116.515,Uto-Aztecan,13
+Luiseno,Luiseño,luis1253,Luiseno-Juaneño,lui,North America,33.3184,-116.939,Uto-Aztecan,14
+Gabrielino,Tongva,tong1329,Tongva,ser,North America,34.1,-118.11,Uto-Aztecan,15
+Hopi,Hopi,hopi1249,Hopi,hop,North America,35.7653,-110.535,Uto-Aztecan,16
+Papago,O'odham,toho1245,Tohono O'odham,ood,North America,31.7973,-111.995,Uto-Aztecan,17
+PimaDeOnavas,Pima Bajo,pima1248,Pima Bajo,ood,North America,28.654,-108.326,Uto-Aztecan,18
+NorthernTepehuan,Northern Tepehuan,nort2959,Northern Tepehuan,ntp,North America,26.4348,-107.379,Uto-Aztecan,19
+Opata,Ópata,opat1246,Teguima,opt,North America,31.15211,-110.06212,Uto-Aztecan,20
+Eudeve,Eudeve,eude1234,Eudeve,opt,North America,28.5,-110.0,Uto-Aztecan,21
+Guarijio,Guarijío,huar1255,Huarijio,var,North America,27.8685,-108.437,Uto-Aztecan,22
+Tarahumara,Tarahumara,cent2131,Central Tarahumara,tar,North America,27.5648,-107.154,Uto-Aztecan,23
+Tubar,Tubar,tuba1279,Tubar,tbu,North America,30.0,-111.0,Uto-Aztecan,24
+Mayo,Mayo,mayo1264,Mayo,mfy,North America,26.4522,-108.981,Uto-Aztecan,25
+Yaqui,Yaqui,yaqu1251,Yaqui,yaq,North America,29.9446,-110.681,Uto-Aztecan,26
+Cora,Cora,elna1235,El Nayar Cora,crn,North America,22.4099,-104.467,Uto-Aztecan,27
+Huichol,Huichol,huic1243,Huichol,hch,North America,21.954,-104.062,Uto-Aztecan,28
+ClassicalAztec,Classical Nahuatl,clas1250,Classical Nahuatl,nci,North America,19.72,-96.97,Uto-Aztecan,29
+AztecTetelcingo,Tetelcingo Nahuatl,tete1251,Tetelcingo Nahuatl,nhg,North America,18.8854,-98.893,Uto-Aztecan,30
+AztecZacapoaxtla,Zacapoaxtla Nahuatl,high1278,Highland Puebla Nahuatl,azz,North America,20.1554,-97.5556,Uto-Aztecan,31
+Pipil,Pipil,pipi1250,Pipil,ppl,North America,13.8931,-89.443,Uto-Aztecan,32
+SoutheasternTepehuan,Southeastern Tepehuan,sout2976,Southeastern Tepehuan,stp,North America,23.1584,-103.983,Uto-Aztecan,33
+Kitanemuk,Kitanemuk,kita1252,Kitanemuk,ser,North America,,,Uto-Aztecan,34
+Kiowa,Kiowa,kiow1266,Kiowa,kio,North America,34.9403,-98.9042,Kiowa-Tanoan,35
+SanJuanPuebloTewa,San Juan Pueblo Tewa,sanj1276,San Juan (USA),tew,North America,36.0542,-106.0703,Kiowa-Tanoan,36
+AztecPochutla,Pochutec,poch1244,Pochutec,xpo,North America,15.735073,-96.468076,Uto-Aztecan,41
+Coahuilteco,Coahuilteco,coah1252,Coahuilteco,xcw,North America,28.2589,-97.89,Coahuilteco,44
+Comecrudo,Comecrudo,come1253,Comecrudo,,North America,,,Comecrudan,45
+Cotaname,Cotaname,coto1248,Cotoname,xcn,North America,25.9116,-97.3956,Cotoname,46
+Karankawa,Karankawa,kara1289,Karankawa,zkk,North America,28.9082,-96.4856,Karankawa,47
+ProtoKeresan,Proto-Keresan,kere1287,Keresan,,,,,Keresan,48
+Acoma,Acoma,acom1246,Acoma,kjq,North America,,,Keresan,49
+SantaAna,Santa Ana,sant1426,Santa Ana,,North America,,,Keresan,50
+SantaDomingo,Santa Domingo,sant1425,Santo Domingo,,North America,,,Keresan,51
+Zuni,Zuni,zuni1245,Zuni,zun,North America,35.0056,-108.782,Zuni,52
