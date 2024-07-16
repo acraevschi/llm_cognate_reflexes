@@ -2,7 +2,7 @@ import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from torch import nn
 from torch.utils.data import DataLoader
-from finetune_helper import custom_dropout, shift_right, WeightedCrossEntropyLoss, run_epoch
+from train_helper import custom_dropout, shift_right, WeightedCrossEntropyLoss, run_epoch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 torch.set_default_device(device)
