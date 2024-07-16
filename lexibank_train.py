@@ -2,7 +2,7 @@ import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from torch import nn
 from torch.utils.data import DataLoader
-from train_helper import custom_dropout, shift_right, WeightedCrossEntropyLoss, run_epoch
+from finetune_helper import custom_dropout, shift_right, WeightedCrossEntropyLoss, run_epoch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 torch.set_default_device(device)
@@ -33,23 +33,11 @@ scheduler = torch.optim.lr_scheduler.ExponentialLR(optim, gamma=0.9)
 loss_fn = WeightedCrossEntropyLoss(ignore_index=tokenizer.pad_token_id, label_smoothing=0.1).to(device)
 
 # Training Loop
-n_epochs = 5
-train_loss_lst = []
-val_loss_lst = []
+n_epochs = 2
 
 for n in range(n_epochs):
     print(f"Epoch {n + 1}/{n_epochs}")
     train_loss, val_loss = run_epoch(model, tokenizer, device, 
                                      train_dataloader, val_dataloader, 
                                      optim, loss_fn, scheduler=scheduler)
-    train_loss_lst.append(train_loss)
-    val_loss_lst.append(val_loss)
-    if n > 0:
-        if val_loss_lst[-1] > min(val_loss_lst[:-1]):
-            print("Validation loss has not decreased")
-            break
-        else:
-            print("Validation loss has decreased")
-            torch.save(model.state_dict(), f"checkpoint_epoch_{n+1}.pt")
-            print(f"Model saved to checkpoint_epoch_{n+1}.pt")
     print("_" * 100)

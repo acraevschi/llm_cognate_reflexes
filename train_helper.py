@@ -58,36 +58,7 @@ class WeightedCrossEntropyLoss(nn.Module):
         loss = nll_loss.mean()
         return loss
 
-def run_epoch(model, tokenizer, device, train_data, val_data, optimizer, loss_fn, scheduler=None, augment=True, finetune=False):
-    model.train()
-    train_loss = 0
-    train_bar = tqdm(train_data, desc="Training")
-
-    for batch in train_bar:
-        cognate_forms, attn_mask, labels, out_attn_mask, weight = batch
-        cognate_forms = cognate_forms.to(device)
-        attn_mask = attn_mask.to(device)
-        target_form = shift_right(labels.to(device), tokenizer.pad_token_id)
-        out_attn_mask = out_attn_mask.to(device)
-        weight = weight.to(device)
-
-        if augment:
-            cognate_forms = custom_dropout(cognate_forms, tokenizer)
-        
-        optimizer.zero_grad()
-        outputs = model(input_ids=cognate_forms, attention_mask=attn_mask, labels=target_form)
-        logits = outputs.logits
-        if finetune:
-            loss = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
-        else:
-            loss = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1), weight)
-        train_loss += loss.item()
-
-        loss.backward()
-        optimizer.step()
-
-        train_bar.set_postfix(loss=train_loss/(train_bar.n + 1))
-
+def evaluate_model(model, tokenizer, val_data, loss_fn):
     model.eval()
     val_loss = 0
     val_bar = tqdm(val_data, desc="Validation")
@@ -105,9 +76,56 @@ def run_epoch(model, tokenizer, device, train_data, val_data, optimizer, loss_fn
             loss = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1), weight)
             val_loss += loss.item()
             val_bar.set_postfix(loss=val_loss/(val_bar.n + 1))
-    
-    train_loss = train_loss / len(train_data)
     val_loss = val_loss / len(val_data)
+    
+    return val_loss
+
+def run_epoch(model, tokenizer, device, train_data, val_data, optimizer, loss_fn, scheduler=None, augment=True, evals_per_epoch=4):
+    steps_to_eval = len(train_data) // evals_per_epoch
+    eval_points = [steps_to_eval*i for i in range(1, evals_per_epoch)] + [len(train_data)]
+
+    val_loss_lst = []
+    stop_training = False
+
+    model.train()
+    train_loss = 0
+    train_bar = tqdm(train_data, desc="Training")
+
+    for batch in train_bar:
+        if stop_training:
+            print("Validation loss has not decreased, stop training")
+            break
+        cognate_forms, attn_mask, labels, out_attn_mask, weight = batch
+        cognate_forms = cognate_forms.to(device)
+        attn_mask = attn_mask.to(device)
+        target_form = shift_right(labels.to(device), tokenizer.pad_token_id)
+        out_attn_mask = out_attn_mask.to(device)
+        weight = weight.to(device)
+
+        if augment:
+            cognate_forms = custom_dropout(cognate_forms, tokenizer)
+        
+        optimizer.zero_grad()
+        outputs = model(input_ids=cognate_forms, attention_mask=attn_mask, labels=target_form)
+        logits = outputs.logits
+        loss = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1), weight)
+        train_loss += loss.item()
+
+        loss.backward()
+        optimizer.step()
+
+        current_step = train_bar.n + 1
+        train_bar.set_postfix(loss=train_loss/current_step)
+
+        if current_step in eval_points:
+            val_loss = evaluate_model(model, tokenizer, val_data, loss_fn)
+            val_loss_lst.append(val_loss)
+            if len(val_loss_lst) > 1 and val_loss_lst[-1] > val_loss_lst[-2]:
+                stop_training = True
+            else:
+                torch.save(model.state_dict(), "checkpoint_byt5_cognates.pt")
+
+    train_loss = train_loss / current_step
 
     if scheduler is not None:
         scheduler.step()
