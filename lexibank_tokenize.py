@@ -3,6 +3,7 @@ import torch
 from torch.utils.data import TensorDataset
 from tokenize_help import split_cognates, get_non_empty_cognates
 from transformers import AutoTokenizer
+from tqdm import tqdm
 import os
 
 
@@ -53,7 +54,7 @@ weight_count = dict()
 lst_dirs = [folder for folder in os.listdir("lexibank") if os.path.isdir(os.path.join("lexibank", folder))]
 
 random.seed(25)
-for dir_name in lst_dirs:
+for dir_name in tqdm(lst_dirs, desc="Tokenizing Lexibank"):
     if dir_name in test_dirs:
         continue
     file_path = f"lexibank/{dir_name}/wide_df.tsv"
@@ -141,8 +142,8 @@ tokenized_outputs = tokenizer(target_form, padding=True, truncation=True, return
 fam_weight_tensor = torch.tensor(fam_weight).view(-1, 1)
 
 for key in tokenized_inputs.keys():
-    tokenized_inputs[key] = tokenized_inputs[key].to(dtype=torch.int32)
-    tokenized_outputs[key] = tokenized_outputs[key].to(dtype=torch.int32)
+    tokenized_inputs[key] = tokenized_inputs[key].to(dtype=torch.int8)
+    tokenized_outputs[key] = tokenized_outputs[key].to(dtype=torch.int8)
 
 # Create TensorDataset
 dataset = TensorDataset(
