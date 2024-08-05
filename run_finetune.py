@@ -57,7 +57,7 @@ for dir_name in lst_dirs:
     train_data = torch.load(f"{file_path}/train_dataset_{prop_path}.pt")
     train_dataloader = DataLoader(
         train_data,
-        batch_size=8,
+        batch_size=32,
         shuffle=True,
         generator=torch.Generator(device=device),
     )
