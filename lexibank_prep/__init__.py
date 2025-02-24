@@ -1,0 +1,1 @@
+from .lexibank_help import check_glotto_coverage
