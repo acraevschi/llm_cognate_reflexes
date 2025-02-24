@@ -4,6 +4,7 @@ import random
 from datasets import Dataset
 from tqdm import tqdm
 import itertools
+import math
 
 from lexibank_prep.lexibank_help import check_glotto_coverage
 from glotto_trees.get_newick import get_phylogenetic_tree
@@ -74,7 +75,7 @@ def format_example(row, masked_row):
 folders = os.listdir("lexibank")
 dataset_entries = []
 dataset_test_entries = []
-concepts_per_text = 210  # maximal number of concepts per one input/output
+concepts_per_text = 100  # maximal number of concepts per one input/output
 
 for folder in tqdm(folders, desc="Processing folders"):
     test_data = folder in test_folders
@@ -142,31 +143,51 @@ for folder in tqdm(folders, desc="Processing folders"):
         # except:
         #     newick = ""
 
-        input_text = f"<NEWICK> {newick} </NEWICK>\n<Cognates>\n"
-        target_text = "<Prediction>\n"
-
-        # Shuffle and process concepts
+        # Shuffle the data
         data_subset = data_subset.sample(frac=1).reset_index(drop=True)
-        for i in range(min(len(data_subset), concepts_per_text)):
-            row = data_subset.iloc[i]
-            masked_row = mask_values(row)
+        n = len(data_subset)
 
-            if len(masked_row) > 0:
-                cog_input, cog_output = format_example(row, masked_row)
-            else:
-                cog_input, cog_output = format_example(row, row)
-
-            input_text += cog_input
-            target_text += cog_output
-
-        input_text += "</Cognates>\n"
-        target_text += "</Prediction>"
-
-        # Add to appropriate dataset
-        if test_data:
-            dataset_test_entries.append({"input": input_text, "output": target_text})
+        # Determine chunks such that each has equal size and no more than concepts_per_text rows.
+        if n <= concepts_per_text:
+            chunks = [data_subset]
         else:
-            dataset_entries.append({"input": input_text, "output": target_text})
+            num_splits = math.ceil(n / concepts_per_text)
+
+            chunk_size = n // num_splits
+            chunks = [
+                data_subset[i * chunk_size : (i + 1) * chunk_size]
+                for i in range(num_splits)
+            ]
+
+        # Process each chunk separately
+        for chunk in chunks:
+            input_text = f"<NEWICK> {newick} </NEWICK>\n<Cognates>\n"
+            target_text = "<Prediction>\n"
+
+            for i in range(len(chunk)):
+                if i == concepts_per_text:
+                    break
+                row = chunk.iloc[i]
+                masked_row = mask_values(row)
+
+                if len(masked_row) > 0:
+                    cog_input, cog_output = format_example(row, masked_row)
+                else:
+                    cog_input, cog_output = format_example(row, row)
+
+                input_text += cog_input
+                target_text += cog_output
+
+            input_text += "</Cognates>\n"
+            target_text += "</Prediction>"
+
+            # Add to appropriate dataset
+            if test_data:
+                dataset_test_entries.append(
+                    {"input": input_text, "output": target_text}
+                )
+            else:
+                dataset_entries.append({"input": input_text, "output": target_text})
 
 # Create final datasets
 hf_dataset = Dataset.from_list(dataset_entries)

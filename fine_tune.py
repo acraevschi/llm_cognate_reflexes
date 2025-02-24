@@ -4,7 +4,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, EarlyStoppingCallb
 from datasets import load_from_disk
 from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
-from config import HF_TOKEN
 
 seed_num = 97
 
@@ -12,13 +11,13 @@ max_length = 32000
 
 
 model = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Llama-3.2-8B", token=HF_TOKEN
+    "meta-llama/Llama-3.2-1B",
+    token="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",
+    attn_implementation="sdpa",
 )  # temporary use 1B
 
-# needed for gradient_checkpointing to work with LoRA
 if hasattr(model, "enable_input_require_grads"):
     model.enable_input_require_grads()
-
 else:
 
     def make_inputs_require_grad(module, input, output):
@@ -27,7 +26,9 @@ else:
     model.get_input_embeddings().register_forward_hook(make_inputs_require_grad)
 
 tokenizer = AutoTokenizer.from_pretrained(
-    "meta-llama/Llama-3.2-8B", max_length=max_length, token=HF_TOKEN
+    "meta-llama/Llama-3.2-1B",
+    max_length=max_length,
+    token="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",
 )  # temporary use 1B
 
 tokenizer.pad_token = tokenizer.eos_token
@@ -69,6 +70,7 @@ collator = DataCollatorForCompletionOnlyLM(
     instruction_template=instruction_template,
     response_template=response_template,
     tokenizer=tokenizer,
+    padding_free=True,
     mlm=False,
 )
 
@@ -83,7 +85,8 @@ training_args = SFTConfig(
     per_device_train_batch_size=1,
     per_device_eval_batch_size=2,
     gradient_accumulation_steps=8,
-    # gradient_checkpointing=True,
+    gradient_checkpointing=True,
+    optim="adamw_bnb_8bit",
     eval_strategy="steps",
     eval_steps=400,
     save_steps=400,
@@ -92,11 +95,13 @@ training_args = SFTConfig(
     num_train_epochs=2,
     seed=seed_num,
     label_smoothing_factor=0.05,
-    neftune_noise_alpha=5,
+    neftune_noise_alpha=5,  # recommended to use, but currently provokes a bug
     load_best_model_at_end=True,
     metric_for_best_model="eval_loss",
     max_seq_length=max_length,
     torch_compile=True,
+    torch_compile_backend="eager",
+    bf16=True,
 )
 
 trainer = SFTTrainer(
