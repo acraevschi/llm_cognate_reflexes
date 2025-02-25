@@ -1,1 +1,3 @@
-# byt5_cognate_reflexes
+# Llama model for historical language reconstruction
+
+TBA
