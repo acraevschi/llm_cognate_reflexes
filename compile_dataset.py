@@ -57,7 +57,8 @@ def clean_form(form):
 def format_example(row, masked_row):
     """Modified to work with subset of languages"""
     cognate_id = row["Cognate_ID"]
-
+    cognate_id = cognate_id.split(",")[-1]
+    cognate_id = cognate_id.split("-")[-1]
     # Get only the languages present in this chunk
     langs = row.index[1:]
 
@@ -76,6 +77,7 @@ folders = os.listdir("lexibank")
 dataset_entries = []
 dataset_test_entries = []
 concepts_per_text = 100  # maximal number of concepts per one input/output
+num_combinations = 50  # number of combinations to generate for each dataset
 
 for folder in tqdm(folders, desc="Processing folders"):
     test_data = folder in test_folders
@@ -93,17 +95,17 @@ for folder in tqdm(folders, desc="Processing folders"):
         continue
 
     # Column renaming
-    column_mapping = {
-        langs["ID"][i]: (
-            f"{langs['ID'][i]}:{langs['Glottocode'][i]}"
-            if pd.notna(langs["Glottocode"][i])
-            else langs["ID"][i]
-        )
-        for i in range(len(langs))
-    }
-    data.columns = [data.columns[0]] + [
-        column_mapping.get(col, col) for col in data.columns[1:]
-    ]
+    # column_mapping = {
+    #     langs["ID"][i]: (
+    #         f"{langs['ID'][i]}:{langs['Glottocode'][i]}"
+    #         if pd.notna(langs["Glottocode"][i])
+    #         else langs["ID"][i]
+    #     )
+    #     for i in range(len(langs))
+    # }
+    # data.columns = [data.columns[0]] + [
+    #     column_mapping.get(col, col) for col in data.columns[1:]
+    # ]
 
     # Get language columns and check if there are at least 3
     lang_columns = data.columns[1:].tolist()
@@ -117,7 +119,7 @@ for folder in tqdm(folders, desc="Processing folders"):
     # Process combinations based on dataset type
     if test_data:
         # For test folders: use first 100 combinations and register them
-        selected_combinations = all_combinations[:100]
+        selected_combinations = all_combinations[:num_combinations]
         # Add to global test combinations (sorted to avoid order variations)
         for combo in selected_combinations:
             test_combinations.add(tuple(sorted(combo)))
@@ -128,7 +130,7 @@ for folder in tqdm(folders, desc="Processing folders"):
             for combo in all_combinations
             if tuple(sorted(combo)) not in test_combinations
         ]
-        selected_combinations = filtered_combinations[:100]
+        selected_combinations = filtered_combinations[:num_combinations]
 
     # Process each selected combination
     for group in selected_combinations:
@@ -136,7 +138,7 @@ for folder in tqdm(folders, desc="Processing folders"):
         data_subset = data[group_columns]
 
         # Generate Newick tree (placeholder for actual implementation)
-        newick = ""
+        # newick = ""
         # try:
         #     glottocodes = [col.split(":")[1] if ":" in col else "" for col in group]
         #     newick = get_phylogenetic_tree(glottocodes)
@@ -161,7 +163,8 @@ for folder in tqdm(folders, desc="Processing folders"):
 
         # Process each chunk separately
         for chunk in chunks:
-            input_text = f"<NEWICK> {newick} </NEWICK>\n<Cognates>\n"
+            # input_text = f"<NEWICK> {newick} </NEWICK>\n<Cognates>\n"
+            input_text = "<Cognates>\n"
             target_text = "<Prediction>\n"
 
             for i in range(len(chunk)):
