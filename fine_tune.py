@@ -5,7 +5,7 @@ from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
 
 seed_num = 97
 
-max_length = 14000
+max_length = 12000
 
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -34,12 +34,15 @@ tokenizer.padding_side = "right"
 data = load_from_disk("hf_cognates_dataset").shuffle(seed=seed_num)
 # test_data = load_from_disk("hf_cognates_test_dataset").shuffle(seed=seed_num)
 val_inds = data.num_rows // 10
+train_data = data.select(range(val_inds, data.num_rows))
+val_data = data.select(range(0, val_inds))
+val_inds = data.num_rows // 10
 
 del data
 
 # Need to double check the LoraConfig arguments
 lora_config = LoraConfig(
-    r=16,
+    r=8,
     lora_alpha=32,
     target_modules=["q_proj", "v_proj"],
     lora_dropout=0.1,
@@ -57,7 +60,7 @@ def formatting_prompts_func(example):
 train_data = train_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
 val_data = val_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
 
-instruction_template = "<NEWICK>"
+instruction_template = "<Cognates>\n"
 response_template = " <Prediction>\n"
 
 collator = DataCollatorForCompletionOnlyLM(
@@ -76,7 +79,7 @@ early_stopping = EarlyStoppingCallback(
 training_args = SFTConfig(
     output_dir="./sft_3b",
     overwrite_output_dir=True,
-    per_device_train_batch_size=2,
+    per_device_train_batch_size=4,
     per_device_eval_batch_size=2,
     gradient_accumulation_steps=4,
     gradient_checkpointing=True,
@@ -86,7 +89,7 @@ training_args = SFTConfig(
     save_steps=500,
     logging_steps=500,
     learning_rate=5e-6,
-    num_train_epochs=5,
+    num_train_epochs=1,
     seed=seed_num,
     label_smoothing_factor=0.05,
     neftune_noise_alpha=5,
@@ -94,8 +97,8 @@ training_args = SFTConfig(
     metric_for_best_model="eval_loss",
     max_seq_length=max_length,
     torch_compile=True,
-    bf16=True,
-    dataloader_num_workers=4,
+    # bf16=True,
+    dataloader_num_workers=8,
 )
 
 
