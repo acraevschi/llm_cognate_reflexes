@@ -1,5 +1,3 @@
-# TODO: read in dataset, prepare llama 3.1 8B and its tokenizer, tokenize data, randomly split 10% for validation, prepare lora, prepare SFTTrainer, train model (only on completions), evaluate model, save model
-
 from transformers import AutoModelForCausalLM, AutoTokenizer, EarlyStoppingCallback
 from datasets import load_from_disk
 from peft import LoraConfig, get_peft_model
@@ -7,14 +5,12 @@ from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
 
 seed_num = 97
 
-max_length = 32000
+max_length = 14000
 
 
 model = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Llama-3.2-1B",
-    token="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",
-    attn_implementation="sdpa",
-)  # temporary use 1B
+    "./llama-3.2-3B",  # token="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"
+)  # temporary use 3B
 
 if hasattr(model, "enable_input_require_grads"):
     model.enable_input_require_grads()
@@ -26,10 +22,10 @@ else:
     model.get_input_embeddings().register_forward_hook(make_inputs_require_grad)
 
 tokenizer = AutoTokenizer.from_pretrained(
-    "meta-llama/Llama-3.2-1B",
+    "./llama-3.2-3B",
     max_length=max_length,
-    token="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",
-)  # temporary use 1B
+    # token="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",
+)  # temporary use 3B
 
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
@@ -38,8 +34,7 @@ tokenizer.padding_side = "right"
 data = load_from_disk("hf_cognates_dataset").shuffle(seed=seed_num)
 # test_data = load_from_disk("hf_cognates_test_dataset").shuffle(seed=seed_num)
 val_inds = data.num_rows // 10
-train_data = data.select(range(val_inds, data.num_rows))
-val_data = data.select(range(val_inds))
+
 del data
 
 # Need to double check the LoraConfig arguments
@@ -56,12 +51,11 @@ model = get_peft_model(model, lora_config)
 
 
 def formatting_prompts_func(example):
-    output_texts = []
-    for i in range(len(example["input"])):
-        text = f"{example['input'][i]} {example['output'][i]}"
-        output_texts.append(text)
-    return output_texts
+    return f"{example['input']} {example['output']}"
 
+
+train_data = train_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
+val_data = val_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
 
 instruction_template = "<NEWICK>"
 response_template = " <Prediction>\n"
@@ -70,7 +64,7 @@ collator = DataCollatorForCompletionOnlyLM(
     instruction_template=instruction_template,
     response_template=response_template,
     tokenizer=tokenizer,
-    padding_free=True,
+    # padding_free=True,
     mlm=False,
 )
 
@@ -80,35 +74,36 @@ early_stopping = EarlyStoppingCallback(
 )
 
 training_args = SFTConfig(
-    output_dir="./model_output",
+    output_dir="./sft_3b",
     overwrite_output_dir=True,
-    per_device_train_batch_size=1,
+    per_device_train_batch_size=2,
     per_device_eval_batch_size=2,
-    gradient_accumulation_steps=8,
+    gradient_accumulation_steps=4,
     gradient_checkpointing=True,
     optim="adamw_bnb_8bit",
     eval_strategy="steps",
-    eval_steps=400,
-    save_steps=400,
-    logging_steps=400,
+    eval_steps=500,
+    save_steps=500,
+    logging_steps=500,
     learning_rate=5e-6,
-    num_train_epochs=2,
+    num_train_epochs=5,
     seed=seed_num,
     label_smoothing_factor=0.05,
-    neftune_noise_alpha=5,  # recommended to use, but currently provokes a bug
+    neftune_noise_alpha=5,
     load_best_model_at_end=True,
     metric_for_best_model="eval_loss",
     max_seq_length=max_length,
     torch_compile=True,
-    torch_compile_backend="eager",
     bf16=True,
+    dataloader_num_workers=4,
 )
+
 
 trainer = SFTTrainer(
     model=model,
     args=training_args,
     data_collator=collator,
-    formatting_func=formatting_prompts_func,
+    formatting_func=None,
     train_dataset=train_data,
     eval_dataset=val_data,
     callbacks=[early_stopping],
@@ -116,3 +111,9 @@ trainer = SFTTrainer(
 )
 
 trainer.train()
+
+# Define the path to save the best model
+best_model_path = "./sft_3b_best"
+
+# Save the model
+trainer.model.save_pretrained(best_model_path)
