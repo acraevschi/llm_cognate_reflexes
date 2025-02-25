@@ -9,8 +9,8 @@ max_length = 12000
 
 
 model = AutoModelForCausalLM.from_pretrained(
-    "./llama-3.2-3B",  # token="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"
-)  # temporary use 3B
+    "./llama-3.2-1B",  # token="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"
+)  # temporary use 1B
 
 if hasattr(model, "enable_input_require_grads"):
     model.enable_input_require_grads()
@@ -22,10 +22,10 @@ else:
     model.get_input_embeddings().register_forward_hook(make_inputs_require_grad)
 
 tokenizer = AutoTokenizer.from_pretrained(
-    "./llama-3.2-3B",
+    "./llama-3.2-1B",
     max_length=max_length,
     # token="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",
-)  # temporary use 3B
+)  # temporary use 1B
 
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
@@ -79,8 +79,8 @@ early_stopping = EarlyStoppingCallback(
 training_args = SFTConfig(
     output_dir="./sft_3b",
     overwrite_output_dir=True,
-    per_device_train_batch_size=4,
-    per_device_eval_batch_size=2,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
     gradient_accumulation_steps=4,
     gradient_checkpointing=True,
     optim="adamw_bnb_8bit",
