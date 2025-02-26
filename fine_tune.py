@@ -2,6 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, EarlyStoppingCallb
 from datasets import load_from_disk
 from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
+from config import HF_TOKEN
 
 seed_num = 97
 
@@ -9,7 +10,7 @@ max_length = 12000
 
 
 model = AutoModelForCausalLM.from_pretrained(
-    "./llama-3.2-1B",  # token="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"
+    "./llama-3.2-1B",  # token=HF_TOKEN
 )  # temporary use 1B
 
 if hasattr(model, "enable_input_require_grads"):
@@ -24,7 +25,7 @@ else:
 tokenizer = AutoTokenizer.from_pretrained(
     "./llama-3.2-1B",
     max_length=max_length,
-    # token="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",
+    # token=HF_TOKEN,
 )  # temporary use 1B
 
 tokenizer.pad_token = tokenizer.eos_token
