@@ -76,8 +76,8 @@ def format_example(row, masked_row):
 folders = os.listdir("lexibank")
 dataset_entries = []
 dataset_test_entries = []
-concepts_per_text = 100  # maximal number of concepts per one input/output
-num_combinations = 50  # number of combinations to generate for each dataset
+concepts_per_text = 50  # maximal number of concepts per one input/output
+num_combinations = 25  # number of combinations to generate for each dataset
 
 for folder in tqdm(folders, desc="Processing folders"):
     test_data = folder in test_folders
