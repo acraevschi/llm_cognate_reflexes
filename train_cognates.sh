@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH --qos=normal
+#SBATCH --time=47:59:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=32GB
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=48GB
 #SBATCH --gpus=1
 #SBATCH --constraint=GPUMEM80GB
 module load mamba
 source activate torch
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/acraev/data/conda/envs/torch/pkgs/cuda-toolkit
-python lexibank_train.py
+python fine_tune.py
