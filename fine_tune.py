@@ -56,7 +56,7 @@ model = FastLanguageModel.get_peft_model(
 prompt = """
 You will be given a list of cognates from three languages, structured in pseudo-XML format.  
 Each concept is enclosed in a separate tag. Some cognate forms are missing and are marked as "?".  
-Your task is to reconstruct these missing forms while keeping all other forms unchanged.  
+Your task is to reconstruct these missing forms step-by-step while keeping all other forms unchanged.  
 
 - If a form is marked with "-", it means the data is unavailable and should remain unchanged.  
 - If a form is already present, do not modify it.  
