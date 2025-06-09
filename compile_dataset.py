@@ -6,8 +6,8 @@ from tqdm import tqdm
 import itertools
 import math
 
-from lexibank_prep.lexibank_help import check_glotto_coverage
-from glotto_trees.get_newick import get_phylogenetic_tree
+# from lexibank_prep.lexibank_help import check_glotto_coverage
+# from glotto_trees.get_newick import get_phylogenetic_tree
 
 random.seed(97)
 
@@ -57,6 +57,7 @@ def clean_form(form):
 def format_example(row, masked_row):
     """Modified to work with subset of languages"""
     cognate_id = row["Cognate_ID"]
+    cognate_id = cognate_id.replace("?", "")
     cognate_id = cognate_id.split(",")[-1]
     cognate_id = cognate_id.split("-")[-1]
     # Get only the languages present in this chunk
@@ -72,12 +73,19 @@ def format_example(row, masked_row):
 
     return input_text, target_text
 
+def has_enough_languages(series, langs_per_entry, threshold=0.6):
+    """Check if the series has enough languages with non-missing values."""
+    no_heading = series.iloc[1:]  # Skip the first element (Cognate_ID)
+    non_missing_count = sum(1 for value in no_heading if value != "-")
+    return non_missing_count >= langs_per_entry * threshold
 
 folders = os.listdir("lexibank")
 dataset_entries = []
 dataset_test_entries = []
-concepts_per_text = 50  # maximal number of concepts per one input/output
-num_combinations = 25  # number of combinations to generate for each dataset
+concepts_per_text = 25  # maximal number of concepts per one input/output
+num_combinations = 50  # number of combinations to generate for each dataset
+langs_per_entry = 3  # number of languages per entry
+min_valid_cognates = 8 # Minimum number of valid cognates per entry
 
 for folder in tqdm(folders, desc="Processing folders"):
     test_data = folder in test_folders
@@ -108,29 +116,40 @@ for folder in tqdm(folders, desc="Processing folders"):
     # ]
 
     # Get language columns and check if there are at least 3
+    # Get language columns and check if there are at least 3
     lang_columns = data.columns[1:].tolist()
     if len(lang_columns) < 3:
         continue  # Skip folders with fewer than 3 languages
 
-    # Generate all possible 3-language combinations
-    all_combinations = list(itertools.combinations(lang_columns, 3))
-    random.shuffle(all_combinations)  # Randomize combination order
-
     # Process combinations based on dataset type
     if test_data:
-        # For test folders: use first 100 combinations and register them
-        selected_combinations = all_combinations[:num_combinations]
-        # Add to global test combinations (sorted to avoid order variations)
-        for combo in selected_combinations:
-            test_combinations.add(tuple(sorted(combo)))
+        # For test folders, randomly sample languages to make it deterministic
+        # but avoid having to generate all combinations
+        selected_combinations = []
+        combinations_generator = itertools.combinations(lang_columns, langs_per_entry)
+        
+        # Take first num_combinations from generator
+        for _ in range(num_combinations):
+            try:
+                combo = next(combinations_generator)
+                selected_combinations.append(combo)
+                # Add to global test combinations (sorted to avoid order variations)
+                test_combinations.add(tuple(sorted(combo)))
+            except StopIteration:
+                break  # In case there are fewer than num_combinations
     else:
-        # For training folders: filter out test combinations and take first 100 remaining
-        filtered_combinations = [
-            combo
-            for combo in all_combinations
-            if tuple(sorted(combo)) not in test_combinations
-        ]
-        selected_combinations = filtered_combinations[:num_combinations]
+        # For non-test folders: filter out test combinations as we go
+        selected_combinations = []
+        combinations_generator = itertools.combinations(lang_columns, langs_per_entry)
+        
+        # Collect num_combinations that aren't in test_combinations
+        while len(selected_combinations) < num_combinations:
+            try:
+                combo = next(combinations_generator)
+                if tuple(sorted(combo)) not in test_combinations:
+                    selected_combinations.append(combo)
+            except StopIteration:
+                break  # Stop if we run out of combinations
 
     # Process each selected combination
     for group in selected_combinations:
@@ -163,14 +182,24 @@ for folder in tqdm(folders, desc="Processing folders"):
 
         # Process each chunk separately
         for chunk in chunks:
-            # input_text = f"<NEWICK> {newick} </NEWICK>\n<Cognates>\n"
             input_text = "<Cognates>\n"
-            target_text = "<Prediction>\n"
-
+            target_text = "<Reconstructed Cognates>\n"
+            valid_cognate = 0
+            
+            # CHANGE: Pre-filter valid rows before processing
+            valid_rows = []
             for i in range(len(chunk)):
-                if i == concepts_per_text:
-                    break
                 row = chunk.iloc[i]
+                if has_enough_languages(row, langs_per_entry, threshold=1):  
+                    valid_rows.append(row)
+            
+            # CHANGE: Skip if not enough valid cognates
+            if len(valid_rows) < min_valid_cognates:  # Minimum number of cognates per entry
+                continue
+                
+            # CHANGE: Process up to concepts_per_text valid cognates
+            for row in valid_rows[:concepts_per_text]:
+                valid_cognate += 1
                 masked_row = mask_values(row)
 
                 if len(masked_row) > 0:
@@ -181,22 +210,31 @@ for folder in tqdm(folders, desc="Processing folders"):
                 input_text += cog_input
                 target_text += cog_output
 
+            # Only add entries with multiple cognates
+            if valid_cognate < min_valid_cognates:  # Minimum cognates threshold
+                continue
+                
             input_text += "</Cognates>\n"
-            target_text += "</Prediction>"
+            target_text += "</Reconstructed Cognates>"
 
             # Add to appropriate dataset
             if test_data:
-                dataset_test_entries.append(
-                    {"input": input_text, "output": target_text}
-                )
+                dataset_test_entries.append({"input": input_text, "output": target_text})
             else:
                 dataset_entries.append({"input": input_text, "output": target_text})
+
 
 # Create final datasets
 hf_dataset = Dataset.from_list(dataset_entries)
 hf_test_dataset = Dataset.from_list(dataset_test_entries)
 
 # # Save the dataset
-hf_dataset.save_to_disk("hf_cognates_dataset", max_shard_size="50MB")
-hf_test_dataset.save_to_disk("hf_cognates_test_dataset", max_shard_size="50MB")
+hf_dataset.save_to_disk(
+    f"hf_cognates_dataset_{concepts_per_text}concepts_min{min_valid_cognates}_{num_combinations}combs", 
+    max_shard_size="50MB"
+    )
+hf_test_dataset.save_to_disk(
+    f"hf_cognates_test_dataset_{concepts_per_text}concepts_min{min_valid_cognates}_{num_combinations}combs", 
+    max_shard_size="50MB"
+    )
 print("Datasets saved successfully!")
