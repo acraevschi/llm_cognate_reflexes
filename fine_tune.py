@@ -17,10 +17,10 @@ gc.collect()
 
 seed_num = 97
 max_length = 4096
-total_steps = 200
-early_stopping_patience = 2
+total_steps = 240
+early_stopping_patience = 4
 early_stopping_threshold = 0.05
-checkpoint_dir = "./checkpoints/sft_qwen3_1_7b"
+checkpoint_dir = "./checkpoints/sft_qwen3_1_7b_run2"
 
 instruction_template = "### Input:\n"
 response_template = "### Output:\n"
@@ -125,10 +125,10 @@ def get_trainer(model, collator, train_dataset, eval_dataset):
         eval_accumulation_steps=2,
         optim="adamw_8bit",
         max_steps=total_steps,  # Use max_total_steps
-        save_steps=total_steps//4,
-        logging_steps=total_steps//4,
+        save_steps=total_steps//8,
+        logging_steps=total_steps//8,
         eval_strategy="steps", # Evaluate at each save_steps
-        eval_steps=total_steps//4, # Evaluate at each save_steps
+        eval_steps=total_steps//8, # Evaluate at each save_steps
         save_total_limit=4,
         warmup_ratio=0.1,
         learning_rate=1e-4,
@@ -141,7 +141,7 @@ def get_trainer(model, collator, train_dataset, eval_dataset):
         bf16=is_bfloat16_supported(),
         dataset_num_proc=1,
         torch_compile=True,
-        torch_empty_cache_steps=total_steps//4 + 1, # empty cache after evaluation
+        torch_empty_cache_steps=total_steps//8 + 1, # empty cache after evaluation
     )
 
     # Create trainer
