@@ -17,10 +17,10 @@ gc.collect()
 
 seed_num = 97
 max_length = 4096
-total_steps = 600
+total_steps = 200
 early_stopping_patience = 2
 early_stopping_threshold = 0.05
-checkpoint_dir = "./checkpoints/sft_qwen3_1_0_6b"
+checkpoint_dir = "./checkpoints/sft_qwen3_1_7b"
 
 instruction_template = "### Input:\n"
 response_template = "### Output:\n"
@@ -49,15 +49,24 @@ prompt = """
 # Make sure the checkpoint directory exists
 Path(checkpoint_dir).mkdir(parents=True, exist_ok=True)
 
-def load_model_and_tokenizer(model_path="unsloth/Qwen3-0.6B-unsloth-bnb-4bit"):
-
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=model_path,
-        max_seq_length=max_length,
-        dtype=torch.bfloat16,
-        load_in_4bit=True,
-        attn_implementation="flash_attention_2",
-    )
+def load_model_and_tokenizer(model_path="unsloth/Qwen3-1.7B-unsloth-bnb-4bit"):
+    try:
+        model, tokenizer = FastLanguageModel.from_pretrained(
+            model_name=model_path,
+            max_seq_length=max_length,
+            dtype=torch.bfloat16,
+            load_in_4bit=True,
+            attn_implementation="flash_attention_2",
+        )
+    except:
+        print("Flash attention not working on this machine, trying without it...\n")
+        model, tokenizer = FastLanguageModel.from_pretrained(
+            model_name=model_path,
+            max_seq_length=max_length,
+            dtype=torch.bfloat16,
+            load_in_4bit=True,
+        )
+    print("The model was successfully loaded!\n")
 
     model = FastLanguageModel.get_peft_model(
         model,
@@ -110,8 +119,8 @@ def get_trainer(model, collator, train_dataset, eval_dataset):
     training_args = SFTConfig(
         output_dir=checkpoint_dir,
         overwrite_output_dir=True,
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=2,
+        per_device_train_batch_size=4,
+        per_device_eval_batch_size=4,
         gradient_accumulation_steps=16,
         eval_accumulation_steps=2,
         optim="adamw_8bit",
@@ -132,7 +141,7 @@ def get_trainer(model, collator, train_dataset, eval_dataset):
         bf16=is_bfloat16_supported(),
         dataset_num_proc=1,
         torch_compile=True,
-        torch_empty_cache_steps=total_steps//4 + 1,
+        torch_empty_cache_steps=total_steps//4 + 1, # empty cache after evaluation
     )
 
     # Create trainer
