@@ -1,0 +1,24 @@
+{
+  "dataset": {
+    "lexibank_path": "lexibank",
+    "test_folders": ["mannburmish", "gerarditupi", "savelyevturkic", "ratcliffearabic", "walworthpolynesian"],
+    "concepts_per_text": 25,
+    "num_combinations": 50,
+    "min_valid_cognates": 8,
+    "langs_per_entry": 3,
+    "output_train_path": "datasets/hf_cognates_dataset",
+    "output_test_path": "datasets/hf_cognates_test_dataset"
+  },
+  "training": {
+    "seed_num": 97,
+    "max_length": 2560,
+    "total_steps": 240,
+    "early_stopping_patience": 4,
+    "early_stopping_threshold": 0.05,
+    "checkpoint_dir": "./checkpoints",
+    "model_name": "unsloth/Qwen3-1.7B-unsloth-bnb-4bit",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 16,
+    "learning_rate": 1e-4
+  }
+}
