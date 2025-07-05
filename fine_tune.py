@@ -16,24 +16,30 @@ instruction_template = "### Input:\n"
 response_template = "### Output:\n"
 
 prompt = """
-    You are a linguistic expert specializing in historical language reconstruction.
+You are a linguistic expert specializing in historical language reconstruction.
 
-    # Task
-    Analyze the list of cognates below and reconstruct any missing forms marked with "?".
+# Task
+Analyze the cognate sets provided and reconstruct any missing word forms marked with "?".
 
-    # Format
-    - Input is provided as cognate sets in pseudo-XML format
-    - Each concept is enclosed in its own tag
-    - Forms marked with "?" need to be reconstructed
-    - Forms marked with "-" represent unavailable data and should remain unchanged
-    - Existing forms should not be modified
+# Input Format
+- Multiple cognate sets are provided within <Cognates>...</Cognates> tags
+- Each cognate set has its own ID tag <cognate_id>...</cognate_id>
+- Each language form is listed as: language_name = word_form
+- Forms marked with "?" need to be reconstructed
+- Forms marked with "-" represent unavailable data
 
-    # Instructions
-    1. Examine patterns across the related language varieties
-    2. Consider regular sound correspondences
-    3. Reconstruct the missing forms based on linguistic principles
-    4. Maintain the exact same structure in your output
-    5. Wrap your complete response in <Reconstructed Cognates>...</Reconstructed Cognates> tags
+# Output Format
+- Your response should ONLY include the reconstructed forms (marked with "?" in input)
+- Maintain the same tag structure with <cognate_id>...</cognate_id> for each set
+- Include ONLY the previously masked languages that need reconstruction
+- Wrap your complete response in <Reconstructed Cognates>...</Reconstructed Cognates> tags
+
+# Reconstruction Guidelines
+1. Identify systematic sound correspondences across related language varieties
+2. Consider phonological patterns and regular sound changes
+3. Use comparative method principles to infer the missing forms
+4. Ensure reconstructed forms follow plausible phonotactic patterns
+5. Do not modify any existing forms or include them in your output
 """
 
 
@@ -61,6 +67,8 @@ def load_model_and_tokenizer(config):
     model_name = config["training"]["model_name"]
     max_length = config["training"]["max_length"]
     seed_num = config["training"]["seed_num"]
+    r = config["training"]["r"]
+    lora_alpha = config["training"]["lora_alpha"]
 
     try:
         model, tokenizer = FastLanguageModel.from_pretrained(
@@ -82,7 +90,7 @@ def load_model_and_tokenizer(config):
 
     model = FastLanguageModel.get_peft_model(
         model,
-        r=8,
+        r=r,
         target_modules=[
             "q_proj",
             "k_proj",
@@ -92,7 +100,7 @@ def load_model_and_tokenizer(config):
             "up_proj",
             "down_proj",
         ],
-        lora_alpha=16,
+        lora_alpha=lora_alpha,
         lora_dropout=0,
         bias="none",
         use_gradient_checkpointing="unsloth",
@@ -145,10 +153,23 @@ def get_trainer(config, model, collator, train_dataset, eval_dataset):
     """Create the trainer with config parameters"""
     training_config = config["training"]
     model_name = training_config["model_name"].split("/")[1]
-    dataset_string = get_dataset_config_string(config)
+    
     checkpoint_path = (
-        f"{training_config['checkpoint_dir']}/{model_name}/{dataset_string}"
+        f"{training_config['checkpoint_dir']}/{model_name}/"
     )
+
+    # check if there are folders in the checkpoint path
+    if not os.path.exists(checkpoint_path):
+        checkpoint_path += "run_0/"
+        Path(checkpoint_path).mkdir(parents=True, exist_ok=True)
+    else:
+        # if there are folders, find the last one and create a new one with incremented number
+        existing_runs = [
+            int(folder.name.split("_")[-1]) for folder in Path(checkpoint_path).iterdir() if folder.is_dir() and folder.name.startswith("run_")
+        ]
+        if existing_runs:
+            last_run = max(existing_runs)
+            checkpoint_path += f"run_{last_run + 1}/"
 
     training_args = SFTConfig(
         output_dir=checkpoint_path,
@@ -173,7 +194,7 @@ def get_trainer(config, model, collator, train_dataset, eval_dataset):
         greater_is_better=False,
         max_seq_length=training_config["max_length"],
         bf16=is_bfloat16_supported(),
-        dataset_num_proc=1,
+        dataset_num_proc=4, # for windows, set to 1
         torch_compile=True,
         torch_empty_cache_steps=training_config["total_steps"] // 8 + 1,
     )
@@ -216,6 +237,11 @@ def train_model(config_path="config.json"):
     trainer, checkpoint_path = get_trainer(
         config, model, collator, train_dataset, eval_dataset
     )
+
+    # write config to checkpoint directory
+    config_path = checkpoint_path + "/config.json"
+    with open(config_path, "w", encoding="utf-8") as f:
+        json.dump(config, f, indent=4)
 
     print("\n\n---Starting training---\n\n")
     trainer.train()

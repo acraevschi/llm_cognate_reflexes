@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --qos=normal
-#SBATCH --time=47:59:00
+#SBATCH --time=23:59:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48GB
@@ -9,4 +9,4 @@
 module load mamba
 source activate torch
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/acraev/data/conda/envs/torch/pkgs/cuda-toolkit
-python fine_tune.py
+python run.py --config_file config_run.json --train-only
