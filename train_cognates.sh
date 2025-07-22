@@ -9,4 +9,4 @@
 module load mamba
 source activate torch
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/home/acraev/data/conda/envs/torch/pkgs/cuda-toolkit
-python run.py --config_file config_run.json --train-only
+python run.py --config config_run.json --train-only
