@@ -12,10 +12,12 @@ from pathlib import Path
 
 os.environ["UNSLOTH_RETURN_LOGITS"] = "1"
 
-instruction_template = "### Input:\n"
+instruction_template = "\n### Instruction:\n"
+input_template = "### Input:\n"
 response_template = "### Output:\n"
 
 prompt = """
+### Instruction:
 You are a linguistic expert specializing in historical language reconstruction.
 
 # Task
@@ -25,8 +27,10 @@ Analyze the cognate sets provided and reconstruct any missing word forms marked 
 - Multiple cognate sets are provided within <Cognates>...</Cognates> tags
 - Each cognate set has its own ID tag <cognate_id>...</cognate_id>
 - Each language form is listed as: language_name = word_form
+- All phonological segments within a word_form are separated by spaces
 - Forms marked with "?" need to be reconstructed
 - Forms marked with "-" represent unavailable data
+- If a a cognate consists of multiple words, they will be separated by a "+" sign
 
 # Output Format
 - Your response should ONLY include the reconstructed forms (marked with "?" in input)
@@ -35,7 +39,7 @@ Analyze the cognate sets provided and reconstruct any missing word forms marked 
 - Wrap your complete response in <Reconstructed Cognates>...</Reconstructed Cognates> tags
 
 # Reconstruction Guidelines
-1. Identify systematic sound correspondences across related language varieties
+1. Identify systematic sound correspondences across language varieties
 2. Consider phonological patterns and regular sound changes
 3. Use comparative method principles to infer the missing forms
 4. Ensure reconstructed forms follow plausible phonotactic patterns
@@ -116,8 +120,8 @@ def load_model_and_tokenizer(config):
     return model, tokenizer
 
 
-def formatting_prompts_func(example):
-    return f"{prompt}\n{instruction_template}{example['input']}\n\n{response_template}{example['output']}"
+def formatting_prompts_func(example, eos_token):
+    return f"{prompt}\n{input_template}{example['input']}\n\n{response_template}{example['output']}{eos_token}"
 
 
 def get_collator(tokenizer):
@@ -129,7 +133,7 @@ def get_collator(tokenizer):
     )
 
 
-def prepare_datasets(config):
+def prepare_datasets(config, eos_token):
     """Load and prepare the dataset using config"""
     dataset_config = config["dataset"]
     dataset_string = get_dataset_config_string(config)
@@ -143,13 +147,13 @@ def prepare_datasets(config):
     val_data = data.select(range(0, val_inds))
 
     # Format the datasets
-    train_data = train_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
-    val_data = val_data.map(lambda ex: {"text": formatting_prompts_func(ex)})
+    train_data = train_data.map(lambda ex: {"text": formatting_prompts_func(ex, eos_token)})
+    val_data = val_data.map(lambda ex: {"text": formatting_prompts_func(ex, eos_token)})
 
     return train_data, val_data
 
 
-def get_trainer(config, model, collator, train_dataset, eval_dataset):
+def get_trainer(config, model, tokenizer, collator, train_dataset, eval_dataset):
     """Create the trainer with config parameters"""
     training_config = config["training"]
     model_name = training_config["model_name"].split("/")[1]
@@ -171,21 +175,24 @@ def get_trainer(config, model, collator, train_dataset, eval_dataset):
             last_run = max(existing_runs)
             checkpoint_path += f"run_{last_run + 1}/"
 
+    num_of_evals = config["training"].get("num_of_evals", 10)
+
     training_args = SFTConfig(
         output_dir=checkpoint_path,
         overwrite_output_dir=True,
+        dataset_text_field="text",
         per_device_train_batch_size=training_config["batch_size"],
         per_device_eval_batch_size=training_config["batch_size"],
         gradient_accumulation_steps=training_config["gradient_accumulation_steps"],
-        eval_accumulation_steps=2,
+        eval_accumulation_steps=1,
         optim="adamw_8bit",
         max_steps=training_config["total_steps"],
-        save_steps=training_config["total_steps"] // 8,
-        logging_steps=training_config["total_steps"] // 8,
+        save_steps=training_config["total_steps"] // num_of_evals,
+        logging_steps=training_config["total_steps"] // num_of_evals,
         eval_strategy="steps",
-        eval_steps=training_config["total_steps"] // 8,
-        save_total_limit=4,
-        warmup_ratio=0.1,
+        eval_steps=training_config["total_steps"] // num_of_evals,
+        save_total_limit=5,
+        warmup_ratio=training_config["warmup_ratio"],
         learning_rate=training_config["learning_rate"],
         weight_decay=0.01,
         seed=training_config["seed_num"],
@@ -194,14 +201,15 @@ def get_trainer(config, model, collator, train_dataset, eval_dataset):
         greater_is_better=False,
         max_seq_length=training_config["max_length"],
         bf16=is_bfloat16_supported(),
-        dataset_num_proc=4, # for windows, set to 1
-        torch_compile=True,
-        torch_empty_cache_steps=training_config["total_steps"] // 8 + 1,
+        dataset_num_proc=4, # for windows, best set to 1
+        torch_compile=True, 
+        torch_empty_cache_steps=training_config["total_steps"] // num_of_evals + 1,
     )
 
     # Create trainer
     trainer = SFTTrainer(
         model=model,
+        processing_class=tokenizer,
         args=training_args,
         data_collator=collator,
         formatting_func=None,
@@ -232,10 +240,11 @@ def train_model(config_path="config.json"):
     gc.collect()
 
     model, tokenizer = load_model_and_tokenizer(config)
-    train_dataset, eval_dataset = prepare_datasets(config)
+    eos_token = tokenizer.eos_token
+    train_dataset, eval_dataset = prepare_datasets(config, eos_token)
     collator = get_collator(tokenizer)
     trainer, checkpoint_path = get_trainer(
-        config, model, collator, train_dataset, eval_dataset
+        config, model, tokenizer, collator, train_dataset, eval_dataset
     )
 
     # write config to checkpoint directory

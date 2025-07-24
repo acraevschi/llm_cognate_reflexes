@@ -73,21 +73,24 @@ def clean_form(form):
     for i, form in enumerate(form_lst):
         if "/" in form:
             form_lst[i] = form.split("/")[0]
-    return "".join(form_lst).replace("+", " ")
+
+    return " ".join(form_lst)
 
 
-def format_example(row, masked_row):
-    """Modified to return only the reconstructed forms in the target"""
+def format_example(row, masked_row, cogid_map=None):
+    """Modified to use integer id instead of cognate id string."""
     cognate_id = row["Cognate_ID"]
-    cognate_id = cognate_id.replace("?", "")
-    cognate_id = cognate_id.split(",")[-1]
-    cognate_id = cognate_id.split("-")[-1]
+    if cogid_map is not None:
+        int_id = cogid_map.setdefault(cognate_id, len(cogid_map))
+    else:
+        int_id = cognate_id  # fallback to string if no map provided
+
     # Get only the languages present in this chunk
     langs = row.index[1:]
 
     # Create input text with all forms (some masked)
     forms_masked = [f"{lang} = {clean_form(masked_row[lang])}" for lang in langs]
-    input_text = f"<{cognate_id}>\n" + "\n".join(forms_masked) + f"\n</{cognate_id}>\n"
+    input_text = f"<{int_id}>\n" + "\n".join(forms_masked) + f"\n</{int_id}>\n"
 
     # Find which languages were masked (have "?" in masked_row)
     masked_langs = [lang for lang in langs if masked_row[lang] == "?"]
@@ -95,7 +98,7 @@ def format_example(row, masked_row):
     # Create target text with only the reconstructed forms
     reconstructed_forms = [f"{lang} = {clean_form(row[lang])}" for lang in masked_langs]
     target_text = (
-        f"<{cognate_id}>\n" + "\n".join(reconstructed_forms) + f"\n</{cognate_id}>\n"
+        f"<{int_id}>\n" + "\n".join(reconstructed_forms) + f"\n</{int_id}>\n"
     )
 
     return input_text, target_text
@@ -123,6 +126,7 @@ def create_datasets(
     dataset_entries = []
     dataset_test_entries = []
     test_combinations = set()
+    cognate_id_map = {}
 
     # Ensure output directories exist
     os.makedirs(output_train_path, exist_ok=True)
@@ -201,14 +205,6 @@ def create_datasets(
             group_columns = ["Cognate_ID"] + list(group)
             data_subset = data[group_columns]
 
-            # Generate Newick tree (placeholder for actual implementation)
-            # newick = ""
-            # try:
-            #     glottocodes = [col.split(":")[1] if ":" in col else "" for col in group]
-            #     newick = get_phylogenetic_tree(glottocodes)
-            # except:
-            #     newick = ""
-
             # Shuffle the data
             data_subset = data_subset.sample(frac=1).reset_index(drop=True)
             n = len(data_subset)
@@ -250,9 +246,9 @@ def create_datasets(
                     masked_row = mask_values(row)
 
                     if len(masked_row) > 0:
-                        cog_input, cog_output = format_example(row, masked_row)
+                        cog_input, cog_output = format_example(row, masked_row, cognate_id_map)
                     else:
-                        cog_input, cog_output = format_example(row, row)
+                        cog_input, cog_output = format_example(row, row, cognate_id_map)
 
                     input_text += cog_input
                     target_text += cog_output
@@ -285,6 +281,10 @@ def create_datasets(
         f"{output_test_path}/{concepts_per_text}concepts_min{min_valid_cognates}_{num_combinations}combs",
         max_shard_size="50MB",
     )
+
+    with open(os.path.join(output_train_path, "cognate_id_map.json"), "w", encoding="utf-8") as f:
+        json.dump(cognate_id_map, f, ensure_ascii=False, indent=2)
+    
     print("Datasets saved successfully!")
 
     return hf_dataset, hf_test_dataset
