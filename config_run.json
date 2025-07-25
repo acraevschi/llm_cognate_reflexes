@@ -14,15 +14,15 @@
     "lora_alpha": 16,
     "seed_num": 97,
     "max_length": 2048,
-    "total_steps": 250,
+    "total_steps": 400,
     "early_stopping_patience": 5,
-    "early_stopping_threshold": 0.0,
+    "early_stopping_threshold": 0.01,
     "checkpoint_dir": "./checkpoints",
     "model_name": "unsloth/Qwen2.5-7B-unsloth-bnb-4bit",
-    "batch_size": 4,
-    "gradient_accumulation_steps": 32,
-    "learning_rate": 2e-6,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 16,
+    "learning_rate": 5e-6,
     "num_of_evals": 15,
-    "warmup_ratio": 0.25
+    "warmup_ratio": 0.2
   }
 }
