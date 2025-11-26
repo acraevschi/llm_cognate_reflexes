@@ -1,28 +1,37 @@
 {
   "dataset": {
+    "test_folders": [
+        "mannburmish", 
+        "gerarditupi", 
+        "savelyevturkic", 
+        "ratcliffearabic", 
+        "walworthpolynesian" 
+    ],
+    "num_evidence_sets": 30,
+    "num_combinations": 5, 
+    "min_valid_cognates": 5,
     "lexibank_path": "lexibank",
-    "test_folders": ["mannburmish", "gerarditupi", "savelyevturkic", "ratcliffearabic", "walworthpolynesian"],
-    "concepts_per_text": 20,
-    "num_combinations": 50,
-    "min_valid_cognates": 8,
     "langs_per_entry": 3,
-    "output_train_path": "datasets/hf_cognates_dataset",
-    "output_test_path": "datasets/hf_cognates_test_dataset"
+    "output_train_path": "datasets/single_cognate/hf_cognates_dataset",
+    "output_test_path": "datasets/single_cognate/hf_cognates_test_dataset",
+    "test_split_ratio": 0.25 
   },
   "training": {
-    "r": 8, 
+    "r": 16, 
     "lora_alpha": 16,
-    "seed_num": 97,
+    "seed_num": 3407,  
     "max_length": 2048,
-    "total_steps": 400,
-    "early_stopping_patience": 5,
-    "early_stopping_threshold": 0.01,
+    "total_steps": 50,  
+    "early_stopping_patience": 3, 
+    "early_stopping_threshold": 0.005,
+    "eval_percent": 10,
     "checkpoint_dir": "./checkpoints",
-    "model_name": "unsloth/Qwen2.5-7B-unsloth-bnb-4bit",
-    "batch_size": 8,
-    "gradient_accumulation_steps": 16,
-    "learning_rate": 5e-6,
-    "num_of_evals": 15,
-    "warmup_ratio": 0.2
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 256, 
+    "learning_rate": 1e-6,           
+    "lr_scheduler_type": "constant",
+    "num_of_evals": 10,
+    "warmup_ratio": 0.05    
   }
 }

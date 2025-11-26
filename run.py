@@ -8,7 +8,7 @@ from fine_tune import train_model
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Run the full cognate reflection pipeline"
+        description="Run the full cognate reconstruction pipeline"
     )
     parser.add_argument(
         "--config", type=str, default="config.json", help="Path to configuration file"

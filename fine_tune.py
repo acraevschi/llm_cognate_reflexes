@@ -1,6 +1,6 @@
 from unsloth import FastLanguageModel
 from unsloth import is_bfloat16_supported
-from transformers import EarlyStoppingCallback
+from transformers import EarlyStoppingCallback, TrainerCallback
 from datasets import load_from_disk
 from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
 from torch.cuda import empty_cache
@@ -9,8 +9,10 @@ import torch
 import gc
 import json
 from pathlib import Path
+from metrics import parse_cognate_output, calculate_ned, compute_batch_ned
+import numpy as np
 
-os.environ["UNSLOTH_RETURN_LOGITS"] = "1"
+# os.environ["UNSLOTH_RETURN_LOGITS"] = "1"
 
 instruction_template = "\n### Instruction:\n"
 input_template = "### Input:\n"
@@ -46,6 +48,87 @@ Analyze the cognate sets provided and reconstruct any missing word forms marked 
 5. Do not modify any existing forms or include them in your output
 """
 
+class GenerativeEvalCallback(TrainerCallback):
+    """
+    Custom callback to generate text and calculate NED on a subset of validation data
+    at the end of every epoch (or specified steps).
+    """
+    def __init__(self, model, tokenizer, eval_dataset, num_samples=None):
+        self.model = model
+        self.tokenizer = tokenizer
+        self.eval_dataset = eval_dataset
+        self.num_samples = len(eval_dataset) if not num_samples else num_samples
+        self.input_template = input_template
+        self.response_template = response_template
+
+    def on_evaluate(self, args, state, control, **kwargs):
+        # This runs whenever the trainer evaluates (calculates loss)
+        print("\nRunning Generative NED Evaluation...")
+        
+        # Enable inference mode
+        FastLanguageModel.for_inference(self.model)
+        
+        # Select random samples
+        if self.num_samples:
+            indices = np.random.choice(len(self.eval_dataset), self.num_samples, replace=False)
+            samples = self.eval_dataset.select(indices)
+        else: 
+            samples = self.eval_dataset
+        
+        
+        ned_scores = []
+        
+        for sample in samples:
+            # We need to strip the "Output" part from the training sample to get just the prompt
+            # The sample['text'] is already formatted with Input+Output. 
+            # We need raw 'input' and 'output' from the dataset before formatting, 
+            # OR split the formatted text.
+            
+            # Assuming 'text' is formatted: Prompt + Input + Output + EOS
+            full_text = sample['text']
+            split_text = full_text.split(self.response_template)
+            if len(split_text) < 2: continue
+            
+            input_prompt = split_text[0] + self.response_template
+            ground_truth = split_text[1].replace(self.tokenizer.eos_token, "")
+            
+            inputs = self.tokenizer([input_prompt], return_tensors="pt").to("cuda")
+            
+            outputs = self.model.generate(
+                **inputs, 
+                max_new_tokens=128, 
+                use_cache=True,
+                pad_token_id=self.tokenizer.eos_token_id
+            )
+            
+            decoded_output = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
+            
+            # Extract only the generated part
+            # The model output includes the prompt.
+            generated_response = decoded_output.split(self.response_template)[-1].strip()
+            
+            # Calculate metrics
+            p_dict = parse_cognate_output(generated_response)
+            r_dict = parse_cognate_output(ground_truth)
+            
+            for lang, true_form in r_dict.items():
+                if lang in p_dict:
+                    ned_scores.append(calculate_ned(p_dict[lang], true_form))
+                else:
+                    ned_scores.append(1.0) # Penalty for missing language
+        
+        avg_ned = sum(ned_scores) / len(ned_scores) if ned_scores else 0.0
+        print(f"\n==========================================")
+        print(f"Validation NED (sample size {self.num_samples}): {avg_ned:.4f}")
+        print(f"==========================================\n")
+        
+        if self.trainer:
+            self.trainer.log({"eval_ned": avg_ned})
+
+        # Reset model to training mode
+        FastLanguageModel.for_training(self.model)
+
+
 
 def load_config(config_path="config.json"):
     """Load configuration from JSON file."""
@@ -79,7 +162,7 @@ def load_model_and_tokenizer(config):
             model_name=model_name,
             max_seq_length=max_length,
             dtype=torch.bfloat16,
-            load_in_4bit=True,
+            load_in_4bit=False,
             attn_implementation="flash_attention_2",
         )
     except:
@@ -88,7 +171,7 @@ def load_model_and_tokenizer(config):
             model_name=model_name,
             max_seq_length=max_length,
             dtype=torch.bfloat16,
-            load_in_4bit=True,
+            load_in_4bit=False,
         )
     print("The model was successfully loaded!\n")
 
@@ -115,7 +198,7 @@ def load_model_and_tokenizer(config):
     )
 
     tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.padding_side = "right"
+    # tokenizer.padding_side = "right"
 
     return model, tokenizer
 
@@ -139,18 +222,16 @@ def prepare_datasets(config, eos_token):
     dataset_string = get_dataset_config_string(config)
     train_data_path = f"{dataset_config['output_train_path']}/{dataset_string}"
 
-    # Load and prepare the dataset
     data = load_from_disk(train_data_path)
-
-    val_inds = data.num_rows // 10
-    train_data = data.select(range(val_inds, data.num_rows))
-    val_data = data.select(range(0, val_inds))
-
-    # Format the datasets
+    eval_inds = data.num_rows // 10
+    train_data = data.select(range(eval_inds, data.num_rows))
+    eval_data = data.select(range(0, eval_inds))
+    
+    # Store raw validation data before mapping for the callback to use
+    eval_data = eval_data.map(lambda ex: {"text": formatting_prompts_func(ex, eos_token)})    
     train_data = train_data.map(lambda ex: {"text": formatting_prompts_func(ex, eos_token)})
-    val_data = val_data.map(lambda ex: {"text": formatting_prompts_func(ex, eos_token)})
-
-    return train_data, val_data
+    
+    return train_data, eval_data
 
 
 def get_trainer(config, model, tokenizer, collator, train_dataset, eval_dataset):
@@ -194,17 +275,20 @@ def get_trainer(config, model, tokenizer, collator, train_dataset, eval_dataset)
         save_total_limit=5,
         warmup_ratio=training_config["warmup_ratio"],
         learning_rate=training_config["learning_rate"],
-        weight_decay=0.005,
+        lr_scheduler_type=training_config["lr_scheduler_type"],
+        weight_decay=0.01,
         seed=training_config["seed_num"],
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
         max_seq_length=training_config["max_length"],
         bf16=is_bfloat16_supported(),
-        dataset_num_proc=4, # for windows, best set to 1
-        torch_compile=True, 
+        dataset_num_proc=1, # for windows, best set to 1
+        torch_compile=True, # for windows, best set to False
         torch_empty_cache_steps=training_config["total_steps"] // num_of_evals + 1,
     )
+
+    ned_callback = GenerativeEvalCallback(model, tokenizer, eval_dataset, num_samples=training_config["num_samples"])
 
     # Create trainer
     trainer = SFTTrainer(
@@ -216,12 +300,16 @@ def get_trainer(config, model, tokenizer, collator, train_dataset, eval_dataset)
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         callbacks=[
+            ned_callback,
             EarlyStoppingCallback(
                 early_stopping_patience=training_config["early_stopping_patience"],
                 early_stopping_threshold=training_config["early_stopping_threshold"],
-            )
+            ),
         ],
     )
+
+    ned_callback.trainer = trainer
+
     return trainer, checkpoint_path
 
 
