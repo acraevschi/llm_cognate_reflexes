@@ -105,8 +105,6 @@ def process_family_folder(folder_info):
         # e.g., {'German': 'A', 'English': 'B', 'Dutch': 'C'}
         anon_labels = [chr(65 + i) for i in range(len(combo))] # Generates ['A', 'B', 'C'...]
         anon_map = dict(zip(combo, anon_labels))
-        
-        # Also create a reverse map to store in metadata
         anon_map_meta = {v: k for k, v in anon_map.items()}
 
         combo_cols = ["Cognate_ID"] + list(combo)
@@ -124,22 +122,18 @@ def process_family_folder(folder_info):
 
         # --- LOGIC BRANCHING ---
         if is_test_folder:
-            # === TEST FOLDER MODE ===
             split_idx = int(len(df_subset) * (1 - test_split_ratio)) 
             evidence_pool_df = df_subset.iloc[:split_idx]
             query_rows_df = df_subset.iloc[split_idx:]
             target_list = local_test_entries 
             
         elif is_val_folder:
-            # === VAL FOLDER MODE ===
-            # Same logic as Test, but goes to Val dataset
             split_idx = int(len(df_subset) * (1 - test_split_ratio)) 
             evidence_pool_df = df_subset.iloc[:split_idx]
             query_rows_df = df_subset.iloc[split_idx:]
             target_list = local_val_entries 
 
         else:
-            # === TRAIN FOLDER MODE ===
             evidence_pool_df = df_subset
             query_rows_df = df_subset
             target_list = local_train_entries
@@ -162,11 +156,25 @@ def process_family_folder(folder_info):
                 if not has_context:
                     continue
 
-                # --- EVIDENCE SELECTION (Phonological N-Closest) ---
+                # --- EVIDENCE SELECTION (Phonological N-Closest + Sparsity Check) ---
                 distances = []
                 for _, cand_row in evidence_pool_df.iterrows():
-                    # CRITICAL: Do not use the query row itself as evidence
+                    # 1. Self-reference check
                     if cand_row["Cognate_ID"] == query_row["Cognate_ID"]:
+                        continue
+                    
+                    # 2. CRITICAL SPARSITY CHECK (New Criteria)
+                    # Evidence must have: 
+                    # a) A form for the Target Language (otherwise we can't learn the mapping)
+                    # b) A form for at least one Context Language (otherwise we can't map from X -> Target)
+                    
+                    cand_target_form = clean_form(cand_row[target_lang])
+                    if not cand_target_form:
+                        continue # Skip evidence that teaches us nothing about the target
+                    
+                    # Check if at least one OTHER language in the tuple has a form
+                    has_evidence_context = any(clean_form(cand_row[l]) for l in context_langs)
+                    if not has_evidence_context:
                         continue
                         
                     dist = calculate_phonological_distance(query_row, cand_row, context_langs)
@@ -180,25 +188,18 @@ def process_family_folder(folder_info):
                     continue
 
                 # --- FORMATTING ---
-                # 1. Build Evidence String
                 evidence_str = ""
                 for i, ev_row in enumerate(top_evidence):
-                    # Pass anon_map here
                     evidence_str += format_single_set(ev_row, i+1, combo, anon_map) + "\n"
 
-                # 2. Build Query String (Target masked)
-                # Pass anon_map here
                 query_str = format_single_set(query_row, len(top_evidence)+1, combo, anon_map, target_lang)
 
-                # 3. Construct Entry
                 entry = {
                     "evidence": evidence_str,
                     "query": query_str,
-                    # We store the Anonymized Label as the target (e.g., "A")
                     "target_lang": anon_map[target_lang], 
                     "target_form": target_form,
                     "output": target_form,
-                    # IMPORTANT: Store the mapping so we know "A" was "German"
                     "original_lang_map": str(anon_map_meta) 
                 }
                 
