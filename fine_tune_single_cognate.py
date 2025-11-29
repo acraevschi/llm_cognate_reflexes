@@ -153,12 +153,23 @@ def prepare_datasets(config, eos_token, eval_percent=10):
         remove_columns=original_columns
     )
 
-    # Split train/eval
-    eval_inds = data.num_rows // eval_percent
-    train_data = data.select(range(eval_inds, data.num_rows))
-    eval_data = data.select(range(0, eval_inds))
+    if "output_eval_path" in dataset_config.keys():
+        eval_data_path = f"{dataset_config['output_eval_path']}/{dataset_string}"
+        eval_data = load_from_disk(eval_data_path)
+        eval_data = eval_data.shuffle(seed=42)
+        eval_data = eval_data.map(
+            lambda ex: formatting_prompts_func(ex, eos_token),
+            remove_columns=original_columns
+        )
+        return data, eval_data
+    
+    else:
+        # Split train/eval
+        eval_inds = data.num_rows // eval_percent
+        train_data = data.select(range(eval_inds, data.num_rows))
+        eval_data = data.select(range(0, eval_inds))
 
-    return train_data, eval_data
+        return train_data, eval_data
 
 
 def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
@@ -191,7 +202,7 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         per_device_train_batch_size=training_config["batch_size"],
         per_device_eval_batch_size=training_config["batch_size"],
         gradient_accumulation_steps=training_config["gradient_accumulation_steps"],
-        eval_accumulation_steps=2,
+        eval_accumulation_steps=1,
         optim="adamw_8bit",
         max_steps=training_config["total_steps"],
         save_steps=training_config["total_steps"] // num_of_evals,
@@ -211,7 +222,7 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         bf16=torch.cuda.is_bf16_supported(),
         fp16=not torch.cuda.is_bf16_supported(),
         gradient_checkpointing=True,
-        dataset_num_proc=4,
+        dataset_num_proc=1,
         torch_compile=False,
         report_to="none",
     )

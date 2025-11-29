@@ -4,15 +4,26 @@ import random
 import itertools
 
 def clean_form(form):
-    """Cleans the word form (removes split entries, handles missing data)."""
+    """
+    Cleans the word form.
+    Specific rule: if 'X/Y' occurs, keep X.
+    Example: 'o./o + tɕʰ o' -> 'o. + tɕʰ o'
+    """
     if pd.isna(form) or form == "" or form == "-":
         return None
+    
+    # Split by whitespace to handle multi-word/multi-phoneme entries
     form_lst = str(form).split()
-    for i, f in enumerate(form_lst):
-        # If multiple forms exist (e.g. "a/b"), take the first one
+    cleaned_parts = []
+    
+    for f in form_lst:
+        # If multiple forms exist (e.g. "o./o"), take the first one ("o.")
         if "/" in f:
-            form_lst[i] = f.split("/")[0]
-    return " ".join(form_lst)
+            cleaned_parts.append(f.split("/")[0])
+        else:
+            cleaned_parts.append(f)
+            
+    return " ".join(cleaned_parts)
 
 def calculate_phonological_distance(row_a, row_b, context_langs):
     """
@@ -40,30 +51,37 @@ def calculate_phonological_distance(row_a, row_b, context_langs):
         
     return total_dist / valid_comps
 
-def format_single_set(row, set_id, languages, target_lang=None):
-    """Formats a single cognate set for the prompt."""
+def format_single_set(row, set_id, languages, anon_map, target_lang=None):
+    """
+    Formats a single cognate set for the prompt.
+    Uses anon_map to replace 'German' with 'A', etc.
+    """
     lines = [f"<set_id={set_id}>"]
     for lang in languages:
         form = clean_form(row[lang])
         
+        # Use the anonymized label (A, B, C) instead of the real name
+        label = anon_map[lang]
+
         if lang == target_lang:
             val = "???"
         else:
             val = form if form else "-"
             
-        lines.append(f"{lang}: {val}")
+        lines.append(f"{label}: {val}")
     lines.append(f"</set_id>")
     return "\n".join(lines)
 
 def process_family_folder(folder_info):
     """
     Worker function to process a single language family folder.
-    Strictly separates logic for Train Folders vs Test Folders.
+    Handles Train, Validation (OOD), and Test (OOD) splits.
     """
-    (folder, lexibank_path, is_test_folder, num_combinations, 
+    (folder, lexibank_path, is_test_folder, is_val_folder, num_combinations, 
      num_evidence_sets, min_valid_cognates, langs_per_entry, test_split_ratio) = folder_info
 
     local_train_entries = []
+    local_val_entries = []
     local_test_entries = []
 
     data_path = f"{lexibank_path}/{folder}/wide_df.tsv"
@@ -72,9 +90,9 @@ def process_family_folder(folder_info):
         data = pd.read_csv(data_path, sep="\t", encoding="utf-8").fillna("-")
         lang_columns = data.columns[1:].tolist() # Skip Cognate_ID
         if len(lang_columns) < langs_per_entry:
-            return [], []
+            return [], [], []
     except Exception:
-        return [], []
+        return [], [], []
 
     # Generate language combinations
     all_combinations = list(itertools.combinations(lang_columns, langs_per_entry))
@@ -83,6 +101,14 @@ def process_family_folder(folder_info):
     selected_combinations = all_combinations[:num_combinations]
 
     for combo in selected_combinations:
+        # Create Anonymization Mapping for this specific tuple
+        # e.g., {'German': 'A', 'English': 'B', 'Dutch': 'C'}
+        anon_labels = [chr(65 + i) for i in range(len(combo))] # Generates ['A', 'B', 'C'...]
+        anon_map = dict(zip(combo, anon_labels))
+        
+        # Also create a reverse map to store in metadata
+        anon_map_meta = {v: k for k, v in anon_map.items()}
+
         combo_cols = ["Cognate_ID"] + list(combo)
         df_subset = data[combo_cols].copy()
         
@@ -99,27 +125,24 @@ def process_family_folder(folder_info):
         # --- LOGIC BRANCHING ---
         if is_test_folder:
             # === TEST FOLDER MODE ===
-            # Goal: Create Evaluation data only.
-            # Strategy: Split folder into Reference (Evidence Pool) and Query (Test Set).
-            # The model attempts to solve Query items using the Reference items.
-            
             split_idx = int(len(df_subset) * (1 - test_split_ratio)) 
-            
             evidence_pool_df = df_subset.iloc[:split_idx]
             query_rows_df = df_subset.iloc[split_idx:]
+            target_list = local_test_entries 
             
-            target_list = local_test_entries # Save to TEST dataset
-            
+        elif is_val_folder:
+            # === VAL FOLDER MODE ===
+            # Same logic as Test, but goes to Val dataset
+            split_idx = int(len(df_subset) * (1 - test_split_ratio)) 
+            evidence_pool_df = df_subset.iloc[:split_idx]
+            query_rows_df = df_subset.iloc[split_idx:]
+            target_list = local_val_entries 
+
         else:
             # === TRAIN FOLDER MODE ===
-            # Goal: Create Training data only.
-            # Strategy: Every row is a valid training example.
-            # For any specific row, the "Evidence Pool" is simply all OTHER rows in the folder.
-            
             evidence_pool_df = df_subset
             query_rows_df = df_subset
-            
-            target_list = local_train_entries # Save to TRAIN dataset
+            target_list = local_train_entries
 
         # --- PROCESS ROWS ---
         for _, query_row in query_rows_df.iterrows():
@@ -134,7 +157,7 @@ def process_family_folder(folder_info):
                 # Context languages are everyone except the target
                 context_langs = [l for l in combo if l != target_lang]
                 
-                # Check if query has at least one context form (otherwise impossible to predict)
+                # Check if query has at least one context form 
                 has_context = any(clean_form(query_row[l]) for l in context_langs)
                 if not has_context:
                     continue
@@ -160,20 +183,25 @@ def process_family_folder(folder_info):
                 # 1. Build Evidence String
                 evidence_str = ""
                 for i, ev_row in enumerate(top_evidence):
-                    evidence_str += format_single_set(ev_row, i+1, combo) + "\n"
+                    # Pass anon_map here
+                    evidence_str += format_single_set(ev_row, i+1, combo, anon_map) + "\n"
 
                 # 2. Build Query String (Target masked)
-                query_str = format_single_set(query_row, len(top_evidence)+1, combo, target_lang)
+                # Pass anon_map here
+                query_str = format_single_set(query_row, len(top_evidence)+1, combo, anon_map, target_lang)
 
                 # 3. Construct Entry
                 entry = {
                     "evidence": evidence_str,
                     "query": query_str,
-                    "target_lang": target_lang,
+                    # We store the Anonymized Label as the target (e.g., "A")
+                    "target_lang": anon_map[target_lang], 
                     "target_form": target_form,
-                    "output": target_form
+                    "output": target_form,
+                    # IMPORTANT: Store the mapping so we know "A" was "German"
+                    "original_lang_map": str(anon_map_meta) 
                 }
                 
                 target_list.append(entry)
 
-    return local_train_entries, local_test_entries
+    return local_train_entries, local_val_entries, local_test_entries
