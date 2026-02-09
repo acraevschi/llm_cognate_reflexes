@@ -1,0 +1,1686 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "evidence": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "query": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "target_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "lang_map": {
+      "Achagua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Afade": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Aha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Andra_1378": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Apurina": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ArakiSouthwestSanto_465": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Arem": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Argobba": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Arhuaco": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Arma": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Aw": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Badga": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bahing": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Baniwa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Baniwa_Dzawinai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Baniwa_Dzurema": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Baniwa_Hohoodene": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Baniwa_Waliperidakenai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bare": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bari": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bariai_1336": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Batek_Deq_Terengganu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Batek_Teh_Lebir": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Batek_Teq": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bichom": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Bonda": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Borong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "BragbarSitu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Buduma": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Buglere": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Burum": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Buwal": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cabecar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cahita": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Car": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ChaYeQing": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Chaha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Changsha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Chibcha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Chimila": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Chrau": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ClassicalNahuatl": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "CogtseSitu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cogui": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Comecrudo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cora": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "CuoiTanHop": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cupeno": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Curva": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Cuzco": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "CuzquenoAntiguo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Daofu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "DarangTaraon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dayang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Desano": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dharumbal": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dhudhuroa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dhuwal": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Diaocao": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dimina": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Duhumbi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dulong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Dzawinai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Eastern_Puroik_Sun": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Emae_229": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "EpenaBasurudo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "EudeveNorth": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "EudeveSouth": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Evenki_Chiringda": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Evenki_Khamnigan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Evenki_Strelka_Chun": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Evenki_Teteya": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Evenki_Tutonchany": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ezha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "FaganiRihua_556": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Fuzhou": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Gangwon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Gavar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Geez": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Gogot": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Guahibo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "GuangKa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Guangzhou": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Guarijio": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Guilin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Gumbaynggir": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Gyeonggi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Haerbin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Hohoodene": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Hopi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Hre": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Hu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Huanca": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "HuarazHuailas": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Huichol": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Hwanghae": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Inapari": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Inkawasi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Inor": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jahai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jahai_Rual": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "JalupaNahuat": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Japhug": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jeju": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jerigaon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jinan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jingpho": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jiulong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Jixi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ka": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kabiyari": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kagazli2": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kagazli3": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kammu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "KamweFutu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kannada": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kapingamarangi_217": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kartujarra": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Karuwali": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kaspi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kate": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kauixana": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kayah": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kayan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kayaw": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kensiw": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kensiw_Kedah": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khasi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khispi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khmer_Surin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khmu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khoina": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Khoitam": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kiakmuz3": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kiorday1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kistane": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kitamga": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kkhalqabad1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kkhalqabad3": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kodava": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kokama": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Komba": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Koreguahe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kota": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kowaidakenai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Koya": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kt": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ku": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kukatja": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kulung": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kurukh": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Kuwi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Lanoh_Kertei": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Lanping": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Lasumpatte": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "LencaSalvador": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Liha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "LihaNVL": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Longxi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Loudi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "LowlandMixe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Lushai": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Lyngngam": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MDip": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MKorean": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ma": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ma1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Malang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Malayo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Malieng": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MaliengQB": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Malto": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MangBang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MangalaMcK": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mangdi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Maragua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MaryRiverandBunyaBunyaCountry": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mayo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mbakwithi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MecayapanNahuat": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Meixian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Menriq_Rual": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mesqan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MiddleChinese": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mindik": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mirana": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mokaren_1383": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Moliwene": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Morouas_1101": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MotuoMenba": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MountFreelingDiyari": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mpade": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "MuongBi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Mussau_79": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NChungcheong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NGyeongsang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NHamgyong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NPyongan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Nabak": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NamHsan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Name": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Namphri": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NanSang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Nanai_Bikin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Nanai_Najkhin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Negidal": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NguonCL": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Niuwozi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NoeLae": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NorthHighlandMixe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NorthPueblaNahuatl": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NorthernPao": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "NorthernSgaw": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Numfor_106": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "OldChinese": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "OldTibetan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "OlutaPopoluca": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Omagua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Opata": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Paakantyi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "PajapanNahuat": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Pakatan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Palaung": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "PangKham": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Papago": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Parji": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Pg": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Piapoco": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Pipil": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Piratapuyo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "PnarJaintia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Pochutec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoAztecan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoCoracholNahua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoKaren": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoLalo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoNahua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoPurus": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoSonoran": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoSouthernUtoAztecan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoTepiman": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ProtoUtoAztecan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Pt": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Puinave": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Puluwatese_336": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Putumayo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Qinghua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Qingyun": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Rahung": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Rangoon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Resigaro": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Rirratjingu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Rongcheng": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ruc": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Rupa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SGyeongsang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SPyongan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Sa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Sach": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Saliba": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanAntonioHuitepecMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanBartolomeYucuaneMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanFranciscoSayultepecMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanJuanDiuxiMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanJuanMixtepecMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanJuanTepeuxila1900Cuicatec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanMiguelChimalapaZoque": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanPedro": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SanPedroTidaaMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantaAnaCuauhtemocMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantaLuciaMonteverdeMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantaMariaApazcoMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantaMariaChimalapaZoque": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantaMariaYolotepecMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantiagoCacaloxtepecMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantiagoChazumbaMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SantoDomingoTonahuixtlaMixtec": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Saria": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SayulaPopoluca": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Sekoya": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Selepet": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Semai_Kampar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Semaq_Beri_Jaboy": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Semnam_Malau": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Shergaon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ShoaArabic": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Shuizhuping": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Singchung": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Siona": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Sobei_126": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Solon": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SonoraPimaBajo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Sora": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SoteapanZoque": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SoutheasternTepehuan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SouthernPwo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "SouthernUte": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tamil": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tangga_131": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tanimuka": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Taoping": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tarahumara": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "TarahumaraCentral": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tarahumaran": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tariana": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tariana_Bruzzi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tariano": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Telugu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tenen_Paborn": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "TepehuanSouth": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tepiman": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "TetelcingoNahuatl": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "TexistepecZoque": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ThavungS": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ThavungSo": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tibetan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tigre": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tigrigna": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Timbe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tnavdi1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Toda": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Toum": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Trishtan3": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tshink3": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tubar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tupinamba": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Turmetan1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Tuyuka": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Udihe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ulcha": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Usoymahalla1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Vietnamese": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Waliperi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wangho": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "WarLamin": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Warekena": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wedau_1459": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wenzhou": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Werekena_Baniva": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "WesternBwe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wolane": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Woleaian_347": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Wounaan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Xi": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "XiAn": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "XiangZhaiTang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Xuzhang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yangliu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yaqui": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ydugova1": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Ydugova2": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yijiacun": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yine": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yiningay": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yonghe": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yucuna": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yukpa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yukuna": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yumana": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yupua": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Yuwaalaraay": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "Zbu": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "adang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "alak": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "bahnargolar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "bahnarpleiku": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "boluotujia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "brao": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "bunong": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "carpigianoemiliano": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "castilianspanish": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "cataniansicilian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "chrau": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "dianfangtujia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "duogutujia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "erzya": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "friulian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "genoeseligurian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "grossetoitalian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "halang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "ingrian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "istroromanian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "jeh": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "jrulaven": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "kaera": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "kamang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "kasseng": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "komipermyak": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "komizyrian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "kui": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "logudorese": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "mel": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "nedebang": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "nganasan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "northwesterncatalan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "protoalorpantar": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "rengao": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "sapuan": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "sawila": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "selkup": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "southeasternsicilian": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "surmiranromansh": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "sursilvanromansh": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "tanxitujia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "tashatujia": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "teiwa": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "udmurt": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "vercellesepiemontese": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "wersing": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    "target_form": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "family": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
