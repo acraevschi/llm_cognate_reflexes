@@ -27,7 +27,7 @@
     "model_name": "google/byt5-base",
     "batch_size": 16,
     "gradient_accumulation_steps": 4, 
-    "learning_rate": 1e-4,           
+    "learning_rate": 3e-4,           
     "lr_scheduler_type": "cosine",
     "num_of_evals": 20,
     "warmup_ratio": 0.1  

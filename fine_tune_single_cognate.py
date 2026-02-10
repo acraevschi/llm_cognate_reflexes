@@ -199,10 +199,10 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
     # Seq2Seq specific arguments
     training_args = Seq2SeqTrainingArguments(
         output_dir=checkpoint_path,
-        eval_on_start=True,
+        # eval_on_start=True,
         # Batch sizes
         per_device_train_batch_size=training_config["batch_size"],
-        per_device_eval_batch_size=training_config["batch_size"] * 4,
+        per_device_eval_batch_size=training_config["batch_size"],
         gradient_accumulation_steps=training_config["gradient_accumulation_steps"],
         # Training loop
         max_steps=training_config["total_steps"],
@@ -220,15 +220,12 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         save_total_limit=5,
         eval_accumulation_steps=1,
         load_best_model_at_end=True,
-        metric_for_best_model="eval_ned",  # We want to minimize NED usually, but if metric is similarity, maximize
-        greater_is_better=False,  # NED is distance, lower is better
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
         # Precision
         bf16=torch.cuda.is_bf16_supported(),
         fp16=not torch.cuda.is_bf16_supported(),
         gradient_checkpointing=True,
-        # Generation for metrics
-        predict_with_generate=True,
-        generation_max_length=64,  # Max length for the output word
         # Misc
         seed=training_config["seed_num"],
         dataloader_num_workers=4,
@@ -249,7 +246,7 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         eval_dataset=eval_dataset,
         data_collator=data_collator,
         processing_class=tokenizer,
-        compute_metrics=compute_metrics_wrapper,
+        # compute_metrics=compute_metrics_wrapper,
         callbacks=[
             EarlyStoppingCallback(
                 early_stopping_patience=training_config["early_stopping_patience"],
