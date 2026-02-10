@@ -229,6 +229,8 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         # Misc
         seed=training_config["seed_num"],
         dataloader_num_workers=4,
+        # clean stesps twice between evals to manage GPU memory
+        torch_empty_cache_steps=training_config["total_steps"] // (num_of_evals * 2),
     )
 
     data_collator = DataCollatorForSeq2Seq(
