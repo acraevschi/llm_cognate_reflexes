@@ -217,7 +217,7 @@ def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
         # Checkpointing
         save_total_limit=5,
         evaluation_strategy="steps",
-        eval_accumulation_steps=1
+        eval_accumulation_steps=1,
         load_best_model_at_end=True,
         metric_for_best_model="eval_ned",  # We want to minimize NED usually, but if metric is similarity, maximize
         greater_is_better=False,  # NED is distance, lower is better
