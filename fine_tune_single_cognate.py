@@ -1,38 +1,29 @@
-from transformers import (
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    EarlyStoppingCallback,
-    TrainerCallback,
-    BitsAndBytesConfig
-)
-from peft import LoraConfig, get_peft_model, TaskType
-from datasets import load_from_disk
-from trl import SFTTrainer, SFTConfig
-from torch.cuda import empty_cache
 import os
-import torch
-import gc
 import json
-from pathlib import Path
+import gc
+import torch
 import numpy as np
+from pathlib import Path
+from datasets import load_from_disk
+from transformers import (
+    AutoTokenizer,
+    AutoModelForSeq2SeqLM,
+    Seq2SeqTrainer,
+    Seq2SeqTrainingArguments,
+    DataCollatorForSeq2Seq,
+    EarlyStoppingCallback,
+)
+import bitsandbytes
+from torch.cuda import empty_cache
+from metrics import calculate_ned
 
-from hf_token import HF_TOKEN
-
-
-prompt_base = """Comparative Linguistics Reconstruction Data
-
-== Context ==
-Evidence Data:
+# Template for the Encoder Input
+prompt_base = """Reconstruct cognates: 
 {evidence}
-
-== Task Configuration ==
-Target Language: {target_lang}
-
-== Input Query ==
+# Target:
 {query}
-
-== Reconstructed Form ==
 """
+
 
 def load_config(config_path="config.json"):
     """Load configuration from JSON file."""
@@ -46,97 +37,97 @@ def load_config(config_path="config.json"):
         print(f"Error parsing config file: {e}")
         return None
 
+
 def load_model_and_tokenizer(config):
-    """Load model and tokenizer with configurations from config dict using Standard Transformers + Peft"""
+    """Load ByT5 model and tokenizer for full fine-tuning"""
     model_name = config["training"]["model_name"]
-    max_length = config["training"]["max_length"]
-    seed_num = config["training"]["seed_num"]
-    r = config["training"]["r"]
-    lora_alpha = config["training"]["lora_alpha"]
 
-    # Determine dtype support
-    torch_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+    print(f"Loading {model_name}...")
 
-    print(f"Loading Tokenizer for {model_name}...")
-    # Load Tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Load model for Seq2Seq. ByT5 works best with bfloat16 if hardware supports it.
+    model = AutoModelForSeq2SeqLM.from_pretrained(
         model_name,
-        model_max_length=max_length,
-        padding_side="right",
-        use_fast=False,
-        token=HF_TOKEN # Uses the token logged in via huggingface_hub
+        torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float32,
     )
-    tokenizer.pad_token = tokenizer.eos_token
-
-    print(f"Loading Model {model_name}...")
-    # Load Model
-    try:
-        model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=torch_dtype,
-            attn_implementation="flash_attention_2",
-            device_map="auto",
-            token=HF_TOKEN # Uses the token logged in via huggingface_hub
-        )
-    except Exception as e:
-        print(f"Flash attention not working or error loading: {e}. Trying fallback...\n")
-        model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=torch_dtype,
-            device_map="auto",
-            token=HF_TOKEN
-            )
 
     print("The model was successfully loaded!\n")
-
-    # Configure LoRA using PEFT
-    peft_config = LoraConfig(
-        r=r,
-        lora_alpha=lora_alpha,
-        target_modules=[
-            "q_proj", "k_proj", "v_proj", "o_proj",
-            "gate_proj", "up_proj", "down_proj",
-        ],
-        lora_dropout=0,
-        bias="none",
-        task_type=TaskType.CAUSAL_LM,
-    )
-
-    # Apply LoRA adapter
-    model = get_peft_model(model, peft_config)
-
-    # Enable gradient checkpointing manually
-    # model.gradient_checkpointing_enable()
-
-    model.print_trainable_parameters()
-
     return model, tokenizer
 
 
-def formatting_prompts_func(example, eos_token):
+def preprocess_function(
+    examples, tokenizer, max_input_length=1280, max_target_length=64
+):
     """
-    Constructs the dictionary with 'prompt' and 'completion' keys.
+    Tokenize inputs (Prompt) and targets (Ground Truth Word) separately
+    for Encoder-Decoder architecture.
     """
-    # 1. Build the Prompt
-    input_text = prompt_base.format(
-        evidence=example['evidence'],
-        query=example['query'],
-        target_lang=example['target_lang']
+    inputs = []
+    targets = []
+
+    for i in range(len(examples["evidence"])):
+        # Construct the input prompt
+        input_text = prompt_base.format(
+            evidence=examples["evidence"][i],
+            query=examples["query"][i],
+        )
+        inputs.append(input_text)
+
+        # The target is just the output word
+        targets.append(examples["target_form"][i])
+
+    # Tokenize inputs
+    model_inputs = tokenizer(
+        inputs,
+        max_length=max_input_length,
+        truncation=True,
+        padding=False,  # Padding handled by collator
     )
 
+    # Tokenize targets
+    with tokenizer.as_target_tokenizer():
+        labels = tokenizer(
+            targets, max_length=max_target_length, truncation=True, padding=False
+        )
+
+    model_inputs["labels"] = labels["input_ids"]
+    return model_inputs
 
 
-    # 2. Get the Completion (Output + EOS)
-    completion_text = f"{example['output']}"
+def compute_metrics(eval_preds, tokenizer):
+    """
+    Compute NED metric using generated predictions.
+    This replaces the GenerativeEvalCallback.
+    """
+    preds, labels = eval_preds
 
-    return {
-        "prompt": input_text,
-        "completion": completion_text,
-    }
+    if isinstance(preds, tuple):
+        preds = preds[0]
+
+    # Decode generated predictions
+    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)
+
+    # Replace -100 in labels as we can't decode them (these are ignored indices)
+    labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
+    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
+
+    # Simple post-processing
+    decoded_preds = [pred.strip() for pred in decoded_preds]
+    decoded_labels = [label.strip() for label in decoded_labels]
+
+    ned_scores = []
+    for pred, label in zip(decoded_preds, decoded_labels):
+        ned = calculate_ned(pred, label)
+        ned_scores.append(ned)
+
+    avg_ned = np.mean(ned_scores) if ned_scores else 0.0
+
+    return {"eval_ned": avg_ned}
 
 
-def prepare_datasets(config, eos_token, eval_percent=10):
-    """Load and prepare the dataset into prompt/completion columns"""
+def prepare_datasets(config, tokenizer):
+    """Load and process the dataset"""
     dataset_config = config["dataset"]
     dataset_string = f"{dataset_config['langs_per_entry']}langs_{dataset_config['num_evidence_sets']}evidence"
     train_data_path = f"{dataset_config['output_train_path']}/{dataset_string}"
@@ -144,101 +135,124 @@ def prepare_datasets(config, eos_token, eval_percent=10):
     print(f"Loading dataset from: {train_data_path}")
     data = load_from_disk(train_data_path)
 
+    # Shuffle
     data = data.shuffle(seed=42)
 
-    # Map to new structure and remove old columns
-    original_columns = data.column_names
-    data = data.map(
-        lambda ex: formatting_prompts_func(ex, eos_token),
-        remove_columns=original_columns
+    # Split
+    eval_percent = config["training"].get("eval_percent", 10)
+    eval_inds = data.num_rows // eval_percent
+    train_data = data.select(range(eval_inds, data.num_rows))
+    eval_data = data.select(range(0, eval_inds))
+
+    # Preprocess (Tokenize)
+    print("Tokenizing datasets...")
+    fn_kwargs = {
+        "tokenizer": tokenizer,
+        "max_input_length": config["training"].get("max_length", 512),
+        "max_target_length": 64,  # Cognates are short
+    }
+
+    train_data = train_data.map(
+        preprocess_function,
+        batched=True,
+        fn_kwargs=fn_kwargs,
+        remove_columns=data.column_names,  # Remove raw text columns to save memory
+    )
+    eval_data = eval_data.map(
+        preprocess_function,
+        batched=True,
+        fn_kwargs=fn_kwargs,
+        remove_columns=data.column_names,
     )
 
-    if "output_eval_path" in dataset_config.keys():
-        eval_data_path = f"{dataset_config['output_eval_path']}/{dataset_string}"
-        eval_data = load_from_disk(eval_data_path)
-        eval_data = eval_data.shuffle(seed=42)
-        eval_data = eval_data.map(
-            lambda ex: formatting_prompts_func(ex, eos_token),
-            remove_columns=original_columns
-        )
-        return data, eval_data
-    
-    else:
-        # Split train/eval
-        eval_inds = data.num_rows // eval_percent
-        train_data = data.select(range(eval_inds, data.num_rows))
-        eval_data = data.select(range(0, eval_inds))
-
-        return train_data, eval_data
+    return train_data, eval_data
 
 
 def get_trainer(config, model, tokenizer, train_dataset, eval_dataset):
-    """Create the trainer with config parameters"""
+    """Create the Seq2SeqTrainer"""
     training_config = config["training"]
-    model_name = training_config["model_name"].split("/")[1]
+    model_name_short = training_config["model_name"].split("/")[-1]
 
-    checkpoint_path = (
-        f"{training_config['checkpoint_dir']}/{model_name}/"
-    )
+    checkpoint_path = f"{training_config['checkpoint_dir']}/{model_name_short}/"
 
+    # Versioning logic
     if not os.path.exists(checkpoint_path):
         checkpoint_path += "run_0/"
         Path(checkpoint_path).mkdir(parents=True, exist_ok=True)
     else:
         existing_runs = [
-            int(folder.name.split("_")[-1]) for folder in Path(checkpoint_path).iterdir() if folder.is_dir() and folder.name.startswith("run_")
+            int(folder.name.split("_")[-1])
+            for folder in Path(checkpoint_path).iterdir()
+            if folder.is_dir() and folder.name.startswith("run_")
         ]
         if existing_runs:
             last_run = max(existing_runs)
             checkpoint_path += f"run_{last_run + 1}/"
+        else:
+            checkpoint_path += "run_0/"
+            Path(checkpoint_path).mkdir(parents=True, exist_ok=True)
 
-    num_of_evals = config["training"].get("num_of_evals", 10)
+    num_of_evals = training_config.get("num_of_evals", 10)
 
-    # Use SFTConfig
-    training_args = SFTConfig(
+    # Seq2Seq specific arguments
+    training_args = Seq2SeqTrainingArguments(
         output_dir=checkpoint_path,
         overwrite_output_dir=True,
-        completion_only_loss=True,
+        # Batch sizes
         per_device_train_batch_size=training_config["batch_size"],
         per_device_eval_batch_size=training_config["batch_size"],
         gradient_accumulation_steps=training_config["gradient_accumulation_steps"],
-        eval_accumulation_steps=1,
-        optim="adamw_8bit",
+        # Training loop
         max_steps=training_config["total_steps"],
         save_steps=training_config["total_steps"] // num_of_evals,
         logging_steps=training_config["total_steps"] // num_of_evals,
         eval_strategy="steps",
         eval_steps=training_config["total_steps"] // num_of_evals,
-        save_total_limit=5,
-        warmup_ratio=training_config["warmup_ratio"],
+        # Optimization
+        optim="adamw_8bit",
         learning_rate=training_config["learning_rate"],
         lr_scheduler_type=training_config["lr_scheduler_type"],
-        max_length=training_config["max_length"],
-        weight_decay=0.01,
-        seed=training_config["seed_num"],
+        warmup_ratio=training_config["warmup_ratio"],
+        weight_decay=0.1,
+        # Checkpointing
+        save_total_limit=5,
+        evaluation_strategy="steps",
+        eval_accumulation_steps=1,
         load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
-        greater_is_better=False,
+        metric_for_best_model="eval_ned",  # We want to minimize NED usually, but if metric is similarity, maximize
+        greater_is_better=False,  # NED is distance, lower is better
+        # Precision
         bf16=torch.cuda.is_bf16_supported(),
         fp16=not torch.cuda.is_bf16_supported(),
-        gradient_checkpointing=True,
-        dataset_num_proc=1,
-        torch_compile=False,
-        report_to="none",
+        # Generation for metrics
+        predict_with_generate=True,
+        generation_max_length=64,  # Max length for the output word
+        # Misc
+        seed=training_config["seed_num"],
+        dataloader_num_workers=4,
     )
 
+    data_collator = DataCollatorForSeq2Seq(
+        tokenizer=tokenizer, model=model, padding=True
+    )
 
-    trainer = SFTTrainer(
+    # Wrap compute_metrics to pass tokenizer
+    def compute_metrics_wrapper(eval_preds):
+        return compute_metrics(eval_preds, tokenizer)
+
+    trainer = Seq2SeqTrainer(
         model=model,
-        processing_class=tokenizer,
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
+        data_collator=data_collator,
+        tokenizer=tokenizer,
+        compute_metrics=compute_metrics_wrapper,
         callbacks=[
             EarlyStoppingCallback(
                 early_stopping_patience=training_config["early_stopping_patience"],
                 early_stopping_threshold=training_config["early_stopping_threshold"],
-            ),
+            )
         ],
     )
 
@@ -251,25 +265,23 @@ def train_model(config_path="config.json"):
     if not config:
         return
 
-    checkpoint_dir = Path(config["training"]["checkpoint_dir"])
-    checkpoint_dir.mkdir(parents=True, exist_ok=True)
-
+    # Clean memory
     empty_cache()
     gc.collect()
 
+    # Load Model & Tokenizer
     model, tokenizer = load_model_and_tokenizer(config)
-    eos_token = tokenizer.eos_token
 
-    # Prepare data
-    train_dataset, eval_dataset = prepare_datasets(config, eos_token, eval_percent=config["training"]["eval_percent"])
+    # Prepare Data
+    train_dataset, eval_dataset = prepare_datasets(config, tokenizer)
 
-    # Get trainer
+    # Get Trainer
     trainer, checkpoint_path = get_trainer(
         config, model, tokenizer, train_dataset, eval_dataset
     )
 
-    config_path = checkpoint_path + "/config.json"
-    with open(config_path, "w", encoding="utf-8") as f:
+    # Write config copy
+    with open(checkpoint_path + "/config.json", "w", encoding="utf-8") as f:
         json.dump(config, f, indent=4)
 
     print("\n\n---Starting training---\n\n")
@@ -277,7 +289,6 @@ def train_model(config_path="config.json"):
     print("\n\n---Training complete!---\n\n")
 
     path_best_model = checkpoint_path + "/best_model"
-    # Save adapter
     trainer.save_model(path_best_model)
     tokenizer.save_pretrained(path_best_model)
 
@@ -286,6 +297,7 @@ def train_model(config_path="config.json"):
 
     print(f"Best model saved at: {path_best_model}")
     return path_best_model
+
 
 if __name__ == "__main__":
     train_model()
