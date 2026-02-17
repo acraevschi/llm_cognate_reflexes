@@ -4,10 +4,12 @@ import gc
 import torch
 from pathlib import Path
 from datasets import load_from_disk
-from transformers import TrainingArguments, EarlyStoppingCallback
-from trl import SFTTrainer, SFTConfig
+
 from unsloth import FastModel
 from unsloth.chat_templates import get_chat_template, train_on_responses_only
+
+from transformers import TrainingArguments, EarlyStoppingCallback
+from trl import SFTTrainer, SFTConfig
 
 # --- Configuration & Setup ---
 
@@ -26,7 +28,7 @@ def load_model_and_tokenizer(config):
     """
     Load Gemma 3 4B using Unsloth for efficient 4-bit training.
     """
-    model_name = "unsloth/gemma-3-4b-it"
+    model_name = config["training"]["model_name"]
     max_seq_length = config["training"].get("max_length", 2048)
 
     print(f"Loading {model_name} via Unsloth...")
@@ -36,6 +38,7 @@ def load_model_and_tokenizer(config):
         max_seq_length=max_seq_length,
         load_in_4bit=False,
         load_in_8bit=False,
+        dtype=None,
     )
 
     # Add LoRA adapters
@@ -49,6 +52,7 @@ def load_model_and_tokenizer(config):
         lora_alpha=64,  # Recommended alpha == r at least
         lora_dropout=0,
         bias="none",
+        use_gradient_checkpointing="unsloth",
         random_state=1997,
     )
 
@@ -137,11 +141,13 @@ def prepare_datasets(config, tokenizer):
         formatting_prompts_func,
         batched=True,
         fn_kwargs=fn_kwargs,
+        num_proc=4,
     )
     eval_data = eval_data.map(
         formatting_prompts_func,
         batched=True,
         fn_kwargs=fn_kwargs,
+        num_proc=4,
     )
 
     return train_data, eval_data
@@ -177,6 +183,7 @@ def train_model(config_path="config.json"):
         gradient_accumulation_steps=training_config.get(
             "gradient_accumulation_steps", 4
         ),
+        eval_accumulation_steps=1,
         learning_rate=training_config.get("learning_rate", 2e-4),
         max_steps=training_config.get(
             "total_steps", 1000
@@ -184,8 +191,11 @@ def train_model(config_path="config.json"):
         logging_steps=training_config["total_steps"] // training_config["num_of_evals"],
         save_steps=training_config["total_steps"] // training_config["num_of_evals"],
         eval_strategy="steps",
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
         eval_steps=training_config["total_steps"] // training_config["num_of_evals"],
-        warmup_ratio=0.1,
+        warmup_ratio=training_config["warmup_ratio"],
+        lr_scheduler_type=training_config["lr_scheduler_type"],
         optim="adamw_8bit",
         weight_decay=0.1,
         fp16=not torch.cuda.is_bf16_supported(),
