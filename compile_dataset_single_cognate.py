@@ -18,7 +18,7 @@ DEFAULT_CONFIG = {
         "ratcliffearabic",
         "walworthpolynesian",
     ],
-    "num_evidence_sets": 10,  # How many sets to provide as context
+    "num_evidence_sets": 50,  # How many sets to provide as context
     "num_combinations": 5,  # How many language tuples to sample
     "min_valid_cognates": 5,  # Min rows required to process a language group
     "lexibank_path": "lexibank",
