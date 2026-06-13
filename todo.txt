@@ -1,4 +1,0 @@
-1) Still need to train it once on a smaller Llama
-2) Evaluate it
-3) Check how to get Newick where possible
-4) Check which languages have proto-languages and try to reconstruct those appropriately (maybe use an already fine-tuned model for this?)
