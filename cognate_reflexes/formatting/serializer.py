@@ -127,18 +127,25 @@ class ExampleSerializer:
             "concepticon_id": form.concepticon_id,
             "cognateset_id": form.cognateset_id,
             "dataset": form.dataset,
+            "tree_glottocode": form.tree_glottocode,
+            "segment_source": form.segment_source,
         }
 
     def _language_to_dict(self, lang: LanguageData) -> dict:
         """Convert a :class:`LanguageData` to a serialisable dict."""
         return {
             "glottocode": lang.glottocode,
+            "variety_id": lang.identifier,
+            "tree_glottocode": lang.tree_glottocode,
             "name": lang.name,
             "forms": [self._form_to_dict(f) for f in lang.forms],
             "latitude": lang.latitude,
             "longitude": lang.longitude,
             "family": lang.family,
             "is_proto": lang.is_proto,
+            "is_historical": lang.is_historical,
+            "date_before_present": lang.date_before_present,
+            "clade_path": list(lang.clade_path),
         }
 
     def _metadata_to_dict(self, meta: ExampleMetadata) -> dict:
@@ -150,11 +157,13 @@ class ExampleSerializer:
             "branch_lengths": meta.branch_lengths,
             "num_cognate_sets": meta.num_cognate_sets,
             "glottocodes": list(meta.glottocodes),
+            "variety_ids": list(meta.variety_ids),
             "coordinates": {
                 k: list(v) if v else None
                 for k, v in meta.coordinates.items()
             },
             "concept_ids": meta.concept_ids,
             "cognateset_ids": meta.cognateset_ids,
+            "target_kind": meta.target_kind,
+            "historical_branch_ids": list(meta.historical_branch_ids),
         }
-

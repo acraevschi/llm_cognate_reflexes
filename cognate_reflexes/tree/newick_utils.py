@@ -423,6 +423,9 @@ def resolve_all_polytomies(
         A list of fully binary :class:`TreeNode` trees. Each tree is
         independent (its own deep copy).
     """
+    if max_total_trees < 1:
+        raise ValueError("max_total_trees must be positive")
+
     if root.is_leaf:
         return [_deep_copy_tree(root)]
 
@@ -433,34 +436,59 @@ def resolve_all_polytomies(
             resolve_all_polytomies(child, max_resolutions_per_node, max_total_trees, rng)
         )
 
-    # 2. Compute Cartesian product of resolved child subtrees
-    child_combos = list(itertools.product(*resolved_children_combos))
-    
+    # 2. Compute a bounded sample of the Cartesian product.  Materialising
+    # the full product before sampling can create millions of combinations
+    # even when the returned result is capped to a few dozen trees.
     if rng is None:
         rng = random.Random()
-    if len(child_combos) > max_total_trees:
-        child_combos = rng.sample(child_combos, max_total_trees)
+    combo_count = 1
+    for child_resolutions in resolved_children_combos:
+        combo_count *= len(child_resolutions)
+
+    if combo_count <= max_total_trees:
+        child_combos = itertools.product(*resolved_children_combos)
+    else:
+        sampled_indices: set[tuple[int, ...]] = set()
+        while len(sampled_indices) < max_total_trees:
+            sampled_indices.add(
+                tuple(rng.randrange(len(options)) for options in resolved_children_combos)
+            )
+        child_combos = (
+            tuple(options[index] for options, index in zip(resolved_children_combos, indices))
+            for indices in sorted(sampled_indices)
+        )
 
     # 3. Resolve the current node if it is a polytomy
-    resolved_roots = []
+    resolved_roots: list[TreeNode] = []
+    candidates_seen = 0
     for combo in child_combos:
         temp_root = TreeNode(label=root.label, branch_length=root.branch_length)
-        temp_root.children = [c for c in combo]
+        # A child resolution can appear in several sampled combinations.  Each
+        # output tree needs independent child objects and parent pointers.
+        temp_root.children = [_deep_copy_tree(child) for child in combo]
         for c in temp_root.children:
             c.parent = temp_root
 
         if len(temp_root.children) > 2:
-            root_resolutions = resolve_polytomy(
+            candidates = resolve_polytomy(
                 temp_root,
                 max_resolutions=max_resolutions_per_node,
                 rng=rng,
             )
-            resolved_roots.extend(root_resolutions)
         else:
-            resolved_roots.append(temp_root)
+            candidates = [temp_root]
 
-    if len(resolved_roots) > max_total_trees:
-        resolved_roots = rng.sample(resolved_roots, max_total_trees)
+        # Keep a bounded reservoir of full trees.  ``resolve_polytomy`` can
+        # yield many candidates for one child combination, so capping only at
+        # the end would still create a transient memory spike.
+        for candidate in candidates:
+            candidates_seen += 1
+            if len(resolved_roots) < max_total_trees:
+                resolved_roots.append(candidate)
+            else:
+                replacement = rng.randrange(candidates_seen)
+                if replacement < max_total_trees:
+                    resolved_roots[replacement] = candidate
 
     return resolved_roots
 

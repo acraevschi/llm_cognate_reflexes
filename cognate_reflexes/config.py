@@ -29,7 +29,21 @@ class Config:
         max_polytomy_resolutions: Upper bound on binary resolutions
             enumerated per polytomy node.
         max_triplets_per_dataset: Maximum number of triplets to generate
-            per dataset (useful to prevent explosion in large families).
+            per dataset. A finite cap enables bounded-memory streaming.
+        max_total_binary_trees: Maximum fully resolved Newick trees retained
+            per family while sampling polytomy resolutions.
+        historical_lineages_path: CSV manifest of curated historical
+            ancestor-to-descendant branch relations.
+        include_historical: Whether to emit reconstruction examples for
+            validated historical targets.
+        min_historical_age_gap: Required age difference between a historical
+            target and a dated descendant, measured in source units before
+            present.  ``0`` requires only strict temporal ordering.
+        temporal_trees_path: Optional CSV mapping datasets to authoritative
+            time-aware Newick files.  Standard CLDF TreeTables and
+            ``cldf/tree.nwk`` are discovered automatically as well.
+        include_temporal_trees: Whether to derive historical targets directly
+            from authoritative time-aware Newick trees.
         seed: Random seed for reproducibility.  ``None`` disables seeding.
     """
 
@@ -44,5 +58,11 @@ class Config:
     include_glosses: bool = True
     show_language_names: bool = False  # No language identity by default
     max_polytomy_resolutions: int = 50  # Cap on binary resolutions per polytomy
-    max_triplets_per_dataset: int | None = None  # Cap on generated triplets
+    max_triplets_per_dataset: int | None = 5000  # Cap on generated triplets
+    max_total_binary_trees: int = 64
+    historical_lineages_path: str = "./data/historical_lineages.csv"
+    include_historical: bool = True
+    min_historical_age_gap: float = 0.0
+    temporal_trees_path: str = "./data/temporal_trees.csv"
+    include_temporal_trees: bool = True
     seed: int | None = 42

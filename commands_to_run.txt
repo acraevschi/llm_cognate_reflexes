@@ -1,4 +1,4 @@
-python scripts/generate_examples.py \
+conda run -n llm_reconstruction python scripts/generate_examples.py \
     --task cognate_reflex \
     --output data/stage1_cognate_reflex.jsonl \
     --min-cognates 15 \
@@ -6,8 +6,9 @@ python scripts/generate_examples.py \
     --mask-ratio 0.3 \
     --max-polytomy-resolutions 50 \
     --max-triplets-per-dataset 5000 \
+    --max-total-binary-trees 64 \
     --seed 42 \
-    --workers 16 \
+    --workers 4 \
     --verbose
 
 
@@ -18,6 +19,8 @@ conda run -n llm_reconstruction python scripts/generate_examples.py \
     --max-cognates 120 \
     --max-polytomy-resolutions 50 \
     --max-triplets-per-dataset 5000 \
+    --max-total-binary-trees 64 \
+    --historical-lineages data/historical_lineages.csv \
     --seed 42 \
-    --workers 16 \
+    --workers 4 \
     --verbose

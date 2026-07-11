@@ -1,0 +1,7 @@
+dataset,target_variety_id,branch_id,descendant_variety_id,evidence
+iecor,iecor:112,ibero_romance,iecor:17,Curated Romance branch assignment for attested Latin target.
+iecor,iecor:112,ibero_romance,iecor:56,Curated Romance branch assignment for attested Latin target.
+iecor,iecor:112,ibero_romance,iecor:68,Curated Romance branch assignment for attested Latin target.
+iecor,iecor:112,gallo_romance,iecor:25,Curated Romance branch assignment for attested Latin target.
+iecor,iecor:112,italo_romance,iecor:39,Curated Romance branch assignment for attested Latin target.
+iecor,iecor:112,eastern_romance,iecor:59,Curated Romance branch assignment for attested Latin target.

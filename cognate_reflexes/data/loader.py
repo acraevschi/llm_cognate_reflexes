@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import logging
+import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -58,26 +59,26 @@ def _apply_dataset_overrides(
 
     if ds_name in LANGUAGE_OVERRIDES:
         for local_id, target_gc in LANGUAGE_OVERRIDES[ds_name].items():
-            for gc_key, lang in list(language_data.items()):
-                if gc_key == local_id or lang.name == local_id:
+            for variety_id, lang in language_data.items():
+                if variety_id.endswith(f":{local_id}") or lang.name == local_id:
                     lang.glottocode = target_gc
-                    if gc_key in forms_by_language:
-                        forms_dict = forms_by_language[gc_key]
+                    lang.tree_glottocode = target_gc
+                    if variety_id in forms_by_language:
+                        forms_dict = forms_by_language[variety_id]
                         for forms in forms_dict.values():
                             for f in forms:
-                                f.language = target_gc
-                        forms_by_language[target_gc] = forms_by_language.pop(gc_key)
-                    
-                    language_data[target_gc] = language_data.pop(gc_key)
-                    if gc_key in proto_languages:
-                        proto_languages.remove(gc_key)
-                        proto_languages.add(target_gc)
+                                f.tree_glottocode = target_gc
                     break
 
     # 2. Cognate set linking overrides (e.g. for sidwellvietic)
     if ds_name == "sidwellvietic":
         param_cog_langs = {}
-        for gc, forms_dict in forms_by_language.items():
+        proto_variety_ids = {
+            variety_id
+            for variety_id, lang in language_data.items()
+            if lang.tree_glottocode == "viet1250"
+        }
+        for variety_id, forms_dict in forms_by_language.items():
             for cid, forms in forms_dict.items():
                 if forms and forms[0].concepticon_id:
                     param = forms[0].concepticon_id
@@ -87,7 +88,7 @@ def _apply_dataset_overrides(
             proto_cids = []
             attested_cids_with_counts = []
             for cid, forms in cog_map.items():
-                is_proto = any(f.language == "viet1250" for f in forms)
+                is_proto = any(f.language in proto_variety_ids for f in forms)
                 if is_proto:
                     proto_cids.append(cid)
                 else:
@@ -96,11 +97,15 @@ def _apply_dataset_overrides(
             if proto_cids and attested_cids_with_counts:
                 major_cid = max(attested_cids_with_counts, key=lambda x: x[1])[0]
                 for proto_cid in proto_cids:
-                    if proto_cid in forms_by_language.get("viet1250", {}):
-                        proto_forms = forms_by_language["viet1250"].pop(proto_cid)
+                    for proto_variety_id in proto_variety_ids:
+                        if proto_cid not in forms_by_language.get(proto_variety_id, {}):
+                            continue
+                        proto_forms = forms_by_language[proto_variety_id].pop(proto_cid)
                         for f in proto_forms:
                             f.cognateset_id = major_cid
-                        forms_by_language["viet1250"].setdefault(major_cid, []).extend(proto_forms)
+                        forms_by_language[proto_variety_id].setdefault(
+                            major_cid, []
+                        ).extend(proto_forms)
 
 
 # ======================================================================
@@ -115,13 +120,16 @@ class DatasetForms:
         dataset_name: Short name of the originating Lexibank dataset
             (usually the repository directory name).
         forms_by_language: Nested mapping
-            ``glottocode → cognateset_id → [Form, …]``.
-        languages: ``glottocode → LanguageData`` (with *forms* list left
+            ``variety_id → cognateset_id → [Form, …]``.
+        languages: ``variety_id → LanguageData`` (with *forms* list left
             empty; forms are accessed via *forms_by_language* instead).
-        cognate_coverage: ``cognateset_id → {glottocodes with forms}``.
-        proto_languages: Glottocodes identified as proto-languages.
+        cognate_coverage: ``cognateset_id → {variety_ids with forms}``.
+        proto_languages: Variety IDs identified as proto-languages.
+        historical_languages: Variety IDs explicitly marked historical by a
+            source dataset.
         family: Best-guess language family for the whole dataset
             (from dataset metadata or the most frequent family value).
+        source_path: Dataset root used to discover authoritative source trees.
     """
 
     dataset_name: str
@@ -129,7 +137,9 @@ class DatasetForms:
     languages: dict[str, LanguageData]
     cognate_coverage: dict[str, set[str]]
     proto_languages: set[str]
+    historical_languages: set[str]
     family: str | None
+    source_path: Path | None = None
 
     @property
     def num_forms(self) -> int:
@@ -142,7 +152,7 @@ class DatasetForms:
 
     @property
     def num_languages(self) -> int:
-        """Number of distinct languages (glottocodes) with at least one form."""
+        """Number of distinct source varieties with at least one form."""
         return len(self.forms_by_language)
 
     @property
@@ -159,6 +169,60 @@ def _is_proto_language(name: str) -> bool:
     """Heuristic: does the language name suggest a proto-language?"""
     lower = name.lower()
     return lower.startswith("proto-") or lower.startswith("proto ")
+
+
+def _as_bool(value: Any) -> bool:
+    """Parse common CLDF boolean encodings without guessing from names."""
+    if isinstance(value, bool):
+        return value
+    return _safe_str(value).strip().lower() in {"1", "true", "yes"}
+
+
+def _historical_date(row: dict[str, Any]) -> float | None:
+    """Return a source-provided age before present, where one is available.
+
+    IE-CoR uses several distribution-specific fields.  We deliberately retain
+    only a single comparable point estimate here; uncertainty remains in the
+    source table and lineage manifests provide the authoritative ancestry.
+    """
+    for column in (
+        "normalMean",
+        "NormalMean",
+        "logNormalMean",
+        "LogNormalMean",
+    ):
+        value = _safe_float(row.get(column))
+        if value is not None:
+            return value
+    return None
+
+
+def _tokens(value: Any) -> list[str]:
+    """Return existing CLDF tokens without attempting raw-form tokenisation."""
+    if isinstance(value, list):
+        return [_safe_str(token).strip() for token in value if _safe_str(token).strip()]
+    if isinstance(value, str):
+        return [token for token in value.split() if token]
+    return []
+
+
+def _normalize_existing_tokens(tokens: list[str]) -> tuple[str, ...]:
+    """Apply only lossless cross-dataset normalization to existing tokens.
+
+    Raw ``Form`` values are deliberately not split here: many are orthographic
+    rather than IPA.  Dataset-specific profiles must opt into that recovery
+    path separately.
+    """
+    return tuple(unicodedata.normalize("NFC", token) for token in tokens)
+
+
+def _clade_path(value: Any) -> tuple[str, ...]:
+    """Coerce a CLDF list or delimited clade field into an ordered path."""
+    if isinstance(value, (list, tuple)):
+        parts = value
+    else:
+        parts = _safe_str(value).split(";")
+    return tuple(_safe_str(part).strip() for part in parts if _safe_str(part).strip())
 
 
 def _find_cldf_metadata(dataset_dir: Path) -> Path | None:
@@ -287,7 +351,7 @@ class CLDFLoader:
         lang_lookup: dict[str, dict[str, Any]] = {}  # internal_id → info
         for lang in ds["LanguageTable"]:
             lid = _safe_str(lang.get("ID", ""))
-            glottocode = _safe_str(lang.get("Glottocode", ""))
+            source_glottocode = _safe_str(lang.get("Glottocode", ""))
             name = _safe_str(lang.get("Name", ""))
             family = lang.get("Family") or lang.get("family") or None
             subgroup = lang.get("SubGroup") or lang.get("subgroup") or lang.get("Subgroup") or None
@@ -298,13 +362,28 @@ class CLDFLoader:
                 continue
 
             lang_lookup[lid] = {
-                "glottocode": glottocode or lid,  # fallback
+                # Forms are keyed by this value, never by a Glottocode.  A
+                # source can legitimately assign the same Glottocode to a
+                # modern variety and one or more of its historical stages.
+                "variety_id": f"{dataset_name}:{lid}",
+                "glottocode": source_glottocode or lid,
+                "tree_glottocode": source_glottocode or lid,
                 "name": name,
                 "family": _safe_str(family) if family else None,
                 "subgroup": _safe_str(subgroup) if subgroup else None,
                 "latitude": lat,
                 "longitude": lon,
                 "is_proto": _is_proto_language(name),
+                "is_historical": _as_bool(
+                    lang.get("historical", lang.get("Historical"))
+                ),
+                "date_before_present": _historical_date(lang),
+                "clade_path": _clade_path(
+                    lang.get("Clade")
+                    or lang.get("clade")
+                    or lang.get("SubGroup")
+                    or lang.get("subgroup")
+                ),
             }
 
         # ---- Build concept lookup -------------------------------------
@@ -339,6 +418,9 @@ class CLDFLoader:
 
         # ---- Check which columns are available in FormTable -----------
         has_segments = _table_has_column(ds, "FormTable", "Segments")
+        has_phonemic_segments = _table_has_column(
+            ds, "FormTable", "Phonemic_Segments"
+        )
 
         # ---- Iterate over forms ---------------------------------------
         forms_by_language: dict[str, dict[str, list[Form]]] = defaultdict(
@@ -347,6 +429,7 @@ class CLDFLoader:
         cognate_coverage: dict[str, set[str]] = defaultdict(set)
         language_data: dict[str, LanguageData] = {}
         proto_languages: set[str] = set()
+        historical_languages: set[str] = set()
         family_counter: dict[str, int] = defaultdict(int)
 
         for row in ds["FormTable"]:
@@ -358,36 +441,18 @@ class CLDFLoader:
             lang_info = lang_lookup.get(lang_id)
             if lang_info is None:
                 continue
-            glottocode = lang_info["glottocode"]
+            variety_id = lang_info["variety_id"]
 
-            # Extract segments / form string
-            raw_segments = row.get("Segments") if has_segments else None
-            raw_form = row.get("Form", "")
-
-            # pycldf may return Segments as a list or as a space-separated string.
-            if isinstance(raw_segments, list):
-                raw_seg_list = [s for s in raw_segments if s]
-            elif isinstance(raw_segments, str) and raw_segments.strip():
-                raw_seg_list = raw_segments.strip().split()
-            else:
-                # Fall back to Form column.
-                form_str = _safe_str(raw_form).strip()
-                if not form_str:
-                    continue  # skip empty forms
-                raw_seg_list = form_str.split()
-
-            clean_segments = []
-            for s in raw_seg_list:
-                # Lexibank segments often use SOURCE/TARGET for orthography/BIPA mapping.
-                # We take the rightmost element to get the standardized BIPA representation.
-                s = s.split("/")[-1]
-                # Strip out uncertainty markers
-                for char in "()[]~":
-                    s = s.replace(char, "")
-                if s:
-                    clean_segments.append(s)
-
-            segments = tuple(clean_segments)
+            # Prefer standard CLDF Segments.  IE-CoR exposes a second,
+            # profile-tokenised Phonemic_Segments field which is a safe
+            # fallback.  Never split a raw Form generically: it can be
+            # orthographic and would introduce systematic pseudo-IPA noise.
+            segment_source = "segments"
+            raw_seg_list = _tokens(row.get("Segments")) if has_segments else []
+            if not raw_seg_list and has_phonemic_segments:
+                raw_seg_list = _tokens(row.get("Phonemic_Segments"))
+                segment_source = "phonemic_segments"
+            segments = _normalize_existing_tokens(raw_seg_list)
 
             if not segments:
                 continue  # skip empty
@@ -411,31 +476,40 @@ class CLDFLoader:
 
             form = Form(
                 form_id=form_id,
-                language=glottocode,
+                language=variety_id,
                 language_name=lang_info["name"],
                 segments=segments,
                 concept=concept_gloss,
                 concepticon_id=concepticon_id,
                 cognateset_id=cognateset_id,
                 dataset=dataset_name,
+                tree_glottocode=lang_info["tree_glottocode"],
+                segment_source=segment_source,
             )
 
-            forms_by_language[glottocode][cognateset_id].append(form)
-            cognate_coverage[cognateset_id].add(glottocode)
+            forms_by_language[variety_id][cognateset_id].append(form)
+            cognate_coverage[cognateset_id].add(variety_id)
 
             # Ensure language metadata entry exists
-            if glottocode not in language_data:
-                language_data[glottocode] = LanguageData(
-                    glottocode=glottocode,
+            if variety_id not in language_data:
+                language_data[variety_id] = LanguageData(
+                    glottocode=lang_info["glottocode"],
                     name=lang_info["name"],
                     family=lang_info["family"],
                     subgroup=lang_info["subgroup"],
                     latitude=lang_info["latitude"],
                     longitude=lang_info["longitude"],
                     is_proto=lang_info["is_proto"],
+                    variety_id=variety_id,
+                    tree_glottocode=lang_info["tree_glottocode"],
+                    is_historical=lang_info["is_historical"],
+                    date_before_present=lang_info["date_before_present"],
+                    clade_path=lang_info["clade_path"],
                 )
                 if lang_info["is_proto"]:
-                    proto_languages.add(glottocode)
+                    proto_languages.add(variety_id)
+                if lang_info["is_historical"]:
+                    historical_languages.add(variety_id)
                 if lang_info["family"]:
                     family_counter[lang_info["family"]] += 1
 
@@ -460,7 +534,9 @@ class CLDFLoader:
             languages=language_data,
             cognate_coverage=dict(cognate_coverage),
             proto_languages=proto_languages,
+            historical_languages=historical_languages,
             family=dataset_family,
+            source_path=dataset_path,
         )
 
     def load_all_datasets(self) -> list[DatasetForms]:

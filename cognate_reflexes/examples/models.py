@@ -15,7 +15,10 @@ class Form:
 
     Attributes:
         form_id: Unique form identifier within the source dataset.
-        language: Glottocode of the language this form belongs to.
+        language: Unique dataset-scoped variety ID this form belongs to.
+        tree_glottocode: Glottocode used for tree lookup, when available.
+        segment_source: Provenance of ``segments`` (for example,
+            ``"segments"`` or ``"phonemic_segments"``).
         language_name: Human-readable language name (metadata only).
         segments: IPA segments as a tuple (e.g. ``("b", "a", "n"...)``).
         concept: Concept gloss (e.g. ``"WATER"``), from Concepticon or
@@ -35,6 +38,8 @@ class Form:
     concepticon_id: str | None
     cognateset_id: str
     dataset: str
+    tree_glottocode: str | None = None
+    segment_source: str = "segments"
 
 
 @dataclass
@@ -42,7 +47,13 @@ class LanguageData:
     """Linguistic data for a single language (doculect) within one dataset.
 
     Attributes:
-        glottocode: Glottolog identifier for the language.
+        glottocode: Glottolog identifier for the language, retained as
+            provenance and for backward-compatible output.
+        variety_id: Dataset-scoped, unique identifier for the variety.  This
+            is distinct from a Glottocode because a source can represent
+            several historical stages with the same Glottocode.
+        tree_glottocode: Identifier used to place the variety in a reference
+            tree.  It may be absent for a source-only historical variety.
         name: Human-readable language name (metadata only — not shown to
             the model by default).
         forms: Lexical forms associated with this language for a given
@@ -62,6 +73,16 @@ class LanguageData:
     family: str | None = None
     subgroup: str | None = None
     is_proto: bool = False
+    variety_id: str | None = None
+    tree_glottocode: str | None = None
+    is_historical: bool = False
+    date_before_present: float | None = None
+    clade_path: tuple[str, ...] = ()
+
+    @property
+    def identifier(self) -> str:
+        """Return the unique variety key used internally by the pipeline."""
+        return self.variety_id or self.glottocode
 
 
 @dataclass
@@ -78,7 +99,9 @@ class ExampleMetadata:
         num_cognate_sets: Number of cognate sets shared across all
             languages in this example.
         glottocodes: ``(*inputs, target)`` Glottocodes.
-        coordinates: Mapping from glottocode to ``(lat, lon)`` or ``None``.
+        variety_ids: Unique dataset-scoped IDs in the same order as
+            ``glottocodes``.
+        coordinates: Mapping from variety ID to ``(lat, lon)`` or ``None``.
         concept_ids: Concepticon IDs used in this example.
         cognateset_ids: Cognate-set IDs used in this example.
     """
@@ -92,6 +115,9 @@ class ExampleMetadata:
     coordinates: dict[str, tuple[float, float] | None]
     concept_ids: list[str]
     cognateset_ids: list[str]
+    variety_ids: tuple[str, ...] = ()
+    target_kind: str = "proto"
+    historical_branch_ids: tuple[str, ...] = ()
 
 
 @dataclass

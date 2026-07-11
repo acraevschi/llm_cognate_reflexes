@@ -12,15 +12,20 @@ a single convenient class that can be used from a fine-tuning script::
 
 from __future__ import annotations
 
-import json
+import hashlib
 import logging
 import random
-from pathlib import Path
+import traceback
 from typing import Iterator
 
 from cognate_reflexes.config import Config
+from cognate_reflexes.data.historical import HistoricalLineageManifest
 from cognate_reflexes.data.loader import CLDFLoader, DatasetForms
 from cognate_reflexes.data.registry import DatasetRegistry
+from cognate_reflexes.data.temporal_trees import (
+    TemporalTreeManifest,
+    discover_temporal_lineages,
+)
 from cognate_reflexes.tree.glottolog import GlottologTree
 from cognate_reflexes.tree.newick_utils import (
     TreeNode,
@@ -36,26 +41,42 @@ from cognate_reflexes.examples.models import TrainingExample
 from cognate_reflexes.examples.reconstruction import (
     generate_reconstruction_examples,
 )
+from cognate_reflexes.examples.historical_reconstruction import (
+    generate_historical_reconstruction_examples,
+)
 
 logger = logging.getLogger(__name__)
 
 
-import hashlib
-
-def _process_dataset_worker(dataset_path: str, config: Config) -> list[TrainingExample]:
-    """Worker function for multiprocessing."""
+def _stream_dataset_worker(
+    dataset_path: str,
+    config: Config,
+    result_queue: object,
+    batch_size: int = 8,
+) -> None:
+    """Generate one dataset and send bounded example batches to the parent."""
     gen = ExampleGenerator(config)
-    
+
     # Create a deterministic but unique seed for this dataset to avoid correlated
     # randomness across worker processes.
     path_hash = int(hashlib.md5(str(dataset_path).encode('utf-8')).hexdigest(), 16)
-    dataset_seed = (config.seed + path_hash) % (2**32)
+    dataset_seed = ((config.seed or 0) + path_hash) % (2**32)
     gen._rng = random.Random(dataset_seed)
-    
-    ds = gen.loader.load_dataset(dataset_path)
-    if not ds:
-        return []
-    return list(gen._generate_for_dataset(ds))
+    try:
+        ds = gen.loader.load_dataset(dataset_path)
+        if ds is not None:
+            batch: list[TrainingExample] = []
+            for example in gen._generate_for_dataset(ds):
+                batch.append(example)
+                if len(batch) >= batch_size:
+                    result_queue.put(("batch", dataset_path, batch))  # type: ignore[attr-defined]
+                    batch = []
+            if batch:
+                result_queue.put(("batch", dataset_path, batch))  # type: ignore[attr-defined]
+    except Exception:
+        result_queue.put(("error", dataset_path, traceback.format_exc()))  # type: ignore[attr-defined]
+    finally:
+        result_queue.put(("done", dataset_path, None))  # type: ignore[attr-defined]
 
 
 class ExampleGenerator:
@@ -92,6 +113,8 @@ class ExampleGenerator:
         self._glottolog: GlottologTree | None = None
         self._registry: DatasetRegistry | None = None
         self._proto_name_map_cached: dict[str, str] | None = None
+        self._historical_manifest: HistoricalLineageManifest | None = None
+        self._temporal_tree_manifest: TemporalTreeManifest | None = None
 
     @property
     def proto_name_map(self) -> dict[str, str]:
@@ -139,6 +162,24 @@ class ExampleGenerator:
             self._registry.scan()
         return self._registry
 
+    @property
+    def historical_manifest(self) -> HistoricalLineageManifest:
+        """Load curated historical relations only when reconstruction needs it."""
+        if self._historical_manifest is None:
+            self._historical_manifest = HistoricalLineageManifest.from_csv(
+                self.config.historical_lineages_path
+            )
+        return self._historical_manifest
+
+    @property
+    def temporal_tree_manifest(self) -> TemporalTreeManifest:
+        """Load optional paths to authoritative time-aware Newick trees."""
+        if self._temporal_tree_manifest is None:
+            self._temporal_tree_manifest = TemporalTreeManifest.from_csv(
+                self.config.temporal_trees_path
+            )
+        return self._temporal_tree_manifest
+
     # ------------------------------------------------------------------
     # Public API
     # ------------------------------------------------------------------
@@ -162,7 +203,16 @@ class ExampleGenerator:
         """
         datasets = self._discover_datasets()
 
-        if workers <= 1:
+        effective_workers = max(1, workers)
+        if effective_workers > 4:
+            logger.warning(
+                "Using %d workers. Each active worker loads a complete CLDF "
+                "dataset and tree collection; values above 4 can cause high "
+                "memory use.",
+                effective_workers,
+            )
+
+        if effective_workers <= 1:
             for ds_info in datasets:
                 ds = self.loader.load_dataset(ds_info.path)
                 if ds is None:
@@ -177,23 +227,79 @@ class ExampleGenerator:
 
                 yield from self._generate_for_dataset(ds)
         else:
-            import concurrent.futures
-            paths = [ds_info.path for ds_info in datasets]
-            logger.info("Starting ProcessPoolExecutor with %d workers.", workers)
-            
-            with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
-                futures = {
-                    executor.submit(_process_dataset_worker, path, self.config): path 
-                    for path in paths
-                }
-                for future in concurrent.futures.as_completed(futures):
-                    path = futures[future]
+            # A ProcessPoolExecutor result is materialised before it can be
+            # returned.  With thousands of rich examples per dataset that
+            # creates several full in-memory copies.  Use a bounded queue of
+            # small batches instead, while retaining process isolation.
+            import multiprocessing as mp
+            from queue import Empty
+
+            paths = [str(ds_info.path) for ds_info in datasets]
+            context = mp.get_context("spawn")
+            result_queue = context.Queue(maxsize=max(1, effective_workers))
+            pending_paths = iter(paths)
+            active: dict[str, object] = {}
+
+            def start_next() -> bool:
+                try:
+                    path = next(pending_paths)
+                except StopIteration:
+                    return False
+                process = context.Process(
+                    target=_stream_dataset_worker,
+                    args=(path, self.config, result_queue),
+                )
+                process.start()
+                active[path] = process
+                return True
+
+            for _ in range(min(effective_workers, len(paths))):
+                start_next()
+
+            try:
+                while active:
                     try:
-                        examples = future.result()
-                        logger.info("Finished dataset %s: %d examples.", path, len(examples))
+                        event, path, payload = result_queue.get(timeout=1)
+                    except Empty:
+                        # A process can terminate before publishing its final
+                        # sentinel (for example after an OOM kill).  Detect it
+                        # instead of waiting forever on the queue.
+                        for dead_path, process in list(active.items()):
+                            if not process.is_alive():
+                                process.join()
+                                active.pop(dead_path)
+                                logger.error(
+                                    "Worker for dataset '%s' exited without "
+                                    "a completion sentinel.",
+                                    dead_path,
+                                )
+                                start_next()
+                        continue
+                    if event == "batch":
+                        examples = payload
+                        logger.debug(
+                            "Received %d examples from dataset '%s'.",
+                            len(examples),
+                            path,
+                        )
                         yield from examples
-                    except Exception:
-                        logger.exception("Worker failed processing dataset '%s'", path)
+                    elif event == "error":
+                        logger.error(
+                            "Worker failed processing dataset '%s':\n%s",
+                            path,
+                            payload,
+                        )
+                    elif event == "done":
+                        process = active.pop(path, None)
+                        if process is not None:
+                            process.join()
+                        start_next()
+            finally:
+                for process in active.values():
+                    if process.is_alive():
+                        process.terminate()
+                    process.join()
+                result_queue.close()
 
     def materialize(self, path: str, format: str = "jsonl") -> int:
         """Write all examples to disk.
@@ -220,6 +326,7 @@ class ExampleGenerator:
         all_ds = self.registry.list_all()
         with_cognates = self.registry.filter(has_cognates=True)
         with_proto = self.registry.filter(has_proto_forms=True)
+        with_historical = self.registry.filter(has_historical_forms=True)
 
         families: set[str] = set()
         total_langs = 0
@@ -233,6 +340,7 @@ class ExampleGenerator:
             "num_datasets": len(all_ds),
             "num_datasets_with_cognates": len(with_cognates),
             "num_datasets_with_proto": len(with_proto),
+            "num_datasets_with_historical": len(with_historical),
             "families": sorted(families),
             "total_languages": total_langs,
             "total_forms": total_forms,
@@ -245,20 +353,61 @@ class ExampleGenerator:
     def _discover_datasets(self) -> list:
         """Get the list of datasets to process based on the task."""
         if self.config.task == "reconstruction":
-            return self.registry.filter(
-                has_cognates=True, has_proto_forms=True
+            manifest_datasets = (
+                self.historical_manifest.datasets()
+                if self.config.include_historical
+                else set()
             )
+            temporal_tree_datasets = (
+                self.temporal_tree_manifest.datasets()
+                if self.config.include_temporal_trees
+                else set()
+            )
+            return [
+                info
+                for info in self.registry.filter(has_cognates=True)
+                if info.has_proto_forms
+                or (
+                    self.config.include_historical
+                    and (
+                        info.has_historical_forms or info.name in manifest_datasets
+                    )
+                )
+                or (
+                    self.config.include_temporal_trees
+                    and (
+                        info.has_source_tree
+                        or info.name in temporal_tree_datasets
+                    )
+                )
+            ]
         else:
             return self.registry.filter(has_cognates=True)
 
     def _generate_for_dataset(
         self, dataset: DatasetForms
     ) -> Iterator[TrainingExample]:
-        """Generate training examples for a single dataset."""
-        dataset_examples: list[TrainingExample] = []
+        """Generate training examples for one dataset with bounded memory.
+
+        Examples are yielded immediately after deduplication.  We deliberately
+        avoid a per-dataset reservoir of complete examples: each object
+        contains raw forms and can be large enough to make a 5,000-item
+        reservoir dominate worker memory.
+        """
         seen_hashes: set[int] = set()
-        count = 0
+        emitted = 0
         max_triplets = self.config.max_triplets_per_dataset
+
+        def is_new_example(example: TrainingExample) -> bool:
+            """Deduplicate without retaining the full example object."""
+            input_ids = tuple(sorted(item.identifier for item in example.inputs))
+            target_id = example.target.identifier
+            cognateset_ids = tuple(sorted(example.metadata.cognateset_ids))
+            signature = hash((input_ids, target_id, cognateset_ids))
+            if signature in seen_hashes:
+                return False
+            seen_hashes.add(signature)
+            return True
 
         # Clean proto name helper
         import re
@@ -270,8 +419,8 @@ class ExampleGenerator:
 
         # Group languages by family.
         # First, resolve missing family names for proto-languages based on their descendants.
-        for proto_gc in dataset.proto_languages:
-            proto_lang = dataset.languages[proto_gc]
+        for proto_id in dataset.proto_languages:
+            proto_lang = dataset.languages[proto_id]
             if not proto_lang.family or proto_lang.family.lower() == "unknown":
                 attested_langs = [
                     lang for lang in dataset.languages.values()
@@ -303,9 +452,12 @@ class ExampleGenerator:
                     proto_lang.family = Counter(families).most_common(1)[0][0]
 
         family_groups: dict[str, list[str]] = {}
-        for gc, lang in dataset.languages.items():
-            family = lang.family or "unknown"
-            family_groups.setdefault(family, []).append(gc)
+        if not (
+            self.config.task == "reconstruction" and not dataset.proto_languages
+        ):
+            for variety_id, lang in dataset.languages.items():
+                family = lang.family or "unknown"
+                family_groups.setdefault(family, []).append(variety_id)
 
         # Helper to find a node in the tree by label
         def find_node(node: TreeNode, label: str) -> TreeNode | None:
@@ -317,17 +469,20 @@ class ExampleGenerator:
                     return res
             return None
 
-        for family, glottocodes in family_groups.items():
+        for family, variety_ids in family_groups.items():
             # Attested languages in the family
-            attested_gcs = [
-                gc for gc in glottocodes
-                if gc in dataset.languages and not dataset.languages[gc].is_proto
+            attested_ids = [
+                variety_id for variety_id in variety_ids
+                if (
+                    variety_id in dataset.languages
+                    and not dataset.languages[variety_id].is_proto
+                )
             ]
-            if len(attested_gcs) < 2:
+            if len(attested_ids) < 2:
                 continue  # Need at least 2 attested languages
 
             # Try to get the family Glottocode for tree retrieval.
-            family_gc = self._resolve_family_glottocode(attested_gcs)
+            family_gc = self._resolve_family_glottocode(dataset, attested_ids)
             if family_gc is None:
                 logger.warning(
                     "Could not resolve family Glottocode for '%s' in "
@@ -354,20 +509,26 @@ class ExampleGenerator:
             full_leaf_nodes = {leaf.label: leaf for leaf in full_tree.get_leaves() if leaf.label}
 
             # Proto-languages in this family
-            family_proto_gcs = [
-                gc for gc in glottocodes
-                if gc in dataset.languages and dataset.languages[gc].is_proto
+            family_proto_ids = [
+                variety_id for variety_id in variety_ids
+                if (
+                    variety_id in dataset.languages
+                    and dataset.languages[variety_id].is_proto
+                )
             ]
 
             # Map proto-languages to Glottocodes/nodes in the full tree
-            mapped_proto_gcs: dict[str, str] = {}
+            mapped_proto_ids: dict[str, str] = {}
 
             # 1. Resolve name-based proto glottocodes
-            for proto_gc in family_proto_gcs:
-                proto_lang = dataset.languages[proto_gc]
+            for proto_id in family_proto_ids:
+                proto_lang = dataset.languages[proto_id]
                 # Check if it has a valid glottocode in Glottolog
-                if proto_gc != proto_lang.name and self.glottolog.api.languoid(proto_gc):
-                    mapped_proto_gcs[proto_gc] = proto_gc
+                if (
+                    proto_lang.tree_glottocode
+                    and self.glottolog.api.languoid(proto_lang.tree_glottocode)
+                ):
+                    mapped_proto_ids[proto_id] = proto_lang.tree_glottocode
                     continue
                 # Try resolving by name
                 resolved_gc = self.proto_name_map.get(proto_lang.name.lower().strip())
@@ -375,18 +536,22 @@ class ExampleGenerator:
                     clean_name = clean_proto_name(proto_lang.name)
                     resolved_gc = self.proto_name_map.get(clean_name)
                 if resolved_gc:
-                    mapped_proto_gcs[proto_gc] = resolved_gc
+                    mapped_proto_ids[proto_id] = resolved_gc
 
             # 2. For unresolved ones, map to MRCA of their attested descendants in the unpruned tree
-            unresolved_proto_gcs = [gc for gc in family_proto_gcs if gc not in mapped_proto_gcs]
-            unresolved_proto_gcs_sorted = sorted(
-                unresolved_proto_gcs,
-                key=lambda gc: len(dataset.languages[gc].name),
+            unresolved_proto_ids = [
+                variety_id
+                for variety_id in family_proto_ids
+                if variety_id not in mapped_proto_ids
+            ]
+            unresolved_proto_ids_sorted = sorted(
+                unresolved_proto_ids,
+                key=lambda variety_id: len(dataset.languages[variety_id].name),
                 reverse=True
             )
 
-            for proto_gc in unresolved_proto_gcs_sorted:
-                proto_lang = dataset.languages[proto_gc]
+            for proto_id in unresolved_proto_ids_sorted:
+                proto_lang = dataset.languages[proto_id]
                 clean_p = clean_proto_name(proto_lang.name)
                 p_subgroup = (proto_lang.subgroup or "").strip()
 
@@ -394,30 +559,54 @@ class ExampleGenerator:
                 descendants = []
                 if p_subgroup:
                     descendants = [
-                        gc for gc in attested_gcs
-                        if gc in full_leaf_nodes and dataset.languages[gc].subgroup == p_subgroup
-                    ]
-                if not descendants:
-                    descendants = [
-                        gc for gc in attested_gcs
-                        if gc in full_leaf_nodes and (
-                            clean_p in (dataset.languages[gc].subgroup or "").lower() or
-                            clean_p in (dataset.languages[gc].family or "").lower()
+                        variety_id for variety_id in attested_ids
+                        if (
+                            dataset.languages[variety_id].tree_glottocode
+                            in full_leaf_nodes
+                            and dataset.languages[variety_id].subgroup == p_subgroup
                         )
                     ]
                 if not descendants:
-                    descendants = [gc for gc in attested_gcs if gc in full_leaf_nodes]
+                    descendants = [
+                        variety_id for variety_id in attested_ids
+                        if (
+                            dataset.languages[variety_id].tree_glottocode
+                            in full_leaf_nodes
+                            and (
+                                clean_p
+                                in (dataset.languages[variety_id].subgroup or "").lower()
+                                or clean_p
+                                in (dataset.languages[variety_id].family or "").lower()
+                            )
+                        )
+                    ]
+                if not descendants:
+                    descendants = [
+                        variety_id
+                        for variety_id in attested_ids
+                        if dataset.languages[variety_id].tree_glottocode
+                        in full_leaf_nodes
+                    ]
 
                 if len(descendants) >= 2:
-                    mrca = full_leaf_nodes[descendants[0]]
-                    for gc in descendants[1:]:
-                        mrca_next = find_mrca(mrca, full_leaf_nodes[gc])
+                    first_gc = dataset.languages[descendants[0]].tree_glottocode
+                    assert first_gc is not None
+                    mrca = full_leaf_nodes[first_gc]
+                    for variety_id in descendants[1:]:
+                        descendant_gc = dataset.languages[variety_id].tree_glottocode
+                        assert descendant_gc is not None
+                        mrca_next = find_mrca(mrca, full_leaf_nodes[descendant_gc])
                         if mrca_next:
                             mrca = mrca_next
-                    mapped_proto_gcs[proto_gc] = mrca.label
+                    if mrca.label:
+                        mapped_proto_ids[proto_id] = mrca.label
 
             # The set of glottocodes to preserve in the pruned tree
-            keep_gcs = set(attested_gcs) | set(mapped_proto_gcs.values())
+            keep_gcs = {
+                dataset.languages[variety_id].tree_glottocode
+                for variety_id in attested_ids
+                if dataset.languages[variety_id].tree_glottocode
+            } | set(mapped_proto_ids.values())
 
             # Prune the tree keeping all of these
             tree = prune_tree(full_tree, keep_gcs)
@@ -429,17 +618,40 @@ class ExampleGenerator:
                 )
                 continue
 
-            # Rename target node labels in the pruned tree to the dataset's proto IDs
-            for proto_gc, resolved_gc in mapped_proto_gcs.items():
+            # One Glottocode can refer to several source varieties.  A
+            # Glottolog leaf can represent only an unambiguous variety; skip
+            # collisions here rather than merging their forms.  Historical
+            # examples use the lineage manifest and remain available.
+            tree_to_varieties: dict[str, list[str]] = {}
+            for variety_id in attested_ids:
+                tree_gc = dataset.languages[variety_id].tree_glottocode
+                if tree_gc:
+                    tree_to_varieties.setdefault(tree_gc, []).append(variety_id)
+            for tree_gc, mapped_variety_ids in tree_to_varieties.items():
+                if len(mapped_variety_ids) != 1:
+                    logger.info(
+                        "Dataset '%s' has %d varieties for Glottocode '%s'; "
+                        "excluding that leaf from Glottolog-derived examples.",
+                        dataset.dataset_name,
+                        len(mapped_variety_ids),
+                        tree_gc,
+                    )
+                    continue
+                node = find_node(tree, tree_gc)
+                if node:
+                    node.label = mapped_variety_ids[0]
+
+            # Rename target nodes to their dataset-scoped variety IDs.
+            for proto_id, resolved_gc in mapped_proto_ids.items():
                 node = find_node(tree, resolved_gc)
                 if node:
-                    node.label = proto_gc
+                    node.label = proto_id
 
             # Resolve polytomies into binary trees.
             binary_trees = resolve_all_polytomies(
                 tree,
                 max_resolutions_per_node=self.config.max_polytomy_resolutions,
-                max_total_trees=1000,
+                max_total_trees=self.config.max_total_binary_trees,
                 rng=self._rng,
             )
 
@@ -465,25 +677,12 @@ class ExampleGenerator:
 
                 found_new_in_tree = False
                 for ex in generator:
-                    # Deduplicate examples across different binary
-                    # resolutions using compact int hashes instead of
-                    # full signature tuples.
-                    input_gcs = tuple(sorted(i.glottocode for i in ex.inputs))
-                    target_gc = ex.target.glottocode
-                    cog_ids = tuple(sorted(ex.metadata.cognateset_ids))
-                    sig_hash = hash((input_gcs, target_gc, cog_ids))
-
-                    if sig_hash not in seen_hashes:
-                        seen_hashes.add(sig_hash)
-                        count += 1
+                    if is_new_example(ex):
                         found_new_in_tree = True
-
-                        if max_triplets is None or len(dataset_examples) < max_triplets:
-                            dataset_examples.append(ex)
-                        else:
-                            j = self._rng.randrange(count)
-                            if j < max_triplets:
-                                dataset_examples[j] = ex
+                        emitted += 1
+                        yield ex
+                        if max_triplets is not None and emitted >= max_triplets:
+                            return
 
                 if found_new_in_tree:
                     stale_tree_count = 0
@@ -499,20 +698,35 @@ class ExampleGenerator:
                         )
                         break
 
-        if max_triplets is not None and len(dataset_examples) > 0:
-            # Although the reservoir sample is a random subset, the first
-            # max_triplets items (if count >= max_triplets) might be
-            # biased in order.  Shuffle to ensure random order.
-            self._rng.shuffle(dataset_examples)
-
-        yield from dataset_examples
+        if self.config.task == "reconstruction" and self.config.include_historical:
+            automatic_lineages = (
+                discover_temporal_lineages(dataset, self.temporal_tree_manifest)
+                if self.config.include_temporal_trees
+                else {}
+            )
+            for example in generate_historical_reconstruction_examples(
+                dataset,
+                self.historical_manifest,
+                self.config,
+                self._rng,
+                automatic_lineages=automatic_lineages,
+            ):
+                if is_new_example(example):
+                    emitted += 1
+                    yield example
+                    if max_triplets is not None and emitted >= max_triplets:
+                        return
 
     def _resolve_family_glottocode(
-        self, glottocodes: list[str]
+        self, dataset: DatasetForms, variety_ids: list[str]
     ) -> str | None:
         """Find the top-level family Glottocode for a group of languages."""
-        for gc in glottocodes:
-            family_gc = self.glottolog.get_family_for_language(gc)
+        for variety_id in variety_ids:
+            language = dataset.languages[variety_id]
+            tree_glottocode = language.tree_glottocode
+            if not tree_glottocode:
+                continue
+            family_gc = self.glottolog.get_family_for_language(tree_glottocode)
             if family_gc is not None:
                 return family_gc
         return None
@@ -542,4 +756,3 @@ class ExampleGenerator:
 
         pruned = prune_tree(full_tree, keep_glottocodes)
         return pruned
-

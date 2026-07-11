@@ -85,6 +85,13 @@ def _build_language_data(
         longitude=lang_meta.longitude if lang_meta else None,
         family=lang_meta.family if lang_meta else None,
         is_proto=lang_meta.is_proto if lang_meta else False,
+        variety_id=lang_meta.identifier if lang_meta else glottocode,
+        tree_glottocode=lang_meta.tree_glottocode if lang_meta else None,
+        is_historical=lang_meta.is_historical if lang_meta else False,
+        date_before_present=(
+            lang_meta.date_before_present if lang_meta else None
+        ),
+        clade_path=lang_meta.clade_path if lang_meta else (),
     )
 
 
@@ -223,18 +230,18 @@ def generate_reconstruction_examples(
                 branch_lengths.append(bl)
                 
             coordinates: dict[str, tuple[float, float] | None] = {}
-            for gc in glottocodes:
-                lang = dataset.languages.get(gc)
+            for variety_id in glottocodes:
+                lang = dataset.languages.get(variety_id)
                 if lang and lang.latitude is not None and lang.longitude is not None:
-                    coordinates[gc] = (lang.latitude, lang.longitude)
+                    coordinates[variety_id] = (lang.latitude, lang.longitude)
                 else:
-                    coordinates[gc] = None
+                    coordinates[variety_id] = None
 
             concept_ids = []
             for cid in shuffled_cogsets:
                 found = False
-                for gc in glottocodes:
-                    forms = dataset.forms_by_language.get(gc, {}).get(cid, [])
+                for variety_id in glottocodes:
+                    forms = dataset.forms_by_language.get(variety_id, {}).get(cid, [])
                     if forms and forms[0].concepticon_id:
                         concept_ids.append(forms[0].concepticon_id)
                         found = True
@@ -248,10 +255,15 @@ def generate_reconstruction_examples(
                 tree_depth=mrca_depth,
                 branch_lengths=branch_lengths,
                 num_cognate_sets=len(shuffled_cogsets),
-                glottocodes=glottocodes,
+                glottocodes=tuple(
+                    dataset.languages[variety_id].glottocode
+                    for variety_id in glottocodes
+                ),
+                variety_ids=glottocodes,
                 coordinates=coordinates,
                 concept_ids=concept_ids,
                 cognateset_ids=shuffled_cogsets,
+                target_kind="proto",
             )
 
             yield TrainingExample(

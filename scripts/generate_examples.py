@@ -49,6 +49,10 @@ def _print_stats(stats: dict[str, object]) -> None:
     print(f"  Total datasets found:          {stats['num_datasets']}")
     print(f"  Datasets with cognate sets:    {stats['num_datasets_with_cognates']}")
     print(f"  Datasets with proto-forms:     {stats['num_datasets_with_proto']}")
+    print(
+        "  Datasets with historical forms:"
+        f" {stats['num_datasets_with_historical']}"
+    )
     print(f"  Total languages:               {stats['total_languages']}")
     print(f"  Total forms:                   {stats['total_forms']}")
     families = stats.get("families", [])
@@ -140,8 +144,52 @@ def main() -> None:
     parser.add_argument(
         "--max-triplets-per-dataset",
         type=int,
-        default=None,
-        help="Maximum triplets to generate per dataset (default: None).",
+        default=5000,
+        help="Maximum triplets to generate per dataset (default: 5000).",
+    )
+    parser.add_argument(
+        "--max-total-binary-trees",
+        type=int,
+        default=64,
+        help=(
+            "Maximum fully resolved trees retained per family during "
+            "polytomy sampling (default: 64)."
+        ),
+    )
+    parser.add_argument(
+        "--historical-lineages",
+        default="./data/historical_lineages.csv",
+        help=(
+            "CSV manifest of curated historical target-to-descendant branch "
+            "relations."
+        ),
+    )
+    parser.add_argument(
+        "--no-historical",
+        action="store_true",
+        help="Exclude validated historical targets from reconstruction output.",
+    )
+    parser.add_argument(
+        "--min-historical-age-gap",
+        type=float,
+        default=0.0,
+        help=(
+            "Required target-minus-descendant age gap for dated historical "
+            "varieties (default: 0)."
+        ),
+    )
+    parser.add_argument(
+        "--temporal-trees",
+        default="./data/temporal_trees.csv",
+        help=(
+            "CSV mapping datasets to authoritative time-aware Newick trees "
+            "that are not exposed through CLDF TreeTable."
+        ),
+    )
+    parser.add_argument(
+        "--no-temporal-trees",
+        action="store_true",
+        help="Disable automatic historical-target extraction from source trees.",
     )
     parser.add_argument(
         "--seed",
@@ -188,6 +236,12 @@ def main() -> None:
         include_glosses=not args.no_glosses,
         max_polytomy_resolutions=args.max_polytomy_resolutions,
         max_triplets_per_dataset=args.max_triplets_per_dataset,
+        max_total_binary_trees=args.max_total_binary_trees,
+        historical_lineages_path=args.historical_lineages,
+        include_historical=not args.no_historical,
+        min_historical_age_gap=args.min_historical_age_gap,
+        temporal_trees_path=args.temporal_trees,
+        include_temporal_trees=not args.no_temporal_trees,
         seed=args.seed,
     )
 

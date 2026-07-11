@@ -31,3 +31,7 @@ cognate_reflexes/data/__pycache__/loader.cpython-311.pyc
 cognate_reflexes/data/__pycache__/loader.cpython-313.pyc
 cognate_reflexes/data/__pycache__/registry.cpython-311.pyc
 data/stage2_reconstruction.jsonl
+commands_to_run.txt
+cognate_reflexes/data/__pycache__/historical.cpython-311.pyc
+cognate_reflexes/data/__pycache__/temporal_trees.cpython-311.pyc
+cognate_reflexes/examples/__pycache__/historical_reconstruction.cpython-311.pyc

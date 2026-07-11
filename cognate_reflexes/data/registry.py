@@ -36,6 +36,10 @@ class DatasetInfo:
             information (inline or via CognateTable).
         has_proto_forms: ``True`` if at least one language name in
             ``languages.csv`` looks like a proto-language.
+        has_historical_forms: ``True`` if the language table explicitly marks
+            at least one variety as historical.
+        has_source_tree: ``True`` if the dataset publishes a standard CLDF
+            tree or a canonical ``cldf/tree.nwk`` Newick file.
         num_languages: Number of rows in ``languages.csv``.
         num_concepts: Number of rows in the parameter (concept) table,
             if present (``0`` otherwise).
@@ -48,6 +52,8 @@ class DatasetInfo:
     path: Path
     has_cognates: bool = False
     has_proto_forms: bool = False
+    has_historical_forms: bool = False
+    has_source_tree: bool = False
     num_languages: int = 0
     num_concepts: int = 0
     num_forms: int = 0
@@ -103,6 +109,7 @@ class DatasetRegistry:
         *,
         has_cognates: bool | None = None,
         has_proto_forms: bool | None = None,
+        has_historical_forms: bool | None = None,
         family: str | None = None,
         min_languages: int | None = None,
     ) -> list[DatasetInfo]:
@@ -115,6 +122,8 @@ class DatasetRegistry:
                 information.
             has_proto_forms: If ``True``, include only datasets with at
                 least one proto-language.
+            has_historical_forms: If ``True``, include only datasets with an
+                explicitly marked historical variety.
             family: If set, include only datasets whose *families* list
                 contains this value (case-insensitive substring match).
             min_languages: If set, include only datasets with at least
@@ -131,6 +140,11 @@ class DatasetRegistry:
             if (
                 has_proto_forms is not None
                 and info.has_proto_forms != has_proto_forms
+            ):
+                continue
+            if (
+                has_historical_forms is not None
+                and info.has_historical_forms != has_historical_forms
             ):
                 continue
             if family is not None:
@@ -195,6 +209,7 @@ class DatasetRegistry:
         # ---- Determine cognate availability ---------------------------
         has_cognate_table = False
         has_inline_cognateset = False
+        has_tree_table = False
         forms_csv_name: str | None = None
         languages_csv_name: str | None = None
         parameters_csv_name: str | None = None
@@ -207,6 +222,11 @@ class DatasetRegistry:
             # Identify table kind
             if "CognateTable" in dc_type or "cognates" in table_url.lower():
                 has_cognate_table = True
+            if "TreeTable" in dc_type or table_url.lower() in (
+                "trees.csv",
+                "tree.csv",
+            ):
+                has_tree_table = True
 
             if "FormTable" in dc_type or table_url.lower() in (
                 "forms.csv",
@@ -236,18 +256,31 @@ class DatasetRegistry:
                 languages_csv_name = table_url
 
         has_cognates = has_cognate_table or has_inline_cognateset
+        has_source_tree = has_tree_table or any(
+            (dataset_dir / relative_path).is_file()
+            for relative_path in (
+                "cldf/tree.nwk",
+                "cldf/tree.newick",
+                "cldf/trees.nwk",
+                "cldf/trees.newick",
+            )
+        )
 
         # ---- Read languages.csv ---------------------------------------
         num_languages = 0
         families: list[str] = []
         has_proto_forms = False
+        has_historical_forms = False
 
         lang_csv = cls._resolve_csv(cldf_dir, languages_csv_name, "languages")
         if lang_csv is not None:
             try:
-                num_languages, families, has_proto_forms = cls._scan_languages(
-                    lang_csv,
-                )
+                (
+                    num_languages,
+                    families,
+                    has_proto_forms,
+                    has_historical_forms,
+                ) = cls._scan_languages(lang_csv)
             except Exception:
                 logger.debug(
                     "Error reading languages file: %s", lang_csv, exc_info=True,
@@ -272,6 +305,8 @@ class DatasetRegistry:
             path=dataset_dir,
             has_cognates=has_cognates,
             has_proto_forms=has_proto_forms,
+            has_historical_forms=has_historical_forms,
+            has_source_tree=has_source_tree,
             num_languages=num_languages,
             num_concepts=num_concepts,
             num_forms=num_forms,
@@ -321,14 +356,16 @@ class DatasetRegistry:
     @staticmethod
     def _scan_languages(
         csv_path: Path,
-    ) -> tuple[int, list[str], bool]:
-        """Read a languages CSV and extract count, families, proto flag.
+    ) -> tuple[int, list[str], bool, bool]:
+        """Read a languages CSV and extract count, families and eligibility.
 
         Returns:
-            ``(num_languages, unique_families, has_proto_forms)``
+            ``(num_languages, unique_families, has_proto_forms,
+            has_historical_forms)``
         """
         families_seen: set[str] = set()
         has_proto = False
+        has_historical = False
         count = 0
 
         with open(csv_path, encoding="utf-8", newline="") as fh:
@@ -344,8 +381,11 @@ class DatasetRegistry:
                     "proto "
                 ):
                     has_proto = True
+                historical = (row.get("historical") or row.get("Historical") or "")
+                if historical.strip().lower() in {"1", "true", "yes"}:
+                    has_historical = True
 
-        return count, sorted(families_seen), has_proto
+        return count, sorted(families_seen), has_proto, has_historical
 
     @staticmethod
     def _count_csv_rows(csv_path: Path) -> int:
