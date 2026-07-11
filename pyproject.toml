@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "cognate_reflexes"
+version = "0.1.0"
+description = "Extract training triplets from Lexibank for LLM-based proto-language reconstruction"
+requires-python = ">=3.11"
+license = "MIT"
+readme = "README.md"
+dependencies = [
+    "pycldf>=1.35",
+    "pyglottolog>=3.0",
+    "newick>=1.0",
+    "clldutils>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cognate_reflexes*"]

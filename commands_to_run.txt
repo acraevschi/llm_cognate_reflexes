@@ -1,0 +1,23 @@
+python scripts/generate_examples.py \
+    --task cognate_reflex \
+    --output data/stage1_cognate_reflex.jsonl \
+    --min-cognates 15 \
+    --max-cognates 100 \
+    --mask-ratio 0.3 \
+    --max-polytomy-resolutions 50 \
+    --max-triplets-per-dataset 5000 \
+    --seed 42 \
+    --workers 16 \
+    --verbose
+
+
+conda run -n llm_reconstruction python scripts/generate_examples.py \
+    --task reconstruction \
+    --output data/stage2_reconstruction.jsonl \
+    --min-cognates 10 \
+    --max-cognates 120 \
+    --max-polytomy-resolutions 50 \
+    --max-triplets-per-dataset 5000 \
+    --seed 42 \
+    --workers 16 \
+    --verbose

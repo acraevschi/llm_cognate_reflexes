@@ -1,0 +1,13 @@
+name: llm_reconstruction
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.11
+  - pip
+  - pip:
+    - pycldf>=1.35
+    - pyglottolog>=3.0
+    - newick>=1.0
+    - clldutils>=3.0
+    - -e .
