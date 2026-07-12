@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cognate_reflexes"
 version = "0.1.0"
-description = "Extract training triplets from Lexibank for LLM-based proto-language reconstruction"
+description = "Deterministic and agentic historical-language reconstruction workbench"
 requires-python = ">=3.11"
 license = "MIT"
 readme = "README.md"
@@ -20,10 +20,14 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0", "pytest-cov"]
+agent = ["litellm>=1.63,<2"]
+
+[project.scripts]
+cognate-reconstruct = "cognate_reconstruction.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["cognate_reflexes*", "cognate_reconstruction*"]
 
 [tool.setuptools.package-data]
-cognate_reconstruction = ["py.typed"]
+cognate_reconstruction = ["py.typed", "agent/SKILL.md"]

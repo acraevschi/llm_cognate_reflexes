@@ -11,6 +11,22 @@ from cognate_reconstruction.schemas.common import (
 )
 
 
+class ConceptMetadata(WorkbenchModel):
+    """Optional human-readable semantics for a stable concept identifier."""
+
+    concept_id: NonEmptyStr
+    gloss: NonEmptyStr | None = None
+    concepticon_id: NonEmptyStr | None = None
+    aliases: tuple[NonEmptyStr, ...] = ()
+    semantic_field: NonEmptyStr | None = None
+
+    @model_validator(mode="after")
+    def validate_aliases(self) -> ConceptMetadata:
+        if len(set(self.aliases)) != len(self.aliases):
+            raise ValueError("concept aliases must be unique")
+        return self
+
+
 class FormProvenance(WorkbenchModel):
     dataset_id: NonEmptyStr | None = None
     source_form_id: NonEmptyStr | None = None

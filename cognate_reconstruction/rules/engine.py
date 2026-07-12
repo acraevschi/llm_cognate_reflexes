@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
+from typing import TypeAlias
 
 from cognate_reconstruction.schemas.lexicon import LexicalForm
 from cognate_reconstruction.schemas.rules import (
@@ -63,6 +64,25 @@ def _replace(
     return tuple(output)
 
 
+AnchorExpectation: TypeAlias = Mapping[
+    str,
+    tuple[str, ...] | Mapping[str, tuple[str, ...]],
+]
+
+
+def _anchors_for_form(
+    anchors: AnchorExpectation,
+    form_id: str,
+) -> Mapping[str, tuple[str, ...]]:
+    expected = anchors.get(form_id)
+    if expected is None:
+        return {}
+    if isinstance(expected, tuple):
+        # Backward-compatible form: the transformed form doubles as anchor ID.
+        return {form_id: expected}
+    return expected
+
+
 class RuleEngine:
     """Apply parsed rules without any dependency on tree traversal."""
 
@@ -71,7 +91,7 @@ class RuleEngine:
         rule: ParsedSoundRule,
         forms: Sequence[LexicalForm],
         *,
-        anchor_expected: Mapping[str, tuple[str, ...]] | None = None,
+        anchor_expected: AnchorExpectation | None = None,
         source_candidate_ids: Mapping[str, str] | None = None,
     ) -> RuleApplicationReport:
         anchors = anchor_expected or {}
@@ -83,9 +103,13 @@ class RuleEngine:
                 start for start in occurrences if _context_matches(rule, form.segments, start)
             )
             output = _replace(form.segments, rule.target.tokens, rule.replacement.tokens, matching)
-            anchor_ids = (form.form_id,) if form.form_id in anchors else ()
-            matched_anchor_ids = (
-                (form.form_id,) if anchor_ids and output == anchors[form.form_id] else ()
+            form_anchors = _anchors_for_form(anchors, form.form_id)
+            anchor_ids = tuple(sorted(form_anchors))
+            # An unchanged form is not an anchor match caused by this rule.
+            matched_anchor_ids = tuple(
+                anchor_id
+                for anchor_id, expected in sorted(form_anchors.items())
+                if matching and output == expected
             )
             if not occurrences:
                 status = ApplicationStatus.TARGET_ABSENT
@@ -126,6 +150,7 @@ class RuleEngine:
         rules: Sequence[ParsedSoundRule],
         forms: Sequence[LexicalForm],
         *,
+        anchor_expected: AnchorExpectation | None = None,
         source_candidate_ids: Mapping[str, str] | None = None,
     ) -> tuple[tuple[LexicalForm, ...], tuple[RuleApplicationReport, ...]]:
         """Apply an ordered rule cascade, returning final forms and every diff."""
@@ -133,7 +158,10 @@ class RuleEngine:
         reports: list[RuleApplicationReport] = []
         for rule in rules:
             report = self.apply_rule(
-                rule, current, source_candidate_ids=source_candidate_ids
+                rule,
+                current,
+                anchor_expected=anchor_expected,
+                source_candidate_ids=source_candidate_ids,
             )
             reports.append(report)
             current = tuple(

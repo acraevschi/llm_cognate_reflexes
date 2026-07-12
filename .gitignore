@@ -1,5 +1,7 @@
 torch_datasets/train_dataset.pt
 torch_datasets/val_dataset.pt
+__pycache__/
+*.py[cod]
 cognate_reflexes/__pycache__/__init__.cpython-311.pyc
 cognate_reflexes/__pycache__/__init__.cpython-313.pyc
 cognate_reflexes/__pycache__/config.cpython-311.pyc

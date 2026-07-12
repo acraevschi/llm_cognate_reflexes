@@ -57,7 +57,7 @@ class NodeBeamState(WorkbenchModel):
     node_id: NonEmptyStr
     distributions: tuple[ConceptCandidateDistribution, ...]
     beam_width: int = Field(ge=1)
-    source_child_ids: tuple[NonEmptyStr, NonEmptyStr] | None = None
+    source_child_ids: tuple[NonEmptyStr, ...] | None = None
 
     @model_validator(mode="after")
     def validate_beam(self) -> NodeBeamState:
@@ -66,4 +66,6 @@ class NodeBeamState(WorkbenchModel):
             raise ValueError("a node beam may contain each concept only once")
         if any(len(d.candidates) > self.beam_width for d in self.distributions):
             raise ValueError("distribution exceeds beam_width")
+        if self.source_child_ids is not None and len(self.source_child_ids) < 2:
+            raise ValueError("a reconstructed node must identify at least two children")
         return self

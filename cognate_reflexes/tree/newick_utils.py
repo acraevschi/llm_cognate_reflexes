@@ -7,7 +7,8 @@ This module is the algorithmic core of the tree layer.  It provides:
 * Parsing from Newick strings (via the ``newick`` package) into
   :class:`TreeNode` trees.
 * Exhaustive or sampled resolution of polytomies into binary trees.
-* Post-order traversal yielding ``(left, right, parent)`` triplets.
+* Native n-ary post-order traversal yielding ``(children, parent)`` groups.
+* A compatibility binary traversal yielding ``(left, right, parent)`` triplets.
 * MRCA and distance computations.
 """
 
@@ -100,8 +101,13 @@ def _convert_newick_node(nwk_node: object) -> TreeNode:
     objects.  This helper mirrors the topology into our own dataclass,
     setting parent back-pointers along the way.
     """
+    raw_label = nwk_node.name or None  # type: ignore[union-attr]
+    if raw_label and len(raw_label) >= 2 and raw_label[0] == raw_label[-1] == "'":
+        # ``newick`` preserves quote characters in parsed names. Decode them
+        # so dataset-scoped IDs containing reserved characters round-trip.
+        raw_label = raw_label[1:-1].replace("''", "'")
     node = TreeNode(
-        label=nwk_node.name or None,  # type: ignore[union-attr]
+        label=raw_label,
         branch_length=nwk_node.length,  # type: ignore[union-attr]
     )
     for child in nwk_node.descendants:  # type: ignore[union-attr]
@@ -536,6 +542,26 @@ def postorder_triplets(
     yield from postorder_triplets(left)
     yield from postorder_triplets(right)
     yield (left, right, root)
+
+
+def postorder_groups(
+    root: TreeNode,
+) -> Iterator[tuple[tuple[TreeNode, ...], TreeNode]]:
+    """Yield native n-ary ``(children, parent)`` groups in post-order.
+
+    Unary nodes are rejected because callers should collapse them during tree
+    normalization. Polytomies are preserved exactly as supplied.
+    """
+    if root.is_leaf:
+        return
+    if len(root.children) < 2:
+        raise ValueError(
+            f"postorder_groups requires normalized internal nodes, but node "
+            f"{root.label!r} has {len(root.children)} child."
+        )
+    for child in root.children:
+        yield from postorder_groups(child)
+    yield (tuple(root.children), root)
 
 
 # ======================================================================

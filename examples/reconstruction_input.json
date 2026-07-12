@@ -1,0 +1,69 @@
+{
+  "lexicons": [
+    {
+      "variety_id": "language_a",
+      "name": "Language A",
+      "forms": [
+        {
+          "form_id": "language_a:water",
+          "variety_id": "language_a",
+          "concept_id": "water",
+          "segments": ["p", "a"],
+          "cognate_set_id": "water-1"
+        },
+        {
+          "form_id": "language_a:fire",
+          "variety_id": "language_a",
+          "concept_id": "fire",
+          "segments": ["p", "u", "r"],
+          "cognate_set_id": "fire-1"
+        }
+      ]
+    },
+    {
+      "variety_id": "language_b",
+      "name": "Language B",
+      "forms": [
+        {
+          "form_id": "language_b:water",
+          "variety_id": "language_b",
+          "concept_id": "water",
+          "segments": ["f", "a"],
+          "cognate_set_id": "water-1"
+        },
+        {
+          "form_id": "language_b:fire",
+          "variety_id": "language_b",
+          "concept_id": "fire",
+          "segments": ["f", "u", "r"],
+          "cognate_set_id": "fire-1"
+        }
+      ]
+    },
+    {
+      "variety_id": "language_c",
+      "name": "Language C",
+      "forms": [
+        {
+          "form_id": "language_c:water",
+          "variety_id": "language_c",
+          "concept_id": "water",
+          "segments": ["p", "a"],
+          "cognate_set_id": "water-1"
+        },
+        {
+          "form_id": "language_c:fire",
+          "variety_id": "language_c",
+          "concept_id": "fire",
+          "segments": ["p", "u", "r"],
+          "cognate_set_id": "fire-1"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {"concept_id": "water", "gloss": "water"},
+    {"concept_id": "fire", "gloss": "fire"}
+  ],
+  "newick": "(language_a,language_b,language_c)PROTO;"
+}

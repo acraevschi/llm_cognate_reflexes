@@ -51,6 +51,28 @@ class ParsedSoundRule(WorkbenchModel):
         return self
 
 
+class ReconstructionRule(WorkbenchModel):
+    """A confidence-weighted rule scoped to one or more active children."""
+
+    rule: ParsedSoundRule
+    source_child_ids: tuple[NonEmptyStr, ...] = Field(min_length=1)
+    confidence: float = Field(gt=0.0, le=1.0)
+
+    @model_validator(mode="after")
+    def validate_child_scope(self) -> ReconstructionRule:
+        if len(set(self.source_child_ids)) != len(self.source_child_ids):
+            raise ValueError("source_child_ids must be unique")
+        return self
+
+
+class AnchorPolicy(StrEnum):
+    """How optional ancestor anchors influence reconstruction."""
+
+    IGNORE = "ignore"
+    ADVISORY = "advisory"
+    SCORED = "scored"
+
+
 class ApplicationStatus(StrEnum):
     APPLIED = "applied"
     TARGET_ABSENT = "target_absent"

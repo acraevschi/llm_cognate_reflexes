@@ -6,6 +6,8 @@ from typing import Literal
 
 from cognate_reconstruction.schemas.ingestion import DistanceMatrix, TreeArtifact, TreeOrigin
 from cognate_reconstruction.schemas.lexicon import LanguageLexicon
+from cognate_reconstruction.ingestion.tree_normalization import to_newick
+from cognate_reflexes.tree.newick_utils import parse_newick
 
 
 def _lexstat_rows(lexicons: tuple[LanguageLexicon, ...]) -> dict[int, list[object]]:
@@ -51,10 +53,25 @@ def induce_tree(
     taxa = tuple(str(taxon) for taxon in lexstat.cols)
     values = tuple(tuple(float(value) for value in row) for row in raw_matrix)
     distance_matrix = DistanceMatrix(taxa=taxa, values=values, method="lexstat-sca")
-    tree = matrix2tree([list(row) for row in values], list(taxa), tree_calc=method)
-    newick = str(tree).strip()
-    if not newick.endswith(";"):
-        newick += ";"
+    # Dataset-scoped variety IDs commonly contain ``:``, which Newick treats as
+    # the branch-length separator. Build with safe temporary labels, then restore
+    # the exact IDs through our quoting-aware serializer.
+    safe_taxa = [f"taxon_{index}" for index in range(len(taxa))]
+    original_by_safe = dict(zip(safe_taxa, taxa, strict=True))
+    tree = matrix2tree(
+        [list(row) for row in values],
+        safe_taxa,
+        tree_calc=method,
+    )
+    raw_newick = str(tree).strip()
+    if not raw_newick.endswith(";"):
+        raw_newick += ";"
+    root = parse_newick(raw_newick)
+    for leaf in root.get_leaves():
+        if leaf.label is None or leaf.label not in original_by_safe:
+            raise ValueError(f"tree induction returned unknown taxon {leaf.label!r}")
+        leaf.label = original_by_safe[leaf.label]
+    newick = to_newick(root)
     return TreeArtifact(
         newick=newick,
         origin=TreeOrigin.INDUCED,

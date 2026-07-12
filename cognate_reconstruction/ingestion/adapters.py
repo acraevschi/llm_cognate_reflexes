@@ -3,11 +3,37 @@
 from __future__ import annotations
 
 from cognate_reconstruction.schemas.lexicon import (
+    ConceptMetadata,
     FormProvenance,
     LanguageLexicon,
     LexicalForm,
 )
 from cognate_reflexes.data.loader import DatasetForms
+
+
+def adapt_concept_metadata(dataset: DatasetForms) -> tuple[ConceptMetadata, ...]:
+    """Recover readable glosses for deterministic concept search."""
+    glosses: dict[str, set[str]] = {}
+    concepticon_ids: dict[str, str] = {}
+    for forms_by_cognate in dataset.forms_by_language.values():
+        for forms in forms_by_cognate.values():
+            for form in forms:
+                concept_id = form.concepticon_id or form.concept
+                glosses.setdefault(concept_id, set()).add(form.concept)
+                if form.concepticon_id is not None:
+                    concepticon_ids[concept_id] = form.concepticon_id
+    concepts = []
+    for concept_id, names in sorted(glosses.items()):
+        ordered = sorted(names)
+        concepts.append(
+            ConceptMetadata(
+                concept_id=concept_id,
+                gloss=ordered[0],
+                concepticon_id=concepticon_ids.get(concept_id),
+                aliases=tuple(ordered[1:]),
+            )
+        )
+    return tuple(concepts)
 
 
 def adapt_dataset_forms(dataset: DatasetForms) -> tuple[LanguageLexicon, ...]:

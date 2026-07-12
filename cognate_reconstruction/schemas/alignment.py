@@ -22,8 +22,9 @@ class AlignmentResult(WorkbenchModel):
     alignment_id: NonEmptyStr
     concept_id: NonEmptyStr
     members: tuple[AlignmentMember, ...] = Field(min_length=2)
+    cognate_set_id: NonEmptyStr | None = None
     alignment_score: float | None = None
-    method: Literal["sca", "lexstat"] = "sca"
+    method: Literal["sca"] = "sca"
     mode: Literal["global", "local", "overlap", "dialign"] = "global"
 
     @model_validator(mode="after")
@@ -63,3 +64,17 @@ class CorrespondenceMap(WorkbenchModel):
     right_variety_id: NonEmptyStr
     alignments: tuple[AlignmentResult, ...]
     correspondences: tuple[CorrespondenceSummary, ...]
+
+
+class MultipleAlignmentMap(WorkbenchModel):
+    """N-way alignment plus derived pairwise correspondence views."""
+
+    variety_ids: tuple[NonEmptyStr, ...] = Field(min_length=2)
+    alignments: tuple[AlignmentResult, ...]
+    pairwise_correspondences: tuple[CorrespondenceMap, ...]
+
+    @model_validator(mode="after")
+    def validate_varieties(self) -> MultipleAlignmentMap:
+        if len(set(self.variety_ids)) != len(self.variety_ids):
+            raise ValueError("multiple-alignment variety IDs must be unique")
+        return self

@@ -13,7 +13,7 @@ from cognate_reconstruction.schemas.beam import (
     NodeBeamState,
     ReconstructionCandidate,
 )
-from cognate_reconstruction.schemas.lexicon import LanguageLexicon
+from cognate_reconstruction.schemas.lexicon import LanguageLexicon, LexicalForm
 
 RawCandidate = tuple[tuple[str, ...], float, CandidateDerivation]
 
@@ -93,4 +93,22 @@ def make_leaf_beam(lexicon: LanguageLexicon, *, beam_width: int) -> NodeBeamStat
         node_id=lexicon.variety_id,
         distributions=tuple(distributions),
         beam_width=beam_width,
+    )
+
+
+def beam_to_lexicon(beam: NodeBeamState) -> LanguageLexicon:
+    """Expose every retained candidate as a read-only node lexicon."""
+    return LanguageLexicon(
+        variety_id=beam.node_id,
+        name=beam.node_id,
+        forms=tuple(
+            LexicalForm(
+                form_id=candidate.candidate_id,
+                variety_id=beam.node_id,
+                concept_id=distribution.concept_id,
+                segments=candidate.segments,
+            )
+            for distribution in beam.distributions
+            for candidate in distribution.candidates
+        ),
     )

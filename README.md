@@ -1,510 +1,277 @@
-<h1 align="center">gws</h1>
+# Cognate Reconstruction Agent
 
-**One CLI for all of Google Workspace — built for humans and AI agents.**<br>
-Drive, Gmail, Calendar, and every Workspace API. Zero boilerplate. Structured JSON output. 40+ agent skills included.
+`cognate_reconstruction` is a historical-linguistics workbench for
+reconstructing parent forms from aligned descendant lexicons. It combines a
+fully deterministic reconstruction engine with an optional LLM hypothesis
+manager. The LLM proposes and tests hypotheses; it does not apply rules,
+calculate scores, change the tree, or commit arbitrary data on its own.
 
-> [!NOTE]
-> This is **not** an officially supported Google product.
+The current implementation supports native n-ary trees, including unresolved
+Glottolog-style polytomies. It does not invent binary ancestors merely to make a
+tree convenient for an algorithm.
 
-<p>
-  <a href="https://www.npmjs.com/package/@googleworkspace/cli"><img src="https://img.shields.io/npm/v/@googleworkspace/cli" alt="npm version"></a>
-  <a href="https://github.com/googleworkspace/cli/blob/main/LICENSE"><img src="https://img.shields.io/github/license/googleworkspace/cli" alt="license"></a>
-  <a href="https://github.com/googleworkspace/cli/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/googleworkspace/cli/ci.yml?branch=main&label=CI" alt="CI status"></a>
-  <a href="https://www.npmjs.com/package/@googleworkspace/cli"><img src="https://img.shields.io/npm/unpacked-size/@googleworkspace/cli" alt="install size"></a>
-</p>
-<br>
+## What is implemented
 
-⬇️ **[Download the latest release for your OS](https://github.com/googleworkspace/cli/releases)**
+The deterministic core provides:
 
-`gws` doesn't ship a static list of commands. It reads Google's own [Discovery Service](https://developers.google.com/discovery) at runtime and builds its entire command surface dynamically. When Google Workspace adds an API endpoint or method, `gws` picks it up automatically.
+- strict immutable Pydantic schemas for lexicons, trees, alignments, rules,
+  beam candidates, anomalies, tool calls, and commits;
+- Newick parsing, pruning of branches without usable data, unary-node collapse,
+  and native n-ary post-order traversal;
+- LingPy multiple sequence alignment across any two or more available nodes,
+  with derived pairwise correspondence views and cognate-set-aware grouping;
+- a literal token-level sound-law DSL and deterministic rule application;
+- beam reconstruction with incremental merging and pruning to bound n-ary
+  combinatorial growth;
+- branch-scoped rules whose confidence contributes to candidate log scores;
+- optional anchors with explicit `ignore`, `advisory`, and `scored` policies;
+- auditable reconstruction steps containing input beams, output beams, rule
+  reports, and anomaly reports.
 
-> [!IMPORTANT]
-> This project is under active development. Expect breaking changes as we march toward v1.0.
+The agent layer provides:
 
-## Contents
+- provider-neutral message and native-tool-call schemas;
+- a LiteLLM adapter for OpenAI, Anthropic, Gemini, and OpenAI-compatible or
+  open-weight endpoints supported by LiteLLM;
+- a bounded LLM/tool loop for one internal tree node;
+- a Pydantic-backed tool registry;
+- paginated concept/form search over active children and available tree evidence;
+- read-only access to observed leaves and already reconstructed internal nodes;
+- temporary morphological-boundary overlays; and
+- a validated terminal commit that turns an LLM proposal into deterministic
+  `ReconstructionRule` objects;
+- versioned trajectory capture and JSONL export; and
+- a high-level family inference result containing every internal-node vocabulary.
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Why gws?](#why-gws)
-- [Authentication](#authentication)
-- [AI Agent Skills](#ai-agent-skills)
-- [Advanced Usage](#advanced-usage)
-- [Environment Variables](#environment-variables)
-- [Exit Codes](#exit-codes)
-- [Architecture](#architecture)
-- [Troubleshooting](#troubleshooting)
-- [Development](#development)
-
-## Prerequisites
-
-- **Node.js 18+** — for `npm install` (or download a pre-built binary from [GitHub Releases](https://github.com/googleworkspace/cli/releases))
-- **A Google Cloud project** — required for OAuth credentials. You can create one via the [Google Cloud Console](https://console.cloud.google.com/) or with the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install) or with the `gws auth setup` command.
-- **A Google account** with access to Google Workspace
-
-## Installation
-
-The recommended way to install `gws` is to download the pre-built binary for your OS and architecture from the **[GitHub Releases](https://github.com/googleworkspace/cli/releases)** page. Extract the archive and place the `gws` binary in your `$PATH`.
-
-For convenience, you can also use `npm` to automate downloading the appropriate binary from GitHub Releases:
+Install the optional provider adapter when using a live model:
 
 ```bash
-npm install -g @googleworkspace/cli
+pip install -e '.[agent]'
 ```
 
-Or build from source:
+For an end-to-end LM Studio run, custom JSON format, verbose terminal trace,
+and Lexibank preparation commands, see
+[Running the reconstruction agent](docs/running_inference.md).
+
+## Reconstruction flow
+
+```mermaid
+flowchart TD
+    A[Lexicons and Newick tree] --> B[Normalize tree]
+    B --> C[Prune unusable leaves and collapse unary nodes]
+    C --> D[Create observed leaf beams]
+    D --> E[Post-order internal node]
+    E --> F{Reconstructor selected}
+    F -->|RuleBasedReconstructor| G[Use supplied rules and anomalies]
+    F -->|AgenticNodeReconstructor| H[Create node-local agent context]
+    H --> I[LLM proposes native tool calls]
+    I --> J[Typed deterministic tool registry]
+    J --> K[Validated commit]
+    K --> G
+    G --> L[Apply scoped rule cascades to child candidates]
+    L --> M[Combine log scores, confidence, and optional scored anchors]
+    M --> N[Incremental merge and beam prune]
+    N --> O[Parent beam and ReconstructionStep]
+    O --> E
+```
+
+At every internal node, the traversal passes all direct children at once. A
+three-way or ten-way Glottolog polytomy therefore remains a three-way or
+ten-way reconstruction problem. Candidate combinations are merged and pruned
+after each child is incorporated, so the engine does not materialize a full
+Cartesian product.
+
+## The deterministic reconstruction engine
+
+`RuleBasedReconstructor` accepts a `Sequence[NodeBeamState]`, not a fixed
+left/right pair. It combines evidence from active children by summing their
+candidate log scores.
+
+For a particular output candidate, the score is built from:
+
+```text
+sum(child candidate log scores)
++ sum(log(rule confidence) for rules that actually apply)
+- log(number of distinct competing outputs in this derivation)
++ log(anchor_match_factor) for each unique matching anchor when policy=scored
+```
+
+Anchors are never required. `anchor_policy="advisory"` is the default for
+ancestor reconstruction: matches appear in rule reports but do not affect beam
+scores. `anchor_policy="scored"` enables the configurable factor, which defaults
+to `100.0` for cognate-reflex-style use. `ignore` removes anchors from the node
+session entirely. Scored anchor evidence is tracked per output form, so a match
+for one possible output cannot boost a different competing output.
+
+Rules are scoped with `source_child_ids`. A rule can target any number of the
+active children, and a rule aimed at an inactive child is rejected. A legacy
+unscoped `ParsedSoundRule` remains usable by the deterministic API and is
+interpreted as applying to all active children with confidence `1.0`.
+
+### Rule direction
+
+Rules are operational **child-to-parent** transformations. For example:
+
+```text
+f > p / #_
+```
+
+means “when reconstructing the parent, transform child-initial `f` to `p`.”
+The engine never guesses an inverse automatically, because ordinary historical
+sound changes may be non-bijective.
+
+### Sound-law DSL
+
+The parser accepts literal token sequences in this form:
+
+```text
+target > replacement / environment
+```
+
+Examples:
+
+```text
+p > f
+p > f / _#
+k > tʃ / _ i
+n > m / _ p
+p > ∅ / _#
+```
+
+- `_` is the focus point in an environment.
+- `#` is a word boundary and is valid only at an outer edge.
+- Whitespace separates multiple tokens.
+- `Ø` and `∅` delete the target.
+- `+` and `-` are morphological-boundary tokens. They can be context, but not
+  rule targets or inserted replacements.
+- Morphological boundaries are not transparent: a context must name them when
+  they matter.
+
+## LLM function calling
+
+`AgentOrchestrator` sends compact active-child summaries and optional anchors to
+an LLM together with native tool schemas. Vocabulary evidence is retrieved on
+demand, so a large family lexicon is not copied into every initial prompt. The
+loop is bounded by default to 24 model turns and 64 tool calls.
+
+| Tool | What the LLM chooses | What the code does deterministically |
+| --- | --- | --- |
+| `list_concepts` | Text query, evidence scope, nodes, page | Returns readable concept metadata, form counts, and stable IDs. |
+| `search_forms` | Semantic text, concept/cognate IDs, segment pattern and position, evidence scope | Finds forms deterministically, including queries such as word-initial `/n/`. |
+| `list_available_nodes` | Observed/reconstructed and topology-relation filters | Lists compact summaries of observed leaves and already completed internal nodes. |
+| `get_alignments` | Any 2–N available nodes, concepts/forms, cognate policy, optional overlay/anchors | Runs one LingPy MSA and returns aligned members plus all derived pairwise correspondence views. |
+| `segment_morphemes` | Forms to annotate, boundary positions, rationale | Verifies that only `+`/`-` boundaries changed, stores an immutable session-local overlay, and returns its ID. It never changes phonetic tokens. |
+| `test_sound_law` | DSL, target child IDs, optional concepts and overlay | Parses the DSL, applies it mechanically to the selected forms, and returns the exact per-form diff: locations, input/output tokens, status, and anchor matches or mismatches. Syntax and validation failures are returned as structured tool errors. |
+| `commit_reconstruction` | Ordered rules, child scopes, confidence, validation references, supporting forms, anomalies, summary | Checks the active node, child scopes, parser output, exact prior test call, supporting forms, overlay consistency, and anomaly subjects. Only then does it create deterministic `ReconstructionRule` objects. |
+
+The LLM receives tool results in its conversation history and continues until it
+makes a valid `commit_reconstruction` call. A text-only response does not finish
+the task; the orchestrator asks it to use a tool or commit. Unknown tool names,
+invalid JSON shapes, and `ValueError`s from the rule parser or tool adapters are
+returned as tool results rather than becoming silent state changes.
+
+## Scripted versus LLM-guided responsibilities
+
+| Fully scripted and deterministic | LLM-guided, then validated |
+| --- | --- |
+| Tree parsing, normalisation, pruning, unary collapse, n-ary traversal, and evidence availability | Which concepts, nodes, and alignment scope to inspect |
+| Leaf-beam construction, candidate merging, pruning, normalisation, and scoring | Which correspondence hypothesis to pursue |
+| Rule DSL parsing, token matching, environment checks, replacement, and diffs | Proposed child-to-parent rule direction, scope, order, rationale, and confidence |
+| Optional anchor comparison and policy-controlled scoring | Whether a temporary morphological segmentation is linguistically justified |
+| Pydantic validation, tool schema generation, commit checks, and loop limits | Which tested forms support a rule and which items should be logged as anomalies |
+| Replaying the committed cascade into the parent beam | The anomaly explanation and linguistic interpretation |
+
+The LLM is therefore a hypothesis manager, not the reconstruction engine. It
+cannot run arbitrary Python, alter a lexicon’s phonetic tokens through the
+segmentation tool, bypass rule parsing, target children not present at the node,
+or commit a rule that does not reference an exact previous test in the same
+session.
+
+## Using the agentic reconstructor
+
+The core `TreeTraverser` remains unaware of LLM APIs. To use an LLM at every
+internal node, supply `AgenticNodeReconstructor`, which implements the same
+node-reconstructor protocol as the deterministic implementation.
+
+```python
+from cognate_reconstruction.agent import (
+    AgenticNodeReconstructor,
+    AgentOrchestrator,
+    LiteLLMProvider,
+    JsonlTrajectorySink,
+    ReconstructionService,
+)
+from cognate_reconstruction.traversal import RuleBasedReconstructor
+
+provider = LiteLLMProvider("openai/<model-name>")
+orchestrator = AgentOrchestrator(
+    provider,
+    trajectory_sink=JsonlTrajectorySink("runs/trajectories.jsonl"),
+)
+deterministic = RuleBasedReconstructor(
+    beam_width=5,
+)
+agentic = AgenticNodeReconstructor(
+    orchestrator,
+    deterministic=deterministic,
+)
+
+result = ReconstructionService(agentic).reconstruct_family(dataset)
+```
+
+`AgenticNodeReconstructor` converts each child beam into a node-local lexicon,
+runs the LLM/tool session, applies the committed segmentation overlay if there
+is one, and finally calls `RuleBasedReconstructor`. `result.snapshot` retains
+the complete beams and audit reports; `result.internal_nodes` provides a best
+lexicon plus the full beam for every reconstructed internal node. Anchors may be
+passed to `reconstruct_family` but are not required.
+
+## Trajectories and future training
+
+Every completed node can produce a versioned `AgentTrajectory` containing the
+instruction and tool-schema hashes, provider/model metadata, initial payload,
+ordered messages, successful and failed tool results, validated commit, and
+completion status. `JsonlTrajectorySink` can stream these records during a long
+family run without retaining them all in memory.
+
+`TrajectoryDatasetBuilder` reads trajectory JSONL and creates generic chat/tool
+`TrainingExample` records. These are intentionally backend-neutral so later
+Hugging Face/TRL or Unsloth adapters can consume the same frozen data contract.
+No optimizer, online parameter update, or vendor-specific training API is
+implemented yet.
+
+## Current limits and deliberate boundaries
+
+- The repository provides a basic verbose inference CLI, but not a credential
+  manager, automatic Lexibank downloader, or resumable production scheduler.
+- `test_sound_law` tests one rule at a time. Committed rules are executed as an
+  ordered deterministic cascade during reconstruction, but there is not yet a
+  separate tool dedicated to previewing an entire proposed cascade.
+- Known cognate-set IDs are respected by default during alignment. When source
+  data leave several same-concept synonyms unassigned, callers should select
+  explicit `form_ids`; the aligner cannot infer cognacy from similarity alone.
+- The commit validator confirms that each rule was tested with the exact DSL,
+  child scope, overlay, and supporting form IDs. It cannot prove that the LLM’s
+  linguistic rationale or anomaly classification is correct.
+- Semantic lookup is deterministic over supplied concept glosses, aliases, IDs,
+  and fields. Embedding-based semantic retrieval is not implemented.
+- Anchors are optional supplementary evidence and anchor discovery is not automated.
+- Trajectory export and training-example preparation are implemented, but an
+  actual TRL/Unsloth training backend is deliberately deferred.
+- Provider credentials, model choice, spend limits, retries, and production
+  observability remain application-level configuration.
+
+## Validation
+
+Run the tests in the project environment:
 
 ```bash
-cargo install --git https://github.com/googleworkspace/cli --locked
+conda run -n llm_reconstruction pytest -q tests
 ```
 
-A Nix flake is also available at `github:googleworkspace/cli`
-
-```bash
-nix run github:googleworkspace/cli
-```
-
-On macOS and Linux, you can also install via [Homebrew](https://brew.sh/):
-
-```bash
-brew install googleworkspace-cli
-```
-
-## Quick Start
-
-```bash
-gws auth setup     # walks you through Google Cloud project config
-gws auth login     # subsequent OAuth login
-gws drive files list --params '{"pageSize": 5}'
-```
-
-## Why gws?
-
-**For humans** — stop writing `curl` calls against REST docs. `gws` gives you `--help` on every resource, `--dry-run` to preview requests, and auto‑pagination.
-
-**For AI agents** — every response is structured JSON. Pair it with the included agent skills and your LLM can manage Workspace without custom tooling.
-
-```bash
-# List the 10 most recent files
-gws drive files list --params '{"pageSize": 10}'
-
-# Create a spreadsheet
-gws sheets spreadsheets create --json '{"properties": {"title": "Q1 Budget"}}'
-
-# Send a Chat message
-gws chat spaces messages create \
-  --params '{"parent": "spaces/xyz"}' \
-  --json '{"text": "Deploy complete."}' \
-  --dry-run
-
-# Introspect any method's request/response schema
-gws schema drive.files.list
-
-# Stream paginated results as NDJSON
-gws drive files list --params '{"pageSize": 100}' --page-all | jq -r '.files[].name'
-```
-
-## Authentication
-
-The CLI supports multiple auth workflows so it works on your laptop, in CI, and on a server.
-
-### Which setup should I use?
-
-| I have… | Use |
-|---|---|
-| `gcloud` installed and authenticated | [`gws auth setup`](#interactive-local-desktop) (fastest) |
-| A GCP project but no `gcloud` | [Manual OAuth setup](#manual-oauth-setup-google-cloud-console) |
-| An existing OAuth access token | [`GOOGLE_WORKSPACE_CLI_TOKEN`](#pre-obtained-access-token) |
-| Existing Credentials | [`GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE`](#service-account-server-to-server) |
-
-### Interactive (local desktop)
-
-Credentials are encrypted at rest (AES-256-GCM) with the key stored in your OS keyring (or `~/.config/gws/.encryption_key` when `GOOGLE_WORKSPACE_CLI_KEYRING_BACKEND=file`).
-
-```bash
-gws auth setup       # one-time: creates a Cloud project, enables APIs, logs you in
-gws auth login       # subsequent scope selection and login
-```
-
-> `gws auth setup` requires the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install). If you don't have `gcloud`, use the [manual setup](#manual-oauth-setup-google-cloud-console) below instead.
-
-> [!WARNING]
-> **Scope limits in testing mode:** If your OAuth app is unverified (testing mode),
-> Google limits consent to ~25 scopes. The `recommended` scope preset includes 85+
-> scopes and **will fail** for unverified apps (especially for `@gmail.com` accounts).
-> Choose individual services instead to filter the scope picker:
-> ```bash
-> gws auth login -s drive,gmail,sheets
-> ```
-
-
-### Manual OAuth setup (Google Cloud Console)
-
-Use this when `gws auth setup` cannot automate project/client creation, or when you want explicit control.
-
-1. Open Google Cloud Console in the target project:
-   - OAuth consent screen: `https://console.cloud.google.com/apis/credentials/consent?project=<PROJECT_ID>`
-   - Credentials: `https://console.cloud.google.com/apis/credentials?project=<PROJECT_ID>`
-2. Configure OAuth branding/audience if prompted:
-   - App type: **External** (testing mode is fine)
-3. Add your account under **Test users**
-4. Create an OAuth client:
-   - Type: **Desktop app**
-5. Download the client JSON and save it to:
-   - `~/.config/gws/client_secret.json`
-
-> [!IMPORTANT]
-> **You must add yourself as a test user.** In the OAuth consent screen, click
-> **Test users → Add users** and enter your Google account email. Without this,
-> login will fail with a generic "Access blocked" error.
-
-Then run:
-
-```bash
-gws auth login
-```
-
-### Browser-assisted auth (human or agent)
-
-You can complete OAuth either manually or with browser automation.
-
-- **Human flow**: run `gws auth login`, open the printed URL, approve scopes.
-- **Agent-assisted flow**: the agent opens the URL, selects account, handles consent prompts, and returns control once the localhost callback succeeds.
-
-If consent shows **"Google hasn't verified this app"** (testing mode), click **Continue**.
-If scope checkboxes appear, select required scopes (or **Select all**) before continuing.
-
-### Headless / CI (export flow)
-
-1. Complete interactive auth on a machine with a browser.
-2. Export credentials:
-   ```bash
-   gws auth export --unmasked > credentials.json
-   ```
-3. On the headless machine:
-   ```bash
-   export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE=/path/to/credentials.json
-   gws drive files list   # just works
-   ```
-
-### Service Account (server-to-server)
-
-Point to your key file; no login needed.
-
-```bash
-export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE=/path/to/service-account.json
-gws drive files list
-```
-
-### Pre-obtained Access Token
-
-Useful when another tool (e.g. `gcloud`) already mints tokens for your environment.
-
-```bash
-export GOOGLE_WORKSPACE_CLI_TOKEN=$(gcloud auth print-access-token)
-```
-
-### Precedence
-
-| Priority | Source                 | Set via                                 |
-| -------- | ---------------------- | --------------------------------------- |
-| 1        | Access token           | `GOOGLE_WORKSPACE_CLI_TOKEN`            |
-| 2        | Credentials file       | `GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE` |
-| 3        | Encrypted credentials  | `gws auth login`                        |
-| 4        | Plaintext credentials  | `~/.config/gws/credentials.json`        |
-
-Environment variables can also live in a `.env` file.
-
-## AI Agent Skills
-
-The repo ships 100+ Agent Skills (`SKILL.md` files) — one for every supported API, plus higher-level helpers for common workflows and 50 curated recipes for Gmail, Drive, Docs, Calendar, and Sheets. See the full [Skills Index](docs/skills.md) for the complete list.
-
-```bash
-# Install all skills at once
-npx skills add https://github.com/googleworkspace/cli
-
-# Or pick only what you need
-npx skills add https://github.com/googleworkspace/cli/tree/main/skills/gws-drive
-npx skills add https://github.com/googleworkspace/cli/tree/main/skills/gws-gmail
-```
-
-<details>
-<summary>OpenClaw setup</summary>
-
-```bash
-# Symlink all skills (stays in sync with repo)
-ln -s $(pwd)/skills/gws-* ~/.openclaw/skills/
-
-# Or copy specific skills
-cp -r skills/gws-drive skills/gws-gmail ~/.openclaw/skills/
-```
-
-The `gws-shared` skill includes an `install` block so OpenClaw auto-installs the CLI via `npm` if `gws` isn't on PATH.
-
-</details>
-
-## Gemini CLI Extension
-
-1. Authenticate the CLI first:
-
-   ```bash
-   gws auth setup
-   ```
-
-2. Install the extension into the Gemini CLI:
-   ```bash
-   gemini extensions install https://github.com/googleworkspace/cli
-   ```
-
-Installing this extension gives your Gemini CLI agent direct access to all `gws` commands and Google Workspace agent skills. Because `gws` handles its own authentication securely, you simply need to authenticate your terminal once prior to using the agent, and the extension will automatically inherit your credentials.
-
-## Advanced Usage
-
-### Multipart Uploads
-
-```bash
-gws drive files create --json '{"name": "report.pdf"}' --upload ./report.pdf
-```
-
-### Pagination
-
-| Flag                | Description                                    | Default |
-| ------------------- | ---------------------------------------------- | ------- |
-| `--page-all`        | Auto-paginate, one JSON line per page (NDJSON) | off     |
-| `--page-limit <N>`  | Max pages to fetch                             | 10      |
-| `--page-delay <MS>` | Delay between pages                            | 100 ms  |
-
-### Google Sheets — Shell Escaping
-
-Sheets ranges use `!` which bash interprets as history expansion. Always wrap values in **single quotes**:
-
-```bash
-# Read cells A1:C10 from "Sheet1"
-gws sheets spreadsheets values get \
-  --params '{"spreadsheetId": "SPREADSHEET_ID", "range": "Sheet1!A1:C10"}'
-
-# Append rows
-gws sheets spreadsheets values append \
-  --params '{"spreadsheetId": "ID", "range": "Sheet1!A1", "valueInputOption": "USER_ENTERED"}' \
-  --json '{"values": [["Name", "Score"], ["Alice", 95]]}'
-```
-
-### Helper Commands
-
-Some services ship hand-crafted helper commands alongside the auto-generated Discovery surface. Helper commands are prefixed with `+` so they are visually distinct and never collide with Discovery-generated method names.
-
-Time-aware helpers (`+agenda`, `+standup-report`, `+weekly-digest`, `+meeting-prep`) automatically use your **Google account timezone** (fetched from Calendar Settings API and cached for 24 hours). Override with `--timezone`/`--tz` on `+agenda`, or set the `--timezone` flag for explicit control.
-
-Run `gws <service> --help` to see both Discovery methods and helper commands together.
-
-```bash
-gws gmail --help      # shows +send, +reply, +reply-all, +forward, +triage, +watch …
-gws calendar --help   # shows +insert, +agenda …
-gws drive --help      # shows +upload …
-```
-
-**Full helper reference:**
-
-| Service | Command | Description |
-|---------|---------|-------------|
-| `gmail` | `+send` | Send an email |
-| `gmail` | `+reply` | Reply to a message (handles threading automatically) |
-| `gmail` | `+reply-all` | Reply-all to a message |
-| `gmail` | `+forward` | Forward a message to new recipients |
-| `gmail` | `+triage` | Show unread inbox summary (sender, subject, date) |
-| `gmail` | `+watch` | Watch for new emails and stream them as NDJSON |
-| `sheets` | `+append` | Append a row to a spreadsheet |
-| `sheets` | `+read` | Read values from a spreadsheet |
-| `docs` | `+write` | Append text to a document |
-| `chat` | `+send` | Send a message to a space |
-| `drive` | `+upload` | Upload a file with automatic metadata |
-| `calendar` | `+insert` | Create a new event |
-| `calendar` | `+agenda` | Show upcoming events (uses Google account timezone; override with `--timezone`) |
-| `script` | `+push` | Replace all files in an Apps Script project with local files |
-| `workflow` | `+standup-report` | Today's meetings + open tasks as a standup summary |
-| `workflow` | `+meeting-prep` | Prepare for your next meeting: agenda, attendees, and linked docs |
-| `workflow` | `+email-to-task` | Convert a Gmail message into a Google Tasks entry |
-| `workflow` | `+weekly-digest` | Weekly summary: this week's meetings + unread email count |
-| `workflow` | `+file-announce` | Announce a Drive file in a Chat space |
-| `events` | `+subscribe` | Subscribe to Workspace events and stream them as NDJSON |
-| `events` | `+renew` | Renew/reactivate Workspace Events subscriptions |
-| `modelarmor` | `+sanitize-prompt` | Sanitize a user prompt through a Model Armor template |
-| `modelarmor` | `+sanitize-response` | Sanitize a model response through a Model Armor template |
-| `modelarmor` | `+create-template` | Create a new Model Armor template |
-
-**Examples:**
-
-```bash
-# Send an email
-gws gmail +send --to alice@example.com --subject "Hello" --body "Hi there"
-
-# Reply to a message
-gws gmail +reply --message-id MESSAGE_ID --body "Thanks!"
-
-# Append a row to a spreadsheet
-gws sheets +append --spreadsheet SPREADSHEET_ID --values "Alice,95"
-
-# Show today's calendar agenda
-gws calendar +agenda
-
-# Upload a file to Drive
-gws drive +upload ./report.pdf --name "Q1 Report"
-
-# Morning standup summary
-gws workflow +standup-report
-
-# Show today's agenda in a specific timezone
-gws calendar +agenda --today --timezone America/New_York
-```
-
-### Model Armor (Response Sanitization)
-
-Integrate [Google Cloud Model Armor](https://cloud.google.com/security/products/model-armor) to scan API responses for prompt injection before they reach your agent.
-
-```bash
-gws gmail users messages get --params '...' \
-  --sanitize "projects/P/locations/L/templates/T"
-```
-
-| Variable                                 | Description                  |
-| ---------------------------------------- | ---------------------------- |
-| `GOOGLE_WORKSPACE_CLI_SANITIZE_TEMPLATE` | Default Model Armor template |
-| `GOOGLE_WORKSPACE_CLI_SANITIZE_MODE`     | `warn` (default) or `block`  |
-
-## Environment Variables
-
-All variables are optional. See [`.env.example`](.env.example) for a copy-paste template.
-
-| Variable | Description |
-|---|---|
-| `GOOGLE_WORKSPACE_CLI_TOKEN` | Pre-obtained OAuth2 access token (highest priority) |
-| `GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE` | Path to OAuth credentials JSON (user or service account) |
-| `GOOGLE_WORKSPACE_CLI_CLIENT_ID` | OAuth client ID (alternative to `client_secret.json`) |
-| `GOOGLE_WORKSPACE_CLI_CLIENT_SECRET` | OAuth client secret (paired with `CLIENT_ID`) |
-| `GOOGLE_WORKSPACE_CLI_CONFIG_DIR` | Override config directory (default: `~/.config/gws`) |
-| `GOOGLE_WORKSPACE_CLI_SANITIZE_TEMPLATE` | Default Model Armor template |
-| `GOOGLE_WORKSPACE_CLI_SANITIZE_MODE` | `warn` (default) or `block` |
-| `GOOGLE_WORKSPACE_CLI_LOG` | Log level for stderr (e.g., `gws=debug`). Off by default. |
-| `GOOGLE_WORKSPACE_CLI_LOG_FILE` | Directory for JSON log files with daily rotation. Off by default. |
-| `GOOGLE_WORKSPACE_PROJECT_ID` | GCP project ID override for quota/billing and fallback for helper commands |
-
-Environment variables can also be set in a `.env` file (loaded via [dotenvy](https://crates.io/crates/dotenvy)).
-
-## Exit Codes
-
-`gws` uses structured exit codes so scripts can branch on the failure type without parsing error output.
-
-| Code | Meaning | Example cause |
-|------|---------|---------------|
-| `0` | Success | Command completed normally |
-| `1` | API error | Google returned a 4xx/5xx response |
-| `2` | Auth error | Credentials missing, expired, or invalid |
-| `3` | Validation error | Bad arguments, unknown service, invalid flag |
-| `4` | Discovery error | Could not fetch the API schema document |
-| `5` | Internal error | Unexpected failure |
-
-```bash
-gws drive files list --params '{"fileId": "bad"}'
-echo $?   # 1 — API error
-
-gws unknown-service files list
-echo $?   # 3 — validation error (unknown service)
-```
-
-## Architecture
-
-`gws` uses a **two-phase parsing** strategy:
-
-1. Read `argv[1]` to identify the service (e.g. `drive`)
-2. Fetch the service's Discovery Document (cached 24 h)
-3. Build a `clap::Command` tree from the document's resources and methods
-4. Re-parse the remaining arguments
-5. Authenticate, build the HTTP request, execute
-
-All output — success, errors, download metadata — is structured JSON.
-
-## Troubleshooting
-
-### "Access blocked" or 403 during login
-
-Your OAuth app is in **testing mode** and your account is not listed as a test user.
-
-**Fix:** Open the [OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent) in your GCP project → **Test users** → **Add users** → enter your Google account email. Then retry `gws auth login`.
-
-### "Google hasn't verified this app"
-
-Expected when your app is in testing mode. Click **Advanced** → **Go to \<app name\> (unsafe)** to proceed. This is safe for personal use; verification is only required to publish the app to other users.
-
-### Too many scopes / consent screen error
-
-Unverified (testing mode) apps are limited to ~25 OAuth scopes. The `recommended` scope preset includes many scopes and will exceed this limit.
-
-**Fix:** Select only the scopes you need:
-
-```bash
-gws auth login --scopes drive,gmail,calendar
-```
-
-### `gcloud` CLI not found
-
-`gws auth setup` requires the `gcloud` CLI to automate project creation. You have three options:
-
-1. [Install gcloud](https://cloud.google.com/sdk/docs/install) and use `gcloud` directly.
-2. Re-run `gws auth setup` which wraps `gcloud` calls.
-3. Skip `gcloud` entirely — set up OAuth credentials manually in the [Cloud Console](#manual-oauth-setup-google-cloud-console)
-
-### `redirect_uri_mismatch`
-
-The OAuth client was not created as a **Desktop app** type. In the [Credentials](https://console.cloud.google.com/apis/credentials) page, delete the existing client, create a new one with type **Desktop app**, and download the new JSON.
-
-### API not enabled — `accessNotConfigured`
-
-If a required Google API is not enabled for your GCP project, you will see a
-403 error with reason `accessNotConfigured`:
-
-```json
-{
-  "error": {
-    "code": 403,
-    "message": "Gmail API has not been used in project 549352339482 ...",
-    "reason": "accessNotConfigured",
-    "enable_url": "https://console.developers.google.com/apis/api/gmail.googleapis.com/overview?project=549352339482"
-  }
-}
-```
-
-`gws` also prints an actionable hint to **stderr**:
-
-```
-💡 API not enabled for your GCP project.
-   Enable it at: https://console.developers.google.com/apis/api/gmail.googleapis.com/overview?project=549352339482
-   After enabling, wait a few seconds and retry your command.
-```
-
-**Steps to fix:**
-
-1. Click the `enable_url` link (or copy it from the `enable_url` JSON field).
-2. In the GCP Console, click **Enable**.
-3. Wait ~10 seconds, then retry your `gws` command.
-
-> [!TIP]
-> You can also run `gws auth setup` which walks you through enabling all required
-> APIs for your project automatically.
-
-## Development
-
-```bash
-cargo build                       # dev build
-cargo clippy -- -D warnings       # lint
-cargo test                        # unit tests
-./scripts/coverage.sh             # HTML coverage report → target/llvm-cov/html/
-```
-
-## License
-
-Apache-2.0
-
-## Disclaimer
-
-> [!CAUTION]
-> This is **not** an officially supported Google product.
+The test suite covers deterministic rule behavior, n-ary traversal, topology
+normalization, child-scoped scoring, advisory/scored anchor policies, n-way
+alignment, evidence availability, semantic and phonological form search,
+malformed tool calls, commit validation, segmentation overlays, trajectory
+round-tripping, complete internal-node inference, orchestration, and the LiteLLM
+response adapter, plus the command-line inference harness and console events.

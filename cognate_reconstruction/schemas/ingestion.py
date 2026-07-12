@@ -8,7 +8,7 @@ from typing import Literal
 from pydantic import Field, model_validator
 
 from cognate_reconstruction.schemas.common import NonEmptyStr, WorkbenchModel
-from cognate_reconstruction.schemas.lexicon import LanguageLexicon
+from cognate_reconstruction.schemas.lexicon import ConceptMetadata, LanguageLexicon
 
 
 class TreeOrigin(StrEnum):
@@ -57,6 +57,7 @@ class TreeArtifact(WorkbenchModel):
 
 class WorkbenchPayload(WorkbenchModel):
     lexicons: tuple[LanguageLexicon, ...] = Field(min_length=2)
+    concepts: tuple[ConceptMetadata, ...] = ()
     newick: str | None = None
     tree_method: Literal["neighbor", "upgma"] = "neighbor"
     random_seed: int = 0
@@ -68,9 +69,13 @@ class WorkbenchPayload(WorkbenchModel):
             raise ValueError("lexicon variety IDs must be unique")
         if self.newick is not None and not self.newick.strip():
             raise ValueError("newick must be non-empty when supplied")
+        concept_ids = [concept.concept_id for concept in self.concepts]
+        if len(concept_ids) != len(set(concept_ids)):
+            raise ValueError("concept metadata IDs must be unique")
         return self
 
 
 class IngestedDataset(WorkbenchModel):
     lexicons: tuple[LanguageLexicon, ...]
     tree: TreeArtifact
+    concepts: tuple[ConceptMetadata, ...] = ()
