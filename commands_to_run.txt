@@ -8,7 +8,7 @@ conda run -n llm_reconstruction python scripts/generate_examples.py \
     --max-triplets-per-dataset 5000 \
     --max-total-binary-trees 64 \
     --seed 42 \
-    --workers 4 \
+    --workers 8 \
     --verbose
 
 
@@ -22,5 +22,5 @@ conda run -n llm_reconstruction python scripts/generate_examples.py \
     --max-total-binary-trees 64 \
     --historical-lineages data/historical_lineages.csv \
     --seed 42 \
-    --workers 4 \
+    --workers 8 \
     --verbose

@@ -35,3 +35,16 @@ commands_to_run.txt
 cognate_reflexes/data/__pycache__/historical.cpython-311.pyc
 cognate_reflexes/data/__pycache__/temporal_trees.cpython-311.pyc
 cognate_reflexes/examples/__pycache__/historical_reconstruction.cpython-311.pyc
+cognate_reflexes/splitting/__pycache__/manifest.cpython-311.pyc
+tests/__pycache__/__init__.cpython-311.pyc
+tests/__pycache__/test_family_split.cpython-311-pytest-9.1.1.pyc
+tests/__pycache__/test_historical_reconstruction.cpython-311-pytest-9.1.1.pyc
+tests/__pycache__/test_memory_safety.cpython-311-pytest-9.1.1.pyc
+data/stage1_cognate_reflex_dev.jsonl
+data/stage1_cognate_reflex_test1.jsonl
+data/stage1_cognate_reflex_test2.jsonl
+data/stage1_cognate_reflex_train.jsonl
+data/stage2_reconstruction_dev.jsonl
+data/stage2_reconstruction_test1.jsonl
+data/stage2_reconstruction_test2.jsonl
+data/stage2_reconstruction_train.jsonl

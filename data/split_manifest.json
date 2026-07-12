@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-07-11T20:25:02.228838+00:00",
+  "glottolog_version": "pinned_local",
+  "seed": 42,
+  "family_assignments": {
+    "Chapacuran": "train",
+    "Sino-Tibetan": "train",
+    "Arawakan": "test1",
+    "Pama-Nyungan": "train",
+    "Chibchan": "train",
+    "Chocoan": "train",
+    "Tucanoan": "train",
+    "Misumalpan": "train",
+    "Barbacoan": "train",
+    "Guahiboan": "train",
+    "Huitotoan": "train",
+    "Austronesian": "dev",
+    "Dravidian": "train",
+    "Uto-Aztecan": "train",
+    "Austroasiatic": "test2",
+    "Tupian": "train",
+    "Quechua": "train",
+    "Afro-Asiatic": "train",
+    "Turkic": "train",
+    "Uru-Chipaya": "train",
+    "Hmong-Mien": "train",
+    "Koreanic": "train",
+    "Japonic": "train",
+    "Atlantic-Congo": "train",
+    "Nuclear Trans New Guinea": "train",
+    "Indo-European": "train",
+    "Tungusic": "train",
+    "Otomanguean": "train",
+    "Zaparoan": "train",
+    "Chicham": "train",
+    "Timor-Alor-Pantar": "train",
+    "Mongolic": "train",
+    "Uralic": "train",
+    "Keresan": "train",
+    "Mixe-Zoque": "train",
+    "Boran": "train"
+  },
+  "stats": {
+    "train": {
+      "stage1_count": 29402,
+      "stage2_count": 1914
+    },
+    "dev": {
+      "stage1_count": 12503,
+      "stage2_count": 355
+    },
+    "test1": {
+      "stage1_count": 496,
+      "stage2_count": 4
+    },
+    "test2": {
+      "stage1_count": 1427,
+      "stage2_count": 17
+    }
+  },
+  "input_checksums": {
+    "stage1_cognate_reflex.jsonl": "e0d2a11e3ba23230cd8216a0979e0dff529e2c59becd8e9921f1438ba94b0ab1",
+    "stage2_reconstruction.jsonl": "4320cb62c124ed3d5f0b7366cd7fd031550f11fd0f27b81511268d380d0f90c0"
+  },
+  "fallbacks_used": []
+}
